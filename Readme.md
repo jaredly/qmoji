@@ -15,7 +15,7 @@ definitely saving on the ram side of things too
 ## Controls
 
 Keyboard:
-- trigger with option-cmd-space
+- trigger with option-cmd-space (you'll need to disable the macos "show a finder search window" shortcut like so https://twitter.com/ThomasAlcala/status/1088710623708565504)
 - tab & shift-tab to move the selection
 - enter to use the current emoji (it types it into the last-active application for you)
 - escape to clear the search text, or if it's empty then it closes the window
