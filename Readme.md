@@ -12,6 +12,17 @@ that's what I'm talkin bout
 
 definitely saving on the ram side of things too
 
+## Controls
+
+Keyboard:
+- trigger with option-cmd-space
+- tab & shift-tab to move the selection
+- enter to use the current emoji (it types it into the last-active application for you)
+- escape to clear the search text, or if it's empty then it closes the window
+
+Mouse:
+- click an emoji to select it
+
 ## Why make this?
 I'm making a [react-like UI framework for native reasonml](https://github.com/jaredly/fluid) & I wanted to try cloning a simple electron-based app as a proof of concept. [joakin suggested mojibar](https://twitter.com/joakin/status/1084898563082125312), and so here we are. It turned out to be more of a stress test than I was expecting (rendering 1500 views turned out to be prohibitively expensive, so I ended up exploring the wonderful world of `drawRect:` & custom NSViews), but I'm pretty happy with how it's turned out.
 
