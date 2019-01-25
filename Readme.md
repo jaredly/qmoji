@@ -12,10 +12,19 @@ that's what I'm talkin bout
 
 definitely saving on the ram side of things too
 
+## Installation
+
+- go to [the releases page](https://github.com/jaredly/qmoji/releases)
+- download `qmoji.zip` & unzip it
+- double-click the `qmoji.app` that comes out.
+- you should see a 🙃 in your statusbar
+- you'll need to disable the macos "show a finder search window" shortcut like so https://twitter.com/ThomasAlcala/status/1088710623708565504
+- now option-cmd-space will bring up qmoji!
+
 ## Controls
 
 Keyboard:
-- trigger with option-cmd-space (you'll need to disable the macos "show a finder search window" shortcut like so https://twitter.com/ThomasAlcala/status/1088710623708565504)
+- trigger with option-cmd-space ()
 - tab & shift-tab to move the selection
 - enter to use the current emoji (it types it into the last-active application for you)
 - escape to clear the search text, or if it's empty then it closes the window
