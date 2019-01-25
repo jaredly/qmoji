@@ -1,0 +1,1 @@
+Ok folks, here it is. The source code is still living over in the [fluid repo](https://github.com/jaredly/fluid/tree/master/src/qmoji), because I'm using it to field test the Fluid api & macos bindings. But I made this separate repositories so that releases will make sense. Also I'll probably move the source code over here eventually.
