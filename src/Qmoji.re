@@ -234,7 +234,6 @@ let run = assetDir => {
 
     let statusBarItem = Fluid.App.statusBarItem(
       ~title=Image(imageTitle),
-      /* ~title=String("🙃"), */
       ~onClick=pos => {
         Fluid.Window.showAtPos(win, pos)
       }
