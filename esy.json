@@ -1,0 +1,14 @@
+{
+  "name": "qmoji",
+  "esy": {
+    "build": "dune build -p #{self.name}"
+  },
+  "dependencies": {
+    "ocaml": ">=4.7.0",
+    "@opam/dune": "*",
+    "@opam/reason": "*",
+    "fluid": "jaredly/fluid",
+    "belt": "jaredly/belt",
+    "RexJson": "jaredly/rex-json#esy"
+  }
+}
