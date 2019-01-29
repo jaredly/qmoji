@@ -8,9 +8,9 @@ B /Users/jared/.esy/3___________________________________________________________
 B /Users/jared/.esy/3___________________________________________________________________/i/fluid-89b94eb6/lib/fluid/MacOS
 B /Users/jared/.esy/3___________________________________________________________________/i/ocaml-4.7.1003-bb69644a/lib/ocaml
 B /Users/jared/.esy/3___________________________________________________________________/i/rexjson-329a12f9/lib/RexJson
-B /Users/jared/clone/apps/qmoji/_esy/default/store/b/qmoji-91561db7/default/bin/.qmojiDev.eobjs
-B /Users/jared/clone/apps/qmoji/_esy/default/store/b/qmoji-91561db7/default/bin/.qmojiProd.eobjs
-B /Users/jared/clone/apps/qmoji/_esy/default/store/b/qmoji-91561db7/default/src/.Qmoji.objs
+B /Users/jared/clone/apps/qmoji/_esy/default/store/b/qmoji-f08726af/default/bin/.qmojiDev.eobjs
+B /Users/jared/clone/apps/qmoji/_esy/default/store/b/qmoji-f08726af/default/bin/.qmojiProd.eobjs
+B /Users/jared/clone/apps/qmoji/_esy/default/store/b/qmoji-f08726af/default/src/.Qmoji.objs
 S /Users/jared/.esy/3___________________________________________________________________/i/belt-63ff3133/lib/belt
 S /Users/jared/.esy/3___________________________________________________________________/i/flex-b927397f/lib/flex
 S /Users/jared/.esy/3___________________________________________________________________/i/fluid-89b94eb6/lib/fluid
@@ -22,5 +22,5 @@ S /Users/jared/.esy/3___________________________________________________________
 S /Users/jared/.esy/3___________________________________________________________________/i/rexjson-329a12f9/lib/RexJson
 S .
 S ../src
-FLG -ppx '/Users/jared/clone/apps/qmoji/_esy/default/store/b/qmoji-91561db7/default/.ppx/9786a1929d64b5a176282090b95e0fef/ppx.exe --as-ppx'
-FLG -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs
+FLG -ppx '/Users/jared/clone/apps/qmoji/_esy/default/store/b/qmoji-f08726af/default/.ppx/9786a1929d64b5a176282090b95e0fef/ppx.exe --as-ppx'
+FLG -w -40 -w -40

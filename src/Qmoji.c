@@ -38,3 +38,43 @@ CAMLprim value qmoji_grayscaleEmoji(value text_v) {
   Wrap(image_v, newImage);
   CAMLreturn(image_v); 
 }
+
+NSData* qmoji_dataForText(NSString* text) {
+  NSFont* nsFont = [NSFont systemFontOfSize:8.0];
+  NSDictionary* attributes = @{NSFontAttributeName: nsFont};
+  NSImage *img = [[NSImage alloc] initWithSize:[text sizeWithAttributes:attributes]];
+  [img lockFocus];
+  [text drawAtPoint:NSMakePoint(10, 10) withAttributes:attributes];
+  [img unlockFocus];
+  return [img TIFFRepresentation];
+}
+
+BOOL _qmoji_isEmojiSupported(NSString* text) {
+  static NSData * UNAVAILABLE = NULL;
+  if (UNAVAILABLE == NULL) {
+    UNAVAILABLE = qmoji_dataForText(@"\u1fff");
+  }
+  return ![qmoji_dataForText(text) isEqualToData:UNAVAILABLE];
+}
+
+CAMLprim value qmoji_isEmojiSupported(value text) {
+  CAMLparam1(text);
+  CAMLreturn(_qmoji_isEmojiSupported(NSString_val(text)) ? Val_true : Val_false);
+}
+
+CAMLprim value qmoji_homeDirectory() {
+  CAMLparam0();
+  CAMLreturn(caml_copy_string([NSHomeDirectory() UTF8String]));
+}
+
+// void qmoji_fetch(value url, ) {
+//   CAMLparam1(url);
+
+//   [[NSURLSession sharedSession]
+//     dataTaskWithURL:NSString_val(url)
+//   completionHandler:^(NSData* data, NSURLResponse *response, NSError *error){
+//     NSString *text = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//   }];
+
+//   CAMLreturn0;
+// }

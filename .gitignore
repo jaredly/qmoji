@@ -1,3 +1,4 @@
 _esy
 *.install
 node_modules
+.merlin
