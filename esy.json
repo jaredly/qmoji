@@ -3,6 +3,9 @@
   "esy": {
     "build": "dune build -p #{self.name}"
   },
+  "scripts": {
+    "start": "dune exec QmojiDev"
+  },
   "dependencies": {
     "ocaml": ">=4.7.0",
     "@opam/dune": "*",

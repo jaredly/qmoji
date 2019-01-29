@@ -32,6 +32,16 @@ Keyboard:
 Mouse:
 - click an emoji to select it
 
+## Contributing
+
+Install `esy` version 0.4.9
+
+`npm i -g esy@0.4.9`
+
+then run `esy` in this directory to build.
+
+And then `esy start` to run the development build.
+
 ## Why make this?
 I'm making a [react-like UI framework for native reasonml](https://github.com/jaredly/fluid) & I wanted to try cloning a simple electron-based app as a proof of concept. [joakin suggested mojibar](https://twitter.com/joakin/status/1084898563082125312), and so here we are. It turned out to be more of a stress test than I was expecting (rendering 1500 views turned out to be prohibitively expensive, so I ended up exploring the wonderful world of `drawRect:` & custom NSViews), but I'm pretty happy with how it's turned out.
 
@@ -39,10 +49,10 @@ I'm making a [react-like UI framework for native reasonml](https://github.com/ja
 that I'll probably do because I already like this better than mac's builtin picker
 
 - [ ] memory of most-frequently used
-- [ ] fuzzy search
+- [x] fuzzy search
 - [ ] option to start at login
 - [ ] skin tone modifier selection
-- [ ] more perf optimization for click / hover state (I currently invalidate the whole view when you click, which is hugely wasteful)
+- [x] more perf optimization for click / hover state (I currently invalidate the whole view when you click, which is hugely wasteful)
 - [ ] customize the global shortcut (maybe, idk)
 
 ## Supported platforms

@@ -23,4 +23,4 @@ S /Users/jared/.esy/3___________________________________________________________
 S .
 S ../src
 FLG -ppx '/Users/jared/clone/apps/qmoji/_esy/default/store/b/qmoji-91561db7/default/.ppx/9786a1929d64b5a176282090b95e0fef/ppx.exe --as-ppx'
-FLG -w -40 -w -40
+FLG -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs
