@@ -57,6 +57,18 @@ BOOL _qmoji_isEmojiSupported(NSString* text) {
   return ![qmoji_dataForText(text) isEqualToData:UNAVAILABLE];
 }
 
+CAMLprim value qmoji_current_mouse(value window_v) {
+  CAMLparam1(window_v);
+  CAMLlocal1(pos_v);
+
+  NSPoint loc = [(id)Unwrap(window_v) mouseLocationOutsideOfEventStream];
+  NSPoint window_origin = ((NSWindow*)Unwrap(window_v)).frame.origin;
+
+  Create_record2_double(pos_v, loc.x + window_origin.x, loc.y + window_origin.y);
+
+  CAMLreturn(pos_v);
+}
+
 CAMLprim value qmoji_isEmojiSupported(value text) {
   CAMLparam1(text);
   CAMLreturn(_qmoji_isEmojiSupported(NSString_val(text)) ? Val_true : Val_false);

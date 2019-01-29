@@ -6,6 +6,8 @@ open Fluid.Hooks;
 open Emojis.T;
 open Fuzzy.T;
 
+external currentMousePos: Fluid.Window.window => pos = "qmoji_current_mouse";
+
 let (|?>) = (x, fn) => switch x { |None => None| Some(x) => fn(x)};
 
 let fuzzyEmoji = (text, emoji) => {
@@ -24,6 +26,7 @@ let has = (text, rx) => Str.string_match(rx, text, 0);
 
 let fontSize = 17.;
 let size = fontSize *. 1.6;
+let fullWidth = 300.;
 
 let rowf = 280. /. size;
 let row = int_of_float(rowf);
@@ -112,7 +115,7 @@ let main = (~emojis, ~onDone, hooks) => {
   let selected = filtered->Belt.List.get(selection);
 
   <view layout={Layout.style(
-    ~width=300.,
+    ~width=fullWidth,
     ~height=250.,
     ()
   )}
@@ -239,7 +242,11 @@ let run = assetDir => {
 
     Fluid.Hotkeys.register(~key=0x31, () => {
       print_endline("Got it!");
-      Fluid.Window.showAtPos(win, Fluid.App.statusBarPos(statusBarItem));
+      let {x, y} = currentMousePos(win);
+      Fluid.Window.showAtPos(
+        win,
+        {x: x -. fullWidth /. 2., y: y -. 20.}
+      );
     })->ignore;
   });
 
