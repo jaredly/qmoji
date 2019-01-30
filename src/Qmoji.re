@@ -7,6 +7,7 @@ open Emojis.T;
 open Fuzzy.T;
 
 external currentMousePos: Fluid.Window.window => pos = "qmoji_current_mouse";
+external showMenu: Fluid.App.menu => unit = "qmoji_showMenu";
 external openUrl: string => unit = "qmoji_openUrl";
 
 let (|?>) = (x, fn) => switch x { |None => None| Some(x) => fn(x)};
@@ -114,6 +115,42 @@ let checkVersion = (assetsDir, onDone) => {
   }
 };
 
+external toggleMenuItem: (Fluid.App.menuItem, bool) => unit = "qmenu_toggleMenuItem";
+
+let toggleItem = (~title, ~initial, ~onChange) => {
+  let v = ref(None);
+  let isOn = ref(initial);
+  let item = Fluid.App.menuItem(~title, ~action=Call(() => {
+    isOn := !isOn^;
+    switch (v^) {
+      | None => ()
+      | Some(item) =>
+        toggleMenuItem(item, isOn^)
+        onChange(isOn^)
+    }
+  }), ~shortcut="")
+  toggleMenuItem(item, initial);
+  v := Some(item);
+  item
+};
+
+let showAtCursor = ref(false);
+
+let rightClickMenu = Fluid.App.menu(
+  ~title="Settings",
+  ~items=[|
+    toggleItem(~title="Check for updates", ~initial=true, ~onChange=shouldCheck => {
+      print_endline(shouldCheck ? "Will check" : "Wont check")
+    }),
+    toggleItem(~title="Show popup at cursor", ~initial=showAtCursor^, ~onChange=shouldShow => {
+      showAtCursor := shouldShow
+    }),
+    Fluid.App.menuItem(~title="Quit", ~action=Call(() => {
+      print_endline("psyc");
+    }), ~shortcut=""),
+    Fluid.App.menuItem(~title="Quit", ~action=Selector("terminate:"), ~shortcut="")
+  |]
+);
 
 let main = (~assetsDir, ~emojis, ~onDone, hooks) => {
   let%hook (text, setText) = useState("");
@@ -243,6 +280,7 @@ let main = (~assetsDir, ~emojis, ~onDone, hooks) => {
       />
       <button title="v" onPress={() => {
         print_endline("Ok");
+        showMenu(rightClickMenu);
       }} />
     </view>
     {Fluid.Native.scrollView(
@@ -332,10 +370,15 @@ let run = assetsDir => {
 
     Fluid.Hotkeys.register(~key=0x31, () => {
       print_endline("Got it!");
-      let {x, y} = currentMousePos(win);
+      let pos = showAtCursor^
+        ? {
+          let {x, y} = currentMousePos(win);
+          {x: x -. fullWidth /. 2., y: y -. 20.}
+        }
+        : Fluid.App.statusBarPos(statusBarItem);
       Fluid.Window.showAtPos(
         win,
-        {x: x -. fullWidth /. 2., y: y -. 20.}
+        pos
       );
     })->ignore;
   });

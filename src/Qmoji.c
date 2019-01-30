@@ -97,6 +97,21 @@ void qmoji_openUrl(value url) {
   CAMLreturn0;
 }
 
+void qmenu_toggleMenuItem(value item_v, value isOn) {
+  CAMLparam1(item_v);
+  NSMenuItem* item = (NSMenuItem*)Unwrap(item_v);
+  [item setState:isOn == Val_true ? NSControlStateValueOn : NSControlStateValueOff];
+  // [item setState:NSControlStateValueOn];
+  CAMLreturn0;
+}
+
+void qmoji_showMenu(value menu_v) {
+  CAMLparam1(menu_v);
+  NSMenu* menu = (NSMenu*)Unwrap(menu_v);
+  [NSMenu popUpContextMenu:menu withEvent:[NSApp currentEvent] forView:nil];
+  CAMLreturn0;
+}
+
 void qmoji_fetch(value url, value callback) {
   CAMLparam1(url);
   int callbackId = Int_val(callback);
