@@ -34,6 +34,50 @@ let fullWidth = 300.;
 let rowf = 280. /. size;
 let row = int_of_float(rowf);
 
+let indexForPos = ({x, y}) => {
+  let x = x /. size |> int_of_float;
+  let y = y /. size |> int_of_float;
+  y * row + x;
+};
+
+let dimsForIndex = (~padding=0., index) => {
+  let x = index mod row |> float_of_int |> (*.)(size);
+  let y = index / row |> float_of_int |> (*.)(size);
+  {
+    left: x -. padding,
+    top: y -. padding,
+    width: size +. padding *. 2.,
+    height: size +. padding *. 2.,
+  }
+};
+
+let drawEmoji = (dims, {top, left, width, height}, emoji, isSelected) =>
+  if (dims.top +. size >= top && dims.top <= top +. height) {
+    if (isSelected) {
+      Fluid.Draw.rect(dims, {r: 0.4, g: 0.4, b: 0.4, a: 0.5});
+    };
+    Fluid.Draw.text(
+      ~fontSize,
+      emoji.char,
+      {x: dims.left +. 2., y: dims.top +. 4.},
+    );
+  };
+
+let showEmoji = (~emoji, hooks) => {
+    <view
+    layout={Layout.style(~alignSelf=AlignStretch, ~paddingBottom=10., ~paddingHorizontal=10., ())}
+  >
+    <view
+      backgroundColor={r: 0.9, g: 0.9, b: 0.9, a: 1.}
+      layout={
+        Layout.style(~height=1., ~alignSelf=AlignStretch, ())
+      }
+    />
+    {str(emoji.name)}
+    {str(emoji.keywords |> Belt.List.fromArray |> String.concat(", "))}
+  </view>
+};
+
 let main = (~emojis, ~onDone, hooks) => {
   let%hook (text, setText) = useState("");
   let%hook (selection, setSelection) = useState(0);
@@ -45,17 +89,6 @@ let main = (~emojis, ~onDone, hooks) => {
   };
 
   let%hook prev = useRef(None);
-
-  let dimsForIndex = (~padding=0., index) => {
-    let x = index mod row |> float_of_int |> (*.)(size);
-    let y = index / row |> float_of_int |> (*.)(size);
-    {
-      left: x -. padding,
-      top: y -. padding,
-      width: size +. padding *. 2.,
-      height: size +. padding *. 2.,
-    }
-  };
 
   let invalidated = switch (prev.contents) {
     | None => `Full
@@ -76,20 +109,16 @@ let main = (~emojis, ~onDone, hooks) => {
 
   let rows = ceil(float_of_int(List.length(filtered)) /. rowf)->int_of_float;
 
-  let%hook mouseMove = useCallback(({x, y}) => {
-    let x = x /. size |> int_of_float;
-    let y = y /. size |> int_of_float;
-    let pos = y * row + x;
-    if (pos < List.length(filtered)) {
-      setSelection(pos);
+  let%hook mouseMove = useCallback((pos) => {
+    let index = indexForPos(pos);
+    if (index < List.length(filtered)) {
+      setSelection(index);
     }
   }, filtered)
 
-  let%hook mouseDown = useCallback(({x, y}) => {
-    let x = x /. size |> int_of_float;
-    let y = y /. size |> int_of_float;
-    let pos = y * row + x;
-    switch (filtered->Belt.List.get(pos)) {
+  let%hook mouseDown = useCallback((pos) => {
+    let index = indexForPos(pos);
+    switch (filtered->Belt.List.get(index)) {
       | None => ()
       | Some({char}) =>
         setText("")
@@ -98,56 +127,46 @@ let main = (~emojis, ~onDone, hooks) => {
     }
   }, filtered)
 
-  let%hook draw = useCallback(({top, left, width, height}) => {
-    filtered->Belt.List.forEachWithIndex((index, emoji) => {
-      let dims = dimsForIndex(index);
-      if (dims.top +. size >= top && dims.top <= top +. height) {
-        if (index == selection) {
-          Fluid.Draw.rect(dims, {
-            r: 0.4,
-            g: 0.4,
-            b: 0.4,
-            a: 0.5,
-          })
-        };
-        Fluid.Draw.text(~fontSize, emoji.char, {x: dims.left +. 2., y: dims.top +. 4.});
-      };
-    });
+  let%hook draw = useCallback((bounds) => {
+    filtered->Belt.List.forEachWithIndex((index, emoji) => drawEmoji(dimsForIndex(index), bounds, emoji, index == selection));
   }, (text, selection));
 
-  let selected = filtered->Belt.List.get(selection);
-
-  <view layout={Layout.style(
-    ~width=fullWidth,
-    ~height=250.,
-    ()
-  )}
-  >
-    <text
-      contents=text
-      layout={Layout.style(~alignSelf=AlignStretch, ~marginHorizontal=10., ~marginBottom=15., ~marginTop=5., ())}
-      onEnter={text => {
+  let%hook onEnter = useCallback(text => {
         switch (Belt.List.get(filtered, selection)) {
           | None => onDone(None)
           | Some({char}) => onDone(Some(char))
         };
         setSelection(0);
         setText("");
-      }}
-      onEscape={() => {
-        if (text == "") {
-          onDone(None)
-        } else {
-          setSelection(0);
-          setText("");
-        }
-      }}
+  }, (filtered, selection));
+
+  let%hook onEscape = useCallback({() => {
+    if (text == "") {
+      onDone(None)
+    } else {
+      setSelection(0);
+      setText("");
+    }
+  }}, text);
+
+  <view
+    layout={Layout.style(
+      ~width=fullWidth,
+      ~height=250.,
+      ()
+    )}
+  >
+    <text
+      contents=text
+      layout={Layout.style(~alignSelf=AlignStretch, ~marginHorizontal=10., ~marginBottom=15., ~marginTop=5., ())}
+      onEnter
+      onEscape
       onTab={() => setSelection(selection == List.length(filtered) - 1 ? 0 : selection + 1)}
       onShiftTab={() => {
         setSelection(max(0, (selection == 0 ? List.length(filtered) : selection) - 1))
       }}
       onChange={text => {
-        setText(text)
+        setText(text);
         setSelection(0)
       }}
     />
@@ -174,21 +193,9 @@ let main = (~emojis, ~onDone, hooks) => {
       ],
       ()
     )}
-    {switch selected {
+    {switch (filtered->Belt.List.get(selection)) {
       | None => <view />
-      | Some(emoji) =>
-        <view
-          layout={Layout.style(~alignSelf=AlignStretch, ~paddingBottom=10., ~paddingHorizontal=10., ())}
-        >
-          <view
-            backgroundColor={r: 0.9, g: 0.9, b: 0.9, a: 1.}
-            layout={
-              Layout.style(~height=1., ~alignSelf=AlignStretch, ())
-            }
-          />
-          {str(emoji.name)}
-          {str(emoji.keywords |> Belt.List.fromArray |> String.concat(", "))}
-        </view>
+      | Some(emoji) => <ShowEmoji emoji />
     }}
   </view>
 };
