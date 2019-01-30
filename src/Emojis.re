@@ -10,6 +10,9 @@ module T = {
 };
 open T;
 
+external grayscaleEmoji: string => FluidMac.NativeInterface.image = "qmoji_grayscaleEmoji";
+external isEmojiSupported: string => bool = "qmoji_isEmojiSupported";
+
 
 let loadEmojis = fileName => {
   let text = Files.readFileExn(fileName);
@@ -27,5 +30,5 @@ let loadEmojis = fileName => {
       category,
     }
   });
-  emojis->Belt.List.keep(emoji => FluidMac.Fluid.App.isEmojiSupported(emoji.char));
+  emojis->Belt.List.keep(emoji => isEmojiSupported(emoji.char));
 }

@@ -15,5 +15,8 @@
     "fluid": "jaredly/fluid",
     "belt": "jaredly/belt",
     "RexJson": "jaredly/rex-json#esy"
+  },
+  "resolutions": {
+    "fluid": "link:../../explorations/fluid/esy.json"
   }
 }

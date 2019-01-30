@@ -1,5 +1,5 @@
 {
-  "checksum": "3de76072aee2828af9a04a1c703449f9",
+  "checksum": "ce23c6c472170eabdbf1c106413dcd4e",
   "root": "qmoji@link:./esy.json",
   "node": {
     "qmoji@link:./esy.json": {
@@ -10,7 +10,7 @@
       "overrides": [],
       "dependencies": [
         "ocaml@4.7.1003@d41d8cd9",
-        "fluid@github:jaredly/fluid#47cdffed5d964ba15cc163987dfb793e10e57f78@d41d8cd9",
+        "fluid@link:../../explorations/fluid/esy.json",
         "belt@github:jaredly/belt#200d736fa08438c91d8c6dd553b97ecbd9c7ab33@d41d8cd9",
         "RexJson@github:jaredly/rex-json#02a6fc047b62d18fd0ef04a51f70bb8072c2b2d2@d41d8cd9",
         "@opam/reason@opam:3.4.0@9dac40ad", "@opam/dune@opam:1.6.3@a7d7baed"
@@ -31,17 +31,14 @@
       "dependencies": [],
       "devDependencies": []
     },
-    "fluid@github:jaredly/fluid#47cdffed5d964ba15cc163987dfb793e10e57f78@d41d8cd9": {
-      "id":
-        "fluid@github:jaredly/fluid#47cdffed5d964ba15cc163987dfb793e10e57f78@d41d8cd9",
+    "fluid@link:../../explorations/fluid/esy.json": {
+      "id": "fluid@link:../../explorations/fluid/esy.json",
       "name": "fluid",
-      "version":
-        "github:jaredly/fluid#47cdffed5d964ba15cc163987dfb793e10e57f78",
+      "version": "link:../../explorations/fluid/esy.json",
       "source": {
-        "type": "install",
-        "source": [
-          "github:jaredly/fluid#47cdffed5d964ba15cc163987dfb793e10e57f78"
-        ]
+        "type": "link",
+        "path": "../../explorations/fluid",
+        "manifest": "esy.json"
       },
       "overrides": [],
       "dependencies": [

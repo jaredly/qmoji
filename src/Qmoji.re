@@ -223,20 +223,28 @@ let main = (~assetsDir, ~emojis, ~onDone, hooks) => {
       ()
     )}
   >
-    <text
-      contents=text
-      layout={Layout.style(~alignSelf=AlignStretch, ~marginHorizontal=10., ~marginBottom=15., ~marginTop=5., ())}
-      onEnter
-      onEscape
-      onTab={() => setSelection(selection == List.length(filtered) - 1 ? 0 : selection + 1)}
-      onShiftTab={() => {
-        setSelection(max(0, (selection == 0 ? List.length(filtered) : selection) - 1))
-      }}
-      onChange={text => {
-        setText(text);
-        setSelection(0)
-      }}
-    />
+    <view layout={Layout.style(
+      ~flexDirection=Row,
+      ()
+    )}>
+      <text
+        contents=text
+        layout={Layout.style(~alignSelf=AlignStretch, ~flexGrow=1., ~marginHorizontal=10., ~marginBottom=15., ~marginTop=5., ())}
+        onEnter
+        onEscape
+        onTab={() => setSelection(selection == List.length(filtered) - 1 ? 0 : selection + 1)}
+        onShiftTab={() => {
+          setSelection(max(0, (selection == 0 ? List.length(filtered) : selection) - 1))
+        }}
+        onChange={text => {
+          setText(text);
+          setSelection(0)
+        }}
+      />
+      <button title="v" onPress={() => {
+        print_endline("Ok");
+      }} />
+    </view>
     {Fluid.Native.scrollView(
       ~layout={Layout.style(
         ~overflow=Scroll,
@@ -313,7 +321,7 @@ let run = assetsDir => {
 
     closeWindow := () => Fluid.Window.hide(win);
 
-    let imageTitle = Fluid.App.grayscaleEmoji("🙃");
+    let imageTitle = Emojis.grayscaleEmoji("🙃");
 
     let statusBarItem = Fluid.App.statusBarItem(
       ~title=Image(imageTitle),
