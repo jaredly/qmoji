@@ -10,6 +10,9 @@ external currentMousePos: Fluid.Window.window => pos = "qmoji_current_mouse";
 
 let (|?>) = (x, fn) => switch x { |None => None| Some(x) => fn(x)};
 
+external fetch: (string, FluidMac.StringTracker.callbackId) => unit = "qmoji_fetch";
+let fetch = (url, onDone) => fetch(url, StringTracker.track(onDone));
+
 let fuzzyEmoji = (text, emoji) => {
   let score = Fuzzy.fuzzyScore(~exactWeight=1000, text, emoji.name);
   let best = emoji.keywords->Belt.Array.reduce(score, (score, kwd) => {
@@ -189,6 +192,11 @@ let main = (~emojis, ~onDone, hooks) => {
     }}
   </view>
 };
+
+fetch("https://api.github.com/repos/jaredly/qmoji/releases/latest", contents => {
+  print_endline("Fetched!");
+  print_endline(contents)
+});
 
 let run = assetDir => {
   let (/+) = Filename.concat;

@@ -79,14 +79,17 @@ CAMLprim value qmoji_homeDirectory() {
   CAMLreturn(caml_copy_string([NSHomeDirectory() UTF8String]));
 }
 
-// void qmoji_fetch(value url, ) {
-//   CAMLparam1(url);
-
-//   [[NSURLSession sharedSession]
-//     dataTaskWithURL:NSString_val(url)
-//   completionHandler:^(NSData* data, NSURLResponse *response, NSError *error){
-//     NSString *text = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-//   }];
-
-//   CAMLreturn0;
-// }
+void qmoji_fetch(value url, value callback) {
+  CAMLparam1(url);
+  int callbackId = Int_val(callback);
+  NSURLSessionDataTask* task = [[NSURLSession sharedSession]
+      dataTaskWithURL:[[NSURL alloc] initWithString:NSString_val(url)]
+    completionHandler:^(NSData* data, NSURLResponse *response, NSError *error){
+      NSString *text = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+      dispatch_async(dispatch_get_main_queue(), ^{
+        callString(callbackId, [text UTF8String]);
+      });
+    }];
+  [task resume];
+  CAMLreturn0;
+}
