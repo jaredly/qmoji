@@ -79,6 +79,24 @@ CAMLprim value qmoji_homeDirectory() {
   CAMLreturn(caml_copy_string([NSHomeDirectory() UTF8String]));
 }
 
+void qmoji_setTimeout(value callback, value milis_v) {
+  CAMLparam2(callback, milis_v);
+  int64_t milis = Int_val(milis_v);
+  int cbid = Int_val(callback);
+  int64_t nanos = milis * 1000 * 1000;
+  // printf("Waiting for %d milis, %f nanos\n", milis, nanos);
+  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, nanos), dispatch_get_main_queue(), ^{
+    callUnit(cbid);
+  });
+  CAMLreturn0;
+}
+
+void qmoji_openUrl(value url) {
+  CAMLparam1(url);
+  [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString: NSString_val(url)]];
+  CAMLreturn0;
+}
+
 void qmoji_fetch(value url, value callback) {
   CAMLparam1(url);
   int callbackId = Int_val(callback);

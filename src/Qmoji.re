@@ -7,11 +7,14 @@ open Emojis.T;
 open Fuzzy.T;
 
 external currentMousePos: Fluid.Window.window => pos = "qmoji_current_mouse";
+external openUrl: string => unit = "qmoji_openUrl";
 
 let (|?>) = (x, fn) => switch x { |None => None| Some(x) => fn(x)};
 
 external fetch: (string, FluidMac.StringTracker.callbackId) => unit = "qmoji_fetch";
 let fetch = (url, onDone) => fetch(url, StringTracker.track(onDone));
+external setTimeout: (FluidMac.UnitTracker.callbackId, int) => unit = "qmoji_setTimeout";
+let setTimeout = (fn, time) => setTimeout(UnitTracker.track(fn), time);
 
 let fuzzyEmoji = (text, emoji) => {
   let score = Fuzzy.fuzzyScore(~exactWeight=1000, text, emoji.name);
@@ -78,15 +81,79 @@ let showEmoji = (~emoji, hooks) => {
   </view>
 };
 
-let main = (~emojis, ~onDone, hooks) => {
+let lastTag = ref("-");
+
+let checkVersion = (assetsDir, onDone) => {
+  print_endline("Checking version");
+  switch (Files.readFile(assetsDir->Filename.concat("git-head"))) {
+    | None => onDone(None)
+    | Some(gitHead) =>
+      fetch("https://api.github.com/repos/jaredly/qmoji/releases/latest", contents => {
+        print_endline("Fetched!");
+        open Json.Infix;
+        let tag = Json.parse(contents) |> Json.get("tag_name") |?> Json.string;
+        switch tag {
+          | None => onDone(None)
+          | Some(tag) when tag == lastTag.contents => onDone(None)
+          | Some(tag) => fetch("https://api.github.com/repos/jaredly/qmoji/commits/" ++ tag, contents => {
+            let sha = Json.parse(contents) |> Json.get("sha") |?> Json.string;
+            switch sha {
+              | None => onDone(None)
+              | Some(sha) =>
+                print_endline("Have sh! " ++ sha);
+                if (sha == gitHead) {
+                  lastTag := tag
+                } else {
+                  /* TODO report tag name */
+                  onDone(Some(tag))
+                }
+            }
+          })
+        }
+      });
+  }
+};
+
+
+let main = (~assetsDir, ~emojis, ~onDone, hooks) => {
   let%hook (text, setText) = useState("");
   let%hook (selection, setSelection) = useState(0);
+  let%hook (hasNewVersion, setHasNewVersion) = useState(None);
 
   let filtered = text == "" ? emojis : {
     emojis->Belt.List.keepMap(fuzzyEmoji(text))->Belt.List.sort(
       ((ascore, amoji), (bscore, bmoji)) => Fuzzy.compareScores(ascore, bscore)
     )->Belt.List.map(snd);
   };
+
+  let%hook () = useEffect(() => {
+    let stopped = ref(false);
+    checkVersion(assetsDir, hasNew => {
+      if (stopped^) {
+        ()
+      } else if (hasNew != None) {
+        setHasNewVersion(hasNew)
+      } else {
+        let rec loop = () => setTimeout(() => {
+          /* print_endline("Got timeout"); */
+          if (!stopped^) {
+            checkVersion(assetsDir, hasNew => {
+              if (stopped^) {
+                ()
+              } else if (hasNew != None) {
+                setHasNewVersion(hasNew)
+              } else {
+                loop()
+              }
+            })
+          }
+          /* Check once per day */
+        }, 1000 * 60 * 60 * 24);
+        loop();
+      }
+    });
+    () => stopped := true
+  }, ());
 
   let%hook prev = useRef(None);
 
@@ -197,17 +264,18 @@ let main = (~emojis, ~onDone, hooks) => {
       | None => <view />
       | Some(emoji) => <ShowEmoji emoji />
     }}
+    {switch (hasNewVersion) {
+      | None => <view />
+      | Some(tag) => <button title={"New version available! " ++ tag} onPress={() => {
+        openUrl("https://github.com/jaredly/qmoji/releases")
+      }} />
+    }}
   </view>
 };
 
-fetch("https://api.github.com/repos/jaredly/qmoji/releases/latest", contents => {
-  print_endline("Fetched!");
-  print_endline(contents)
-});
-
-let run = assetDir => {
+let run = assetsDir => {
   let (/+) = Filename.concat;
-  let emojis = Emojis.loadEmojis(assetDir /+ "emojis.json");
+  let emojis = Emojis.loadEmojis(assetsDir /+ "emojis.json");
 
   Fluid.App.launch(
     ~isAccessory=true,
@@ -228,7 +296,7 @@ let run = assetDir => {
       ~onBlur=win => {
         Fluid.Window.hide(win);
       },
-      <Main emojis onDone={text => {
+      <Main assetsDir emojis onDone={text => {
         switch (text) {
           | Some(text) =>
             closeWindow^();
