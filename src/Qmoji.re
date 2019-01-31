@@ -112,10 +112,11 @@ module Config = {
 
   let configPath = Filename.concat(homeDirectory(), "qmoji-config.json");
 
+  print_endline("Saving config to " ++ configPath);
+
   let current = ref(load(configPath));
   let update = fn => {
     current := fn(current^);
-    /* print_endline("Saving"); */
     save(current^, configPath);
   };
 };
