@@ -256,6 +256,8 @@ let main = (~assetsDir, ~emojis, ~onDone, hooks) => {
     Config.useEmoji(emoji.name);
     setSelection(0);
     setText("");
+    /* Printf.printf("Unit: %d, Pos: %d\n", FluidMac.UnitTracker.size(), FluidMac.PosTracker.size()); */
+    /* print_endline("Ok"); */
     onDone(Some(emoji.char))
   };
   let onCancel = () => onDone(None);
