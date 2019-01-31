@@ -128,8 +128,8 @@ let checkVersion = (assetsDir, onDone) => {
   switch (Files.readFile(assetsDir->Filename.concat("git-head"))) {
     | None => onDone(None)
     | Some(gitHead) =>
+      let gitHead = gitHead->String.trim;
       fetch("https://api.github.com/repos/jaredly/qmoji/releases/latest", contents => {
-        /* print_endline("Fetched!"); */
         open Json.Infix;
         let tag = Json.parse(contents) |> Json.get("tag_name") |?> Json.string;
         switch tag {
