@@ -31,6 +31,7 @@ Keyboard:
 
 Mouse:
 - click an emoji to select it
+- right-click an emoji to remove from "recently used" list
 
 ## Contributing
 
