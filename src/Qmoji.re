@@ -110,7 +110,9 @@ module Config = {
   };
   let save = (config, path) => Files.writeFileExn(path, Json.stringify(toJson(config)));
 
-  let configPath = Filename.concat(homeDirectory(), "qmoji-config.json");
+  let (/+) = Filename.concat;
+
+  let configPath = homeDirectory() /+ "Library" /+ "Preferences" /+ "com.jaredforsyth.qmoji.json";
 
   print_endline("Saving config to " ++ configPath);
 
@@ -188,7 +190,7 @@ let startChecking = assetsDir => {
     }
   }
   and loop = () => setTimeout(check, checkingTime);
-  loop()
+  check()
 };
 
 let main = (~assetsDir, ~emojis, ~onDone, hooks) => {
