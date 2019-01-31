@@ -9,6 +9,7 @@ open Fuzzy.T;
 external currentMousePos: Fluid.Window.window => pos = "qmoji_current_mouse";
 external showMenu: Fluid.App.menu => unit = "qmoji_showMenu";
 external openUrl: string => unit = "qmoji_openUrl";
+external homeDirectory: unit => string = "qmoji_homeDirectory";
 
 let (|?>) = (x, fn) => switch x { |None => None| Some(x) => fn(x)};
 
@@ -16,6 +17,8 @@ external fetch: (string, FluidMac.StringTracker.callbackId) => unit = "qmoji_fet
 let fetch = (url, onDone) => fetch(url, StringTracker.track(onDone));
 external setTimeout: (FluidMac.UnitTracker.callbackId, int) => unit = "qmoji_setTimeout";
 let setTimeout = (fn, time) => setTimeout(UnitTracker.track(fn), time);
+
+external toggleMenuItem: (Fluid.App.menuItem, bool) => unit = "qmenu_toggleMenuItem";
 
 let fuzzyEmoji = (text, emoji) => {
   let score = Fuzzy.fuzzyScore(~exactWeight=1000, text, emoji.name);
@@ -68,7 +71,7 @@ let drawEmoji = (dims, {top, left, width, height}, emoji, isSelected) =>
   };
 
 let showEmoji = (~emoji, hooks) => {
-    <view
+  <view
     layout={Layout.style(~alignSelf=AlignStretch, ~paddingBottom=10., ~paddingHorizontal=10., ())}
   >
     <view
@@ -82,30 +85,62 @@ let showEmoji = (~emoji, hooks) => {
   </view>
 };
 
-let lastTag = ref("-");
+module Config = {
+  type config = {
+    showAtCursor: bool,
+    checkForUpdates: bool,
+    lastCheckedTag: string,
+  };
+  let default = {showAtCursor: false, checkForUpdates: true, lastCheckedTag: "-"};
+  let ofJson = json => {
+    open Json.Infix;
+    let showAtCursor = json |> Json.get("showAtCursor") |?> Json.bool |? false;
+    let checkForUpdates = json |> Json.get("checkForUpdates") |?> Json.bool |? true;
+    let lastCheckedTag = json |> Json.get("lastCheckedTag") |?> Json.string |? "-";
+    {showAtCursor, checkForUpdates, lastCheckedTag}
+  };
+  let toJson = ({showAtCursor, checkForUpdates, lastCheckedTag}) => Json.Object([
+    ("showAtCursor", showAtCursor ? Json.True : Json.False),
+    ("checkForUpdates", checkForUpdates ? Json.True : Json.False),
+    ("lastCheckedTag", Json.String(lastCheckedTag))
+  ]);
+  let load = path => switch (Json.parse(Files.readFileExn(path))) {
+    | exception _ => default
+    | json => ofJson(json)
+  };
+  let save = (config, path) => Files.writeFileExn(path, Json.stringify(toJson(config)));
+
+  let configPath = Filename.concat(homeDirectory(), "qmoji-config.json");
+
+  let current = ref(load(configPath));
+  let update = fn => {
+    current := fn(current^);
+    /* print_endline("Saving"); */
+    save(current^, configPath);
+  };
+};
 
 let checkVersion = (assetsDir, onDone) => {
-  print_endline("Checking version");
+  /* print_endline("Checking version"); */
   switch (Files.readFile(assetsDir->Filename.concat("git-head"))) {
     | None => onDone(None)
     | Some(gitHead) =>
       fetch("https://api.github.com/repos/jaredly/qmoji/releases/latest", contents => {
-        print_endline("Fetched!");
+        /* print_endline("Fetched!"); */
         open Json.Infix;
         let tag = Json.parse(contents) |> Json.get("tag_name") |?> Json.string;
         switch tag {
           | None => onDone(None)
-          | Some(tag) when tag == lastTag.contents => onDone(None)
+          | Some(tag) when tag == Config.current^.lastCheckedTag => onDone(None)
           | Some(tag) => fetch("https://api.github.com/repos/jaredly/qmoji/commits/" ++ tag, contents => {
             let sha = Json.parse(contents) |> Json.get("sha") |?> Json.string;
             switch sha {
               | None => onDone(None)
               | Some(sha) =>
-                print_endline("Have sh! " ++ sha);
                 if (sha == gitHead) {
-                  lastTag := tag
+                  Config.update(config => {...config, lastCheckedTag: tag});
+                  onDone(None)
                 } else {
-                  /* TODO report tag name */
                   onDone(Some(tag))
                 }
             }
@@ -114,8 +149,6 @@ let checkVersion = (assetsDir, onDone) => {
       });
   }
 };
-
-external toggleMenuItem: (Fluid.App.menuItem, bool) => unit = "qmenu_toggleMenuItem";
 
 let toggleItem = (~title, ~initial, ~onChange) => {
   let v = ref(None);
@@ -134,63 +167,57 @@ let toggleItem = (~title, ~initial, ~onChange) => {
   item
 };
 
-let showAtCursor = ref(false);
+let hasNewVersion = ref(None);
+let onHasNewVersion = ref((x: option(string)) => ());
 
-let rightClickMenu = Fluid.App.menu(
-  ~title="Settings",
-  ~items=[|
-    toggleItem(~title="Check for updates", ~initial=true, ~onChange=shouldCheck => {
-      print_endline(shouldCheck ? "Will check" : "Wont check")
-    }),
-    toggleItem(~title="Show popup at cursor", ~initial=showAtCursor^, ~onChange=shouldShow => {
-      showAtCursor := shouldShow
-    }),
-    Fluid.App.menuItem(~title="Quit", ~action=Call(() => {
-      print_endline("psyc");
-    }), ~shortcut=""),
-    Fluid.App.menuItem(~title="Quit", ~action=Selector("terminate:"), ~shortcut="")
-  |]
-);
+let checkingTime = 1000 * 60 * 60 * 24;
+let checkingTime = 1000 * 5;
+
+let startChecking = assetsDir => {
+  let rec check = () => {
+    if (Config.current^.checkForUpdates) {
+      checkVersion(assetsDir, hasNew => {
+        if (hasNew != hasNewVersion^) {
+          hasNewVersion := hasNew;
+          onHasNewVersion^(hasNew)
+        };
+        loop()
+      })
+    } else {
+      loop()
+    }
+  }
+  and loop = () => setTimeout(check, checkingTime);
+  loop()
+};
 
 let main = (~assetsDir, ~emojis, ~onDone, hooks) => {
   let%hook (text, setText) = useState("");
   let%hook (selection, setSelection) = useState(0);
-  let%hook (hasNewVersion, setHasNewVersion) = useState(None);
+  let%hook (hasNewVersion, setHasNewVersion) = useState(hasNewVersion^);
+
+  onHasNewVersion := setHasNewVersion;
+
+  let%hook rightClickMenu = useMemo(() => {
+    Fluid.App.menu(
+      ~title="Settings",
+      ~items=[|
+        toggleItem(~title="Check for updates", ~initial=Config.current^.checkForUpdates, ~onChange=checkForUpdates => {
+          Config.update(config => {...config, checkForUpdates});
+        }),
+        toggleItem(~title="Show popup at cursor", ~initial=Config.current^.showAtCursor, ~onChange=showAtCursor => {
+          Config.update(config => {...config, showAtCursor});
+        }),
+        Fluid.App.menuItem(~title="Quit", ~action=Selector("terminate:"), ~shortcut="")
+      |]
+    );
+  }, ());
 
   let filtered = text == "" ? emojis : {
     emojis->Belt.List.keepMap(fuzzyEmoji(text))->Belt.List.sort(
       ((ascore, amoji), (bscore, bmoji)) => Fuzzy.compareScores(ascore, bscore)
     )->Belt.List.map(snd);
   };
-
-  let%hook () = useEffect(() => {
-    let stopped = ref(false);
-    checkVersion(assetsDir, hasNew => {
-      if (stopped^) {
-        ()
-      } else if (hasNew != None) {
-        setHasNewVersion(hasNew)
-      } else {
-        let rec loop = () => setTimeout(() => {
-          /* print_endline("Got timeout"); */
-          if (!stopped^) {
-            checkVersion(assetsDir, hasNew => {
-              if (stopped^) {
-                ()
-              } else if (hasNew != None) {
-                setHasNewVersion(hasNew)
-              } else {
-                loop()
-              }
-            })
-          }
-          /* Check once per day */
-        }, 1000 * 60 * 60 * 24);
-        loop();
-      }
-    });
-    () => stopped := true
-  }, ());
 
   let%hook prev = useRef(None);
 
@@ -278,10 +305,7 @@ let main = (~assetsDir, ~emojis, ~onDone, hooks) => {
           setSelection(0)
         }}
       />
-      <button title="v" onPress={() => {
-        print_endline("Ok");
-        showMenu(rightClickMenu);
-      }} />
+      <button title="v" onPress={() => showMenu(rightClickMenu)} />
     </view>
     {Fluid.Native.scrollView(
       ~layout={Layout.style(
@@ -322,6 +346,8 @@ let main = (~assetsDir, ~emojis, ~onDone, hooks) => {
 let run = assetsDir => {
   let (/+) = Filename.concat;
   let emojis = Emojis.loadEmojis(assetsDir /+ "emojis.json");
+
+  startChecking(assetsDir);
 
   Fluid.App.launch(
     ~isAccessory=true,
@@ -369,11 +395,11 @@ let run = assetsDir => {
     );
 
     Fluid.Hotkeys.register(~key=0x31, () => {
-      print_endline("Got it!");
-      let pos = showAtCursor^
+      let pos = Config.current^.showAtCursor
         ? {
           let {x, y} = currentMousePos(win);
-          {x: x -. fullWidth /. 2., y: y -. 20.}
+          /* {x: x -. fullWidth /. 2., y: y -. 20.} */
+          {x,y}
         }
         : Fluid.App.statusBarPos(statusBarItem);
       Fluid.Window.showAtPos(
