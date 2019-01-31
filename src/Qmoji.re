@@ -20,13 +20,13 @@ let setTimeout = (fn, time) => setTimeout(UnitTracker.track(fn), time);
 
 external toggleMenuItem: (Fluid.App.menuItem, bool) => unit = "qmenu_toggleMenuItem";
 
-let fuzzyEmoji = (text, emoji) => {
+let fuzzyEmoji = (text, recentlyUsedMap, emoji) => {
   let score = Fuzzy.fuzzyScore(~exactWeight=1000, text, emoji.name);
   let best = emoji.keywords->Belt.Array.reduce(score, (score, kwd) => {
     Fuzzy.maxScore(score, Fuzzy.fuzzyScore(text, kwd))
   });
   if (best.full) {
-    Some((best, emoji))
+    Some((best, emoji, recentlyUsedMap->Belt.Map.String.get(emoji.name)))
   } else {
     None
   }
@@ -58,8 +58,11 @@ let dimsForIndex = (~padding=0., index) => {
   }
 };
 
-let drawEmoji = (dims, {top, left, width, height}, emoji, isSelected) =>
+let drawEmoji = (dims, {top, left, width, height}, emoji, used, isSelected) =>
   if (dims.top +. size >= top && dims.top <= top +. height) {
+    if (used != None) {
+      Fluid.Draw.fillRect(dims, {r: 0.6, g: 0.6, b: 0.8, a: 0.2});
+    };
     if (isSelected) {
       Fluid.Draw.rect(dims, {r: 0.4, g: 0.4, b: 0.4, a: 0.5});
     };
@@ -90,19 +93,32 @@ module Config = {
     showAtCursor: bool,
     checkForUpdates: bool,
     lastCheckedTag: string,
+    recentlyUsed: Belt.Map.String.t((int, float))
   };
-  let default = {showAtCursor: false, checkForUpdates: true, lastCheckedTag: "-"};
+  let m = Unix.gettimeofday();
+  let default = {showAtCursor: false, checkForUpdates: true, lastCheckedTag: "-", recentlyUsed: Belt.Map.String.empty};
   let ofJson = json => {
     open Json.Infix;
     let showAtCursor = json |> Json.get("showAtCursor") |?> Json.bool |? false;
     let checkForUpdates = json |> Json.get("checkForUpdates") |?> Json.bool |? true;
     let lastCheckedTag = json |> Json.get("lastCheckedTag") |?> Json.string |? "-";
-    {showAtCursor, checkForUpdates, lastCheckedTag}
+    let recentlyUsed = json |> Json.get("recentlyUsed") |?> Json.array |?>> Belt.List.keepMap(_, item => {
+      switch ((item |> Json.get("name") |?> Json.string, item |> Json.get("count") |?> Json.number, item |> Json.get("date") |?> Json.number)) {
+        | (Some(name), Some(count), Some(date)) => Some((name, (int_of_float(count), date)))
+        | _ => None
+      }
+    }) |?>> Belt.List.toArray |?>> Belt.Map.String.fromArray |? Belt.Map.String.empty;
+    {showAtCursor, checkForUpdates, lastCheckedTag, recentlyUsed}
   };
-  let toJson = ({showAtCursor, checkForUpdates, lastCheckedTag}) => Json.Object([
+  let toJson = ({showAtCursor, checkForUpdates, lastCheckedTag, recentlyUsed}) => Json.Object([
     ("showAtCursor", showAtCursor ? Json.True : Json.False),
     ("checkForUpdates", checkForUpdates ? Json.True : Json.False),
-    ("lastCheckedTag", Json.String(lastCheckedTag))
+    ("lastCheckedTag", Json.String(lastCheckedTag)),
+    ("recentlyUsed", Json.Array(recentlyUsed->Belt.Map.String.toArray->Belt.List.fromArray->Belt.List.map(((name, (count, date))) => Json.Object([
+      ("name", Json.String(name)),
+      ("count", Json.Number(float_of_int(count))),
+      ("date", Json.Number(date)),
+    ]))))
   ]);
   let load = path => switch (Json.parse(Files.readFileExn(path))) {
     | exception _ => default
@@ -121,10 +137,36 @@ module Config = {
     current := fn(current^);
     save(current^, configPath);
   };
+
+  let maxRecentlyUsed = 20;
+
+  let removeEmojiUse = name => update(({recentlyUsed} as config) => {...config, recentlyUsed: Belt.Map.String.remove(recentlyUsed, name)});
+
+  let useEmoji = name => {
+    update(({recentlyUsed} as config) => {
+      let recentlyUsed = switch (Belt.Map.String.get(recentlyUsed, name)) {
+        | Some((count, date)) => Belt.Map.String.set(recentlyUsed, name, (count + 1, Unix.gettimeofday()))
+        | None =>
+          if (Belt.Map.String.size(recentlyUsed) < maxRecentlyUsed) {
+            Belt.Map.String.set(recentlyUsed, name, (1, Unix.gettimeofday()))
+          } else {
+            let least = recentlyUsed->Belt.Map.String.reduce(None, (least, key, (count, date)) => switch least {
+              | None => Some((key, count, date))
+              | Some((okey, ocount, odate)) when ocount > count || (ocount == count && odate > date) => Some((key, count, date))
+              | _ => least
+            });
+            switch least {
+              | None => recentlyUsed
+              | Some((least, _, _)) => Belt.Map.String.remove(recentlyUsed, least)->Belt.Map.String.set(name, (1, Unix.gettimeofday()))
+            }
+          }
+      };
+      {...config, recentlyUsed}
+    });
+  };
 };
 
 let checkVersion = (assetsDir, onDone) => {
-  /* print_endline("Checking version"); */
   switch (Files.readFile(assetsDir->Filename.concat("git-head"))) {
     | None => onDone(None)
     | Some(gitHead) =>
@@ -193,10 +235,30 @@ let startChecking = assetsDir => {
   check()
 };
 
+let compareUsed = (a, b) => switch (a, b) {
+  | (Some((acount, adate)), Some((bcount, bdate))) =>
+    if (acount != bcount) {
+      bcount - acount
+    } else {
+      int_of_float(bdate) - int_of_float(adate)
+    }
+  | (Some(_), _) => -1
+  | (_, Some(_)) => 1
+  | _ => 0
+};
+
 let main = (~assetsDir, ~emojis, ~onDone, hooks) => {
   let%hook (text, setText) = useState("");
   let%hook (selection, setSelection) = useState(0);
   let%hook (hasNewVersion, setHasNewVersion) = useState(hasNewVersion^);
+
+  let onSelect = emoji => {
+    Config.useEmoji(emoji.name);
+    setSelection(0);
+    setText("");
+    onDone(Some(emoji.char))
+  };
+  let onCancel = () => onDone(None);
 
   onHasNewVersion := setHasNewVersion;
 
@@ -215,18 +277,25 @@ let main = (~assetsDir, ~emojis, ~onDone, hooks) => {
     );
   }, ());
 
-  let filtered = text == "" ? emojis : {
-    emojis->Belt.List.keepMap(fuzzyEmoji(text))->Belt.List.sort(
-      ((ascore, amoji), (bscore, bmoji)) => Fuzzy.compareScores(ascore, bscore)
-    )->Belt.List.map(snd);
+  let filtered = text == "" ? emojis->Belt.List.map(em => (em, Config.current^.recentlyUsed->Belt.Map.String.get(em.name)))->Belt.List.sort(((amoji, aused), (bmoji, bused)) => compareUsed(aused, bused)) : {
+    emojis->Belt.List.keepMap(fuzzyEmoji(text, Config.current^.recentlyUsed))->Belt.List.sort(
+      ((ascore, amoji, aused), (bscore, bmoji, bused)) => {
+        let uc = compareUsed(aused, bused);
+        if (uc == 0) {
+          Fuzzy.compareScores(ascore, bscore)
+        } else {
+          uc
+        }
+      }
+    )->Belt.List.map(((_, emoji, used)) => (emoji, used));
   };
 
   let%hook prev = useRef(None);
 
   let invalidated = switch (prev.contents) {
     | None => `Full
-    | Some((prevText, prevSelection)) =>
-      if (prevText != text) {
+    | Some((prevText, prevSelection, prevUsed)) =>
+      if (prevText != text || prevUsed !== Config.current^.recentlyUsed) {
         `Full
       } else if (prevSelection != selection) {
         `Partial([
@@ -238,7 +307,7 @@ let main = (~assetsDir, ~emojis, ~onDone, hooks) => {
       }
   };
 
-  prev.contents = Some((text, selection));
+  prev.contents = Some((text, selection, Config.current^.recentlyUsed));
 
   let rows = ceil(float_of_int(List.length(filtered)) /. rowf)->int_of_float;
 
@@ -249,33 +318,39 @@ let main = (~assetsDir, ~emojis, ~onDone, hooks) => {
     }
   }, filtered)
 
+  let%hook rightMouseDown = useCallback((pos) => {
+    let index = indexForPos(pos);
+    switch (filtered->Belt.List.get(index)) {
+      | None => ()
+      | Some((emoji, _)) =>
+        Config.removeEmojiUse(emoji.name);
+        setText(text);
+    }
+  }, (text, filtered))
+
   let%hook mouseDown = useCallback((pos) => {
     let index = indexForPos(pos);
     switch (filtered->Belt.List.get(index)) {
       | None => ()
-      | Some({char}) =>
-        setText("")
-        setSelection(0);
-        onDone(Some(char));
+      | Some((emoji, _)) =>
+        onSelect(emoji);
     }
   }, filtered)
 
   let%hook draw = useCallback((bounds) => {
-    filtered->Belt.List.forEachWithIndex((index, emoji) => drawEmoji(dimsForIndex(index), bounds, emoji, index == selection));
-  }, (text, selection));
+    filtered->Belt.List.forEachWithIndex((index, (emoji, used)) => drawEmoji(dimsForIndex(index), bounds, emoji, used, index == selection));
+  }, (filtered, selection));
 
   let%hook onEnter = useCallback(text => {
         switch (Belt.List.get(filtered, selection)) {
-          | None => onDone(None)
-          | Some({char}) => onDone(Some(char))
+          | None => onCancel()
+          | Some((emoji, _)) => onSelect(emoji)
         };
-        setSelection(0);
-        setText("");
   }, (filtered, selection));
 
   let%hook onEscape = useCallback({() => {
     if (text == "") {
-      onDone(None)
+      onCancel()
     } else {
       setSelection(0);
       setText("");
@@ -322,20 +397,21 @@ let main = (~assetsDir, ~emojis, ~onDone, hooks) => {
         <view layout={
           Layout.style(~paddingHorizontal=10., ~alignSelf=AlignStretch, ())
         }>
-      <custom
-        invalidated
-        layout={Layout.style(~alignSelf=AlignStretch, ~height=(float_of_int(rows) *. size), ())}
-        onMouseDown={mouseDown}
-        onMouseMove={mouseMove}
-        draw={draw}
-      />
+          <custom
+            invalidated
+            layout={Layout.style(~alignSelf=AlignStretch, ~height=(float_of_int(rows) *. size), ())}
+            onMouseDown={mouseDown}
+            onMouseMove={mouseMove}
+            onRightMouseDown={rightMouseDown}
+            draw={draw}
+          />
         </view>
       ],
       ()
     )}
     {switch (filtered->Belt.List.get(selection)) {
       | None => <view />
-      | Some(emoji) => <ShowEmoji emoji />
+      | Some((emoji, _)) => <ShowEmoji emoji />
     }}
     {switch (hasNewVersion) {
       | None => <view />
