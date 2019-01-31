@@ -172,7 +172,6 @@ let hasNewVersion = ref(None);
 let onHasNewVersion = ref((x: option(string)) => ());
 
 let checkingTime = 1000 * 60 * 60 * 24;
-let checkingTime = 1000 * 5;
 
 let startChecking = assetsDir => {
   let rec check = () => {
@@ -203,7 +202,7 @@ let main = (~assetsDir, ~emojis, ~onDone, hooks) => {
     Fluid.App.menu(
       ~title="Settings",
       ~items=[|
-        toggleItem(~title="Check for updates", ~initial=Config.current^.checkForUpdates, ~onChange=checkForUpdates => {
+        toggleItem(~title="Check for updates daily", ~initial=Config.current^.checkForUpdates, ~onChange=checkForUpdates => {
           Config.update(config => {...config, checkForUpdates});
         }),
         toggleItem(~title="Show popup at cursor", ~initial=Config.current^.showAtCursor, ~onChange=showAtCursor => {
@@ -290,11 +289,12 @@ let main = (~assetsDir, ~emojis, ~onDone, hooks) => {
   >
     <view layout={Layout.style(
       ~flexDirection=Row,
+      ~alignItems=AlignCenter,
       ()
     )}>
       <text
         contents=text
-        layout={Layout.style(~alignSelf=AlignStretch, ~flexGrow=1., ~marginHorizontal=10., ~marginBottom=15., ~marginTop=5., ())}
+        layout={Layout.style(~alignSelf=AlignStretch, ~flexGrow=1., ~marginLeft=10., ~marginBottom=15., ~marginTop=5., ())}
         onEnter
         onEscape
         onTab={() => setSelection(selection == List.length(filtered) - 1 ? 0 : selection + 1)}
@@ -306,7 +306,7 @@ let main = (~assetsDir, ~emojis, ~onDone, hooks) => {
           setSelection(0)
         }}
       />
-      <button title="v" onPress={() => showMenu(rightClickMenu)} />
+      <button title="⚙︎" onPress={() => showMenu(rightClickMenu)} layout=Layout.style(~marginRight=5., ()) />
     </view>
     {Fluid.Native.scrollView(
       ~layout={Layout.style(
