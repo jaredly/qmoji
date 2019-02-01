@@ -49,7 +49,7 @@ I'm making a [react-like UI framework for native reasonml](https://github.com/ja
 ## Future work
 that I'll probably do because I already like this better than mac's builtin picker
 
-- [ ] memory of most-frequently used
+- [x] memory of most-frequently used
 - [x] fuzzy search
 - [ ] option to start at login
 - [ ] skin tone modifier selection
