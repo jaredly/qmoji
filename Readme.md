@@ -1,14 +1,14 @@
 Ok folks, here it is. The source code is still living over in the [fluid repo](https://github.com/jaredly/fluid/tree/master/src/qmoji), because I'm using it to field test the Fluid api & macos bindings. But I made this separate repositories so that releases will make sense. Also I'll probably move the source code over here eventually.
 
-![screenshot](screenshot.png)
+<img src="screenshot.png" width="300px">
 
 Inspired by the excellent [mojibar](https://github.com/muan/mojibar).
 
-![sizes](sizes.png)
+<img src="sizes.png" width="300px">
 
 that's what I'm talkin bout
 
-![memory](memory.png)
+<img src="memory.png" width="300px" >
 
 definitely saving on the ram side of things too
 
@@ -20,6 +20,16 @@ definitely saving on the ram side of things too
 - you should see a 🙃 in your statusbar
 - you'll need to disable the macos "show a finder search window" shortcut like so https://twitter.com/ThomasAlcala/status/1088710623708565504
 - now option-cmd-space will bring up qmoji!
+
+### Mojave note:
+
+user @Tibfib writes:
+
+> Every time I update the app (by downloading the new one and replacing qmoji.app in my Applications folder), the app is no longer able to insert emojis.
+
+> I have to go to the System Preferences -> Security & Privacy -> Privacy -> Accessibility -> Uncheck qmoji.app -> Check qmoji.app and it works again.
+
+I'm developing on High Sierra so I can't verify.
 
 ## Controls
 
