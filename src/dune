@@ -1,7 +1,7 @@
 
 (library
   (name Qmoji)
-  (libraries str flex belt fluid RexJson fluid.Files fluid.MacOS)
+  (libraries str flex belt RexJson fluid.Files fluid.MacOS)
   (c_names Qmoji)
   (flags :standard -open RexJson -w -9-3)
     (c_flags -x objective-c)

@@ -5,7 +5,7 @@
     "build": "dune build -p #{self.name}"
   },
   "scripts": {
-    "start": "dune exec QmojiDev",
+    "start": "esy x QmojiDev",
     "pkg": "sh -c 'cd bundler && ./bundle.sh'"
   },
   "dependencies": {

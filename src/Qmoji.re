@@ -1,4 +1,5 @@
 open FluidMac;
+open Fluid.Native;
 
 let str = Fluid.string;
 
@@ -9,7 +10,6 @@ open Fuzzy.T;
 external currentMousePos: Fluid.Window.window => pos = "qmoji_current_mouse";
 external showMenu: Fluid.App.menu => unit = "qmoji_showMenu";
 external openUrl: string => unit = "qmoji_openUrl";
-external homeDirectory: unit => string = "qmoji_homeDirectory";
 
 let (|?>) = (x, fn) => switch x { |None => None| Some(x) => fn(x)};
 
@@ -86,84 +86,6 @@ let showEmoji = (~emoji, hooks) => {
     {str(emoji.name)}
     {str(emoji.keywords |> Belt.List.fromArray |> String.concat(", "))}
   </view>
-};
-
-module Config = {
-  type config = {
-    showAtCursor: bool,
-    checkForUpdates: bool,
-    lastCheckedTag: string,
-    recentlyUsed: Belt.Map.String.t((int, float))
-  };
-  let m = Unix.gettimeofday();
-  let default = {showAtCursor: false, checkForUpdates: true, lastCheckedTag: "-", recentlyUsed: Belt.Map.String.empty};
-  let ofJson = json => {
-    open Json.Infix;
-    let showAtCursor = json |> Json.get("showAtCursor") |?> Json.bool |? false;
-    let checkForUpdates = json |> Json.get("checkForUpdates") |?> Json.bool |? true;
-    let lastCheckedTag = json |> Json.get("lastCheckedTag") |?> Json.string |? "-";
-    let recentlyUsed = json |> Json.get("recentlyUsed") |?> Json.array |?>> Belt.List.keepMap(_, item => {
-      switch ((item |> Json.get("name") |?> Json.string, item |> Json.get("count") |?> Json.number, item |> Json.get("date") |?> Json.number)) {
-        | (Some(name), Some(count), Some(date)) => Some((name, (int_of_float(count), date)))
-        | _ => None
-      }
-    }) |?>> Belt.List.toArray |?>> Belt.Map.String.fromArray |? Belt.Map.String.empty;
-    {showAtCursor, checkForUpdates, lastCheckedTag, recentlyUsed}
-  };
-  let toJson = ({showAtCursor, checkForUpdates, lastCheckedTag, recentlyUsed}) => Json.Object([
-    ("showAtCursor", showAtCursor ? Json.True : Json.False),
-    ("checkForUpdates", checkForUpdates ? Json.True : Json.False),
-    ("lastCheckedTag", Json.String(lastCheckedTag)),
-    ("recentlyUsed", Json.Array(recentlyUsed->Belt.Map.String.toArray->Belt.List.fromArray->Belt.List.map(((name, (count, date))) => Json.Object([
-      ("name", Json.String(name)),
-      ("count", Json.Number(float_of_int(count))),
-      ("date", Json.Number(date)),
-    ]))))
-  ]);
-  let load = path => switch (Json.parse(Files.readFileExn(path))) {
-    | exception _ => default
-    | json => ofJson(json)
-  };
-  let save = (config, path) => Files.writeFileExn(path, Json.stringify(toJson(config)));
-
-  let (/+) = Filename.concat;
-
-  let configPath = homeDirectory() /+ "Library" /+ "Preferences" /+ "com.jaredforsyth.qmoji.json";
-
-  print_endline("Saving config to " ++ configPath);
-
-  let current = ref(load(configPath));
-  let update = fn => {
-    current := fn(current^);
-    save(current^, configPath);
-  };
-
-  let maxRecentlyUsed = 20;
-
-  let removeEmojiUse = name => update(({recentlyUsed} as config) => {...config, recentlyUsed: Belt.Map.String.remove(recentlyUsed, name)});
-
-  let useEmoji = name => {
-    update(({recentlyUsed} as config) => {
-      let recentlyUsed = switch (Belt.Map.String.get(recentlyUsed, name)) {
-        | Some((count, date)) => Belt.Map.String.set(recentlyUsed, name, (count + 1, Unix.gettimeofday()))
-        | None =>
-          if (Belt.Map.String.size(recentlyUsed) < maxRecentlyUsed) {
-            Belt.Map.String.set(recentlyUsed, name, (1, Unix.gettimeofday()))
-          } else {
-            let least = recentlyUsed->Belt.Map.String.reduce(None, (least, key, (count, date)) => switch least {
-              | None => Some((key, count, date))
-              | Some((okey, ocount, odate)) when ocount > count || (ocount == count && odate > date) => Some((key, count, date))
-              | _ => least
-            });
-            switch least {
-              | None => recentlyUsed
-              | Some((least, _, _)) => Belt.Map.String.remove(recentlyUsed, least)->Belt.Map.String.set(name, (1, Unix.gettimeofday()))
-            }
-          }
-      };
-      {...config, recentlyUsed}
-    });
-  };
 };
 
 let checkVersion = (assetsDir, onDone) => {
@@ -248,7 +170,7 @@ let compareUsed = (a, b) => switch (a, b) {
 };
 
 let main = (~assetsDir, ~emojis, ~onDone, hooks) => {
-  let%hook (text, setText) = useState("");
+  let%hook (searchText, setText) = useState("");
   let%hook (selection, setSelection) = useState(0);
   let%hook (hasNewVersion, setHasNewVersion) = useState(hasNewVersion^);
 
@@ -279,8 +201,8 @@ let main = (~assetsDir, ~emojis, ~onDone, hooks) => {
     );
   }, ());
 
-  let filtered = text == "" ? emojis->Belt.List.map(em => (em, Config.current^.recentlyUsed->Belt.Map.String.get(em.name)))->Belt.List.sort(((amoji, aused), (bmoji, bused)) => compareUsed(aused, bused)) : {
-    emojis->Belt.List.keepMap(fuzzyEmoji(text, Config.current^.recentlyUsed))->Belt.List.sort(
+  let filtered = searchText == "" ? emojis->Belt.List.map(em => (em, Config.current^.recentlyUsed->Belt.Map.String.get(em.name)))->Belt.List.sort(((amoji, aused), (bmoji, bused)) => compareUsed(aused, bused)) : {
+    emojis->Belt.List.keepMap(fuzzyEmoji(searchText, Config.current^.recentlyUsed))->Belt.List.sort(
       ((ascore, amoji, aused), (bscore, bmoji, bused)) => {
         let uc = compareUsed(aused, bused);
         if (uc == 0) {
@@ -297,7 +219,7 @@ let main = (~assetsDir, ~emojis, ~onDone, hooks) => {
   let invalidated = switch (prev.contents) {
     | None => `Full
     | Some((prevText, prevSelection, prevUsed)) =>
-      if (prevText != text || prevUsed !== Config.current^.recentlyUsed) {
+      if (prevText != searchText || prevUsed !== Config.current^.recentlyUsed) {
         `Full
       } else if (prevSelection != selection) {
         `Partial([
@@ -309,7 +231,7 @@ let main = (~assetsDir, ~emojis, ~onDone, hooks) => {
       }
   };
 
-  prev.contents = Some((text, selection, Config.current^.recentlyUsed));
+  prev.contents = Some((searchText, selection, Config.current^.recentlyUsed));
 
   let rows = ceil(float_of_int(List.length(filtered)) /. rowf)->int_of_float;
 
@@ -326,9 +248,9 @@ let main = (~assetsDir, ~emojis, ~onDone, hooks) => {
       | None => ()
       | Some((emoji, _)) =>
         Config.removeEmojiUse(emoji.name);
-        setText(text);
+        setText(searchText);
     }
-  }, (text, filtered))
+  }, (searchText, filtered))
 
   let%hook mouseDown = useCallback((pos) => {
     let index = indexForPos(pos);
@@ -351,13 +273,13 @@ let main = (~assetsDir, ~emojis, ~onDone, hooks) => {
   }, (filtered, selection));
 
   let%hook onEscape = useCallback({() => {
-    if (text == "") {
+    if (searchText == "") {
       onCancel()
     } else {
       setSelection(0);
       setText("");
     }
-  }}, text);
+  }}, searchText);
 
   <view
     layout={Layout.style(
@@ -372,7 +294,7 @@ let main = (~assetsDir, ~emojis, ~onDone, hooks) => {
       ()
     )}>
       <text
-        contents=text
+        contents=searchText
         layout={Layout.style(~alignSelf=AlignStretch, ~flexGrow=1., ~marginLeft=10., ~marginBottom=15., ~marginTop=5., ())}
         onEnter
         onEscape
@@ -469,6 +391,7 @@ let run = assetsDir => {
     let imageTitle = Emojis.grayscaleEmoji("🙃");
 
     let statusBarItem = Fluid.App.statusBarItem(
+      ~isVariableLength=false,
       ~title=Image(imageTitle),
       ~onClick=pos => {
         Fluid.Window.showAtPos(win, pos)
