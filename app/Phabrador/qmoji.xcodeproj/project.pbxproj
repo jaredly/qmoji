@@ -1,0 +1,364 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F7B5ED3225319A30012DBE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7B5ED2225319A30012DBE1 /* AppDelegate.m */; };
+		7F7B5ED5225319A40012DBE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F7B5ED4225319A40012DBE1 /* Assets.xcassets */; };
+		7F7B5ED8225319A40012DBE1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F7B5ED6225319A40012DBE1 /* MainMenu.xib */; };
+		7F7B5EDB225319A40012DBE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7B5EDA225319A40012DBE1 /* main.m */; };
+		7F7B5EE822531B450012DBE1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F7B5EE722531B450012DBE1 /* Cocoa.framework */; };
+		7F7B5EEA22531B500012DBE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F7B5EE922531B500012DBE1 /* Foundation.framework */; };
+		7F7B5EEC22531B5A0012DBE1 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F7B5EEB22531B590012DBE1 /* CoreImage.framework */; };
+		7F7B5EEE22531B5F0012DBE1 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F7B5EED22531B5F0012DBE1 /* Carbon.framework */; };
+		7FBAB4B5226E65A4003A686B /* qmojiDev.exe.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBAB4B4226E65A4003A686B /* qmojiDev.exe.o */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7F7B5ECE225319A30012DBE1 /* qmoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qmoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F7B5ED1225319A30012DBE1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7F7B5ED2225319A30012DBE1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7F7B5ED4225319A40012DBE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7F7B5ED7225319A40012DBE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		7F7B5ED9225319A40012DBE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F7B5EDA225319A40012DBE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7F7B5EDC225319A40012DBE1 /* Phabrador.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Phabrador.entitlements; sourceTree = "<group>"; };
+		7F7B5EE722531B450012DBE1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		7F7B5EE922531B500012DBE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7F7B5EEB22531B590012DBE1 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		7F7B5EED22531B5F0012DBE1 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		7FBAB4B4226E65A4003A686B /* qmojiDev.exe.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = qmojiDev.exe.o; path = ../qmojiDev.exe.o; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7F7B5ECB225319A30012DBE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F7B5EEE22531B5F0012DBE1 /* Carbon.framework in Frameworks */,
+				7F7B5EEC22531B5A0012DBE1 /* CoreImage.framework in Frameworks */,
+				7F7B5EEA22531B500012DBE1 /* Foundation.framework in Frameworks */,
+				7F7B5EE822531B450012DBE1 /* Cocoa.framework in Frameworks */,
+				7FBAB4B5226E65A4003A686B /* qmojiDev.exe.o in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7F7B5EC5225319A30012DBE1 = {
+			isa = PBXGroup;
+			children = (
+				7FBAB4B4226E65A4003A686B /* qmojiDev.exe.o */,
+				7F7B5ED0225319A30012DBE1 /* Phabrador */,
+				7F7B5ECF225319A30012DBE1 /* Products */,
+				7F7B5EE622531B450012DBE1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7F7B5ECF225319A30012DBE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F7B5ECE225319A30012DBE1 /* qmoji.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7F7B5ED0225319A30012DBE1 /* Phabrador */ = {
+			isa = PBXGroup;
+			children = (
+				7F7B5ED1225319A30012DBE1 /* AppDelegate.h */,
+				7F7B5ED2225319A30012DBE1 /* AppDelegate.m */,
+				7F7B5ED4225319A40012DBE1 /* Assets.xcassets */,
+				7F7B5ED6225319A40012DBE1 /* MainMenu.xib */,
+				7F7B5ED9225319A40012DBE1 /* Info.plist */,
+				7F7B5EDA225319A40012DBE1 /* main.m */,
+				7F7B5EDC225319A40012DBE1 /* Phabrador.entitlements */,
+			);
+			path = Phabrador;
+			sourceTree = "<group>";
+		};
+		7F7B5EE622531B450012DBE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F7B5EED22531B5F0012DBE1 /* Carbon.framework */,
+				7F7B5EEB22531B590012DBE1 /* CoreImage.framework */,
+				7F7B5EE922531B500012DBE1 /* Foundation.framework */,
+				7F7B5EE722531B450012DBE1 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7F7B5ECD225319A30012DBE1 /* qmoji */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F7B5EDF225319A40012DBE1 /* Build configuration list for PBXNativeTarget "qmoji" */;
+			buildPhases = (
+				7F7B5ECA225319A30012DBE1 /* Sources */,
+				7F7B5ECB225319A30012DBE1 /* Frameworks */,
+				7F7B5ECC225319A30012DBE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = qmoji;
+			productName = Phabrador;
+			productReference = 7F7B5ECE225319A30012DBE1 /* qmoji.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F7B5EC6225319A30012DBE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Jared Forsyth";
+				TargetAttributes = {
+					7F7B5ECD225319A30012DBE1 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 7F7B5EC9225319A30012DBE1 /* Build configuration list for PBXProject "qmoji" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7F7B5EC5225319A30012DBE1;
+			productRefGroup = 7F7B5ECF225319A30012DBE1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7F7B5ECD225319A30012DBE1 /* qmoji */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F7B5ECC225319A30012DBE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F7B5ED5225319A40012DBE1 /* Assets.xcassets in Resources */,
+				7F7B5ED8225319A40012DBE1 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F7B5ECA225319A30012DBE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F7B5EDB225319A40012DBE1 /* main.m in Sources */,
+				7F7B5ED3225319A30012DBE1 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7F7B5ED6225319A40012DBE1 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F7B5ED7225319A40012DBE1 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F7B5EDD225319A40012DBE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7F7B5EDE225319A40012DBE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7F7B5EE0225319A40012DBE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Phabrador/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaredforsyth.qmoji;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7F7B5EE1225319A40012DBE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Phabrador/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaredforsyth.qmoji;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F7B5EC9225319A30012DBE1 /* Build configuration list for PBXProject "qmoji" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F7B5EDD225319A40012DBE1 /* Debug */,
+				7F7B5EDE225319A40012DBE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F7B5EDF225319A40012DBE1 /* Build configuration list for PBXNativeTarget "qmoji" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F7B5EE0225319A40012DBE1 /* Debug */,
+				7F7B5EE1225319A40012DBE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7F7B5EC6225319A30012DBE1 /* Project object */;
+}

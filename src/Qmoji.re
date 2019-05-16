@@ -388,11 +388,12 @@ let run = assetsDir => {
 
     closeWindow := () => Fluid.Window.hide(win);
 
-    let imageTitle = Emojis.grayscaleEmoji("🙃");
+    // let imageTitle = Emojis.grayscaleEmoji("🙃");
 
     let statusBarItem = Fluid.App.statusBarItem(
       ~isVariableLength=false,
-      ~title=Image(imageTitle),
+      ~title=String("Ha"),
+      // Image(imageTitle),
       ~onClick=pos => {
         Fluid.Window.showAtPos(win, pos)
       }

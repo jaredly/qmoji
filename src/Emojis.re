@@ -15,6 +15,8 @@ external isEmojiSupported: string => bool = "qmoji_isEmojiSupported";
 
 
 let loadEmojis = fileName => {
+  print_endline(fileName);
+  print_endline(Sys.getcwd());
   let text = Files.readFileExn(fileName);
   let emojis = Json.parse(text);
   let force = x => switch x { |None => failwith("Force unwrapped nil") | Some(x) => x};

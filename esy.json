@@ -2,7 +2,8 @@
   "name": "qmoji",
   "version": "1.1",
   "esy": {
-    "build": "dune build -p #{self.name}"
+    "build": "dune build -p #{self.name}",
+    "buildsInSource": "_build"
   },
   "scripts": {
     "start": "esy x QmojiDev",

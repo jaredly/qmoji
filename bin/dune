@@ -3,6 +3,7 @@
   (public_name qmojiDev)
   (libraries Qmoji)
   (modules QmojiDev)
+  (modes native byte object shared_object)
   (link_flags -cclib -framework -cclib Cocoa -cclib -framework -cclib Carbon -cclib -framework -cclib CoreImage)
   (preprocess (pps belt.ppx fluid.ppx)))
 
