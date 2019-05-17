@@ -391,7 +391,7 @@ let run = assetsDir => {
     // let imageTitle = Emojis.grayscaleEmoji("🙃");
 
     let statusBarItem = Fluid.App.statusBarItem(
-      ~isVariableLength=false,
+      // ~isVariableLength=false,
       ~title=String("Ha"),
       // Image(imageTitle),
       ~onClick=pos => {

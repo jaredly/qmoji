@@ -13,11 +13,11 @@
     "ocaml": ">=4.7.0",
     "@opam/dune": "*",
     "@opam/reason": "*",
-    "fluid": "jaredly/fluid",
+    "fluid": "jaredly/fluid#f83ee6d31c4dedbd9ac4f8af888521b5fcdd3d9f",
     "belt": "jaredly/belt",
     "RexJson": "jaredly/rex-json#esy"
-  },
-  "resolutions": {
-    "fluid": "link:../../explorations/fluid/esy.json"
+  // },
+  // "resolutions": {
+  //   "fluid": "link:../../explorations/fluid/esy.json"
   }
 }
