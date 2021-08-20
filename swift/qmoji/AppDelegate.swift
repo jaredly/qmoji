@@ -106,6 +106,11 @@ struct Cache {
     }
 }
 
+func heightForCount(count: Int) -> Int {
+    let lines = Int((Float(count) / Float(lineWidth)).rounded(.awayFromZero))
+    return lines * size + margin * 2
+}
+
 class CustomView: NSView {
     var trackingArea: NSTrackingArea?
     var selected: Int = 0
@@ -120,13 +125,16 @@ class CustomView: NSView {
         set {
             _searchTerm = newValue
             selected = 0
-            /*let newCache = Cache(searchTerm: newValue, usages: usages)
-            if let oldCache = self.filterCache {
+            /*let newCache =
+            if let oldCache = self.filterCakkche {
                 if oldCache.cached == newCache.cached {
                     return
                 }
             }*/
+            self.filterCache = Cache(searchTerm: newValue, usages: usages)
+            let newHeight = heightForCount(count: self.filterCache!.cached.count)
             self.scroll(NSPoint(x: 0, y: 0))
+            self.setFrameSize(NSSize(width: width, height: newHeight))
             self.setNeedsDisplay(self.bounds)
             // self.setNeedsDisplay(NSRect(x: 0, y: 0, width: self.bounds.width, height: 200))
         }
@@ -299,7 +307,8 @@ class MyVC: NSViewController, NSTextFieldDelegate {
         self.descriptionField = description
         
         let scroll = NSScrollView(frame: NSRect(x: 0, y: Int(newSize.height), width: width, height: height - h - margin * 2 - Int(newSize.height)))
-        let height = Int(ceil(CGFloat(emojis.count) / (CGFloat(width - margin * 2) / CGFloat(size) + 1.0) * CGFloat(size))) + margin * 2
+        
+        let height = heightForCount(count: emojis.count)
         let custom = CustomView(frame: NSRect(x: 0, y: 0, width: width, height: height ))
         custom.usages = usages
         self.customView = custom
