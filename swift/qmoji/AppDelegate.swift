@@ -19,6 +19,8 @@ let im = CGFloat(1)
 let size = 25
 let fontSize = size - 4
 
+let h = 20
+
 //let lineWidth = (width - margin * 2) / size
 let lineWidth = 10
 let width = numAcross * size + margin * 2
@@ -70,18 +72,63 @@ func sendKeystrokesToFrontmostApp(_ string: String) {
     keyup.postToPid(pid)
 }
 
+struct Cache {
+    var cached: [Emoji]
+    var searchTerm: String
+    init(searchTerm: String, usages: [String:Usage]) {
+        self.searchTerm = searchTerm
+        
+        if searchTerm.isEmpty {
+            var used = emojis.filter({emoji in usages[emoji.id] != nil})
+            let unused = emojis.filter({emoji in usages[emoji.id] == nil})
+            used.sort(by: { one, two in
+                let oc = usages[one.id]!.count
+                let od = usages[one.id]!.date
+                let tc = usages[two.id]!.count
+                let td = usages[two.id]!.date
+                if oc == tc {
+                    return od > td
+                } else {
+                    return oc > tc
+                }
+            })
+            used.append(contentsOf: unused)
+            cached = used
+        } else {
+            let needle = searchTerm.lowercased()
+            var scores = emojis.map({emoji in (emoji, bestMatch(emoji: emoji, needle: needle))}).filter({s in s.1.full})
+            scores.sort(by: {one, two in compareScores(one.1, two.1)})
+            var used = scores.filter({score in usages[score.0.id] != nil})
+            let unused = scores.filter({score in usages[score.0.id] == nil})
+            used.append(contentsOf: unused)
+            cached = used.map({both in both.0})
+        }
+    }
+}
+
 class CustomView: NSView {
     var trackingArea: NSTrackingArea?
     var selected: Int = 0
     var usages: [String:Usage] = [:]
+    var filterCache: Cache?
+    var onUpdate: (Emoji) -> () = {_ in ()}
+    var lastSelected: String = ""
+    
     private var _searchTerm: String = ""
     var searchTerm: String {
         get { _searchTerm }
         set {
             _searchTerm = newValue
             selected = 0
-            self.setNeedsDisplay(self.bounds)
+            /*let newCache = Cache(searchTerm: newValue, usages: usages)
+            if let oldCache = self.filterCache {
+                if oldCache.cached == newCache.cached {
+                    return
+                }
+            }*/
             self.scroll(NSPoint(x: 0, y: 0))
+            self.setNeedsDisplay(self.bounds)
+            // self.setNeedsDisplay(NSRect(x: 0, y: 0, width: self.bounds.width, height: 200))
         }
     }
     override var isFlipped: Bool {
@@ -99,84 +146,83 @@ class CustomView: NSView {
             self.trackingArea = nil
         }
 
-        self.trackingArea = NSTrackingArea.init(rect: self.bounds, options: [.mouseMoved, .mouseEnteredAndExited, .activeInKeyWindow], owner: self, userInfo: nil)
+        self.trackingArea = NSTrackingArea.init(rect: self.bounds, options: [.mouseMoved, .activeInKeyWindow, .inVisibleRect], owner: self, userInfo: nil)
         self.addTrackingArea(self.trackingArea!)
     }
     
     override func mouseMoved(with event: NSEvent) {
         let local = self.convert(event.locationInWindow, from: nil)
-        
-        let old = pointFromIndex(index: self.selected)
-        self.selected = indexFromPoint(point: local)
-        self.setNeedsDisplay(pointRect(point: old).insetBy(dx: -5, dy: -5))
-        self.setNeedsDisplay(pointRect(point: pointFromIndex(index: self.selected)).insetBy(dx: -5, dy: -5))
+        self.setSelected(proposed: indexFromPoint(point: local))
     }
     
-    func setSelected(selected: Int) {
+    func setSelected(proposed: Int) {
         let filtered = sortedEmoijs().count
+        if filtered == 0 {
+            return
+        }
+        var selected = proposed
         let old = pointFromIndex(index: self.selected)
-        self.selected = selected % filtered
+        while selected < 0 || selected >= filtered {
+            if selected < 0 {
+                selected += filtered
+            } else if selected >= filtered {
+                selected -= filtered
+            }
+        }
+        if selected == self.selected {
+            return
+        }
+        self.selected = selected
         self.setNeedsDisplay(pointRect(point: old).insetBy(dx: -5, dy: -5))
         let rect = pointRect(point: pointFromIndex(index: self.selected))
         self.setNeedsDisplay(rect.insetBy(dx: -5, dy: -5))
+        let emoji = sortedEmoijs()[self.selected]
+        if lastSelected != emoji.id {
+            lastSelected = emoji.id
+            self.onUpdate(emoji)
+        }
         self.scrollToVisible(rect)
     }
     
-    func sortedEmoijs() -> Array<Emoji> {
-        if self._searchTerm.isEmpty {
-            var used = emojis.filter({emoji in self.usages[emoji.id] != nil})
-            let unused = emojis.filter({emoji in self.usages[emoji.id] == nil})
-            used.sort(by: { one, two in
-                let oc = self.usages[one.id]!.count
-                let od = self.usages[one.id]!.date
-                let tc = self.usages[two.id]!.count
-                let td = self.usages[two.id]!.date
-                if oc == tc {
-                    return od > td
-                } else {
-                    return oc > tc
-                }
-            })
-            used.append(contentsOf: unused)
-            return used
-        } else {
-            let needle = self._searchTerm.lowercased()
-            var scores = emojis.map({emoji in (emoji, bestMatch(emoji: emoji, needle: needle))})
-            scores.sort(by: {one, two in compareScores(one.1, two.1)})
-            var used = scores.filter({score in self.usages[score.0.id] != nil})
-            let unused = scores.filter({score in self.usages[score.0.id] == nil})
-            used.append(contentsOf: unused)
-            return used.map({both in both.0})
-        }
+    func currentEmoji() -> Emoji {
+        return sortedEmoijs()[self.selected]
     }
     
+    func sortedEmoijs() -> Array<Emoji> {
+        if let cache = filterCache,
+            cache.searchTerm == _searchTerm {
+            return cache.cached
+        }
+        let cache = Cache(searchTerm: _searchTerm, usages: usages)
+        filterCache = cache
+        return cache.cached
+    }
+    
+    func updateUsage(id: String) {
+        if var usage = self.usages[id] {
+            usage.count += 1
+            usage.date = Date.init().timeIntervalSince1970
+            self.usages[id] = usage
+        } else {
+            self.usages[id] = Usage(name: id, count: 1, date: Date.init().timeIntervalSince1970)
+        }
+        self.filterCache = Cache(searchTerm: _searchTerm, usages: usages)
+        self.setNeedsDisplay(self.bounds)
+    }
+
     func sendKey() {
         self.window!.orderOut(nil)
         NSApp.hide(nil)
         NSApp.deactivate()
         let filtered = sortedEmoijs()
         let emoji = filtered[self.selected]
-        
-        if var usage = self.usages[emoji.id] {
-            usage.count += 1
-            usage.date = Date.init().timeIntervalSince1970
-            self.usages[emoji.id] = usage
-            print("Usage", usage)
-        } else {
-            self.usages[emoji.id] = Usage(name: emoji.id, count: 1, date: Date.init().timeIntervalSince1970)
-        }
-        //
-//        var usageAny: [String:Any] = [:]🤩😛
+
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(self.usages) {
             UserDefaults.standard.set(encoded, forKey: usageKey)
         }
-//        for (key, value) in self.usages {
-//            usageAny[key] = value. as Any
-//        }
         
         print("Sending", emoji.char)
-        self.setNeedsDisplay(self.bounds)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
             sendKeystrokesToFrontmostApp(emoji.char)
         })
@@ -222,6 +268,9 @@ class MyVC: NSViewController, NSTextFieldDelegate {
     var textField: NSTextField!
     var customView: CustomView!
     var usages: [String:Usage] = [:]
+    var descriptionField: NSTextField!
+    var scroll: NSScrollView!
+    
     override func loadView() {
         self.view = NSView()
     }
@@ -231,7 +280,6 @@ class MyVC: NSViewController, NSTextFieldDelegate {
         text.placeholderString = "Type to search"
         text.stringValue = ""
         self.view.addSubview(text)
-        let h = 20
         text.setFrameSize(NSSize(width: width - margin * 2, height: h))
         text.setFrameOrigin(NSPoint(x: margin, y: height - h - margin))
         text.delegate = self
@@ -244,28 +292,42 @@ class MyVC: NSViewController, NSTextFieldDelegate {
             usages = decoded
         }
         
-//        if let dict = UserDefaults.standard.dictionary(forKey: usageKey) {
-//            for (key, value) in dict {
-//                usages[key] = (value as! Usage)
-//            }
-//        }
+        let description = NSTextField.init(wrappingLabelWithString: " ")
+        let newSize = description.sizeThatFits(NSSize(width: width, height: 400))
+        description.setFrameSize(newSize)
+        description.setFrameOrigin(NSPoint(x: margin, y: margin))
+        self.descriptionField = description
         
-        let scroll = NSScrollView(frame: NSRect(x: 0, y: 0, width: width, height: height - h - margin * 2))
+        let scroll = NSScrollView(frame: NSRect(x: 0, y: Int(newSize.height), width: width, height: height - h - margin * 2 - Int(newSize.height)))
         let height = Int(ceil(CGFloat(emojis.count) / (CGFloat(width - margin * 2) / CGFloat(size) + 1.0) * CGFloat(size))) + margin * 2
         let custom = CustomView(frame: NSRect(x: 0, y: 0, width: width, height: height ))
         custom.usages = usages
         self.customView = custom
         scroll.documentView = custom
         self.view.addSubview(scroll)
+        self.scroll = scroll
+        custom.onUpdate = {emoji in self.updateDescription(emoji: emoji)}
+        
+        self.view.addSubview(description)
         
         textField = text
+        // Update description pleasee
+        self.updateDescription(emoji: custom.currentEmoji())
     }
     
     @objc func onEnter() {
         self.customView.sendKey()
         self.customView.searchTerm = ""
     }
-    
+
+    func updateDescription(emoji: Emoji) {
+        self.descriptionField.stringValue = emoji.id + "\n" + emoji.keywords.joined(separator: ", ")
+        let newSize = self.descriptionField.sizeThatFits(NSSize(width: width - margin * 2, height: 400))
+        self.descriptionField.setFrameSize(newSize)
+        self.scroll.setFrameOrigin(NSPoint(x: 0, y: Int(newSize.height) + margin))
+        self.scroll.setFrameSize(NSSize(width: width, height: height - h - margin * 2 - Int(newSize.height) - margin))
+    }
+
     func controlTextDidChange(_ obj: Notification) {
         customView.searchTerm = textField.stringValue
     }
@@ -279,11 +341,11 @@ class MyVC: NSViewController, NSTextFieldDelegate {
         print("Selector", commandSelector)
         if commandSelector == #selector(insertTab(_:)) {
             print("tab")
-            self.customView.setSelected(selected: self.customView.selected + 1)
+            self.customView.setSelected(proposed: self.customView.selected + 1)
         }
         if commandSelector == #selector(insertBacktab(_:)) {
             print("back tab")
-            self.customView.setSelected(selected: self.customView.selected - 1)
+            self.customView.setSelected(proposed: self.customView.selected - 1)
         }
         if commandSelector == #selector(cancelOperation(_:)) {
             print("Escape")

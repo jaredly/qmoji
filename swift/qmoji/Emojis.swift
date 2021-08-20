@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Emoji: Codable {
+struct Emoji: Codable, Equatable {
     var id: String
     var keywords: Array<String>
     var char: String
