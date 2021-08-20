@@ -12,7 +12,7 @@
 		7F2468D726CD50F8000B2AB5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F2468D626CD50F8000B2AB5 /* Preview Assets.xcassets */; };
 		7F2468DA26CD50F8000B2AB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F2468D826CD50F8000B2AB5 /* Main.storyboard */; };
 		7FE12E6126CD83C9001D1B24 /* Emojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE12E6026CD83C9001D1B24 /* Emojis.swift */; };
-		7FEE95B026CE008900302F83 /* Shims.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE95AF26CE008900302F83 /* Shims.m */; };
+		7FECA17526D0054A000E7276 /* Fuzzy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FECA17426D0054A000E7276 /* Fuzzy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,9 +43,7 @@
 		7F2468E126CD50F8000B2AB5 /* qmojiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = qmojiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F2468EC26CD50F8000B2AB5 /* qmojiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = qmojiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FE12E6026CD83C9001D1B24 /* Emojis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emojis.swift; sourceTree = "<group>"; };
-		7FEE95AE26CE008900302F83 /* qmoji-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "qmoji-Bridging-Header.h"; sourceTree = "<group>"; };
-		7FEE95AF26CE008900302F83 /* Shims.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Shims.m; sourceTree = "<group>"; };
-		7FEE95B426CE019C00302F83 /* Shims.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shims.h; sourceTree = "<group>"; };
+		7FECA17426D0054A000E7276 /* Fuzzy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fuzzy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,15 +93,13 @@
 			isa = PBXGroup;
 			children = (
 				7F2468CF26CD50F6000B2AB5 /* AppDelegate.swift */,
-				7FEE95AF26CE008900302F83 /* Shims.m */,
-				7FEE95B426CE019C00302F83 /* Shims.h */,
+				7FECA17426D0054A000E7276 /* Fuzzy.swift */,
 				7F2468D326CD50F8000B2AB5 /* Assets.xcassets */,
 				7F2468D826CD50F8000B2AB5 /* Main.storyboard */,
 				7F2468DB26CD50F8000B2AB5 /* Info.plist */,
 				7F2468DC26CD50F8000B2AB5 /* qmoji.entitlements */,
 				7F2468D526CD50F8000B2AB5 /* Preview Content */,
 				7FE12E6026CD83C9001D1B24 /* Emojis.swift */,
-				7FEE95AE26CE008900302F83 /* qmoji-Bridging-Header.h */,
 			);
 			path = qmoji;
 			sourceTree = "<group>";
@@ -251,8 +247,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FEE95B026CE008900302F83 /* Shims.m in Sources */,
 				7FE12E6126CD83C9001D1B24 /* Emojis.swift in Sources */,
+				7FECA17526D0054A000E7276 /* Fuzzy.swift in Sources */,
 				7F2468D026CD50F6000B2AB5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,7 +428,6 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaredforsyth.qmoji;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "qmoji/qmoji-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -457,7 +452,6 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaredforsyth.qmoji;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "qmoji/qmoji-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

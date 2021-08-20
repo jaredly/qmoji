@@ -10,14 +10,18 @@ import SwiftUI
 import AppKit
 import Carbon
 
-let width = 300
+//let width = 300
 let height = 200
 let margin = 5
+let numAcross = 10
 
+let im = CGFloat(1)
 let size = 25
 let fontSize = size - 4
 
-let lineWidth = (width - margin * 2) / size
+//let lineWidth = (width - margin * 2) / size
+let lineWidth = 10
+let width = numAcross * size + margin * 2
 
 func indexFromPoint(point: NSPoint) -> Int {
     let ox = (Int(point.x) - margin) / size
@@ -34,6 +38,13 @@ func pointRect(point: NSPoint) -> NSRect {
     return NSRect(x: point.x, y: point.y, width: CGFloat(size), height: CGFloat(size))
 }
 
+func bestMatch(emoji: Emoji, needle: String) -> FuzzyScore {
+    var best = fuzzyScore(exactWeight: 1000, query: needle, term: emoji.id)
+    for k in emoji.keywords {
+        best = maxScore(best, fuzzyScore(exactWeight: 1000, query: needle, term: k))
+    }
+    return best
+}
 
 func toUnicodeCString(_ string: String) -> UnsafeMutablePointer<UInt16> {
     let u16s = UnsafeMutablePointer<UInt16>.allocate(capacity: string.utf16.count + 1) //<- `cnt * 4` is not appropriate
@@ -62,6 +73,7 @@ func sendKeystrokesToFrontmostApp(_ string: String) {
 class CustomView: NSView {
     var trackingArea: NSTrackingArea?
     var selected: Int = 0
+    var usages: [String:Usage] = [:]
     private var _searchTerm: String = ""
     var searchTerm: String {
         get { _searchTerm }
@@ -101,9 +113,7 @@ class CustomView: NSView {
     }
     
     func setSelected(selected: Int) {
-        let filtered = emojis.filter({emoji in
-            return self._searchTerm.isEmpty || emoji.id.contains(self._searchTerm)
-        }).count
+        let filtered = sortedEmoijs().count
         let old = pointFromIndex(index: self.selected)
         self.selected = selected % filtered
         self.setNeedsDisplay(pointRect(point: old).insetBy(dx: -5, dy: -5))
@@ -112,17 +122,63 @@ class CustomView: NSView {
         self.scrollToVisible(rect)
     }
     
+    func sortedEmoijs() -> Array<Emoji> {
+        if self._searchTerm.isEmpty {
+            var used = emojis.filter({emoji in self.usages[emoji.id] != nil})
+            let unused = emojis.filter({emoji in self.usages[emoji.id] == nil})
+            used.sort(by: { one, two in
+                let oc = self.usages[one.id]!.count
+                let od = self.usages[one.id]!.date
+                let tc = self.usages[two.id]!.count
+                let td = self.usages[two.id]!.date
+                if oc == tc {
+                    return od > td
+                } else {
+                    return oc > tc
+                }
+            })
+            used.append(contentsOf: unused)
+            return used
+        } else {
+            let needle = self._searchTerm.lowercased()
+            var scores = emojis.map({emoji in (emoji, bestMatch(emoji: emoji, needle: needle))})
+            scores.sort(by: {one, two in compareScores(one.1, two.1)})
+            var used = scores.filter({score in self.usages[score.0.id] != nil})
+            let unused = scores.filter({score in self.usages[score.0.id] == nil})
+            used.append(contentsOf: unused)
+            return used.map({both in both.0})
+        }
+    }
+    
     func sendKey() {
         self.window!.orderOut(nil)
         NSApp.hide(nil)
         NSApp.deactivate()
-        let filtered = emojis.filter({emoji in
-            return self._searchTerm.isEmpty || emoji.id.contains(self._searchTerm)
-        })
-        let string = filtered[self.selected].char
-        print("Sending", string)
+        let filtered = sortedEmoijs()
+        let emoji = filtered[self.selected]
+        
+        if var usage = self.usages[emoji.id] {
+            usage.count += 1
+            usage.date = Date.init().timeIntervalSince1970
+            self.usages[emoji.id] = usage
+            print("Usage", usage)
+        } else {
+            self.usages[emoji.id] = Usage(name: emoji.id, count: 1, date: Date.init().timeIntervalSince1970)
+        }
+        //
+//        var usageAny: [String:Any] = [:]🤩😛
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(self.usages) {
+            UserDefaults.standard.set(encoded, forKey: usageKey)
+        }
+//        for (key, value) in self.usages {
+//            usageAny[key] = value. as Any
+//        }
+        
+        print("Sending", emoji.char)
+        self.setNeedsDisplay(self.bounds)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
-            sendKeystrokesToFrontmostApp(string)
+            sendKeystrokesToFrontmostApp(emoji.char)
         })
     }
 
@@ -131,15 +187,15 @@ class CustomView: NSView {
     }
     
     override func draw(_ dirtyRect: NSRect) {
-        let im = CGFloat(2)
-        for (index, emoji) in emojis.filter({emoji in
-            return _searchTerm.isEmpty || emoji.id.contains(_searchTerm)
-        }).enumerated() {
+        for (index, emoji) in sortedEmoijs().enumerated() {
             let rect = pointRect(point: pointFromIndex(index: index))
             if rect.intersects(dirtyRect) {
+                if usages[emoji.id] != nil {
+                    NSColor(calibratedRed: 1.0, green: 1.0, blue: 1.0, alpha: 0.3).set()
+                    rect.fill()
+                }
                 let font = NSFont.systemFont(ofSize: CGFloat(fontSize))
                 NSString(string: emoji.char).draw(at: NSPoint(x: rect.minX + im, y: rect.minY + im), withAttributes: [.font:font])
-                
                 if index == self.selected {
                     NSColor(calibratedRed: 1.0, green: 1.0, blue: 1.0, alpha: 1.0).set()
                     rect.frame()
@@ -153,9 +209,19 @@ class CustomView: NSView {
     }
 }
 
+//
+let usageKey = "emoji_usages"
+
+struct Usage: Codable {
+    var name: String
+    var count: Int
+    var date: Double
+}
+
 class MyVC: NSViewController, NSTextFieldDelegate {
     var textField: NSTextField!
     var customView: CustomView!
+    var usages: [String:Usage] = [:]
     override func loadView() {
         self.view = NSView()
     }
@@ -172,9 +238,22 @@ class MyVC: NSViewController, NSTextFieldDelegate {
         text.action = #selector(onEnter)
         text.target = self
         
+        let decoder = JSONDecoder()
+        if let data = UserDefaults.standard.data(forKey: usageKey),
+           let decoded = try? decoder.decode([String:Usage].self, from: data) {
+            usages = decoded
+        }
+        
+//        if let dict = UserDefaults.standard.dictionary(forKey: usageKey) {
+//            for (key, value) in dict {
+//                usages[key] = (value as! Usage)
+//            }
+//        }
+        
         let scroll = NSScrollView(frame: NSRect(x: 0, y: 0, width: width, height: height - h - margin * 2))
         let height = Int(ceil(CGFloat(emojis.count) / (CGFloat(width - margin * 2) / CGFloat(size) + 1.0) * CGFloat(size))) + margin * 2
         let custom = CustomView(frame: NSRect(x: 0, y: 0, width: width, height: height ))
+        custom.usages = usages
         self.customView = custom
         scroll.documentView = custom
         self.view.addSubview(scroll)
