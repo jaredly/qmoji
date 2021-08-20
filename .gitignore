@@ -2,3 +2,7 @@ _esy
 *.install
 node_modules
 .merlin
+DerivedData
+_git
+_build
+app
