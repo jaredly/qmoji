@@ -117,6 +117,7 @@ class CustomView: NSView {
     var usages: [String:Usage] = [:]
     var filterCache: Cache?
     var onUpdate: (Emoji) -> () = {_ in ()}
+    var onClear: () -> () = { () }
     var lastSelected: String = ""
     
     private var _searchTerm: String = ""
@@ -216,24 +217,31 @@ class CustomView: NSView {
         }
         self.filterCache = Cache(searchTerm: _searchTerm, usages: usages)
         self.setNeedsDisplay(self.bounds)
-    }
-
-    func sendKey() {
-        self.window!.orderOut(nil)
-        NSApp.hide(nil)
-        NSApp.deactivate()
-        let filtered = sortedEmoijs()
-        let emoji = filtered[self.selected]
-
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(self.usages) {
             UserDefaults.standard.set(encoded, forKey: usageKey)
         }
+    }
+
+    func sendKey() {
+        let filtered = sortedEmoijs()
+        if filtered.isEmpty || self.selected > filtered.count {
+            return
+        }
+        self.window!.orderOut(nil)
+        NSApp.hide(nil)
+        NSApp.deactivate()
+        let emoji = filtered[self.selected]
+        updateUsage(id: emoji.id)
         
         print("Sending", emoji.char)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
             sendKeystrokesToFrontmostApp(emoji.char)
         })
+        if !_searchTerm.isEmpty {
+            onClear()
+            searchTerm = ""
+        }
     }
 
     override func mouseDown(with event: NSEvent) {
@@ -316,6 +324,7 @@ class MyVC: NSViewController, NSTextFieldDelegate {
         self.view.addSubview(scroll)
         self.scroll = scroll
         custom.onUpdate = {emoji in self.updateDescription(emoji: emoji)}
+        custom.onClear = { self.textField.stringValue = "" }
         
         self.view.addSubview(description)
         
@@ -326,7 +335,6 @@ class MyVC: NSViewController, NSTextFieldDelegate {
     
     @objc func onEnter() {
         self.customView.sendKey()
-        self.customView.searchTerm = ""
     }
 
     func updateDescription(emoji: Emoji) {
