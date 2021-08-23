@@ -1,4 +1,5 @@
 _esy
+xcuserdata
 *.install
 node_modules
 .merlin
