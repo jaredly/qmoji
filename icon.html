@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<meta charset="utf8" />
+<body>
+    <canvas id="out"></canvas>
+    <script>
+        const sizes = [16, 32, 64, 128, 256, 512, 1024];
+        sizes.forEach((size) => {
+            out.width = size;
+            out.height = size;
+            const ctx = out.getContext('2d');
+            ctx.font = `${size === 16 ? 10 : size}px sans-serif`;
+            const text = '🙃';
+            const metrics = ctx.measureText(text);
+            const middle =
+                (metrics.actualBoundingBoxAscent +
+                    metrics.actualBoundingBoxDescent) /
+                2;
+            const offset = middle - size / 2;
+            ctx.fillText(
+                text,
+                size / 2 - metrics.width / 2,
+                metrics.actualBoundingBoxAscent - offset,
+            );
+
+            ctx.putImageData(desaturate(ctx), 0, 0);
+
+            const img = document.createElement('img');
+            img.src = out.toDataURL();
+            img.style.outline = '1px solid #ccc';
+            img.style.margin = '4px';
+            document.body.append(img);
+        });
+
+        function rgbToGrayscale(r, g, b) {
+            // Returns single monochrome figure:
+            return 0.2125 * r + 0.7154 * g + 0.0721 * b;
+        }
+        function desaturate(ctx) {
+            var imgData = ctx.getImageData(
+                0,
+                0,
+                ctx.canvas.width,
+                ctx.canvas.height,
+            );
+
+            for (y = 0; y < ctx.canvas.height; y++) {
+                for (x = 0; x < ctx.canvas.width; x++) {
+                    i = (y * ctx.canvas.width + x) * 4;
+
+                    // Apply Monochrome level across all channels:
+                    imgData.data[i] =
+                        imgData.data[i + 1] =
+                        imgData.data[i + 2] =
+                            rgbToGrayscale(
+                                imgData.data[i],
+                                imgData.data[i + 1],
+                                imgData.data[i + 2],
+                            );
+                }
+            }
+
+            return imgData;
+        }
+
+        out.style.display = 'none';
+    </script>
+</body>
