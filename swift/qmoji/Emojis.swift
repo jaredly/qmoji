@@ -12,7 +12,7 @@ struct Emoji: Codable, Equatable {
     var id: String
     var keywords: Array<String>
     var char: String
-    var skinTones: Dictionary<Int, String>
+    var skinTones: Dictionary<String, String>
     var category: String
 	var oldId: String?
 }
@@ -25,8 +25,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","grin","smile","happy","joy",":D","grinning","grinning_face"],
 		char: "😀",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "grinning face with big eyes",
@@ -34,8 +33,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","mouth","open","smile","eyes","teeth","smiley","happy","joy","haha",":D",":)","funny","grinning_face_with_big_eyes"],
 		char: "😃",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "grinning face with smiling eyes",
@@ -43,8 +41,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["eye","face","mouth","open","smile","happy","teeth","joy","funny","haha","laugh","like",":D",":)","grinning_face_with_closed_eyes","grinning_face_with_smiling_eyes"],
 		char: "😄",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "beaming face with smiling eyes",
@@ -52,8 +49,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["eye","face","grin","smile","happy","teeth","mouth","joy","kawaii","beaming_face","beaming_face_with_smiling_eyes"],
 		char: "😁",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "grinning squinting face",
@@ -61,8 +57,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","laugh","mouth","satisfied","smile","laughing","happy","joy","lol","haha","glad","XD","squinting_face","grinning_squinting_face"],
 		char: "😆",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "grinning face with sweat",
@@ -70,8 +65,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cold","face","open","smile","sweat","laugh","hot","happy","relief","grinning_face_with_sweat","sweat_smile"],
 		char: "😅",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "rolling on the floor laughing",
@@ -79,8 +73,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","floor","laugh","rofl","rolling","rotfl","tears",":'D","rolling_on_the_floor_laughing","laughing","lol","haha"],
 		char: "🤣",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "face with tears of joy",
@@ -88,8 +81,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","joy","laugh","tear","cry","weep","happy","happytears","haha",":')","lmao","tears_of_joy","face_with_tears_of_joy","tears"],
 		char: "😂",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "slightly smiling face",
@@ -97,8 +89,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","smile","satisfied",":)","slightly_smiling_face"],
 		char: "🙂",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "upside-down face",
@@ -106,8 +97,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","upside-down","turn","upside","down","flipped","silly","smile","upside_down_face"],
 		char: "🙃",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "melting face",
@@ -115,8 +105,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["disappear","dissolve","liquid","melt","melting_face","melting face","hot","heat"],
 		char: "🫠",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "winking face",
@@ -124,8 +113,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","wink","eye","happy","mischievous","secret",";)","smile","winking_face"],
 		char: "😉",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "smiling face with smiling eyes",
@@ -133,8 +121,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["blush","eye","face","smile","satisfied","happy","flushed","crush","embarrassed","shy","joy",":>","smiling_face_with_closed_eyes","smiling_face_with_smiling_eyes"],
 		char: "😊",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "smiling face with halo",
@@ -142,8 +129,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["angel","face","fantasy","halo","innocent","heaven","O:)","smiling_face_with_halo"],
 		char: "😇",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "smiling face with hearts",
@@ -151,8 +137,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["adore","crush","hearts","in love","smiling_face_with_3_hearts","smiling_face_with_hearts","face","love","like","affection","valentines","infatuation"],
 		char: "🥰",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "smiling face with heart-eyes",
@@ -160,8 +145,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["eye","face","love","smile","hearts","happy","heart","eyes","like","affection","valentines","infatuation","crush","heart_eyes","smiling_face_with_heart_eyes"],
 		char: "😍",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "star-struck",
@@ -169,8 +153,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["eyes","face","grinning","star","surprised","star_struck","smile","starry"],
 		char: "🤩",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "face blowing a kiss",
@@ -178,8 +161,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","kiss","love","happy","kissing","heart","like","affection","valentines","infatuation",":X","blowing_a_kiss","kissing_heart","face_blowing_a_kiss"],
 		char: "😘",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "kissing face",
@@ -187,8 +169,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","kiss","love","like","3","valentines","infatuation","kissing","kissing_face"],
 		char: "😗",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "smiling face",
@@ -196,8 +177,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","outlined","relaxed","smile","satisfied","blush","massage","happiness","smiling_face"],
 		char: "☺️",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "kissing face with closed eyes",
@@ -205,8 +185,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["closed","eye","face","kiss","love","happy","like","affection","valentines","infatuation",":*","kissing_closed_eyes","kissing_face_with_closed_eyes"],
 		char: "😚",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "kissing face with smiling eyes",
@@ -214,8 +193,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["eye","face","kiss","smile","affection","valentines","infatuation","kissing_face_with_smiling_eyes","kissing_smiling_eyes"],
 		char: "😙",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "smiling face with tear",
@@ -223,8 +201,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["grateful","proud","relieved","smiling","tear","touched","smiling_face_with_tear","smiling face with tear","sad","cry","pretend"],
 		char: "🥲",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "face savoring food",
@@ -232,8 +209,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["delicious","face","savouring","smile","yum","yummy","tongue","happy","joy","silly","nom","savoring_food","face_savoring_food"],
 		char: "😋",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "face with tongue",
@@ -241,8 +217,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","tongue","stuck","out","prank","childish","playful","mischievous","smile",":P","face_with_tongue","stuck_out_tongue"],
 		char: "😛",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "winking face with tongue",
@@ -250,8 +225,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["eye","face","joke","tongue","wink","stuck","out","prank","childish","playful","mischievous","smile",";P","stuck_out_tongue_winking_eye","winking_face_with_tongue"],
 		char: "😜",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "zany face",
@@ -259,8 +233,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["eye","goofy","large","small","zany","zany_face","face","crazy"],
 		char: "🤪",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "squinting face with tongue",
@@ -268,8 +241,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["eye","face","horrible","taste","tongue","stuck","out","closed","eyes","prank","playful","mischievous","smile","XP","stuck_out_tongue_closed_eyes","squinting_face_with_tongue"],
 		char: "😝",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "money-mouth face",
@@ -277,8 +249,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","money","mouth","tongue","dollar","rich","money_mouth_face"],
 		char: "🤑",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "smiling face with open hands",
@@ -286,8 +257,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","hug","hugging","open hands","smiling face","hands","smile","hugging_face"],
 		char: "🤗",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "face with hand over mouth",
@@ -295,8 +265,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["whoops","hand","mouth","smile","giggling","covering","face_with_hand_over_mouth","hand_over_mouth","face","shock","surprise"],
 		char: "🤭",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "face with open eyes and hand over mouth",
@@ -304,8 +273,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["amazement","awe","disbelief","embarrass","scared","surprise","face_with_open_eyes_hand_over_mouth","gasp","face with open eyes and hand over mouth","silence","secret","shock"],
 		char: "🫢",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "face with peeking eye",
@@ -313,8 +281,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["captivated","peep","stare","face_with_peeking_eye","peek","face with peeking eye","scared","frightening","embarrassing","shy"],
 		char: "🫣",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "shushing face",
@@ -322,8 +289,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["quiet","shush","hand","silent","shushing_face","face","shhh"],
 		char: "🤫",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "thinking face",
@@ -331,8 +297,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","thinking","hand","overthinking","hmmm","think","consider",":L","thinking_face","wtf"],
 		char: "🤔",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "saluting face",
@@ -340,8 +305,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ok","salute","sunny","troops","yes","saluting_face","saluting face","respect"],
 		char: "🫡",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "zipper-mouth face",
@@ -349,8 +313,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","mouth","zipper","sealed","secret",":Z","zipper_mouth","zipper_mouth_face"],
 		char: "🤐",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "face with raised eyebrow",
@@ -358,8 +321,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["distrust","skeptic","suspiciously","face_with_raised_eyebrow","raised_eyebrow","face","scepticism","disapproval","disbelief","surprise"],
 		char: "🤨",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "neutral face",
@@ -367,8 +329,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["deadpan","face","meh","neutral","indifference",":",":|","neutral_face"],
 		char: "😐️",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "expressionless face",
@@ -376,8 +337,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["expressionless","face","inexpressive","meh","unexpressive","indifferent","-","deadpan","expressionless_face","-_-"],
 		char: "😑",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "face without mouth",
@@ -385,8 +345,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","mouth","quiet","silent","shhh","no","hellokitty",":#","no_mouth","face_without_mouth"],
 		char: "😶",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "dotted line face",
@@ -394,8 +353,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["depressed","disappear","hide","introvert","invisible","dotted_line_face","dotted line face","lonely","isolation","depression"],
 		char: "🫥",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "face in clouds",
@@ -403,8 +361,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["absentminded","face in the fog","head in clouds","in_clouds","face in clouds","shower","steam","dream"],
 		char: "😶‍🌫️",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "smirking face",
@@ -412,8 +369,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","smirk","smile","mean","prank","smug","sarcasm",":j","smirking","smirking_face"],
 		char: "😏",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "unamused face",
@@ -421,8 +377,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","unamused","unhappy","indifference","bored","straight","serious","sarcasm","unimpressed","skeptical","dubious","side","eye",":?","unamused_face","straight face","side_eye"],
 		char: "😒",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "face with rolling eyes",
@@ -430,8 +385,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["eyeroll","eyes","face","rolling","annoyed","frustrated","rolling_eyes","face_with_rolling_eyes"],
 		char: "🙄",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "grimacing face",
@@ -439,8 +393,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","grimace","awkward","teeth","8D","grimacing","grimacing_face"],
 		char: "😬",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "face exhaling",
@@ -448,8 +401,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["exhale","gasp","groan","relief","whisper","whistle","exhaling","face exhaling","relieve","tired","sigh"],
 		char: "😮‍💨",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "lying face",
@@ -457,8 +409,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","lie","pinocchio","nose","long","lying","lying_face"],
 		char: "🤥",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "relieved face",
@@ -466,8 +417,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","relieved","relaxed","phew","massage","happiness","relieved_face"],
 		char: "😌",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "pensive face",
@@ -475,8 +425,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["dejected","face","pensive","sad","depressed","upset","pensive_face"],
 		char: "😔",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "sleepy face",
@@ -484,8 +433,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","good night","sleep","snot bubble","side-tear","tired","rest","nap","sleepy","sleepy_face"],
 		char: "😪",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "drooling face",
@@ -493,8 +441,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["drooling","face","hungry","yummy","drooling_face"],
 		char: "🤤",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "sleeping face",
@@ -502,8 +449,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","good night","sleep","zzz","tired","sleepy","night","sleeping","sleeping_face"],
 		char: "😴",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "face with medical mask",
@@ -511,8 +457,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cold","doctor","face","mask","sick","ill","disease","medical_mask","face_with_medical_mask","covid"],
 		char: "😷",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "face with thermometer",
@@ -520,8 +465,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","ill","sick","thermometer","fever","temperature","cold","face_with_thermometer","covid"],
 		char: "🤒",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "face with head-bandage",
@@ -529,8 +473,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bandage","face","hurt","injury","head","injured","clumsy","face_with_head_bandage"],
 		char: "🤕",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "nauseated face",
@@ -538,8 +481,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","nauseated","vomit","green","%(","nauseated_face","gross","sick","throw up","ill"],
 		char: "🤢",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "face vomiting",
@@ -547,8 +489,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["puke","sick","vomit","face_vomiting","vomiting","face"],
 		char: "🤮",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "sneezing face",
@@ -556,8 +497,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","gesundheit","sneeze","tissue","sneezing","sneezing_face","sick","allergy"],
 		char: "🤧",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "hot face",
@@ -565,8 +505,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["feverish","heat stroke","hot","red-faced","sweating","hot_face","face","heat","red"],
 		char: "🥵",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "cold face",
@@ -574,8 +513,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["blue-faced","cold","freezing","frostbite","icicles","cold_face","face","blue","frozen"],
 		char: "🥶",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "woozy face",
@@ -583,8 +521,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["dizzy","intoxicated","tipsy","uneven eyes","wavy mouth",":&","woozy","woozy_face","face","wavy"],
 		char: "🥴",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "face with crossed-out eyes",
@@ -592,8 +529,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["crossed-out eyes","dead","face","knocked out","dead eyes","spent","unconscious","xox","XO","dizzy_face","knocked_out","dizzy"],
 		char: "😵",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "face with spiral eyes",
@@ -601,8 +537,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["dizzy","hypnotized","spiral","trouble","whoa","dizzy_eyes","face with spiral eyes","sick","ill","confused","nauseous","nausea"],
 		char: "😵‍💫",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "exploding head",
@@ -610,8 +545,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["mind blown","shocked","explosion","exploding_head","face","mind","blown"],
 		char: "🤯",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "cowboy hat face",
@@ -619,8 +553,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cowboy","cowgirl","face","hat","howdy","cowboy_face","cowboy_hat_face"],
 		char: "🤠",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "partying face",
@@ -628,8 +561,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["celebration","hat","horn","party","hooray","partying","partying_face","face","woohoo"],
 		char: "🥳",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "disguised face",
@@ -637,8 +569,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["disguise","face","glasses","incognito","nose","disguised","disguised_face","disguised face","pretent","brows","moustache"],
 		char: "🥸",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "smiling face with sunglasses",
@@ -646,8 +577,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bright","cool","face","sun","sunglasses","smile","summer","beach","sunglass","8)","smiling_face_with_sunglasses","sunglasses_cool","too_cool"],
 		char: "😎",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "nerd face",
@@ -655,8 +585,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","geek","nerd","glasses","learning","nerdy","dork",":B","nerd_face"],
 		char: "🤓",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "face with monocle",
@@ -664,8 +593,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","monocle","stuffy","glasses","intelligent","face_with_monocle","wealthy"],
 		char: "🧐",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "confused face",
@@ -673,8 +601,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["confused","face","meh","indifference","huh","weird","hmmm",":/","confused_face"],
 		char: "😕",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "face with diagonal mouth",
@@ -682,8 +609,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["disappointed","meh","skeptical","unsure","face_with_diagonal_mouth","face with diagonal mouth","skeptic","confuse","frustrated","indifferent"],
 		char: "🫤",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "worried face",
@@ -691,8 +617,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","worried","concern","nervous",":(","worried_face"],
 		char: "😟",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "slightly frowning face",
@@ -700,8 +625,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","frown","disappointed","sad","upset","slightly_frowning_face","frowning"],
 		char: "🙁",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "frowning face",
@@ -709,8 +633,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","frown","negative","white","sad","upset",":(","white_frowning_face","frowning_face"],
 		char: "☹️",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "face with open mouth",
@@ -718,8 +641,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","mouth","open","sympathy","surprise","impressed","wow","whoa",":O","face_with_open_mouth","open_mouth"],
 		char: "😮",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "hushed face",
@@ -727,8 +649,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","hushed","stunned","surprised","woo","shh","hushed_face"],
 		char: "😯",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "astonished face",
@@ -736,8 +657,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["astonished","face","shocked","totally","xox","surprised","poisoned",":O","astonished_face"],
 		char: "😲",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "flushed face",
@@ -745,8 +665,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["dazed","face","flushed","red jaws","blush","shy","flattered",":$","flushed_face"],
 		char: "😳",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "pleading face",
@@ -754,8 +673,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["begging","mercy","puppy eyes","pleading","pleading_face","face","cry","tears","sad","grievance"],
 		char: "🥺",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "face holding back tears",
@@ -763,8 +681,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["angry","cry","proud","resist","sad","face_holding_back_tears","watery_eyes","face holding back tears","touched","gratitude"],
 		char: "🥹",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "frowning face with open mouth",
@@ -772,8 +689,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","frown","mouth","open","aw","what","frowning","frowning_face","frowning_face_with_open_mouth"],
 		char: "😦",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "anguished face",
@@ -781,8 +697,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["anguished","face","stunned","nervous",":S","anguished_face"],
 		char: "😧",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "fearful face",
@@ -790,8 +705,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","fear","fearful","scared","terrified","nervous","oops","huh","fearful_face"],
 		char: "😨",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "anxious face with sweat",
@@ -799,8 +713,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["blue","cold","face","rushed","sweat","anxious","worried","considerate","nervous","anxious_face","cold_sweat","anxious_face_with_sweat"],
 		char: "😰",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "sad but relieved face",
@@ -808,8 +721,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["disappointed","face","relieved","whew","phew","sweat","nervous","disappointed_relieved","sad_relieved_face","sad_but_relieved_face"],
 		char: "😥",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "crying face",
@@ -817,8 +729,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cry","face","sad","tear","tears","depressed","upset",":'(","crying_face"],
 		char: "😢",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "loudly crying face",
@@ -826,8 +737,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cry","face","sad","sob","tear","tears","upset","depressed",":'o","loudly_crying_face"],
 		char: "😭",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "face screaming in fear",
@@ -835,8 +745,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","fear","munch","scared","scream","open mouth","omg","Dx","screaming_in_fear","face_screaming_in_fear"],
 		char: "😱",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "confounded face",
@@ -844,8 +753,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["confounded","face","confused","sick","unwell","oops",":S","X(","confounded_face"],
 		char: "😖",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "persevering face",
@@ -853,8 +761,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","persevere","sick","no","upset","oops","persevering_face"],
 		char: "😣",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "disappointed face",
@@ -862,8 +769,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["disappointed","face","sad","upset","depressed",":(","disappointed_face"],
 		char: "😞",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "downcast face with sweat",
@@ -871,8 +777,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cold","face","sweat","downcast","hot","sad","tired","exercise",":<","downcast_face","downcast_face_with_sweat"],
 		char: "😓",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "weary face",
@@ -880,8 +785,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","tired","weary","distraught","sleepy","sad","frustrated","upset","D:","weary_face"],
 		char: "😩",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "tired face",
@@ -889,8 +793,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","tired","exhausted","sick","whine","upset","frustrated",":C","tired_face"],
 		char: "😫",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "yawning face",
@@ -898,8 +801,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bored","tired","yawn","yawning","yawning_face","sleepy"],
 		char: "🥱",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "face with steam from nose",
@@ -907,8 +809,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","triumph","won","steam","from","nose","gas","phew","proud","pride","nose_steam","face_with_steam_from_nose"],
 		char: "😤",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "enraged face",
@@ -916,8 +817,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["angry","enraged","face","mad","pouting","rage","red","hate","despise",">:/","pout","pouting_face"],
 		char: "😡",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "angry face",
@@ -925,8 +825,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["anger","angry","face","mad","annoyed","frustrated","angry_face"],
 		char: "😠",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "face with symbols on mouth",
@@ -934,8 +833,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["swearing","angry",":@","censored","face_with_symbols_on_mouth","face","cursing","cussing","profanity","expletive"],
 		char: "🤬",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "smiling face with horns",
@@ -943,8 +841,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","fairy tale","fantasy","horns","smile","malicious","sardonic","imp","devil",">:)","smiling_imp","smiling_face_with_horns"],
 		char: "😈",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "angry face with horns",
@@ -952,8 +849,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["demon","devil","face","fantasy","imp","mean","angry","with","horns",">:(","angry_imp","angry_face_with_horns"],
 		char: "👿",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "skull",
@@ -961,8 +857,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["death","face","fairy tale","monster","skull","dead","skeleton","creepy"],
 		char: "💀",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "skull and crossbones",
@@ -970,8 +865,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["crossbones","death","face","monster","skull","poison","danger","deadly","scary","pirate","evil","skull_and_crossbones"],
 		char: "☠️",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "pile of poo",
@@ -979,8 +873,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["dung","face","monster","poo","poop","hankey","shit","shitface","fail","turd","pile_of_poo"],
 		char: "💩",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "clown face",
@@ -988,8 +881,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clown","face","clown_face"],
 		char: "🤡",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "ogre",
@@ -997,8 +889,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["creature","face","fairy tale","fantasy","monster","japanese","red","mask","halloween","scary","creepy","devil","demon",">0)","japanese_ogre","ogre"],
 		char: "👹",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "goblin",
@@ -1006,8 +897,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["creature","face","fairy tale","fantasy","monster","japanese","red","evil","mask","scary","creepy","goblin","japanese_goblin"],
 		char: "👺",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "ghost",
@@ -1015,8 +905,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["creature","face","fairy tale","fantasy","monster","ghost","halloween","spooky","scary"],
 		char: "👻",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "alien",
@@ -1024,8 +913,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["creature","extraterrestrial","face","fantasy","ufo","alien","UFO","paul","weird","outer","space","outer_space"],
 		char: "👽️",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "alien monster",
@@ -1033,8 +921,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alien","creature","extraterrestrial","face","monster","ufo","space","invader","game","arcade","play","alien_monster","space_invader"],
 		char: "👾",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "robot",
@@ -1042,8 +929,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","monster","computer","machine","bot","robot","robot_face"],
 		char: "🤖",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "grinning cat",
@@ -1051,8 +937,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cat","face","grinning","mouth","open","smile","smiley","animal","cats","happy","grinning_cat","smiley_cat"],
 		char: "😺",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "grinning cat with smiling eyes",
@@ -1060,8 +945,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cat","eye","face","grin","smile","grinning","animal","cats","grinning_cat_with_closed_eyes","smile_cat","grinning_cat_with_smiling_eyes"],
 		char: "😸",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "cat with tears of joy",
@@ -1069,8 +953,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cat","face","joy","tear","laughing","smile","animal","cats","haha","happy","joy_cat","tears_of_joy_cat","cat_with_tears_of_joy","tears"],
 		char: "😹",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "smiling cat with heart-eyes",
@@ -1078,8 +961,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cat","eye","face","heart","love","smile","hearts","red","eyes","animal","like","affection","cats","valentines","heart_eyes_cat","smiling_cat_with_heart_eyes"],
 		char: "😻",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "cat with wry smile",
@@ -1087,8 +969,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cat","face","ironic","smile","wry","smirk","animal","cats","smirk_cat","wry_smile_cat","cat_with_wry_smile"],
 		char: "😼",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "kissing cat",
@@ -1096,8 +977,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cat","eye","face","kiss","animal","cats",":3","kissing_cat"],
 		char: "😽",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "weary cat",
@@ -1105,8 +985,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cat","face","oh","surprised","weary","wow","scream","animal","cats","munch","scared","scream_cat","weary_cat"],
 		char: "🙀",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "crying cat",
@@ -1114,8 +993,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cat","cry","face","sad","tear","unhappy","depressed","animal","tears","weep","cats","upset","crying_cat"],
 		char: "😿",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "pouting cat",
@@ -1123,8 +1001,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cat","face","pouting","sad","angry","animal","cats","pouting_cat"],
 		char: "😾",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "see-no-evil monkey",
@@ -1132,8 +1009,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["evil","face","forbidden","monkey","see","no","animal","nature","haha","see_no_evil","see_no_evil_monkey"],
 		char: "🙈",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "hear-no-evil monkey",
@@ -1141,8 +1017,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["evil","face","forbidden","hear","monkey","no","animal","nature","hear_no_evil","hear_no_evil_monkey"],
 		char: "🙉",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "speak-no-evil monkey",
@@ -1150,8 +1025,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["evil","face","forbidden","monkey","speak","no","animal","nature","omg","speak_no_evil","speak_no_evil_monkey"],
 		char: "🙊",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "kiss mark",
@@ -1159,8 +1033,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["kiss","lips","love","face","like","affection","valentines","kiss_mark"],
 		char: "💋",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "love letter",
@@ -1168,8 +1041,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["heart","letter","love","mail","email","like","affection","envelope","valentines","love_letter"],
 		char: "💌",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "heart with arrow",
@@ -1177,8 +1049,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","cupid","love","inlove","like","affection","valentines","heart_with_arrow","heart"],
 		char: "💘",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "heart with ribbon",
@@ -1186,8 +1057,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ribbon","valentine","present","love","gift","valentines","gift_heart","heart_with_ribbon"],
 		char: "💝",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "sparkling heart",
@@ -1195,8 +1065,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["excited","sparkle","love","inlove","like","affection","valentines","sparkling_heart"],
 		char: "💖",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "growing heart",
@@ -1204,8 +1073,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["excited","growing","nervous","pulse","love","inlove","heartpulse","like","affection","valentines","pink","growing_heart"],
 		char: "💗",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "beating heart",
@@ -1213,8 +1081,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["beating","heartbeat","pulsating","love","like","affection","valentines","pink","beating_heart","heart"],
 		char: "💓",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "revolving hearts",
@@ -1222,8 +1089,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["revolving","love","like","affection","valentines","revolving_hearts"],
 		char: "💞",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "two hearts",
@@ -1231,8 +1097,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["love","like","affection","valentines","heart","two_hearts"],
 		char: "💕",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "heart decoration",
@@ -1240,8 +1105,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["heart","purple","square","love","like","heart_decoration","purple-square"],
 		char: "💟",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "heart exclamation",
@@ -1249,8 +1113,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["exclamation","mark","punctuation","heavy","ornament","decoration","love","heart_exclamation"],
 		char: "❣️",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "broken heart",
@@ -1258,8 +1121,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["break","broken","heartbreak","sad","sorry","</3","broken_heart","heart"],
 		char: "💔",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "heart on fire",
@@ -1267,8 +1129,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["burn","heart","love","lust","sacred heart","heart_on_fire","heart on fire","passionate","enthusiastic"],
 		char: "❤️‍🔥",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "mending heart",
@@ -1276,8 +1137,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["healthier","improving","mending","recovering","recuperating","well","mending_heart","mending heart","broken heart","bandage","wounded"],
 		char: "❤️‍🩹",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "red heart",
@@ -1285,8 +1145,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["heart","love","red","like","valentines","<3","red_heart"],
 		char: "❤️",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "orange heart",
@@ -1294,8 +1153,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["orange","orange_heart","love","like","affection","valentines"],
 		char: "🧡",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "yellow heart",
@@ -1303,8 +1161,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["yellow","love","like","affection","valentines","yellow_heart"],
 		char: "💛",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "green heart",
@@ -1312,8 +1169,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["green","love","like","affection","valentines","green_heart"],
 		char: "💚",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "blue heart",
@@ -1321,8 +1177,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["blue","love","like","affection","valentines","blue_heart"],
 		char: "💙",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "purple heart",
@@ -1330,8 +1185,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["purple","love","like","affection","valentines","purple_heart"],
 		char: "💜",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "brown heart",
@@ -1339,8 +1193,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["brown","heart","brown_heart","coffee"],
 		char: "🤎",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "black heart",
@@ -1348,8 +1201,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["black","evil","wicked","black_heart"],
 		char: "🖤",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "white heart",
@@ -1357,8 +1209,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["heart","white","white_heart","pure"],
 		char: "🤍",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "hundred points",
@@ -1366,8 +1217,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["100","full","hundred","score","perfect","excellent","numbers","century","exam","quiz","test","pass","hundred_points"],
 		char: "💯",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "anger symbol",
@@ -1375,8 +1225,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["angry","comic","mad","anger","anger_symbol"],
 		char: "💢",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "collision",
@@ -1384,8 +1233,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["boom","comic","explosion","bomb","explode","blown","collision"],
 		char: "💥",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "dizzy",
@@ -1393,8 +1241,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["comic","star","shootingstar","sparkle","shoot","magic","dizzy"],
 		char: "💫",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "sweat droplets",
@@ -1402,8 +1249,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["comic","splashing","sweat","drops","water","drip","oops","sweat_drops","sweat_droplets"],
 		char: "💦",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "dashing away",
@@ -1411,8 +1257,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["comic","dash","running","dashing","away","wind","air","fast","shoo","fart","smoke","puff","dashing_away"],
 		char: "💨",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "hole",
@@ -1420,8 +1265,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hole","embarrassing"],
 		char: "🕳️",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "bomb",
@@ -1429,8 +1273,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["comic","explosion","boom","explode","terrorism","bomb"],
 		char: "💣️",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "speech balloon",
@@ -1438,8 +1281,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["balloon","bubble","comic","dialog","speech","talk","words","message","chatting","speech_balloon"],
 		char: "💬",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "eye in speech bubble",
@@ -1447,8 +1289,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["balloon","bubble","eye","speech","witness","speech bubble","eye_in_speech_bubble","info"],
 		char: "👁️‍🗨️",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "left speech bubble",
@@ -1456,8 +1297,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["balloon","bubble","dialog","speech","left_speech_bubble","words","message","talk","chatting"],
 		char: "🗨️",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "right anger bubble",
@@ -1465,8 +1305,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["angry","balloon","bubble","mad","caption","speech","thinking","right_anger_bubble"],
 		char: "🗯️",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "thought balloon",
@@ -1474,8 +1313,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["balloon","bubble","comic","thought","think","cloud","speech","thinking","dream","thought_balloon"],
 		char: "💭",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "ZZZ",
@@ -1483,386 +1321,343 @@ var emojis: Array<Emoji> = [
 		keywords: ["comic","good night","sleep","zzz","night","sleepy","tired","dream"],
 		char: "💤",
 		skinTones: [:],
-		category: "smileys-emotion",
-	),
+		category: "smileys-emotion"),
 
 	Emoji(
 		id: "waving hand",
 		oldId: "wave",
 		keywords: ["hand","wave","waving","hello","goodbye","waving hand sign","hands","gesture","solong","farewell","hi","palm","waving_hand"],
 		char: "👋",
-		skinTones: [1: "👋🏻", 2: "👋🏼", 3: "👋🏽", 4: "👋🏾", 5: "👋🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👋🏻", "2": "👋🏼", "3": "👋🏽", "4": "👋🏾", "5": "👋🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "raised back of hand",
 		oldId: "raised_back_of_hand",
 		keywords: ["backhand","raised","hand","raised_back_of_hand","fingers"],
 		char: "🤚",
-		skinTones: [1: "🤚🏻", 2: "🤚🏼", 3: "🤚🏽", 4: "🤚🏾", 5: "🤚🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤚🏻", "2": "🤚🏼", "3": "🤚🏽", "4": "🤚🏾", "5": "🤚🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "hand with fingers splayed",
 		oldId: "raised_hand_with_fingers_splayed",
 		keywords: ["finger","hand","splayed","five hand","five","raised","palm","raised_hand_with_fingers_splayed","hand_with_fingers_splayed","fingers"],
 		char: "🖐️",
-		skinTones: [1: "🖐🏻", 2: "🖐🏼", 3: "🖐🏽", 4: "🖐🏾", 5: "🖐🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🖐🏻", "2": "🖐🏼", "3": "🖐🏽", "4": "🖐🏾", "5": "🖐🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "raised hand",
 		oldId: "raised_hand",
 		keywords: ["hand","high 5","high five","raise","raised","raised hand","fingers","stop","highfive","high","five","palm","ban","high_five","raised_hand"],
 		char: "✋",
-		skinTones: [1: "✋🏻", 2: "✋🏼", 3: "✋🏽", 4: "✋🏾", 5: "✋🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "✋🏻", "2": "✋🏼", "3": "✋🏽", "4": "✋🏾", "5": "✋🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "vulcan salute",
 		oldId: "vulcan_salute",
 		keywords: ["finger","hand","spock","vulcan","fingers","star trek","star","trek","vulcan_salute"],
 		char: "🖖",
-		skinTones: [1: "🖖🏻", 2: "🖖🏼", 3: "🖖🏽", 4: "🖖🏾", 5: "🖖🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🖖🏻", "2": "🖖🏼", "3": "🖖🏽", "4": "🖖🏾", "5": "🖖🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "rightwards hand",
 		oldId: nil,
 		keywords: ["hand","right","rightward","rightwards_hand","rightwards hand","palm","offer"],
 		char: "🫱",
-		skinTones: [1: "🫱🏻", 2: "🫱🏼", 3: "🫱🏽", 4: "🫱🏾", 5: "🫱🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🫱🏻", "2": "🫱🏼", "3": "🫱🏽", "4": "🫱🏾", "5": "🫱🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "leftwards hand",
 		oldId: nil,
 		keywords: ["hand","left","leftward","leftwards_hand","leftwards hand","palm","offer"],
 		char: "🫲",
-		skinTones: [1: "🫲🏻", 2: "🫲🏼", 3: "🫲🏽", 4: "🫲🏾", 5: "🫲🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🫲🏻", "2": "🫲🏼", "3": "🫲🏽", "4": "🫲🏾", "5": "🫲🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "palm down hand",
 		oldId: nil,
 		keywords: ["dismiss","drop","shoo","palm_down","palm down hand","palm"],
 		char: "🫳",
-		skinTones: [1: "🫳🏻", 2: "🫳🏼", 3: "🫳🏽", 4: "🫳🏾", 5: "🫳🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🫳🏻", "2": "🫳🏼", "3": "🫳🏽", "4": "🫳🏾", "5": "🫳🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "palm up hand",
 		oldId: nil,
 		keywords: ["beckon","catch","come","offer","palm_up","palm up hand","lift","demand"],
 		char: "🫴",
-		skinTones: [1: "🫴🏻", 2: "🫴🏼", 3: "🫴🏽", 4: "🫴🏾", 5: "🫴🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🫴🏻", "2": "🫴🏼", "3": "🫴🏽", "4": "🫴🏾", "5": "🫴🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "OK hand",
 		oldId: "ok_hand",
 		keywords: ["hand","ok","okay","perfect","fingers","limbs","ok_hand"],
 		char: "👌",
-		skinTones: [1: "👌🏻", 2: "👌🏼", 3: "👌🏽", 4: "👌🏾", 5: "👌🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👌🏻", "2": "👌🏼", "3": "👌🏽", "4": "👌🏾", "5": "👌🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "pinched fingers",
 		oldId: nil,
 		keywords: ["fingers","hand gesture","interrogation","pinched","sarcastic","pinch","pinched_fingers","pinched fingers","size","tiny","small"],
 		char: "🤌",
-		skinTones: [1: "🤌🏻", 2: "🤌🏼", 3: "🤌🏽", 4: "🤌🏾", 5: "🤌🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤌🏻", "2": "🤌🏼", "3": "🤌🏽", "4": "🤌🏾", "5": "🤌🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "pinching hand",
 		oldId: nil,
 		keywords: ["small amount","pinching_hand","tiny","small","size"],
 		char: "🤏",
-		skinTones: [1: "🤏🏻", 2: "🤏🏼", 3: "🤏🏽", 4: "🤏🏾", 5: "🤏🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤏🏻", "2": "🤏🏼", "3": "🤏🏽", "4": "🤏🏾", "5": "🤏🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "victory hand",
 		oldId: "v",
 		keywords: ["hand","v","victory","air quotes","quotes","peace","peace sign","V sign","fingers","ohyeah","two","victory_hand"],
 		char: "✌️",
-		skinTones: [1: "✌🏻", 2: "✌🏼", 3: "✌🏽", 4: "✌🏾", 5: "✌🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "✌🏻", "2": "✌🏼", "3": "✌🏽", "4": "✌🏾", "5": "✌🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "crossed fingers",
 		oldId: "crossed_fingers",
 		keywords: ["cross","finger","hand","luck","fingers crossed","crossed","fingers","good luck","fingers_crossed","crossed_fingers","good","lucky"],
 		char: "🤞",
-		skinTones: [1: "🤞🏻", 2: "🤞🏼", 3: "🤞🏽", 4: "🤞🏾", 5: "🤞🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤞🏻", "2": "🤞🏼", "3": "🤞🏽", "4": "🤞🏾", "5": "🤞🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "hand with index finger and thumb crossed",
 		oldId: nil,
 		keywords: ["expensive","heart","love","money","snap","hand_with_index_finger_and_thumb_crossed","hand with index finger and thumb crossed"],
 		char: "🫰",
-		skinTones: [1: "🫰🏻", 2: "🫰🏼", 3: "🫰🏽", 4: "🫰🏾", 5: "🫰🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🫰🏻", "2": "🫰🏼", "3": "🫰🏽", "4": "🫰🏾", "5": "🫰🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "love-you gesture",
 		oldId: "love_you",
 		keywords: ["hand","ily","love","heavy metal","love_you_gesture","fingers","gesture"],
 		char: "🤟",
-		skinTones: [1: "🤟🏻", 2: "🤟🏼", 3: "🤟🏽", 4: "🤟🏾", 5: "🤟🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤟🏻", "2": "🤟🏼", "3": "🤟🏽", "4": "🤟🏾", "5": "🤟🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "sign of the horns",
 		oldId: "metal",
 		keywords: ["finger","hand","horns","rock-on","rock on","rock","devil","devil fingers","heavy","metal","heavy metal","fingers","evil","eye","on","\\M/","sign_of_the_horns","evil_eye","sign_of_horns","rock_on"],
 		char: "🤘",
-		skinTones: [1: "🤘🏻", 2: "🤘🏼", 3: "🤘🏽", 4: "🤘🏾", 5: "🤘🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤘🏻", "2": "🤘🏼", "3": "🤘🏽", "4": "🤘🏾", "5": "🤘🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "call me hand",
 		oldId: "call_me_hand",
 		keywords: ["call","hand","hang loose","shaka","call me hand","phone","shaka sign","right on","call_me_hand","hands","gesture"],
 		char: "🤙",
-		skinTones: [1: "🤙🏻", 2: "🤙🏼", 3: "🤙🏽", 4: "🤙🏾", 5: "🤙🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤙🏻", "2": "🤙🏼", "3": "🤙🏽", "4": "🤙🏾", "5": "🤙🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "backhand index pointing left",
 		oldId: "point_left",
 		keywords: ["backhand","finger","hand","index","point","left","point left","direction","fingers","point_left","backhand_index_pointing_left"],
 		char: "👈️",
-		skinTones: [1: "👈🏻", 2: "👈🏼", 3: "👈🏽", 4: "👈🏾", 5: "👈🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👈🏻", "2": "👈🏼", "3": "👈🏽", "4": "👈🏾", "5": "👈🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "backhand index pointing right",
 		oldId: "point_right",
 		keywords: ["backhand","finger","hand","index","point","right","point right","fingers","direction","point_right","backhand_index_pointing_right"],
 		char: "👉️",
-		skinTones: [1: "👉🏻", 2: "👉🏼", 3: "👉🏽", 4: "👉🏾", 5: "👉🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👉🏻", "2": "👉🏼", "3": "👉🏽", "4": "👉🏾", "5": "👉🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "backhand index pointing up",
 		oldId: "point_up_2",
 		keywords: ["backhand","finger","hand","point","up","index","point up","2","fingers","direction","point_up","backhand_index_pointing_up"],
 		char: "👆️",
-		skinTones: [1: "👆🏻", 2: "👆🏼", 3: "👆🏽", 4: "👆🏾", 5: "👆🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👆🏻", "2": "👆🏼", "3": "👆🏽", "4": "👆🏾", "5": "👆🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "middle finger",
 		oldId: "fu",
 		keywords: ["finger","hand","fingering","reversed","with","extended","fingers","rude","flipping","middle_finger","middle"],
 		char: "🖕",
-		skinTones: [1: "🖕🏻", 2: "🖕🏼", 3: "🖕🏽", 4: "🖕🏾", 5: "🖕🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🖕🏻", "2": "🖕🏼", "3": "🖕🏽", "4": "🖕🏾", "5": "🖕🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "backhand index pointing down",
 		oldId: "point_down",
 		keywords: ["backhand","down","finger","hand","point","index","point down","fingers","direction","point_down","backhand_index_pointing_down"],
 		char: "👇️",
-		skinTones: [1: "👇🏻", 2: "👇🏼", 3: "👇🏽", 4: "👇🏾", 5: "👇🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👇🏻", "2": "👇🏼", "3": "👇🏽", "4": "👇🏾", "5": "👇🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "index pointing up",
 		oldId: "point_up",
 		keywords: ["finger","hand","index","point","up","fingers","direction","point_up_2","index_pointing_up"],
 		char: "☝️",
-		skinTones: [1: "☝🏻", 2: "☝🏼", 3: "☝🏽", 4: "☝🏾", 5: "☝🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "☝🏻", "2": "☝🏼", "3": "☝🏽", "4": "☝🏾", "5": "☝🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "index pointing at the viewer",
 		oldId: nil,
 		keywords: ["point","you","point_forward","index pointing at the viewer","recruit"],
 		char: "🫵",
-		skinTones: [1: "🫵🏻", 2: "🫵🏼", 3: "🫵🏽", 4: "🫵🏾", 5: "🫵🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🫵🏻", "2": "🫵🏼", "3": "🫵🏽", "4": "🫵🏾", "5": "🫵🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "thumbs up",
 		oldId: "+1",
 		keywords: ["+1","hand","thumb","up","like","yes","thumbs up","thumbsup","awesome","good","agree","accept","cool","thumbs_up"],
 		char: "👍️",
-		skinTones: [1: "👍🏻", 2: "👍🏼", 3: "👍🏽", 4: "👍🏾", 5: "👍🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👍🏻", "2": "👍🏼", "3": "👍🏽", "4": "👍🏾", "5": "👍🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "thumbs down",
 		oldId: "-1",
 		keywords: ["-1","down","hand","thumb","dislike","no","thumbs down","thumbs down sign","thumbs","thumbsdown","thumbs_down"],
 		char: "👎️",
-		skinTones: [1: "👎🏻", 2: "👎🏼", 3: "👎🏽", 4: "👎🏾", 5: "👎🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👎🏻", "2": "👎🏼", "3": "👎🏽", "4": "👎🏾", "5": "👎🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "raised fist",
 		oldId: "fist",
 		keywords: ["clenched","fist","hand","punch","fingers","grasp","raised_fist"],
 		char: "✊",
-		skinTones: [1: "✊🏻", 2: "✊🏼", 3: "✊🏽", 4: "✊🏾", 5: "✊🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "✊🏻", "2": "✊🏼", "3": "✊🏽", "4": "✊🏾", "5": "✊🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "oncoming fist",
 		oldId: "facepunch",
 		keywords: ["clenched","fist","hand","punch","oncoming fist","brofist","bro","bump","facepunch","angry","violence","hit","attack","oncoming_fist"],
 		char: "👊",
-		skinTones: [1: "👊🏻", 2: "👊🏼", 3: "👊🏽", 4: "👊🏾", 5: "👊🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👊🏻", "2": "👊🏼", "3": "👊🏽", "4": "👊🏾", "5": "👊🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "left-facing fist",
 		oldId: "fist_left",
 		keywords: ["fist","leftwards","left","left-facing fist","left_facing_fist","hand","fistbump"],
 		char: "🤛",
-		skinTones: [1: "🤛🏻", 2: "🤛🏼", 3: "🤛🏽", 4: "🤛🏾", 5: "🤛🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤛🏻", "2": "🤛🏼", "3": "🤛🏽", "4": "🤛🏾", "5": "🤛🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "right-facing fist",
 		oldId: "fist_right",
 		keywords: ["fist","rightwards","right","right-facing fist","right_facing_fist","hand","fistbump"],
 		char: "🤜",
-		skinTones: [1: "🤜🏻", 2: "🤜🏼", 3: "🤜🏽", 4: "🤜🏾", 5: "🤜🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤜🏻", "2": "🤜🏼", "3": "🤜🏽", "4": "🤜🏾", "5": "🤜🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "clapping hands",
 		oldId: "clap",
 		keywords: ["clap","hand","clapping hands","applause","clapping","golf clap","round of applause","praise","congrats","yay","clapping_hands","hands"],
 		char: "👏",
-		skinTones: [1: "👏🏻", 2: "👏🏼", 3: "👏🏽", 4: "👏🏾", 5: "👏🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👏🏻", "2": "👏🏼", "3": "👏🏽", "4": "👏🏾", "5": "👏🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "raising hands",
 		oldId: "raised_hands",
 		keywords: ["celebration","gesture","hand","hooray","raised","raising hands","raising","hands","arms in the air","banzai","Festivus miracle","hallelujah","praise hands","two hands","yea","raised_hands","raising_hands"],
 		char: "🙌",
-		skinTones: [1: "🙌🏻", 2: "🙌🏼", 3: "🙌🏽", 4: "🙌🏾", 5: "🙌🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🙌🏻", "2": "🙌🏼", "3": "🙌🏽", "4": "🙌🏾", "5": "🙌🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "heart hands",
 		oldId: nil,
 		keywords: ["love","heart_hands","heart hands","appreciation","support"],
 		char: "🫶",
-		skinTones: [1: "🫶🏻", 2: "🫶🏼", 3: "🫶🏽", 4: "🫶🏾", 5: "🫶🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🫶🏻", "2": "🫶🏼", "3": "🫶🏽", "4": "🫶🏾", "5": "🫶🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "open hands",
 		oldId: "open_hands",
 		keywords: ["hand","open","hug","open hands","hands","jazz hands","jazz","fingers","butterfly","open_hands"],
 		char: "👐",
-		skinTones: [1: "👐🏻", 2: "👐🏼", 3: "👐🏽", 4: "👐🏾", 5: "👐🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👐🏻", "2": "👐🏼", "3": "👐🏽", "4": "👐🏾", "5": "👐🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "palms up together",
 		oldId: "palms_up",
 		keywords: ["prayer","pray","god","palms_up_together","hands","gesture","cupped"],
 		char: "🤲",
-		skinTones: [1: "🤲🏻", 2: "🤲🏼", 3: "🤲🏽", 4: "🤲🏾", 5: "🤲🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤲🏻", "2": "🤲🏼", "3": "🤲🏽", "4": "🤲🏾", "5": "🤲🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "handshake",
 		oldId: "handshake",
 		keywords: ["agreement","hand","meeting","shake","shaking hands","hello","bye","goodbye","handshake"],
 		char: "🤝",
-		skinTones: [1: "🤝🏻", 2: "🤝🏼", 3: "🤝🏽", 4: "🤝🏾", 5: "🤝🏿", 1,2: "🫱🏻‍🫲🏼", 1,3: "🫱🏻‍🫲🏽", 1,4: "🫱🏻‍🫲🏾", 1,5: "🫱🏻‍🫲🏿", 2,1: "🫱🏼‍🫲🏻", 2,3: "🫱🏼‍🫲🏽", 2,4: "🫱🏼‍🫲🏾", 2,5: "🫱🏼‍🫲🏿", 3,1: "🫱🏽‍🫲🏻", 3,2: "🫱🏽‍🫲🏼", 3,4: "🫱🏽‍🫲🏾", 3,5: "🫱🏽‍🫲🏿", 4,1: "🫱🏾‍🫲🏻", 4,2: "🫱🏾‍🫲🏼", 4,3: "🫱🏾‍🫲🏽", 4,5: "🫱🏾‍🫲🏿", 5,1: "🫱🏿‍🫲🏻", 5,2: "🫱🏿‍🫲🏼", 5,3: "🫱🏿‍🫲🏽", 5,4: "🫱🏿‍🫲🏾"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤝🏻", "2": "🤝🏼", "3": "🤝🏽", "4": "🤝🏾", "5": "🤝🏿", "1,2": "🫱🏻‍🫲🏼", "1,3": "🫱🏻‍🫲🏽", "1,4": "🫱🏻‍🫲🏾", "1,5": "🫱🏻‍🫲🏿", "2,1": "🫱🏼‍🫲🏻", "2,3": "🫱🏼‍🫲🏽", "2,4": "🫱🏼‍🫲🏾", "2,5": "🫱🏼‍🫲🏿", "3,1": "🫱🏽‍🫲🏻", "3,2": "🫱🏽‍🫲🏼", "3,4": "🫱🏽‍🫲🏾", "3,5": "🫱🏽‍🫲🏿", "4,1": "🫱🏾‍🫲🏻", "4,2": "🫱🏾‍🫲🏼", "4,3": "🫱🏾‍🫲🏽", "4,5": "🫱🏾‍🫲🏿", "5,1": "🫱🏿‍🫲🏻", "5,2": "🫱🏿‍🫲🏼", "5,3": "🫱🏿‍🫲🏽", "5,4": "🫱🏿‍🫲🏾"],
+		category: "people-body"),
 
 	Emoji(
 		id: "folded hands",
 		oldId: "pray",
 		keywords: ["ask","hand","high 5","high five","please","pray","thanks","bow","folded","gesture","hope","wish","namaste","highfive","high","five","folded_hands","thank you","appreciate"],
 		char: "🙏",
-		skinTones: [1: "🙏🏻", 2: "🙏🏼", 3: "🙏🏽", 4: "🙏🏾", 5: "🙏🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🙏🏻", "2": "🙏🏼", "3": "🙏🏽", "4": "🙏🏾", "5": "🙏🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "writing hand",
 		oldId: "writing_hand",
 		keywords: ["hand","write","writing hand","writing","lower","left","ballpoint","pen","stationery","compose","writing_hand","lower_left_ballpoint_pen"],
 		char: "✍️",
-		skinTones: [1: "✍🏻", 2: "✍🏼", 3: "✍🏽", 4: "✍🏾", 5: "✍🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "✍🏻", "2": "✍🏼", "3": "✍🏽", "4": "✍🏾", "5": "✍🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "nail polish",
 		oldId: "nail_care",
 		keywords: ["care","cosmetics","manicure","nail","polish","beauty","finger","fashion","nail_care","nail_polish"],
 		char: "💅",
-		skinTones: [1: "💅🏻", 2: "💅🏼", 3: "💅🏽", 4: "💅🏾", 5: "💅🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "💅🏻", "2": "💅🏼", "3": "💅🏽", "4": "💅🏾", "5": "💅🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "selfie",
 		oldId: "selfie",
 		keywords: ["camera","phone","selfie"],
 		char: "🤳",
-		skinTones: [1: "🤳🏻", 2: "🤳🏼", 3: "🤳🏽", 4: "🤳🏾", 5: "🤳🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤳🏻", "2": "🤳🏼", "3": "🤳🏽", "4": "🤳🏾", "5": "🤳🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "flexed biceps",
 		oldId: "muscle",
 		keywords: ["biceps","comic","flex","muscle","flexed biceps","flexed","feats of strength","strength","feats","strong","arm","hand","summer","right_bicep","flexed_biceps"],
 		char: "💪",
-		skinTones: [1: "💪🏻", 2: "💪🏼", 3: "💪🏽", 4: "💪🏾", 5: "💪🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "💪🏻", "2": "💪🏼", "3": "💪🏽", "4": "💪🏾", "5": "💪🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "mechanical arm",
@@ -1870,8 +1665,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["accessibility","prosthetic","mechanical_arm"],
 		char: "🦾",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "mechanical leg",
@@ -1879,53 +1673,47 @@ var emojis: Array<Emoji> = [
 		keywords: ["accessibility","prosthetic","mechanical_leg"],
 		char: "🦿",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "leg",
 		oldId: "leg",
 		keywords: ["kick","limb","leg"],
 		char: "🦵",
-		skinTones: [1: "🦵🏻", 2: "🦵🏼", 3: "🦵🏽", 4: "🦵🏾", 5: "🦵🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🦵🏻", "2": "🦵🏼", "3": "🦵🏽", "4": "🦵🏾", "5": "🦵🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "foot",
 		oldId: "foot",
 		keywords: ["kick","stomp","foot"],
 		char: "🦶",
-		skinTones: [1: "🦶🏻", 2: "🦶🏼", 3: "🦶🏽", 4: "🦶🏾", 5: "🦶🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🦶🏻", "2": "🦶🏼", "3": "🦶🏽", "4": "🦶🏾", "5": "🦶🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "ear",
 		oldId: "ear",
 		keywords: ["body","ear","hear","listen","face","sound"],
 		char: "👂️",
-		skinTones: [1: "👂🏻", 2: "👂🏼", 3: "👂🏽", 4: "👂🏾", 5: "👂🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👂🏻", "2": "👂🏼", "3": "👂🏽", "4": "👂🏾", "5": "👂🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "ear with hearing aid",
 		oldId: nil,
 		keywords: ["accessibility","hard of hearing","ear_with_hearing_aid","hearing_aid"],
 		char: "🦻",
-		skinTones: [1: "🦻🏻", 2: "🦻🏼", 3: "🦻🏽", 4: "🦻🏾", 5: "🦻🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🦻🏻", "2": "🦻🏼", "3": "🦻🏽", "4": "🦻🏾", "5": "🦻🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "nose",
 		oldId: "nose",
 		keywords: ["body","nose","smell","sniff"],
 		char: "👃",
-		skinTones: [1: "👃🏻", 2: "👃🏼", 3: "👃🏽", 4: "👃🏾", 5: "👃🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👃🏻", "2": "👃🏼", "3": "👃🏽", "4": "👃🏾", "5": "👃🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "brain",
@@ -1933,8 +1721,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["intelligent","brain","clever","smart"],
 		char: "🧠",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "anatomical heart",
@@ -1942,8 +1729,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["anatomical","cardiology","heart","organ","pulse","pump","blood","beat","anatomical_heart","anatomical heart","health","heartbeat"],
 		char: "🫀",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "lungs",
@@ -1951,8 +1737,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["breath","exhalation","inhalation","organ","respiration","breathing","air","lungs","breathe"],
 		char: "🫁",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "tooth",
@@ -1960,8 +1745,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["dentist","tooth","teeth"],
 		char: "🦷",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "bone",
@@ -1969,8 +1753,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["skeleton","bone"],
 		char: "🦴",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "eyes",
@@ -1978,8 +1761,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["eye","face","eyes","look","watch","stalk","peek","see"],
 		char: "👀",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "eye",
@@ -1987,8 +1769,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["body","eye","face","look","see","watch","stare"],
 		char: "👁️",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "tongue",
@@ -1996,8 +1777,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["body","tongue","kiss","lick","licking","mouth","playful"],
 		char: "👅",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "mouth",
@@ -2005,8 +1785,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["lips","kiss","mouth"],
 		char: "👄",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "biting lip",
@@ -2014,1493 +1793,1327 @@ var emojis: Array<Emoji> = [
 		keywords: ["anxious","fear","flirting","nervous","uncomfortable","worried","biting_lip","biting lip","flirt","sexy","pain","worry"],
 		char: "🫦",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "baby",
 		oldId: "baby",
 		keywords: ["young","human","person","child","boy","girl","toddler","baby"],
 		char: "👶",
-		skinTones: [1: "👶🏻", 2: "👶🏼", 3: "👶🏽", 4: "👶🏾", 5: "👶🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👶🏻", "2": "👶🏼", "3": "👶🏽", "4": "👶🏾", "5": "👶🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "child",
 		oldId: "child",
 		keywords: ["gender-neutral","unspecified gender","young","human","person","child"],
 		char: "🧒",
-		skinTones: [1: "🧒🏻", 2: "🧒🏼", 3: "🧒🏽", 4: "🧒🏾", 5: "🧒🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧒🏻", "2": "🧒🏼", "3": "🧒🏽", "4": "🧒🏾", "5": "🧒🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "boy",
 		oldId: "boy",
 		keywords: ["young","human","person","man","male","guy","teenager","boy"],
 		char: "👦",
-		skinTones: [1: "👦🏻", 2: "👦🏼", 3: "👦🏽", 4: "👦🏾", 5: "👦🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👦🏻", "2": "👦🏼", "3": "👦🏽", "4": "👦🏾", "5": "👦🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "girl",
 		oldId: "girl",
 		keywords: ["virgo","young","zodiac","human","person","female","woman","teenager","girl"],
 		char: "👧",
-		skinTones: [1: "👧🏻", 2: "👧🏼", 3: "👧🏽", 4: "👧🏾", 5: "👧🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👧🏻", "2": "👧🏼", "3": "👧🏽", "4": "👧🏾", "5": "👧🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person",
 		oldId: "adult",
 		keywords: ["adult","gender-neutral","unspecified gender","human","person"],
 		char: "🧑",
-		skinTones: [1: "🧑🏻", 2: "🧑🏼", 3: "🧑🏽", 4: "🧑🏾", 5: "🧑🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻", "2": "🧑🏼", "3": "🧑🏽", "4": "🧑🏾", "5": "🧑🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person: blond hair",
 		oldId: "blonde_man",
 		keywords: ["blond","blond-haired person","hair","with","hairstyle","blond_haired","person_blond_hair"],
 		char: "👱",
-		skinTones: [1: "👱🏻", 2: "👱🏼", 3: "👱🏽", 4: "👱🏾", 5: "👱🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👱🏻", "2": "👱🏼", "3": "👱🏽", "4": "👱🏾", "5": "👱🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man",
 		oldId: "man",
 		keywords: ["adult","human","person","mustache","father","dad","guy","classy","sir","moustache","man"],
 		char: "👨",
-		skinTones: [1: "👨🏻", 2: "👨🏼", 3: "👨🏽", 4: "👨🏾", 5: "👨🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻", "2": "👨🏼", "3": "👨🏽", "4": "👨🏾", "5": "👨🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person: beard",
 		oldId: "bearded_person",
 		keywords: ["beard","person","man","facial hair","manly","person_bearded","man_beard","bewhiskered"],
 		char: "🧔",
-		skinTones: [1: "🧔🏻", 2: "🧔🏼", 3: "🧔🏽", 4: "🧔🏾", 5: "🧔🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧔🏻", "2": "🧔🏼", "3": "🧔🏽", "4": "🧔🏾", "5": "🧔🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man: beard",
 		oldId: nil,
 		keywords: ["beard","man","man_bearded","man beard","facial hair"],
 		char: "🧔‍♂️",
-		skinTones: [1: "🧔🏻‍♂️", 2: "🧔🏼‍♂️", 3: "🧔🏽‍♂️", 4: "🧔🏾‍♂️", 5: "🧔🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧔🏻‍♂️", "2": "🧔🏼‍♂️", "3": "🧔🏽‍♂️", "4": "🧔🏾‍♂️", "5": "🧔🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman: beard",
 		oldId: nil,
 		keywords: ["beard","woman","woman_bearded","woman beard","facial hair"],
 		char: "🧔‍♀️",
-		skinTones: [1: "🧔🏻‍♀️", 2: "🧔🏼‍♀️", 3: "🧔🏽‍♀️", 4: "🧔🏾‍♀️", 5: "🧔🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧔🏻‍♀️", "2": "🧔🏼‍♀️", "3": "🧔🏽‍♀️", "4": "🧔🏾‍♀️", "5": "🧔🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man: red hair",
 		oldId: nil,
 		keywords: ["adult","man","red hair","man_red_haired","man_red_hair","hairstyle"],
 		char: "👨‍🦰",
-		skinTones: [1: "👨🏻‍🦰", 2: "👨🏼‍🦰", 3: "👨🏽‍🦰", 4: "👨🏾‍🦰", 5: "👨🏿‍🦰"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻‍🦰", "2": "👨🏼‍🦰", "3": "👨🏽‍🦰", "4": "👨🏾‍🦰", "5": "👨🏿‍🦰"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man: curly hair",
 		oldId: nil,
 		keywords: ["adult","curly hair","man","man_curly_haired","man_curly_hair","hairstyle"],
 		char: "👨‍🦱",
-		skinTones: [1: "👨🏻‍🦱", 2: "👨🏼‍🦱", 3: "👨🏽‍🦱", 4: "👨🏾‍🦱", 5: "👨🏿‍🦱"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻‍🦱", "2": "👨🏼‍🦱", "3": "👨🏽‍🦱", "4": "👨🏾‍🦱", "5": "👨🏿‍🦱"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man: white hair",
 		oldId: nil,
 		keywords: ["adult","man","white hair","man_white_haired","man_white_hair","old","elder"],
 		char: "👨‍🦳",
-		skinTones: [1: "👨🏻‍🦳", 2: "👨🏼‍🦳", 3: "👨🏽‍🦳", 4: "👨🏾‍🦳", 5: "👨🏿‍🦳"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻‍🦳", "2": "👨🏼‍🦳", "3": "👨🏽‍🦳", "4": "👨🏾‍🦳", "5": "👨🏿‍🦳"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man: bald",
 		oldId: nil,
 		keywords: ["adult","bald","man","man_bald","hairless"],
 		char: "👨‍🦲",
-		skinTones: [1: "👨🏻‍🦲", 2: "👨🏼‍🦲", 3: "👨🏽‍🦲", 4: "👨🏾‍🦲", 5: "👨🏿‍🦲"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻‍🦲", "2": "👨🏼‍🦲", "3": "👨🏽‍🦲", "4": "👨🏾‍🦲", "5": "👨🏿‍🦲"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman",
 		oldId: "woman",
 		keywords: ["adult","human","person","female","girls","lady","woman"],
 		char: "👩",
-		skinTones: [1: "👩🏻", 2: "👩🏼", 3: "👩🏽", 4: "👩🏾", 5: "👩🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻", "2": "👩🏼", "3": "👩🏽", "4": "👩🏾", "5": "👩🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman: red hair",
 		oldId: nil,
 		keywords: ["adult","red hair","woman","woman_red_haired","woman_red_hair","hairstyle"],
 		char: "👩‍🦰",
-		skinTones: [1: "👩🏻‍🦰", 2: "👩🏼‍🦰", 3: "👩🏽‍🦰", 4: "👩🏾‍🦰", 5: "👩🏿‍🦰"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍🦰", "2": "👩🏼‍🦰", "3": "👩🏽‍🦰", "4": "👩🏾‍🦰", "5": "👩🏿‍🦰"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person: red hair",
 		oldId: nil,
 		keywords: ["adult","gender-neutral","person","red hair","unspecified gender","red_haired","person_red_hair","hairstyle"],
 		char: "🧑‍🦰",
-		skinTones: [1: "🧑🏻‍🦰", 2: "🧑🏼‍🦰", 3: "🧑🏽‍🦰", 4: "🧑🏾‍🦰", 5: "🧑🏿‍🦰"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻‍🦰", "2": "🧑🏼‍🦰", "3": "🧑🏽‍🦰", "4": "🧑🏾‍🦰", "5": "🧑🏿‍🦰"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman: curly hair",
 		oldId: nil,
 		keywords: ["adult","curly hair","woman","woman_curly_haired","woman_curly_hair","hairstyle"],
 		char: "👩‍🦱",
-		skinTones: [1: "👩🏻‍🦱", 2: "👩🏼‍🦱", 3: "👩🏽‍🦱", 4: "👩🏾‍🦱", 5: "👩🏿‍🦱"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍🦱", "2": "👩🏼‍🦱", "3": "👩🏽‍🦱", "4": "👩🏾‍🦱", "5": "👩🏿‍🦱"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person: curly hair",
 		oldId: nil,
 		keywords: ["adult","curly hair","gender-neutral","person","unspecified gender","curly_haired","person_curly_hair","hairstyle"],
 		char: "🧑‍🦱",
-		skinTones: [1: "🧑🏻‍🦱", 2: "🧑🏼‍🦱", 3: "🧑🏽‍🦱", 4: "🧑🏾‍🦱", 5: "🧑🏿‍🦱"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻‍🦱", "2": "🧑🏼‍🦱", "3": "🧑🏽‍🦱", "4": "🧑🏾‍🦱", "5": "🧑🏿‍🦱"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman: white hair",
 		oldId: nil,
 		keywords: ["adult","white hair","woman","woman_white_haired","woman_white_hair","old","elder"],
 		char: "👩‍🦳",
-		skinTones: [1: "👩🏻‍🦳", 2: "👩🏼‍🦳", 3: "👩🏽‍🦳", 4: "👩🏾‍🦳", 5: "👩🏿‍🦳"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍🦳", "2": "👩🏼‍🦳", "3": "👩🏽‍🦳", "4": "👩🏾‍🦳", "5": "👩🏿‍🦳"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person: white hair",
 		oldId: nil,
 		keywords: ["adult","gender-neutral","person","unspecified gender","white hair","white_haired","person_white_hair","elder","old"],
 		char: "🧑‍🦳",
-		skinTones: [1: "🧑🏻‍🦳", 2: "🧑🏼‍🦳", 3: "🧑🏽‍🦳", 4: "🧑🏾‍🦳", 5: "🧑🏿‍🦳"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻‍🦳", "2": "🧑🏼‍🦳", "3": "🧑🏽‍🦳", "4": "🧑🏾‍🦳", "5": "🧑🏿‍🦳"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman: bald",
 		oldId: nil,
 		keywords: ["adult","bald","woman","woman_bald","hairless"],
 		char: "👩‍🦲",
-		skinTones: [1: "👩🏻‍🦲", 2: "👩🏼‍🦲", 3: "👩🏽‍🦲", 4: "👩🏾‍🦲", 5: "👩🏿‍🦲"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍🦲", "2": "👩🏼‍🦲", "3": "👩🏽‍🦲", "4": "👩🏾‍🦲", "5": "👩🏿‍🦲"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person: bald",
 		oldId: nil,
 		keywords: ["adult","bald","gender-neutral","person","unspecified gender","person_bald","hairless"],
 		char: "🧑‍🦲",
-		skinTones: [1: "🧑🏻‍🦲", 2: "🧑🏼‍🦲", 3: "🧑🏽‍🦲", 4: "🧑🏾‍🦲", 5: "🧑🏿‍🦲"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻‍🦲", "2": "🧑🏼‍🦲", "3": "🧑🏽‍🦲", "4": "🧑🏾‍🦲", "5": "🧑🏿‍🦲"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman: blond hair",
 		oldId: "blonde_woman",
 		keywords: ["blond-haired woman","blonde","hair","woman","woman_blond_haired","woman_blond_hair","female","girl","person"],
 		char: "👱‍♀️",
-		skinTones: [1: "👱🏻‍♀️", 2: "👱🏼‍♀️", 3: "👱🏽‍♀️", 4: "👱🏾‍♀️", 5: "👱🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👱🏻‍♀️", "2": "👱🏼‍♀️", "3": "👱🏽‍♀️", "4": "👱🏾‍♀️", "5": "👱🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man: blond hair",
 		oldId: nil,
 		keywords: ["blond","blond-haired man","hair","man","man_blond_haired","man_blond_hair","male","boy","blonde","guy","person"],
 		char: "👱‍♂️",
-		skinTones: [1: "👱🏻‍♂️", 2: "👱🏼‍♂️", 3: "👱🏽‍♂️", 4: "👱🏾‍♂️", 5: "👱🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👱🏻‍♂️", "2": "👱🏼‍♂️", "3": "👱🏽‍♂️", "4": "👱🏾‍♂️", "5": "👱🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "older person",
 		oldId: "older_adult",
 		keywords: ["adult","gender-neutral","old","unspecified gender","human","person","older_adult","older_person","elder","senior"],
 		char: "🧓",
-		skinTones: [1: "🧓🏻", 2: "🧓🏼", 3: "🧓🏽", 4: "🧓🏾", 5: "🧓🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧓🏻", "2": "🧓🏼", "3": "🧓🏽", "4": "🧓🏾", "5": "🧓🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "old man",
 		oldId: "older_man",
 		keywords: ["adult","man","old","grandpa","human","person","older","male","men","elder","senior","older_man","old_man"],
 		char: "👴",
-		skinTones: [1: "👴🏻", 2: "👴🏼", 3: "👴🏽", 4: "👴🏾", 5: "👴🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👴🏻", "2": "👴🏼", "3": "👴🏽", "4": "👴🏾", "5": "👴🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "old woman",
 		oldId: "older_woman",
 		keywords: ["adult","old","woman","grandma","human","person","older","female","women","lady","elder","senior","older_woman","old_woman"],
 		char: "👵",
-		skinTones: [1: "👵🏻", 2: "👵🏼", 3: "👵🏽", 4: "👵🏾", 5: "👵🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👵🏻", "2": "👵🏼", "3": "👵🏽", "4": "👵🏾", "5": "👵🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person frowning",
 		oldId: "frowning_woman",
 		keywords: ["frown","gesture","negative","angry","head","face","worried","person_frowning"],
 		char: "🙍",
-		skinTones: [1: "🙍🏻", 2: "🙍🏼", 3: "🙍🏽", 4: "🙍🏾", 5: "🙍🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🙍🏻", "2": "🙍🏼", "3": "🙍🏽", "4": "🙍🏾", "5": "🙍🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man frowning",
 		oldId: "frowning_man",
 		keywords: ["frowning","gesture","man","man_frowning","male","boy","sad","depressed","discouraged","unhappy"],
 		char: "🙍‍♂️",
-		skinTones: [1: "🙍🏻‍♂️", 2: "🙍🏼‍♂️", 3: "🙍🏽‍♂️", 4: "🙍🏾‍♂️", 5: "🙍🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🙍🏻‍♂️", "2": "🙍🏼‍♂️", "3": "🙍🏽‍♂️", "4": "🙍🏾‍♂️", "5": "🙍🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman frowning",
 		oldId: nil,
 		keywords: ["frowning","gesture","woman","woman_frowning","female","girl","sad","depressed","discouraged","unhappy"],
 		char: "🙍‍♀️",
-		skinTones: [1: "🙍🏻‍♀️", 2: "🙍🏼‍♀️", 3: "🙍🏽‍♀️", 4: "🙍🏾‍♀️", 5: "🙍🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🙍🏻‍♀️", "2": "🙍🏼‍♀️", "3": "🙍🏽‍♀️", "4": "🙍🏾‍♀️", "5": "🙍🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person pouting",
 		oldId: "pouting_woman",
 		keywords: ["gesture","pouting","sad","negative","head","face","with","upset","person_pouting"],
 		char: "🙎",
-		skinTones: [1: "🙎🏻", 2: "🙎🏼", 3: "🙎🏽", 4: "🙎🏾", 5: "🙎🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🙎🏻", "2": "🙎🏼", "3": "🙎🏽", "4": "🙎🏾", "5": "🙎🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man pouting",
 		oldId: "pouting_man",
 		keywords: ["gesture","man","pouting","man_pouting","male","boy"],
 		char: "🙎‍♂️",
-		skinTones: [1: "🙎🏻‍♂️", 2: "🙎🏼‍♂️", 3: "🙎🏽‍♂️", 4: "🙎🏾‍♂️", 5: "🙎🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🙎🏻‍♂️", "2": "🙎🏼‍♂️", "3": "🙎🏽‍♂️", "4": "🙎🏾‍♂️", "5": "🙎🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman pouting",
 		oldId: nil,
 		keywords: ["gesture","pouting","woman","woman_pouting","female","girl"],
 		char: "🙎‍♀️",
-		skinTones: [1: "🙎🏻‍♀️", 2: "🙎🏼‍♀️", 3: "🙎🏽‍♀️", 4: "🙎🏾‍♀️", 5: "🙎🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🙎🏻‍♀️", "2": "🙎🏼‍♀️", "3": "🙎🏽‍♀️", "4": "🙎🏾‍♀️", "5": "🙎🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person gesturing NO",
 		oldId: "no_good_woman",
 		keywords: ["forbidden","gesture","hand","person gesturing no","prohibited","human","head","face","good","decline","no_good","person_gesturing_no"],
 		char: "🙅",
-		skinTones: [1: "🙅🏻", 2: "🙅🏼", 3: "🙅🏽", 4: "🙅🏾", 5: "🙅🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🙅🏻", "2": "🙅🏼", "3": "🙅🏽", "4": "🙅🏾", "5": "🙅🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man gesturing NO",
 		oldId: "no_good_man",
 		keywords: ["forbidden","gesture","hand","man","man gesturing no","prohibited","man_gesturing_no","male","boy","nope"],
 		char: "🙅‍♂️",
-		skinTones: [1: "🙅🏻‍♂️", 2: "🙅🏼‍♂️", 3: "🙅🏽‍♂️", 4: "🙅🏾‍♂️", 5: "🙅🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🙅🏻‍♂️", "2": "🙅🏼‍♂️", "3": "🙅🏽‍♂️", "4": "🙅🏾‍♂️", "5": "🙅🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman gesturing NO",
 		oldId: nil,
 		keywords: ["forbidden","gesture","hand","prohibited","woman","woman gesturing no","woman_gesturing_no","female","girl","nope"],
 		char: "🙅‍♀️",
-		skinTones: [1: "🙅🏻‍♀️", 2: "🙅🏼‍♀️", 3: "🙅🏽‍♀️", 4: "🙅🏾‍♀️", 5: "🙅🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🙅🏻‍♀️", "2": "🙅🏼‍♀️", "3": "🙅🏽‍♀️", "4": "🙅🏾‍♀️", "5": "🙅🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person gesturing OK",
 		oldId: "ok_woman",
 		keywords: ["gesture","hand","ok","person gesturing ok","human","head","face","woman","agree","all_good","person_gesturing_ok"],
 		char: "🙆",
-		skinTones: [1: "🙆🏻", 2: "🙆🏼", 3: "🙆🏽", 4: "🙆🏾", 5: "🙆🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🙆🏻", "2": "🙆🏼", "3": "🙆🏽", "4": "🙆🏾", "5": "🙆🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man gesturing OK",
 		oldId: "ok_man",
 		keywords: ["gesture","hand","man","man gesturing ok","ok","man_gesturing_ok","men","boy","male","blue","human"],
 		char: "🙆‍♂️",
-		skinTones: [1: "🙆🏻‍♂️", 2: "🙆🏼‍♂️", 3: "🙆🏽‍♂️", 4: "🙆🏾‍♂️", 5: "🙆🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🙆🏻‍♂️", "2": "🙆🏼‍♂️", "3": "🙆🏽‍♂️", "4": "🙆🏾‍♂️", "5": "🙆🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman gesturing OK",
 		oldId: nil,
 		keywords: ["gesture","hand","ok","woman","woman gesturing ok","woman_gesturing_ok","women","girl","female","pink","human"],
 		char: "🙆‍♀️",
-		skinTones: [1: "🙆🏻‍♀️", 2: "🙆🏼‍♀️", 3: "🙆🏽‍♀️", 4: "🙆🏾‍♀️", 5: "🙆🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🙆🏻‍♀️", "2": "🙆🏼‍♀️", "3": "🙆🏽‍♀️", "4": "🙆🏾‍♀️", "5": "🙆🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person tipping hand",
 		oldId: "tipping_hand_woman",
 		keywords: ["hand","help","information","sassy","tipping","human","head","face","desk","person_tipping_hand"],
 		char: "💁",
-		skinTones: [1: "💁🏻", 2: "💁🏼", 3: "💁🏽", 4: "💁🏾", 5: "💁🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "💁🏻", "2": "💁🏼", "3": "💁🏽", "4": "💁🏾", "5": "💁🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man tipping hand",
 		oldId: "tipping_hand_man",
 		keywords: ["man","sassy","tipping hand","man_tipping_hand","male","boy","human","information"],
 		char: "💁‍♂️",
-		skinTones: [1: "💁🏻‍♂️", 2: "💁🏼‍♂️", 3: "💁🏽‍♂️", 4: "💁🏾‍♂️", 5: "💁🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "💁🏻‍♂️", "2": "💁🏼‍♂️", "3": "💁🏽‍♂️", "4": "💁🏾‍♂️", "5": "💁🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman tipping hand",
 		oldId: nil,
 		keywords: ["sassy","tipping hand","woman","woman_tipping_hand","female","girl","human","information"],
 		char: "💁‍♀️",
-		skinTones: [1: "💁🏻‍♀️", 2: "💁🏼‍♀️", 3: "💁🏽‍♀️", 4: "💁🏾‍♀️", 5: "💁🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "💁🏻‍♀️", "2": "💁🏼‍♀️", "3": "💁🏽‍♀️", "4": "💁🏾‍♀️", "5": "💁🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person raising hand",
 		oldId: "raising_hand_woman",
 		keywords: ["gesture","hand","happy","raised","human","head","face","question","person_raising_hand"],
 		char: "🙋",
-		skinTones: [1: "🙋🏻", 2: "🙋🏼", 3: "🙋🏽", 4: "🙋🏾", 5: "🙋🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🙋🏻", "2": "🙋🏼", "3": "🙋🏽", "4": "🙋🏾", "5": "🙋🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man raising hand",
 		oldId: "raising_hand_man",
 		keywords: ["gesture","man","raising hand","man_raising_hand","male","boy"],
 		char: "🙋‍♂️",
-		skinTones: [1: "🙋🏻‍♂️", 2: "🙋🏼‍♂️", 3: "🙋🏽‍♂️", 4: "🙋🏾‍♂️", 5: "🙋🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🙋🏻‍♂️", "2": "🙋🏼‍♂️", "3": "🙋🏽‍♂️", "4": "🙋🏾‍♂️", "5": "🙋🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman raising hand",
 		oldId: nil,
 		keywords: ["gesture","raising hand","woman","woman_raising_hand","female","girl"],
 		char: "🙋‍♀️",
-		skinTones: [1: "🙋🏻‍♀️", 2: "🙋🏼‍♀️", 3: "🙋🏽‍♀️", 4: "🙋🏾‍♀️", 5: "🙋🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🙋🏻‍♀️", "2": "🙋🏼‍♀️", "3": "🙋🏽‍♀️", "4": "🙋🏾‍♀️", "5": "🙋🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "deaf person",
 		oldId: nil,
 		keywords: ["accessibility","deaf","ear","hear","deaf_person"],
 		char: "🧏",
-		skinTones: [1: "🧏🏻", 2: "🧏🏼", 3: "🧏🏽", 4: "🧏🏾", 5: "🧏🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧏🏻", "2": "🧏🏼", "3": "🧏🏽", "4": "🧏🏾", "5": "🧏🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "deaf man",
 		oldId: nil,
 		keywords: ["deaf","man","deaf_man","accessibility"],
 		char: "🧏‍♂️",
-		skinTones: [1: "🧏🏻‍♂️", 2: "🧏🏼‍♂️", 3: "🧏🏽‍♂️", 4: "🧏🏾‍♂️", 5: "🧏🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧏🏻‍♂️", "2": "🧏🏼‍♂️", "3": "🧏🏽‍♂️", "4": "🧏🏾‍♂️", "5": "🧏🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "deaf woman",
 		oldId: nil,
 		keywords: ["deaf","woman","deaf_woman","accessibility"],
 		char: "🧏‍♀️",
-		skinTones: [1: "🧏🏻‍♀️", 2: "🧏🏼‍♀️", 3: "🧏🏽‍♀️", 4: "🧏🏾‍♀️", 5: "🧏🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧏🏻‍♀️", "2": "🧏🏼‍♀️", "3": "🧏🏽‍♀️", "4": "🧏🏾‍♀️", "5": "🧏🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person bowing",
 		oldId: "bowing_man",
 		keywords: ["apology","bow","gesture","sorry","human","head","face","respectiful","person_bowing"],
 		char: "🙇",
-		skinTones: [1: "🙇🏻", 2: "🙇🏼", 3: "🙇🏽", 4: "🙇🏾", 5: "🙇🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🙇🏻", "2": "🙇🏼", "3": "🙇🏽", "4": "🙇🏾", "5": "🙇🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man bowing",
 		oldId: nil,
 		keywords: ["apology","bowing","favor","gesture","man","sorry","man_bowing","male","boy"],
 		char: "🙇‍♂️",
-		skinTones: [1: "🙇🏻‍♂️", 2: "🙇🏼‍♂️", 3: "🙇🏽‍♂️", 4: "🙇🏾‍♂️", 5: "🙇🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🙇🏻‍♂️", "2": "🙇🏼‍♂️", "3": "🙇🏽‍♂️", "4": "🙇🏾‍♂️", "5": "🙇🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman bowing",
 		oldId: "bowing_woman",
 		keywords: ["apology","bowing","favor","gesture","sorry","woman","woman_bowing","female","girl"],
 		char: "🙇‍♀️",
-		skinTones: [1: "🙇🏻‍♀️", 2: "🙇🏼‍♀️", 3: "🙇🏽‍♀️", 4: "🙇🏾‍♀️", 5: "🙇🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🙇🏻‍♀️", "2": "🙇🏼‍♀️", "3": "🙇🏽‍♀️", "4": "🙇🏾‍♀️", "5": "🙇🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person facepalming",
 		oldId: nil,
 		keywords: ["disbelief","exasperation","face","palm","facepalm","human","head","person_facepalming","disappointed"],
 		char: "🤦",
-		skinTones: [1: "🤦🏻", 2: "🤦🏼", 3: "🤦🏽", 4: "🤦🏾", 5: "🤦🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤦🏻", "2": "🤦🏼", "3": "🤦🏽", "4": "🤦🏾", "5": "🤦🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man facepalming",
 		oldId: "man_facepalming",
 		keywords: ["disbelief","exasperation","facepalm","man","head","face","man_facepalming","male","boy"],
 		char: "🤦‍♂️",
-		skinTones: [1: "🤦🏻‍♂️", 2: "🤦🏼‍♂️", 3: "🤦🏽‍♂️", 4: "🤦🏾‍♂️", 5: "🤦🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤦🏻‍♂️", "2": "🤦🏼‍♂️", "3": "🤦🏽‍♂️", "4": "🤦🏾‍♂️", "5": "🤦🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman facepalming",
 		oldId: "woman_facepalming",
 		keywords: ["disbelief","exasperation","facepalm","woman","head","face","woman_facepalming","female","girl"],
 		char: "🤦‍♀️",
-		skinTones: [1: "🤦🏻‍♀️", 2: "🤦🏼‍♀️", 3: "🤦🏽‍♀️", 4: "🤦🏾‍♀️", 5: "🤦🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤦🏻‍♀️", "2": "🤦🏼‍♀️", "3": "🤦🏽‍♀️", "4": "🤦🏾‍♀️", "5": "🤦🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person shrugging",
 		oldId: "woman_shrugging",
 		keywords: ["doubt","ignorance","indifference","shrug","human","head","face","person_shrugging","regardless"],
 		char: "🤷",
-		skinTones: [1: "🤷🏻", 2: "🤷🏼", 3: "🤷🏽", 4: "🤷🏾", 5: "🤷🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤷🏻", "2": "🤷🏼", "3": "🤷🏽", "4": "🤷🏾", "5": "🤷🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man shrugging",
 		oldId: "man_shrugging",
 		keywords: ["doubt","ignorance","indifference","man","shrug","man_shrugging","male","boy","confused","indifferent"],
 		char: "🤷‍♂️",
-		skinTones: [1: "🤷🏻‍♂️", 2: "🤷🏼‍♂️", 3: "🤷🏽‍♂️", 4: "🤷🏾‍♂️", 5: "🤷🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤷🏻‍♂️", "2": "🤷🏼‍♂️", "3": "🤷🏽‍♂️", "4": "🤷🏾‍♂️", "5": "🤷🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman shrugging",
 		oldId: nil,
 		keywords: ["doubt","ignorance","indifference","shrug","woman","woman_shrugging","female","girl","confused","indifferent"],
 		char: "🤷‍♀️",
-		skinTones: [1: "🤷🏻‍♀️", 2: "🤷🏼‍♀️", 3: "🤷🏽‍♀️", 4: "🤷🏾‍♀️", 5: "🤷🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤷🏻‍♀️", "2": "🤷🏼‍♀️", "3": "🤷🏽‍♀️", "4": "🤷🏾‍♀️", "5": "🤷🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "health worker",
 		oldId: nil,
 		keywords: ["doctor","healthcare","nurse","therapist","health_worker","hospital"],
 		char: "🧑‍⚕️",
-		skinTones: [1: "🧑🏻‍⚕️", 2: "🧑🏼‍⚕️", 3: "🧑🏽‍⚕️", 4: "🧑🏾‍⚕️", 5: "🧑🏿‍⚕️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻‍⚕️", "2": "🧑🏼‍⚕️", "3": "🧑🏽‍⚕️", "4": "🧑🏾‍⚕️", "5": "🧑🏿‍⚕️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man health worker",
 		oldId: "man_health_worker",
 		keywords: ["doctor","healthcare","man","nurse","therapist","stethoscope","doctor smock","man_health_worker","human"],
 		char: "👨‍⚕️",
-		skinTones: [1: "👨🏻‍⚕️", 2: "👨🏼‍⚕️", 3: "👨🏽‍⚕️", 4: "👨🏾‍⚕️", 5: "👨🏿‍⚕️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻‍⚕️", "2": "👨🏼‍⚕️", "3": "👨🏽‍⚕️", "4": "👨🏾‍⚕️", "5": "👨🏿‍⚕️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman health worker",
 		oldId: "woman_health_worker",
 		keywords: ["doctor","healthcare","nurse","therapist","woman","stethoscope","doctor smock","woman_health_worker","human"],
 		char: "👩‍⚕️",
-		skinTones: [1: "👩🏻‍⚕️", 2: "👩🏼‍⚕️", 3: "👩🏽‍⚕️", 4: "👩🏾‍⚕️", 5: "👩🏿‍⚕️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍⚕️", "2": "👩🏼‍⚕️", "3": "👩🏽‍⚕️", "4": "👩🏾‍⚕️", "5": "👩🏿‍⚕️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "student",
 		oldId: nil,
 		keywords: ["graduate","student","learn"],
 		char: "🧑‍🎓",
-		skinTones: [1: "🧑🏻‍🎓", 2: "🧑🏼‍🎓", 3: "🧑🏽‍🎓", 4: "🧑🏾‍🎓", 5: "🧑🏿‍🎓"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻‍🎓", "2": "🧑🏼‍🎓", "3": "🧑🏽‍🎓", "4": "🧑🏾‍🎓", "5": "🧑🏿‍🎓"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man student",
 		oldId: "man_student",
 		keywords: ["graduate","man","student","black robe","collegian","undergraduate","graduation","man_student","human"],
 		char: "👨‍🎓",
-		skinTones: [1: "👨🏻‍🎓", 2: "👨🏼‍🎓", 3: "👨🏽‍🎓", 4: "👨🏾‍🎓", 5: "👨🏿‍🎓"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻‍🎓", "2": "👨🏼‍🎓", "3": "👨🏽‍🎓", "4": "👨🏾‍🎓", "5": "👨🏿‍🎓"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman student",
 		oldId: "woman_student",
 		keywords: ["graduate","student","woman","black robe","collegian","undergraduate","graduation","woman_student","human"],
 		char: "👩‍🎓",
-		skinTones: [1: "👩🏻‍🎓", 2: "👩🏼‍🎓", 3: "👩🏽‍🎓", 4: "👩🏾‍🎓", 5: "👩🏿‍🎓"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍🎓", "2": "👩🏼‍🎓", "3": "👩🏽‍🎓", "4": "👩🏾‍🎓", "5": "👩🏿‍🎓"],
+		category: "people-body"),
 
 	Emoji(
 		id: "teacher",
 		oldId: nil,
 		keywords: ["instructor","professor","teacher"],
 		char: "🧑‍🏫",
-		skinTones: [1: "🧑🏻‍🏫", 2: "🧑🏼‍🏫", 3: "🧑🏽‍🏫", 4: "🧑🏾‍🏫", 5: "🧑🏿‍🏫"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻‍🏫", "2": "🧑🏼‍🏫", "3": "🧑🏽‍🏫", "4": "🧑🏾‍🏫", "5": "🧑🏿‍🏫"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man teacher",
 		oldId: "man_teacher",
 		keywords: ["instructor","man","professor","teacher","lecturer","educator","chalkboard","man_teacher","human"],
 		char: "👨‍🏫",
-		skinTones: [1: "👨🏻‍🏫", 2: "👨🏼‍🏫", 3: "👨🏽‍🏫", 4: "👨🏾‍🏫", 5: "👨🏿‍🏫"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻‍🏫", "2": "👨🏼‍🏫", "3": "👨🏽‍🏫", "4": "👨🏾‍🏫", "5": "👨🏿‍🏫"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman teacher",
 		oldId: "woman_teacher",
 		keywords: ["instructor","professor","teacher","woman","lecturer","educator","chalkboard","woman_teacher","human"],
 		char: "👩‍🏫",
-		skinTones: [1: "👩🏻‍🏫", 2: "👩🏼‍🏫", 3: "👩🏽‍🏫", 4: "👩🏾‍🏫", 5: "👩🏿‍🏫"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍🏫", "2": "👩🏼‍🏫", "3": "👩🏽‍🏫", "4": "👩🏾‍🏫", "5": "👩🏿‍🏫"],
+		category: "people-body"),
 
 	Emoji(
 		id: "judge",
 		oldId: nil,
 		keywords: ["justice","scales","judge","law"],
 		char: "🧑‍⚖️",
-		skinTones: [1: "🧑🏻‍⚖️", 2: "🧑🏼‍⚖️", 3: "🧑🏽‍⚖️", 4: "🧑🏾‍⚖️", 5: "🧑🏿‍⚖️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻‍⚖️", "2": "🧑🏼‍⚖️", "3": "🧑🏽‍⚖️", "4": "🧑🏾‍⚖️", "5": "🧑🏿‍⚖️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man judge",
 		oldId: "man_judge",
 		keywords: ["judge","justice","man","scales","judge hammer","gavel","black robe","law","order","man_judge","court","human"],
 		char: "👨‍⚖️",
-		skinTones: [1: "👨🏻‍⚖️", 2: "👨🏼‍⚖️", 3: "👨🏽‍⚖️", 4: "👨🏾‍⚖️", 5: "👨🏿‍⚖️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻‍⚖️", "2": "👨🏼‍⚖️", "3": "👨🏽‍⚖️", "4": "👨🏾‍⚖️", "5": "👨🏿‍⚖️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman judge",
 		oldId: "woman_judge",
 		keywords: ["judge","justice","scales","woman","judge hammer","gavel","black robe","law","order","woman_judge","court","human"],
 		char: "👩‍⚖️",
-		skinTones: [1: "👩🏻‍⚖️", 2: "👩🏼‍⚖️", 3: "👩🏽‍⚖️", 4: "👩🏾‍⚖️", 5: "👩🏿‍⚖️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍⚖️", "2": "👩🏼‍⚖️", "3": "👩🏽‍⚖️", "4": "👩🏾‍⚖️", "5": "👩🏿‍⚖️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "farmer",
 		oldId: nil,
 		keywords: ["gardener","rancher","farmer","crops"],
 		char: "🧑‍🌾",
-		skinTones: [1: "🧑🏻‍🌾", 2: "🧑🏼‍🌾", 3: "🧑🏽‍🌾", 4: "🧑🏾‍🌾", 5: "🧑🏿‍🌾"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻‍🌾", "2": "🧑🏼‍🌾", "3": "🧑🏽‍🌾", "4": "🧑🏾‍🌾", "5": "🧑🏿‍🌾"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man farmer",
 		oldId: "man_farmer",
 		keywords: ["farmer","gardener","man","rancher","pitchfork","strawhat","man_farmer","human"],
 		char: "👨‍🌾",
-		skinTones: [1: "👨🏻‍🌾", 2: "👨🏼‍🌾", 3: "👨🏽‍🌾", 4: "👨🏾‍🌾", 5: "👨🏿‍🌾"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻‍🌾", "2": "👨🏼‍🌾", "3": "👨🏽‍🌾", "4": "👨🏾‍🌾", "5": "👨🏿‍🌾"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman farmer",
 		oldId: "woman_farmer",
 		keywords: ["farmer","gardener","rancher","woman","pitchfork","braids","woman_farmer","human"],
 		char: "👩‍🌾",
-		skinTones: [1: "👩🏻‍🌾", 2: "👩🏼‍🌾", 3: "👩🏽‍🌾", 4: "👩🏾‍🌾", 5: "👩🏿‍🌾"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍🌾", "2": "👩🏼‍🌾", "3": "👩🏽‍🌾", "4": "👩🏾‍🌾", "5": "👩🏿‍🌾"],
+		category: "people-body"),
 
 	Emoji(
 		id: "cook",
 		oldId: nil,
 		keywords: ["chef","cook","food","kitchen","culinary"],
 		char: "🧑‍🍳",
-		skinTones: [1: "🧑🏻‍🍳", 2: "🧑🏼‍🍳", 3: "🧑🏽‍🍳", 4: "🧑🏾‍🍳", 5: "🧑🏿‍🍳"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻‍🍳", "2": "🧑🏼‍🍳", "3": "🧑🏽‍🍳", "4": "🧑🏾‍🍳", "5": "🧑🏿‍🍳"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man cook",
 		oldId: "man_cook",
 		keywords: ["chef","cook","man","toque","chef's hat","food","cooking","man_cook","human"],
 		char: "👨‍🍳",
-		skinTones: [1: "👨🏻‍🍳", 2: "👨🏼‍🍳", 3: "👨🏽‍🍳", 4: "👨🏾‍🍳", 5: "👨🏿‍🍳"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻‍🍳", "2": "👨🏼‍🍳", "3": "👨🏽‍🍳", "4": "👨🏾‍🍳", "5": "👨🏿‍🍳"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman cook",
 		oldId: "woman_cook",
 		keywords: ["chef","cook","woman","toque","chef's hat","food","cooking","woman_cook","human"],
 		char: "👩‍🍳",
-		skinTones: [1: "👩🏻‍🍳", 2: "👩🏼‍🍳", 3: "👩🏽‍🍳", 4: "👩🏾‍🍳", 5: "👩🏿‍🍳"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍🍳", "2": "👩🏼‍🍳", "3": "👩🏽‍🍳", "4": "👩🏾‍🍳", "5": "👩🏿‍🍳"],
+		category: "people-body"),
 
 	Emoji(
 		id: "mechanic",
 		oldId: nil,
 		keywords: ["electrician","plumber","tradesperson","mechanic","worker","technician"],
 		char: "🧑‍🔧",
-		skinTones: [1: "🧑🏻‍🔧", 2: "🧑🏼‍🔧", 3: "🧑🏽‍🔧", 4: "🧑🏾‍🔧", 5: "🧑🏿‍🔧"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻‍🔧", "2": "🧑🏼‍🔧", "3": "🧑🏽‍🔧", "4": "🧑🏾‍🔧", "5": "🧑🏿‍🔧"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man mechanic",
 		oldId: "man_mechanic",
 		keywords: ["electrician","man","mechanic","plumber","tradesperson","wrench","overalls","blue hat","auto mechanic","man_mechanic","human"],
 		char: "👨‍🔧",
-		skinTones: [1: "👨🏻‍🔧", 2: "👨🏼‍🔧", 3: "👨🏽‍🔧", 4: "👨🏾‍🔧", 5: "👨🏿‍🔧"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻‍🔧", "2": "👨🏼‍🔧", "3": "👨🏽‍🔧", "4": "👨🏾‍🔧", "5": "👨🏿‍🔧"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman mechanic",
 		oldId: "woman_mechanic",
 		keywords: ["electrician","mechanic","plumber","tradesperson","woman","wrench","overalls","blue hat","auto mechanic","woman_mechanic","human"],
 		char: "👩‍🔧",
-		skinTones: [1: "👩🏻‍🔧", 2: "👩🏼‍🔧", 3: "👩🏽‍🔧", 4: "👩🏾‍🔧", 5: "👩🏿‍🔧"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍🔧", "2": "👩🏼‍🔧", "3": "👩🏽‍🔧", "4": "👩🏾‍🔧", "5": "👩🏿‍🔧"],
+		category: "people-body"),
 
 	Emoji(
 		id: "factory worker",
 		oldId: nil,
 		keywords: ["assembly","factory","industrial","worker","factory_worker","labor"],
 		char: "🧑‍🏭",
-		skinTones: [1: "🧑🏻‍🏭", 2: "🧑🏼‍🏭", 3: "🧑🏽‍🏭", 4: "🧑🏾‍🏭", 5: "🧑🏿‍🏭"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻‍🏭", "2": "🧑🏼‍🏭", "3": "🧑🏽‍🏭", "4": "🧑🏾‍🏭", "5": "🧑🏿‍🏭"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man factory worker",
 		oldId: "man_factory_worker",
 		keywords: ["assembly","factory","industrial","man","worker","welder","welding","welding helmet","man_factory_worker","human"],
 		char: "👨‍🏭",
-		skinTones: [1: "👨🏻‍🏭", 2: "👨🏼‍🏭", 3: "👨🏽‍🏭", 4: "👨🏾‍🏭", 5: "👨🏿‍🏭"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻‍🏭", "2": "👨🏼‍🏭", "3": "👨🏽‍🏭", "4": "👨🏾‍🏭", "5": "👨🏿‍🏭"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman factory worker",
 		oldId: "woman_factory_worker",
 		keywords: ["assembly","factory","industrial","woman","worker","welder","welding","welding helmet","woman_factory_worker","human"],
 		char: "👩‍🏭",
-		skinTones: [1: "👩🏻‍🏭", 2: "👩🏼‍🏭", 3: "👩🏽‍🏭", 4: "👩🏾‍🏭", 5: "👩🏿‍🏭"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍🏭", "2": "👩🏼‍🏭", "3": "👩🏽‍🏭", "4": "👩🏾‍🏭", "5": "👩🏿‍🏭"],
+		category: "people-body"),
 
 	Emoji(
 		id: "office worker",
 		oldId: nil,
 		keywords: ["architect","business","manager","white-collar","office_worker"],
 		char: "🧑‍💼",
-		skinTones: [1: "🧑🏻‍💼", 2: "🧑🏼‍💼", 3: "🧑🏽‍💼", 4: "🧑🏾‍💼", 5: "🧑🏿‍💼"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻‍💼", "2": "🧑🏼‍💼", "3": "🧑🏽‍💼", "4": "🧑🏾‍💼", "5": "🧑🏿‍💼"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man office worker",
 		oldId: "man_office_worker",
 		keywords: ["architect","business","man","manager","white-collar","office","papers","copy","man_office_worker","human"],
 		char: "👨‍💼",
-		skinTones: [1: "👨🏻‍💼", 2: "👨🏼‍💼", 3: "👨🏽‍💼", 4: "👨🏾‍💼", 5: "👨🏿‍💼"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻‍💼", "2": "👨🏼‍💼", "3": "👨🏽‍💼", "4": "👨🏾‍💼", "5": "👨🏿‍💼"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman office worker",
 		oldId: "woman_office_worker",
 		keywords: ["architect","business","manager","white-collar","woman","office","papers","copy","woman_office_worker","human"],
 		char: "👩‍💼",
-		skinTones: [1: "👩🏻‍💼", 2: "👩🏼‍💼", 3: "👩🏽‍💼", 4: "👩🏾‍💼", 5: "👩🏿‍💼"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍💼", "2": "👩🏼‍💼", "3": "👩🏽‍💼", "4": "👩🏾‍💼", "5": "👩🏿‍💼"],
+		category: "people-body"),
 
 	Emoji(
 		id: "scientist",
 		oldId: nil,
 		keywords: ["biologist","chemist","engineer","physicist","scientist","chemistry"],
 		char: "🧑‍🔬",
-		skinTones: [1: "🧑🏻‍🔬", 2: "🧑🏼‍🔬", 3: "🧑🏽‍🔬", 4: "🧑🏾‍🔬", 5: "🧑🏿‍🔬"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻‍🔬", "2": "🧑🏼‍🔬", "3": "🧑🏽‍🔬", "4": "🧑🏾‍🔬", "5": "🧑🏿‍🔬"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man scientist",
 		oldId: "man_scientist",
 		keywords: ["biologist","chemist","engineer","man","physicist","scientist","mathematician","experiment","laboratory","lab","erlenmeyer flask","safety glasses","man_scientist","human"],
 		char: "👨‍🔬",
-		skinTones: [1: "👨🏻‍🔬", 2: "👨🏼‍🔬", 3: "👨🏽‍🔬", 4: "👨🏾‍🔬", 5: "👨🏿‍🔬"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻‍🔬", "2": "👨🏼‍🔬", "3": "👨🏽‍🔬", "4": "👨🏾‍🔬", "5": "👨🏿‍🔬"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman scientist",
 		oldId: "woman_scientist",
 		keywords: ["biologist","chemist","engineer","physicist","scientist","woman","mathematician","experiment","laboratory","lab","erlenmeyer flask","safety glasses","woman_scientist","human"],
 		char: "👩‍🔬",
-		skinTones: [1: "👩🏻‍🔬", 2: "👩🏼‍🔬", 3: "👩🏽‍🔬", 4: "👩🏾‍🔬", 5: "👩🏿‍🔬"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍🔬", "2": "👩🏼‍🔬", "3": "👩🏽‍🔬", "4": "👩🏾‍🔬", "5": "👩🏿‍🔬"],
+		category: "people-body"),
 
 	Emoji(
 		id: "technologist",
 		oldId: nil,
 		keywords: ["coder","developer","inventor","software","technologist","computer"],
 		char: "🧑‍💻",
-		skinTones: [1: "🧑🏻‍💻", 2: "🧑🏼‍💻", 3: "🧑🏽‍💻", 4: "🧑🏾‍💻", 5: "🧑🏿‍💻"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻‍💻", "2": "🧑🏼‍💻", "3": "🧑🏽‍💻", "4": "🧑🏾‍💻", "5": "🧑🏿‍💻"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man technologist",
 		oldId: "man_technologist",
 		keywords: ["coder","developer","inventor","man","software","technologist","tablet","graphs","glasses","smart","clever","coding","code","man_technologist","engineer","programmer","human","laptop","computer"],
 		char: "👨‍💻",
-		skinTones: [1: "👨🏻‍💻", 2: "👨🏼‍💻", 3: "👨🏽‍💻", 4: "👨🏾‍💻", 5: "👨🏿‍💻"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻‍💻", "2": "👨🏼‍💻", "3": "👨🏽‍💻", "4": "👨🏾‍💻", "5": "👨🏿‍💻"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman technologist",
 		oldId: "woman_technologist",
 		keywords: ["coder","developer","inventor","software","technologist","woman","tablet","graphs","glasses","smart","clever","coding","code","woman_technologist","engineer","programmer","human","laptop","computer"],
 		char: "👩‍💻",
-		skinTones: [1: "👩🏻‍💻", 2: "👩🏼‍💻", 3: "👩🏽‍💻", 4: "👩🏾‍💻", 5: "👩🏿‍💻"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍💻", "2": "👩🏼‍💻", "3": "👩🏽‍💻", "4": "👩🏾‍💻", "5": "👩🏿‍💻"],
+		category: "people-body"),
 
 	Emoji(
 		id: "singer",
 		oldId: nil,
 		keywords: ["actor","entertainer","rock","star","singer","song","artist","performer"],
 		char: "🧑‍🎤",
-		skinTones: [1: "🧑🏻‍🎤", 2: "🧑🏼‍🎤", 3: "🧑🏽‍🎤", 4: "🧑🏾‍🎤", 5: "🧑🏿‍🎤"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻‍🎤", "2": "🧑🏼‍🎤", "3": "🧑🏽‍🎤", "4": "🧑🏾‍🎤", "5": "🧑🏿‍🎤"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man singer",
 		oldId: "man_singer",
 		keywords: ["actor","entertainer","man","rock","singer","star","microphone","musician","man_singer","rockstar","human"],
 		char: "👨‍🎤",
-		skinTones: [1: "👨🏻‍🎤", 2: "👨🏼‍🎤", 3: "👨🏽‍🎤", 4: "👨🏾‍🎤", 5: "👨🏿‍🎤"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻‍🎤", "2": "👨🏼‍🎤", "3": "👨🏽‍🎤", "4": "👨🏾‍🎤", "5": "👨🏿‍🎤"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman singer",
 		oldId: "woman_singer",
 		keywords: ["actor","entertainer","rock","singer","star","woman","microphone","musician","glamour","glamorous","dress","wavy hair","woman_singer","rockstar","human"],
 		char: "👩‍🎤",
-		skinTones: [1: "👩🏻‍🎤", 2: "👩🏼‍🎤", 3: "👩🏽‍🎤", 4: "👩🏾‍🎤", 5: "👩🏿‍🎤"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍🎤", "2": "👩🏼‍🎤", "3": "👩🏽‍🎤", "4": "👩🏾‍🎤", "5": "👩🏿‍🎤"],
+		category: "people-body"),
 
 	Emoji(
 		id: "artist",
 		oldId: nil,
 		keywords: ["palette","artist","painting","draw","creativity"],
 		char: "🧑‍🎨",
-		skinTones: [1: "🧑🏻‍🎨", 2: "🧑🏼‍🎨", 3: "🧑🏽‍🎨", 4: "🧑🏾‍🎨", 5: "🧑🏿‍🎨"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻‍🎨", "2": "🧑🏼‍🎨", "3": "🧑🏽‍🎨", "4": "🧑🏾‍🎨", "5": "🧑🏿‍🎨"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man artist",
 		oldId: "man_artist",
 		keywords: ["artist","man","palette","brush","beret","french hat","colors","painter","art","drawing","painting","illustrator","illustrating","creative","creativity","man_artist","human"],
 		char: "👨‍🎨",
-		skinTones: [1: "👨🏻‍🎨", 2: "👨🏼‍🎨", 3: "👨🏽‍🎨", 4: "👨🏾‍🎨", 5: "👨🏿‍🎨"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻‍🎨", "2": "👨🏼‍🎨", "3": "👨🏽‍🎨", "4": "👨🏾‍🎨", "5": "👨🏿‍🎨"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman artist",
 		oldId: "woman_artist",
 		keywords: ["artist","palette","woman","brush","beret","french hat","colors","painter","art","drawing","painting","illustrator","illustrating","creative","creativity","woman_artist","human"],
 		char: "👩‍🎨",
-		skinTones: [1: "👩🏻‍🎨", 2: "👩🏼‍🎨", 3: "👩🏽‍🎨", 4: "👩🏾‍🎨", 5: "👩🏿‍🎨"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍🎨", "2": "👩🏼‍🎨", "3": "👩🏽‍🎨", "4": "👩🏾‍🎨", "5": "👩🏿‍🎨"],
+		category: "people-body"),
 
 	Emoji(
 		id: "pilot",
 		oldId: nil,
 		keywords: ["plane","pilot","fly","airplane"],
 		char: "🧑‍✈️",
-		skinTones: [1: "🧑🏻‍✈️", 2: "🧑🏼‍✈️", 3: "🧑🏽‍✈️", 4: "🧑🏾‍✈️", 5: "🧑🏿‍✈️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻‍✈️", "2": "🧑🏼‍✈️", "3": "🧑🏽‍✈️", "4": "🧑🏾‍✈️", "5": "🧑🏿‍✈️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man pilot",
 		oldId: "man_pilot",
 		keywords: ["man","pilot","plane","flying","control stick","man_pilot","aviator","human"],
 		char: "👨‍✈️",
-		skinTones: [1: "👨🏻‍✈️", 2: "👨🏼‍✈️", 3: "👨🏽‍✈️", 4: "👨🏾‍✈️", 5: "👨🏿‍✈️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻‍✈️", "2": "👨🏼‍✈️", "3": "👨🏽‍✈️", "4": "👨🏾‍✈️", "5": "👨🏿‍✈️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman pilot",
 		oldId: "woman_pilot",
 		keywords: ["pilot","plane","woman","flying","control stick","woman_pilot","aviator","human"],
 		char: "👩‍✈️",
-		skinTones: [1: "👩🏻‍✈️", 2: "👩🏼‍✈️", 3: "👩🏽‍✈️", 4: "👩🏾‍✈️", 5: "👩🏿‍✈️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍✈️", "2": "👩🏼‍✈️", "3": "👩🏽‍✈️", "4": "👩🏾‍✈️", "5": "👩🏿‍✈️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "astronaut",
 		oldId: nil,
 		keywords: ["rocket","astronaut","outerspace"],
 		char: "🧑‍🚀",
-		skinTones: [1: "🧑🏻‍🚀", 2: "🧑🏼‍🚀", 3: "🧑🏽‍🚀", 4: "🧑🏾‍🚀", 5: "🧑🏿‍🚀"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻‍🚀", "2": "🧑🏼‍🚀", "3": "🧑🏽‍🚀", "4": "🧑🏾‍🚀", "5": "🧑🏿‍🚀"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man astronaut",
 		oldId: "man_astronaut",
 		keywords: ["astronaut","man","rocket","spacesuit","space","universe","spaceship","man_astronaut","human"],
 		char: "👨‍🚀",
-		skinTones: [1: "👨🏻‍🚀", 2: "👨🏼‍🚀", 3: "👨🏽‍🚀", 4: "👨🏾‍🚀", 5: "👨🏿‍🚀"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻‍🚀", "2": "👨🏼‍🚀", "3": "👨🏽‍🚀", "4": "👨🏾‍🚀", "5": "👨🏿‍🚀"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman astronaut",
 		oldId: "woman_astronaut",
 		keywords: ["astronaut","rocket","woman","spacesuit","space","universe","spaceship","woman_astronaut","human"],
 		char: "👩‍🚀",
-		skinTones: [1: "👩🏻‍🚀", 2: "👩🏼‍🚀", 3: "👩🏽‍🚀", 4: "👩🏾‍🚀", 5: "👩🏿‍🚀"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍🚀", "2": "👩🏼‍🚀", "3": "👩🏽‍🚀", "4": "👩🏾‍🚀", "5": "👩🏿‍🚀"],
+		category: "people-body"),
 
 	Emoji(
 		id: "firefighter",
 		oldId: nil,
 		keywords: ["firetruck","firefighter","fire"],
 		char: "🧑‍🚒",
-		skinTones: [1: "🧑🏻‍🚒", 2: "🧑🏼‍🚒", 3: "🧑🏽‍🚒", 4: "🧑🏾‍🚒", 5: "🧑🏿‍🚒"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻‍🚒", "2": "🧑🏼‍🚒", "3": "🧑🏽‍🚒", "4": "🧑🏾‍🚒", "5": "🧑🏿‍🚒"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man firefighter",
 		oldId: "man_firefighter",
 		keywords: ["firefighter","firetruck","man","water hose","save","rescue","red helmet","man_firefighter","fireman","human"],
 		char: "👨‍🚒",
-		skinTones: [1: "👨🏻‍🚒", 2: "👨🏼‍🚒", 3: "👨🏽‍🚒", 4: "👨🏾‍🚒", 5: "👨🏿‍🚒"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻‍🚒", "2": "👨🏼‍🚒", "3": "👨🏽‍🚒", "4": "👨🏾‍🚒", "5": "👨🏿‍🚒"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman firefighter",
 		oldId: "woman_firefighter",
 		keywords: ["firefighter","firetruck","woman","water hose","save","rescue","red helmet","woman_firefighter","fireman","human"],
 		char: "👩‍🚒",
-		skinTones: [1: "👩🏻‍🚒", 2: "👩🏼‍🚒", 3: "👩🏽‍🚒", 4: "👩🏾‍🚒", 5: "👩🏿‍🚒"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍🚒", "2": "👩🏼‍🚒", "3": "👩🏽‍🚒", "4": "👩🏾‍🚒", "5": "👩🏿‍🚒"],
+		category: "people-body"),
 
 	Emoji(
 		id: "police officer",
 		oldId: "policeman",
 		keywords: ["cop","officer","police","law","justice","blue","badge","police_officer"],
 		char: "👮",
-		skinTones: [1: "👮🏻", 2: "👮🏼", 3: "👮🏽", 4: "👮🏾", 5: "👮🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👮🏻", "2": "👮🏼", "3": "👮🏽", "4": "👮🏾", "5": "👮🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man police officer",
 		oldId: nil,
 		keywords: ["cop","man","officer","police","man_police_officer","law","legal","enforcement","arrest","911"],
 		char: "👮‍♂️",
-		skinTones: [1: "👮🏻‍♂️", 2: "👮🏼‍♂️", 3: "👮🏽‍♂️", 4: "👮🏾‍♂️", 5: "👮🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👮🏻‍♂️", "2": "👮🏼‍♂️", "3": "👮🏽‍♂️", "4": "👮🏾‍♂️", "5": "👮🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman police officer",
 		oldId: "policewoman",
 		keywords: ["cop","officer","police","woman","woman_police_officer","law","legal","enforcement","arrest","911","female"],
 		char: "👮‍♀️",
-		skinTones: [1: "👮🏻‍♀️", 2: "👮🏼‍♀️", 3: "👮🏽‍♀️", 4: "👮🏾‍♀️", 5: "👮🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👮🏻‍♀️", "2": "👮🏼‍♀️", "3": "👮🏽‍♀️", "4": "👮🏾‍♀️", "5": "👮🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "detective",
 		oldId: "male_detective",
 		keywords: ["sleuth","spy","sherlock","investigator","magnifier","magnifying glass","cloak","coat","or","human","detective"],
 		char: "🕵️",
-		skinTones: [1: "🕵🏻", 2: "🕵🏼", 3: "🕵🏽", 4: "🕵🏾", 5: "🕵🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🕵🏻", "2": "🕵🏼", "3": "🕵🏽", "4": "🕵🏾", "5": "🕵🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man detective",
 		oldId: nil,
 		keywords: ["detective","man","sleuth","spy","man_detective","crime"],
 		char: "🕵️‍♂️",
-		skinTones: [1: "🕵🏻‍♂️", 2: "🕵🏼‍♂️", 3: "🕵🏽‍♂️", 4: "🕵🏾‍♂️", 5: "🕵🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🕵🏻‍♂️", "2": "🕵🏼‍♂️", "3": "🕵🏽‍♂️", "4": "🕵🏾‍♂️", "5": "🕵🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman detective",
 		oldId: "female_detective",
 		keywords: ["detective","sleuth","spy","woman","woman_detective","human","female"],
 		char: "🕵️‍♀️",
-		skinTones: [1: "🕵🏻‍♀️", 2: "🕵🏼‍♀️", 3: "🕵🏽‍♀️", 4: "🕵🏾‍♀️", 5: "🕵🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🕵🏻‍♀️", "2": "🕵🏼‍♀️", "3": "🕵🏽‍♀️", "4": "🕵🏾‍♀️", "5": "🕵🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "guard",
 		oldId: "guardsman",
 		keywords: ["guard","britain","great britain","queen","england","london","royal guard","furry hat guard","protection","guardsman","protect"],
 		char: "💂",
-		skinTones: [1: "💂🏻", 2: "💂🏼", 3: "💂🏽", 4: "💂🏾", 5: "💂🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "💂🏻", "2": "💂🏼", "3": "💂🏽", "4": "💂🏾", "5": "💂🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man guard",
 		oldId: nil,
 		keywords: ["guard","man","man_guard","uk","gb","british","male","guy","royal"],
 		char: "💂‍♂️",
-		skinTones: [1: "💂🏻‍♂️", 2: "💂🏼‍♂️", 3: "💂🏽‍♂️", 4: "💂🏾‍♂️", 5: "💂🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "💂🏻‍♂️", "2": "💂🏼‍♂️", "3": "💂🏽‍♂️", "4": "💂🏾‍♂️", "5": "💂🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman guard",
 		oldId: "guardswoman",
 		keywords: ["guard","woman","woman_guard","uk","gb","british","female","royal"],
 		char: "💂‍♀️",
-		skinTones: [1: "💂🏻‍♀️", 2: "💂🏼‍♀️", 3: "💂🏽‍♀️", 4: "💂🏾‍♀️", 5: "💂🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "💂🏻‍♀️", "2": "💂🏼‍♀️", "3": "💂🏽‍♀️", "4": "💂🏾‍♀️", "5": "💂🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "ninja",
 		oldId: nil,
 		keywords: ["fighter","hidden","stealth","ninja","ninjutsu","skills","japanese"],
 		char: "🥷",
-		skinTones: [1: "🥷🏻", 2: "🥷🏼", 3: "🥷🏽", 4: "🥷🏾", 5: "🥷🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🥷🏻", "2": "🥷🏼", "3": "🥷🏽", "4": "🥷🏾", "5": "🥷🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "construction worker",
 		oldId: "construction_worker_man",
 		keywords: ["construction","hat","worker","striped west","helmet","labor","build","construction_worker"],
 		char: "👷",
-		skinTones: [1: "👷🏻", 2: "👷🏼", 3: "👷🏽", 4: "👷🏾", 5: "👷🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👷🏻", "2": "👷🏼", "3": "👷🏽", "4": "👷🏾", "5": "👷🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man construction worker",
 		oldId: nil,
 		keywords: ["construction","man","worker","man_construction_worker","male","human","wip","guy","build","labor"],
 		char: "👷‍♂️",
-		skinTones: [1: "👷🏻‍♂️", 2: "👷🏼‍♂️", 3: "👷🏽‍♂️", 4: "👷🏾‍♂️", 5: "👷🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👷🏻‍♂️", "2": "👷🏼‍♂️", "3": "👷🏽‍♂️", "4": "👷🏾‍♂️", "5": "👷🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman construction worker",
 		oldId: "construction_worker_woman",
 		keywords: ["construction","woman","worker","woman_construction_worker","female","human","wip","build","labor"],
 		char: "👷‍♀️",
-		skinTones: [1: "👷🏻‍♀️", 2: "👷🏼‍♀️", 3: "👷🏽‍♀️", 4: "👷🏾‍♀️", 5: "👷🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👷🏻‍♀️", "2": "👷🏼‍♀️", "3": "👷🏽‍♀️", "4": "👷🏾‍♀️", "5": "👷🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person with crown",
 		oldId: nil,
 		keywords: ["monarch","noble","regal","royalty","person_with_crown","person with crown","power"],
 		char: "🫅",
-		skinTones: [1: "🫅🏻", 2: "🫅🏼", 3: "🫅🏽", 4: "🫅🏾", 5: "🫅🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🫅🏻", "2": "🫅🏼", "3": "🫅🏽", "4": "🫅🏾", "5": "🫅🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "prince",
 		oldId: "prince",
 		keywords: ["prince","charming","crown","fairy tale","fantasy","pink","boy","man","male","royal","king"],
 		char: "🤴",
-		skinTones: [1: "🤴🏻", 2: "🤴🏼", 3: "🤴🏽", 4: "🤴🏾", 5: "🤴🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤴🏻", "2": "🤴🏼", "3": "🤴🏽", "4": "🤴🏾", "5": "🤴🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "princess",
 		oldId: "princess",
 		keywords: ["fairy tale","fantasy","crown","pink dress","princess crown","girl","woman","female","blond","royal","queen","princess"],
 		char: "👸",
-		skinTones: [1: "👸🏻", 2: "👸🏼", 3: "👸🏽", 4: "👸🏾", 5: "👸🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👸🏻", "2": "👸🏼", "3": "👸🏽", "4": "👸🏾", "5": "👸🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person wearing turban",
 		oldId: "man_with_turban",
 		keywords: ["turban","man","beard","religion","person","wearing","headdress","person_wearing_turban"],
 		char: "👳",
-		skinTones: [1: "👳🏻", 2: "👳🏼", 3: "👳🏽", 4: "👳🏾", 5: "👳🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👳🏻", "2": "👳🏼", "3": "👳🏽", "4": "👳🏾", "5": "👳🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man wearing turban",
 		oldId: nil,
 		keywords: ["man","turban","man_wearing_turban","male","indian","hinduism","arabs"],
 		char: "👳‍♂️",
-		skinTones: [1: "👳🏻‍♂️", 2: "👳🏼‍♂️", 3: "👳🏽‍♂️", 4: "👳🏾‍♂️", 5: "👳🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👳🏻‍♂️", "2": "👳🏼‍♂️", "3": "👳🏽‍♂️", "4": "👳🏾‍♂️", "5": "👳🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman wearing turban",
 		oldId: "woman_with_turban",
 		keywords: ["turban","woman","woman_wearing_turban","female","indian","hinduism","arabs"],
 		char: "👳‍♀️",
-		skinTones: [1: "👳🏻‍♀️", 2: "👳🏼‍♀️", 3: "👳🏽‍♀️", 4: "👳🏾‍♀️", 5: "👳🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👳🏻‍♀️", "2": "👳🏼‍♀️", "3": "👳🏽‍♀️", "4": "👳🏾‍♀️", "5": "👳🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person with skullcap",
 		oldId: "man_with_gua_pi_mao",
 		keywords: ["cap","gua pi mao","hat","person","skullcap","male","boy","chinese","person_with_skullcap","man_with_skullcap"],
 		char: "👲",
-		skinTones: [1: "👲🏻", 2: "👲🏼", 3: "👲🏽", 4: "👲🏾", 5: "👲🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👲🏻", "2": "👲🏼", "3": "👲🏽", "4": "👲🏾", "5": "👲🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman with headscarf",
 		oldId: "woman_with_headscarf",
 		keywords: ["headscarf","hijab","mantilla","tichel","religion","religious","muslim","woman_with_headscarf","female"],
 		char: "🧕",
-		skinTones: [1: "🧕🏻", 2: "🧕🏼", 3: "🧕🏽", 4: "🧕🏾", 5: "🧕🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧕🏻", "2": "🧕🏼", "3": "🧕🏽", "4": "🧕🏾", "5": "🧕🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person in tuxedo",
 		oldId: "man_in_tuxedo",
 		keywords: ["groom","person","tuxedo","person_in_tuxedo","man_in_tuxedo","couple","marriage","wedding"],
 		char: "🤵",
-		skinTones: [1: "🤵🏻", 2: "🤵🏼", 3: "🤵🏽", 4: "🤵🏾", 5: "🤵🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤵🏻", "2": "🤵🏼", "3": "🤵🏽", "4": "🤵🏾", "5": "🤵🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man in tuxedo",
 		oldId: nil,
 		keywords: ["man","tuxedo","man_in_tuxedo","man in tuxedo","formal","fashion"],
 		char: "🤵‍♂️",
-		skinTones: [1: "🤵🏻‍♂️", 2: "🤵🏼‍♂️", 3: "🤵🏽‍♂️", 4: "🤵🏾‍♂️", 5: "🤵🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤵🏻‍♂️", "2": "🤵🏼‍♂️", "3": "🤵🏽‍♂️", "4": "🤵🏾‍♂️", "5": "🤵🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman in tuxedo",
 		oldId: nil,
 		keywords: ["tuxedo","woman","woman_in_tuxedo","woman in tuxedo","formal","fashion"],
 		char: "🤵‍♀️",
-		skinTones: [1: "🤵🏻‍♀️", 2: "🤵🏼‍♀️", 3: "🤵🏽‍♀️", 4: "🤵🏾‍♀️", 5: "🤵🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤵🏻‍♀️", "2": "🤵🏼‍♀️", "3": "🤵🏽‍♀️", "4": "🤵🏾‍♀️", "5": "🤵🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person with veil",
 		oldId: "bride_with_veil",
 		keywords: ["bride","person","veil","wedding","couple","marriage","woman","person_with_veil","bride_with_veil"],
 		char: "👰",
-		skinTones: [1: "👰🏻", 2: "👰🏼", 3: "👰🏽", 4: "👰🏾", 5: "👰🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👰🏻", "2": "👰🏼", "3": "👰🏽", "4": "👰🏾", "5": "👰🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man with veil",
 		oldId: nil,
 		keywords: ["man","veil","man_with_veil","man with veil","wedding","marriage"],
 		char: "👰‍♂️",
-		skinTones: [1: "👰🏻‍♂️", 2: "👰🏼‍♂️", 3: "👰🏽‍♂️", 4: "👰🏾‍♂️", 5: "👰🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👰🏻‍♂️", "2": "👰🏼‍♂️", "3": "👰🏽‍♂️", "4": "👰🏾‍♂️", "5": "👰🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman with veil",
 		oldId: nil,
 		keywords: ["veil","woman","bride","wedding","female","marriage","married","love","wedding dress","woman_with_veil","woman with veil"],
 		char: "👰‍♀️",
-		skinTones: [1: "👰🏻‍♀️", 2: "👰🏼‍♀️", 3: "👰🏽‍♀️", 4: "👰🏾‍♀️", 5: "👰🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👰🏻‍♀️", "2": "👰🏼‍♀️", "3": "👰🏽‍♀️", "4": "👰🏾‍♀️", "5": "👰🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "pregnant woman",
 		oldId: "pregnant_woman",
 		keywords: ["pregnant","woman","child","birth","love","mother","motherhood","trust","baby","pregnant_woman"],
 		char: "🤰",
-		skinTones: [1: "🤰🏻", 2: "🤰🏼", 3: "🤰🏽", 4: "🤰🏾", 5: "🤰🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤰🏻", "2": "🤰🏼", "3": "🤰🏽", "4": "🤰🏾", "5": "🤰🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "pregnant man",
 		oldId: nil,
 		keywords: ["belly","bloated","full","pregnant","pregnant_man","pregnant man","baby"],
 		char: "🫃",
-		skinTones: [1: "🫃🏻", 2: "🫃🏼", 3: "🫃🏽", 4: "🫃🏾", 5: "🫃🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🫃🏻", "2": "🫃🏼", "3": "🫃🏽", "4": "🫃🏾", "5": "🫃🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "pregnant person",
 		oldId: nil,
 		keywords: ["belly","bloated","full","pregnant","pregnant_person","pregnant person","baby"],
 		char: "🫄",
-		skinTones: [1: "🫄🏻", 2: "🫄🏼", 3: "🫄🏽", 4: "🫄🏾", 5: "🫄🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🫄🏻", "2": "🫄🏼", "3": "🫄🏽", "4": "🫄🏾", "5": "🫄🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "breast-feeding",
 		oldId: "breastfeeding",
 		keywords: ["baby","breast","nursing","love","trust","mother","motherhood","breast_feeding"],
 		char: "🤱",
-		skinTones: [1: "🤱🏻", 2: "🤱🏼", 3: "🤱🏽", 4: "🤱🏾", 5: "🤱🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤱🏻", "2": "🤱🏼", "3": "🤱🏽", "4": "🤱🏾", "5": "🤱🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman feeding baby",
 		oldId: nil,
 		keywords: ["baby","feeding","nursing","woman","woman_feeding_baby","woman feeding baby","birth","food"],
 		char: "👩‍🍼",
-		skinTones: [1: "👩🏻‍🍼", 2: "👩🏼‍🍼", 3: "👩🏽‍🍼", 4: "👩🏾‍🍼", 5: "👩🏿‍🍼"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍🍼", "2": "👩🏼‍🍼", "3": "👩🏽‍🍼", "4": "👩🏾‍🍼", "5": "👩🏿‍🍼"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man feeding baby",
 		oldId: nil,
 		keywords: ["baby","feeding","man","nursing","man_feeding_baby","man feeding baby","birth","food"],
 		char: "👨‍🍼",
-		skinTones: [1: "👨🏻‍🍼", 2: "👨🏼‍🍼", 3: "👨🏽‍🍼", 4: "👨🏾‍🍼", 5: "👨🏿‍🍼"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻‍🍼", "2": "👨🏼‍🍼", "3": "👨🏽‍🍼", "4": "👨🏾‍🍼", "5": "👨🏿‍🍼"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person feeding baby",
 		oldId: nil,
 		keywords: ["baby","feeding","nursing","person","person_feeding_baby","person feeding baby","birth","food"],
 		char: "🧑‍🍼",
-		skinTones: [1: "🧑🏻‍🍼", 2: "🧑🏼‍🍼", 3: "🧑🏽‍🍼", 4: "🧑🏾‍🍼", 5: "🧑🏿‍🍼"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻‍🍼", "2": "🧑🏼‍🍼", "3": "🧑🏽‍🍼", "4": "🧑🏾‍🍼", "5": "🧑🏿‍🍼"],
+		category: "people-body"),
 
 	Emoji(
 		id: "baby angel",
 		oldId: "angel",
 		keywords: ["angel","baby","face","fairy tale","fantasy","heaven","wings","halo","baby_angel"],
 		char: "👼",
-		skinTones: [1: "👼🏻", 2: "👼🏼", 3: "👼🏽", 4: "👼🏾", 5: "👼🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👼🏻", "2": "👼🏼", "3": "👼🏽", "4": "👼🏾", "5": "👼🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "Santa Claus",
 		oldId: "santa",
 		keywords: ["celebration","christmas","claus","father","santa","santa claus","holiday","jolly","happy","saint nicholas","xmas","festival","man","male","santa_claus","father christmas"],
 		char: "🎅",
-		skinTones: [1: "🎅🏻", 2: "🎅🏼", 3: "🎅🏽", 4: "🎅🏾", 5: "🎅🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🎅🏻", "2": "🎅🏼", "3": "🎅🏽", "4": "🎅🏾", "5": "🎅🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "Mrs. Claus",
 		oldId: "mrs_claus",
 		keywords: ["celebration","christmas","claus","mother","mrs.","mrs. claus","holiday","jolly","happy","mrs. clause","xmas","mrs_claus","woman","female","mother christmas"],
 		char: "🤶",
-		skinTones: [1: "🤶🏻", 2: "🤶🏼", 3: "🤶🏽", 4: "🤶🏾", 5: "🤶🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤶🏻", "2": "🤶🏼", "3": "🤶🏽", "4": "🤶🏾", "5": "🤶🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "mx claus",
 		oldId: nil,
 		keywords: ["claus","christmas","claus, christmas","mx_claus","mx claus"],
 		char: "🧑‍🎄",
-		skinTones: [1: "🧑🏻‍🎄", 2: "🧑🏼‍🎄", 3: "🧑🏽‍🎄", 4: "🧑🏾‍🎄", 5: "🧑🏿‍🎄"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻‍🎄", "2": "🧑🏼‍🎄", "3": "🧑🏽‍🎄", "4": "🧑🏾‍🎄", "5": "🧑🏿‍🎄"],
+		category: "people-body"),
 
 	Emoji(
 		id: "superhero",
 		oldId: nil,
 		keywords: ["good","hero","heroine","superpower","superhero","marvel"],
 		char: "🦸",
-		skinTones: [1: "🦸🏻", 2: "🦸🏼", 3: "🦸🏽", 4: "🦸🏾", 5: "🦸🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🦸🏻", "2": "🦸🏼", "3": "🦸🏽", "4": "🦸🏾", "5": "🦸🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man superhero",
 		oldId: "man_superhero",
 		keywords: ["good","hero","man","superpower","man_superhero","male","superpowers"],
 		char: "🦸‍♂️",
-		skinTones: [1: "🦸🏻‍♂️", 2: "🦸🏼‍♂️", 3: "🦸🏽‍♂️", 4: "🦸🏾‍♂️", 5: "🦸🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🦸🏻‍♂️", "2": "🦸🏼‍♂️", "3": "🦸🏽‍♂️", "4": "🦸🏾‍♂️", "5": "🦸🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman superhero",
 		oldId: "woman_superhero",
 		keywords: ["good","hero","heroine","superpower","woman","woman_superhero","female","superpowers"],
 		char: "🦸‍♀️",
-		skinTones: [1: "🦸🏻‍♀️", 2: "🦸🏼‍♀️", 3: "🦸🏽‍♀️", 4: "🦸🏾‍♀️", 5: "🦸🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🦸🏻‍♀️", "2": "🦸🏼‍♀️", "3": "🦸🏽‍♀️", "4": "🦸🏾‍♀️", "5": "🦸🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "supervillain",
 		oldId: nil,
 		keywords: ["criminal","evil","superpower","villain","supervillain","marvel"],
 		char: "🦹",
-		skinTones: [1: "🦹🏻", 2: "🦹🏼", 3: "🦹🏽", 4: "🦹🏾", 5: "🦹🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🦹🏻", "2": "🦹🏼", "3": "🦹🏽", "4": "🦹🏾", "5": "🦹🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man supervillain",
 		oldId: "man_supervillain",
 		keywords: ["criminal","evil","man","superpower","villain","man_supervillain","male","bad","hero","superpowers"],
 		char: "🦹‍♂️",
-		skinTones: [1: "🦹🏻‍♂️", 2: "🦹🏼‍♂️", 3: "🦹🏽‍♂️", 4: "🦹🏾‍♂️", 5: "🦹🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🦹🏻‍♂️", "2": "🦹🏼‍♂️", "3": "🦹🏽‍♂️", "4": "🦹🏾‍♂️", "5": "🦹🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman supervillain",
 		oldId: "woman_supervillain",
 		keywords: ["criminal","evil","superpower","villain","woman","woman_supervillain","female","bad","heroine","superpowers"],
 		char: "🦹‍♀️",
-		skinTones: [1: "🦹🏻‍♀️", 2: "🦹🏼‍♀️", 3: "🦹🏽‍♀️", 4: "🦹🏾‍♀️", 5: "🦹🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🦹🏻‍♀️", "2": "🦹🏼‍♀️", "3": "🦹🏽‍♀️", "4": "🦹🏾‍♀️", "5": "🦹🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "mage",
 		oldId: nil,
 		keywords: ["sorcerer","sorceress","witch","wizard","magician","wand","sage","mage","magic"],
 		char: "🧙",
-		skinTones: [1: "🧙🏻", 2: "🧙🏼", 3: "🧙🏽", 4: "🧙🏾", 5: "🧙🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧙🏻", "2": "🧙🏼", "3": "🧙🏽", "4": "🧙🏾", "5": "🧙🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man mage",
 		oldId: "wizard",
 		keywords: ["sorcerer","wizard",":{>","man_mage","man","male","mage"],
 		char: "🧙‍♂️",
-		skinTones: [1: "🧙🏻‍♂️", 2: "🧙🏼‍♂️", 3: "🧙🏽‍♂️", 4: "🧙🏾‍♂️", 5: "🧙🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧙🏻‍♂️", "2": "🧙🏼‍♂️", "3": "🧙🏽‍♂️", "4": "🧙🏾‍♂️", "5": "🧙🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman mage",
 		oldId: "sorceress",
 		keywords: ["sorceress","witch","woman_mage","woman","female","mage"],
 		char: "🧙‍♀️",
-		skinTones: [1: "🧙🏻‍♀️", 2: "🧙🏼‍♀️", 3: "🧙🏽‍♀️", 4: "🧙🏾‍♀️", 5: "🧙🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧙🏻‍♀️", "2": "🧙🏼‍♀️", "3": "🧙🏽‍♀️", "4": "🧙🏾‍♀️", "5": "🧙🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "fairy",
 		oldId: nil,
 		keywords: ["oberon","puck","titania","fairy","wings","magical"],
 		char: "🧚",
-		skinTones: [1: "🧚🏻", 2: "🧚🏼", 3: "🧚🏽", 4: "🧚🏾", 5: "🧚🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧚🏻", "2": "🧚🏼", "3": "🧚🏽", "4": "🧚🏾", "5": "🧚🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man fairy",
 		oldId: "man_fairy",
 		keywords: ["oberon","puck","man_fairy","man","male"],
 		char: "🧚‍♂️",
-		skinTones: [1: "🧚🏻‍♂️", 2: "🧚🏼‍♂️", 3: "🧚🏽‍♂️", 4: "🧚🏾‍♂️", 5: "🧚🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧚🏻‍♂️", "2": "🧚🏼‍♂️", "3": "🧚🏽‍♂️", "4": "🧚🏾‍♂️", "5": "🧚🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman fairy",
 		oldId: "woman_fairy",
 		keywords: ["titania","woman_fairy","woman","female"],
 		char: "🧚‍♀️",
-		skinTones: [1: "🧚🏻‍♀️", 2: "🧚🏼‍♀️", 3: "🧚🏽‍♀️", 4: "🧚🏾‍♀️", 5: "🧚🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧚🏻‍♀️", "2": "🧚🏼‍♀️", "3": "🧚🏽‍♀️", "4": "🧚🏾‍♀️", "5": "🧚🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "vampire",
 		oldId: nil,
 		keywords: ["dracula","undead",":E","vampire","blood","twilight"],
 		char: "🧛",
-		skinTones: [1: "🧛🏻", 2: "🧛🏼", 3: "🧛🏽", 4: "🧛🏾", 5: "🧛🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧛🏻", "2": "🧛🏼", "3": "🧛🏽", "4": "🧛🏾", "5": "🧛🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man vampire",
 		oldId: "man_vampire",
 		keywords: ["dracula","undead","man_vampire","man","male"],
 		char: "🧛‍♂️",
-		skinTones: [1: "🧛🏻‍♂️", 2: "🧛🏼‍♂️", 3: "🧛🏽‍♂️", 4: "🧛🏾‍♂️", 5: "🧛🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧛🏻‍♂️", "2": "🧛🏼‍♂️", "3": "🧛🏽‍♂️", "4": "🧛🏾‍♂️", "5": "🧛🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman vampire",
 		oldId: "woman_vampire",
 		keywords: ["undead","woman_vampire","woman","female"],
 		char: "🧛‍♀️",
-		skinTones: [1: "🧛🏻‍♀️", 2: "🧛🏼‍♀️", 3: "🧛🏽‍♀️", 4: "🧛🏾‍♀️", 5: "🧛🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧛🏻‍♀️", "2": "🧛🏼‍♀️", "3": "🧛🏽‍♀️", "4": "🧛🏾‍♀️", "5": "🧛🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "merperson",
 		oldId: nil,
 		keywords: ["mermaid","merman","merwoman","merperson","sea"],
 		char: "🧜",
-		skinTones: [1: "🧜🏻", 2: "🧜🏼", 3: "🧜🏽", 4: "🧜🏾", 5: "🧜🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧜🏻", "2": "🧜🏼", "3": "🧜🏽", "4": "🧜🏾", "5": "🧜🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "merman",
 		oldId: "merman",
 		keywords: ["triton","merman","man","male"],
 		char: "🧜‍♂️",
-		skinTones: [1: "🧜🏻‍♂️", 2: "🧜🏼‍♂️", 3: "🧜🏽‍♂️", 4: "🧜🏾‍♂️", 5: "🧜🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧜🏻‍♂️", "2": "🧜🏼‍♂️", "3": "🧜🏽‍♂️", "4": "🧜🏾‍♂️", "5": "🧜🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "mermaid",
 		oldId: "mermaid",
 		keywords: ["merwoman","mermaid","woman","female","ariel"],
 		char: "🧜‍♀️",
-		skinTones: [1: "🧜🏻‍♀️", 2: "🧜🏼‍♀️", 3: "🧜🏽‍♀️", 4: "🧜🏾‍♀️", 5: "🧜🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧜🏻‍♀️", "2": "🧜🏼‍♀️", "3": "🧜🏽‍♀️", "4": "🧜🏾‍♀️", "5": "🧜🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "elf",
 		oldId: nil,
 		keywords: ["magical","mystic","bow","arrow","pointy ears","elf"],
 		char: "🧝",
-		skinTones: [1: "🧝🏻", 2: "🧝🏼", 3: "🧝🏽", 4: "🧝🏾", 5: "🧝🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧝🏻", "2": "🧝🏼", "3": "🧝🏽", "4": "🧝🏾", "5": "🧝🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man elf",
 		oldId: "man_elf",
 		keywords: ["magical","man_elf","man","male"],
 		char: "🧝‍♂️",
-		skinTones: [1: "🧝🏻‍♂️", 2: "🧝🏼‍♂️", 3: "🧝🏽‍♂️", 4: "🧝🏾‍♂️", 5: "🧝🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧝🏻‍♂️", "2": "🧝🏼‍♂️", "3": "🧝🏽‍♂️", "4": "🧝🏾‍♂️", "5": "🧝🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman elf",
 		oldId: "woman_elf",
 		keywords: ["magical","woman_elf","woman","female"],
 		char: "🧝‍♀️",
-		skinTones: [1: "🧝🏻‍♀️", 2: "🧝🏼‍♀️", 3: "🧝🏽‍♀️", 4: "🧝🏾‍♀️", 5: "🧝🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧝🏻‍♀️", "2": "🧝🏼‍♀️", "3": "🧝🏽‍♀️", "4": "🧝🏾‍♀️", "5": "🧝🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "genie",
@@ -3508,8 +3121,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["djinn","magic lamp","wish","magic","genie","magical","wishes"],
 		char: "🧞",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "man genie",
@@ -3517,8 +3129,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["djinn","man_genie","man","male"],
 		char: "🧞‍♂️",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "woman genie",
@@ -3526,8 +3137,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["djinn","woman_genie","woman","female"],
 		char: "🧞‍♀️",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "zombie",
@@ -3535,8 +3145,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["undead","walking dead","brain","decayed","8#","zombie","dead"],
 		char: "🧟",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "man zombie",
@@ -3544,8 +3153,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["undead","walking dead","man_zombie","man","male","dracula"],
 		char: "🧟‍♂️",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "woman zombie",
@@ -3553,8 +3161,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["undead","walking dead","woman_zombie","woman","female"],
 		char: "🧟‍♀️",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "troll",
@@ -3562,278 +3169,247 @@ var emojis: Array<Emoji> = [
 		keywords: ["fairy tale","fantasy","monster","troll","mystical"],
 		char: "🧌",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "person getting massage",
 		oldId: "massage_woman",
 		keywords: ["face","massage","salon","human","person","getting","relax","person_getting_massage"],
 		char: "💆",
-		skinTones: [1: "💆🏻", 2: "💆🏼", 3: "💆🏽", 4: "💆🏾", 5: "💆🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "💆🏻", "2": "💆🏼", "3": "💆🏽", "4": "💆🏾", "5": "💆🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man getting massage",
 		oldId: "massage_man",
 		keywords: ["face","man","massage","man_getting_massage","male","boy","head"],
 		char: "💆‍♂️",
-		skinTones: [1: "💆🏻‍♂️", 2: "💆🏼‍♂️", 3: "💆🏽‍♂️", 4: "💆🏾‍♂️", 5: "💆🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "💆🏻‍♂️", "2": "💆🏼‍♂️", "3": "💆🏽‍♂️", "4": "💆🏾‍♂️", "5": "💆🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman getting massage",
 		oldId: nil,
 		keywords: ["face","massage","woman","woman_getting_massage","female","girl","head"],
 		char: "💆‍♀️",
-		skinTones: [1: "💆🏻‍♀️", 2: "💆🏼‍♀️", 3: "💆🏽‍♀️", 4: "💆🏾‍♀️", 5: "💆🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "💆🏻‍♀️", "2": "💆🏼‍♀️", "3": "💆🏽‍♀️", "4": "💆🏾‍♀️", "5": "💆🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person getting haircut",
 		oldId: "haircut_woman",
 		keywords: ["barber","beauty","haircut","parlor","human","person","getting","hairstyle","person_getting_haircut"],
 		char: "💇",
-		skinTones: [1: "💇🏻", 2: "💇🏼", 3: "💇🏽", 4: "💇🏾", 5: "💇🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "💇🏻", "2": "💇🏼", "3": "💇🏽", "4": "💇🏾", "5": "💇🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man getting haircut",
 		oldId: "haircut_man",
 		keywords: ["haircut","man","man_getting_haircut","male","boy"],
 		char: "💇‍♂️",
-		skinTones: [1: "💇🏻‍♂️", 2: "💇🏼‍♂️", 3: "💇🏽‍♂️", 4: "💇🏾‍♂️", 5: "💇🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "💇🏻‍♂️", "2": "💇🏼‍♂️", "3": "💇🏽‍♂️", "4": "💇🏾‍♂️", "5": "💇🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman getting haircut",
 		oldId: nil,
 		keywords: ["haircut","woman","woman_getting_haircut","female","girl"],
 		char: "💇‍♀️",
-		skinTones: [1: "💇🏻‍♀️", 2: "💇🏼‍♀️", 3: "💇🏽‍♀️", 4: "💇🏾‍♀️", 5: "💇🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "💇🏻‍♀️", "2": "💇🏼‍♀️", "3": "💇🏽‍♀️", "4": "💇🏾‍♀️", "5": "💇🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person walking",
 		oldId: "walking_man",
 		keywords: ["hike","walk","walking","human","person","move","person_walking"],
 		char: "🚶",
-		skinTones: [1: "🚶🏻", 2: "🚶🏼", 3: "🚶🏽", 4: "🚶🏾", 5: "🚶🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🚶🏻", "2": "🚶🏼", "3": "🚶🏽", "4": "🚶🏾", "5": "🚶🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man walking",
 		oldId: nil,
 		keywords: ["hike","man","walk","human","person","man_walking","feet","steps"],
 		char: "🚶‍♂️",
-		skinTones: [1: "🚶🏻‍♂️", 2: "🚶🏼‍♂️", 3: "🚶🏽‍♂️", 4: "🚶🏾‍♂️", 5: "🚶🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🚶🏻‍♂️", "2": "🚶🏼‍♂️", "3": "🚶🏽‍♂️", "4": "🚶🏾‍♂️", "5": "🚶🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman walking",
 		oldId: "walking_woman",
 		keywords: ["hike","walk","woman","human","person","woman_walking","feet","steps","female"],
 		char: "🚶‍♀️",
-		skinTones: [1: "🚶🏻‍♀️", 2: "🚶🏼‍♀️", 3: "🚶🏽‍♀️", 4: "🚶🏾‍♀️", 5: "🚶🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🚶🏻‍♀️", "2": "🚶🏼‍♀️", "3": "🚶🏽‍♀️", "4": "🚶🏾‍♀️", "5": "🚶🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person standing",
 		oldId: nil,
 		keywords: ["stand","standing","person_standing","still"],
 		char: "🧍",
-		skinTones: [1: "🧍🏻", 2: "🧍🏼", 3: "🧍🏽", 4: "🧍🏾", 5: "🧍🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧍🏻", "2": "🧍🏼", "3": "🧍🏽", "4": "🧍🏾", "5": "🧍🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man standing",
 		oldId: nil,
 		keywords: ["man","standing","man_standing","still"],
 		char: "🧍‍♂️",
-		skinTones: [1: "🧍🏻‍♂️", 2: "🧍🏼‍♂️", 3: "🧍🏽‍♂️", 4: "🧍🏾‍♂️", 5: "🧍🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧍🏻‍♂️", "2": "🧍🏼‍♂️", "3": "🧍🏽‍♂️", "4": "🧍🏾‍♂️", "5": "🧍🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman standing",
 		oldId: nil,
 		keywords: ["standing","woman","woman_standing","still"],
 		char: "🧍‍♀️",
-		skinTones: [1: "🧍🏻‍♀️", 2: "🧍🏼‍♀️", 3: "🧍🏽‍♀️", 4: "🧍🏾‍♀️", 5: "🧍🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧍🏻‍♀️", "2": "🧍🏼‍♀️", "3": "🧍🏽‍♀️", "4": "🧍🏾‍♀️", "5": "🧍🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person kneeling",
 		oldId: nil,
 		keywords: ["kneel","kneeling","person_kneeling","pray","respectful"],
 		char: "🧎",
-		skinTones: [1: "🧎🏻", 2: "🧎🏼", 3: "🧎🏽", 4: "🧎🏾", 5: "🧎🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧎🏻", "2": "🧎🏼", "3": "🧎🏽", "4": "🧎🏾", "5": "🧎🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man kneeling",
 		oldId: nil,
 		keywords: ["kneeling","man","man_kneeling","pray","respectful"],
 		char: "🧎‍♂️",
-		skinTones: [1: "🧎🏻‍♂️", 2: "🧎🏼‍♂️", 3: "🧎🏽‍♂️", 4: "🧎🏾‍♂️", 5: "🧎🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧎🏻‍♂️", "2": "🧎🏼‍♂️", "3": "🧎🏽‍♂️", "4": "🧎🏾‍♂️", "5": "🧎🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman kneeling",
 		oldId: nil,
 		keywords: ["kneeling","woman","woman_kneeling","respectful","pray"],
 		char: "🧎‍♀️",
-		skinTones: [1: "🧎🏻‍♀️", 2: "🧎🏼‍♀️", 3: "🧎🏽‍♀️", 4: "🧎🏾‍♀️", 5: "🧎🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧎🏻‍♀️", "2": "🧎🏼‍♀️", "3": "🧎🏽‍♀️", "4": "🧎🏾‍♀️", "5": "🧎🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person with white cane",
 		oldId: nil,
 		keywords: ["accessibility","blind","person_with_probing_cane","person_with_white_cane"],
 		char: "🧑‍🦯",
-		skinTones: [1: "🧑🏻‍🦯", 2: "🧑🏼‍🦯", 3: "🧑🏽‍🦯", 4: "🧑🏾‍🦯", 5: "🧑🏿‍🦯"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻‍🦯", "2": "🧑🏼‍🦯", "3": "🧑🏽‍🦯", "4": "🧑🏾‍🦯", "5": "🧑🏿‍🦯"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man with white cane",
 		oldId: nil,
 		keywords: ["accessibility","blind","man","man_with_probing_cane","man_with_white_cane"],
 		char: "👨‍🦯",
-		skinTones: [1: "👨🏻‍🦯", 2: "👨🏼‍🦯", 3: "👨🏽‍🦯", 4: "👨🏾‍🦯", 5: "👨🏿‍🦯"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻‍🦯", "2": "👨🏼‍🦯", "3": "👨🏽‍🦯", "4": "👨🏾‍🦯", "5": "👨🏿‍🦯"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman with white cane",
 		oldId: nil,
 		keywords: ["accessibility","blind","woman","woman_with_probing_cane","woman_with_white_cane"],
 		char: "👩‍🦯",
-		skinTones: [1: "👩🏻‍🦯", 2: "👩🏼‍🦯", 3: "👩🏽‍🦯", 4: "👩🏾‍🦯", 5: "👩🏿‍🦯"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍🦯", "2": "👩🏼‍🦯", "3": "👩🏽‍🦯", "4": "👩🏾‍🦯", "5": "👩🏿‍🦯"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person in motorized wheelchair",
 		oldId: nil,
 		keywords: ["accessibility","wheelchair","person_in_motorized_wheelchair","disability"],
 		char: "🧑‍🦼",
-		skinTones: [1: "🧑🏻‍🦼", 2: "🧑🏼‍🦼", 3: "🧑🏽‍🦼", 4: "🧑🏾‍🦼", 5: "🧑🏿‍🦼"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻‍🦼", "2": "🧑🏼‍🦼", "3": "🧑🏽‍🦼", "4": "🧑🏾‍🦼", "5": "🧑🏿‍🦼"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man in motorized wheelchair",
 		oldId: nil,
 		keywords: ["accessibility","man","wheelchair","man_in_motorized_wheelchair","disability"],
 		char: "👨‍🦼",
-		skinTones: [1: "👨🏻‍🦼", 2: "👨🏼‍🦼", 3: "👨🏽‍🦼", 4: "👨🏾‍🦼", 5: "👨🏿‍🦼"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻‍🦼", "2": "👨🏼‍🦼", "3": "👨🏽‍🦼", "4": "👨🏾‍🦼", "5": "👨🏿‍🦼"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman in motorized wheelchair",
 		oldId: nil,
 		keywords: ["accessibility","wheelchair","woman","woman_in_motorized_wheelchair","disability"],
 		char: "👩‍🦼",
-		skinTones: [1: "👩🏻‍🦼", 2: "👩🏼‍🦼", 3: "👩🏽‍🦼", 4: "👩🏾‍🦼", 5: "👩🏿‍🦼"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍🦼", "2": "👩🏼‍🦼", "3": "👩🏽‍🦼", "4": "👩🏾‍🦼", "5": "👩🏿‍🦼"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person in manual wheelchair",
 		oldId: nil,
 		keywords: ["accessibility","wheelchair","person_in_manual_wheelchair","disability"],
 		char: "🧑‍🦽",
-		skinTones: [1: "🧑🏻‍🦽", 2: "🧑🏼‍🦽", 3: "🧑🏽‍🦽", 4: "🧑🏾‍🦽", 5: "🧑🏿‍🦽"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻‍🦽", "2": "🧑🏼‍🦽", "3": "🧑🏽‍🦽", "4": "🧑🏾‍🦽", "5": "🧑🏿‍🦽"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man in manual wheelchair",
 		oldId: nil,
 		keywords: ["accessibility","man","wheelchair","man_in_manual_wheelchair","disability"],
 		char: "👨‍🦽",
-		skinTones: [1: "👨🏻‍🦽", 2: "👨🏼‍🦽", 3: "👨🏽‍🦽", 4: "👨🏾‍🦽", 5: "👨🏿‍🦽"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻‍🦽", "2": "👨🏼‍🦽", "3": "👨🏽‍🦽", "4": "👨🏾‍🦽", "5": "👨🏿‍🦽"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman in manual wheelchair",
 		oldId: nil,
 		keywords: ["accessibility","wheelchair","woman","woman_in_manual_wheelchair","disability"],
 		char: "👩‍🦽",
-		skinTones: [1: "👩🏻‍🦽", 2: "👩🏼‍🦽", 3: "👩🏽‍🦽", 4: "👩🏾‍🦽", 5: "👩🏿‍🦽"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍🦽", "2": "👩🏼‍🦽", "3": "👩🏽‍🦽", "4": "👩🏾‍🦽", "5": "👩🏿‍🦽"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person running",
 		oldId: "running_man",
 		keywords: ["marathon","running","human","person","move","person_running"],
 		char: "🏃",
-		skinTones: [1: "🏃🏻", 2: "🏃🏼", 3: "🏃🏽", 4: "🏃🏾", 5: "🏃🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🏃🏻", "2": "🏃🏼", "3": "🏃🏽", "4": "🏃🏾", "5": "🏃🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man running",
 		oldId: nil,
 		keywords: ["man","marathon","racing","running","man_running","walking","exercise","race"],
 		char: "🏃‍♂️",
-		skinTones: [1: "🏃🏻‍♂️", 2: "🏃🏼‍♂️", 3: "🏃🏽‍♂️", 4: "🏃🏾‍♂️", 5: "🏃🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🏃🏻‍♂️", "2": "🏃🏼‍♂️", "3": "🏃🏽‍♂️", "4": "🏃🏾‍♂️", "5": "🏃🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman running",
 		oldId: "running_woman",
 		keywords: ["marathon","racing","running","woman","woman_running","walking","exercise","race","female"],
 		char: "🏃‍♀️",
-		skinTones: [1: "🏃🏻‍♀️", 2: "🏃🏼‍♀️", 3: "🏃🏽‍♀️", 4: "🏃🏾‍♀️", 5: "🏃🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🏃🏻‍♀️", "2": "🏃🏼‍♀️", "3": "🏃🏽‍♀️", "4": "🏃🏾‍♀️", "5": "🏃🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman dancing",
 		oldId: "dancer",
 		keywords: ["dance","dancing","woman","human","person","female","girl","fun","dancer","woman_dancing"],
 		char: "💃",
-		skinTones: [1: "💃🏻", 2: "💃🏼", 3: "💃🏽", 4: "💃🏾", 5: "💃🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "💃🏻", "2": "💃🏼", "3": "💃🏽", "4": "💃🏾", "5": "💃🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man dancing",
 		oldId: "man_dancing",
 		keywords: ["dance","dancing","man","human","person","man_dancing","male","boy","fun","dancer"],
 		char: "🕺",
-		skinTones: [1: "🕺🏻", 2: "🕺🏼", 3: "🕺🏽", 4: "🕺🏾", 5: "🕺🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🕺🏻", "2": "🕺🏼", "3": "🕺🏽", "4": "🕺🏾", "5": "🕺🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person in suit levitating",
 		oldId: "business_suit_levitating",
 		keywords: ["business","person","suit","man","levitate","hover","jump","levitating","person_in_suit_levitating","man_in_suit_levitating"],
 		char: "🕴️",
-		skinTones: [1: "🕴🏻", 2: "🕴🏼", 3: "🕴🏽", 4: "🕴🏾", 5: "🕴🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🕴🏻", "2": "🕴🏼", "3": "🕴🏽", "4": "🕴🏾", "5": "🕴🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "people with bunny ears",
@@ -3841,8 +3417,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bunny ear","dancer","partying","human","person","dancers","people","perform","costume","people_with_bunny_ears_partying","people_with_bunny_ears"],
 		char: "👯",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "men with bunny ears",
@@ -3850,8 +3425,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bunny ear","dancer","men","partying","men_with_bunny_ears_partying","men_with_bunny_ears","male","bunny","boys"],
 		char: "👯‍♂️",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "women with bunny ears",
@@ -3859,62 +3433,55 @@ var emojis: Array<Emoji> = [
 		keywords: ["bunny ear","dancer","partying","women","women_with_bunny_ears_partying","women_with_bunny_ears","female","bunny","girls"],
 		char: "👯‍♀️",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "person in steamy room",
 		oldId: nil,
 		keywords: ["sauna","steam room","person_in_steamy_room","relax","spa"],
 		char: "🧖",
-		skinTones: [1: "🧖🏻", 2: "🧖🏼", 3: "🧖🏽", 4: "🧖🏾", 5: "🧖🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧖🏻", "2": "🧖🏼", "3": "🧖🏽", "4": "🧖🏾", "5": "🧖🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man in steamy room",
 		oldId: "man_in_steamy_room",
 		keywords: ["sauna","steam room","man_in_steamy_room","male","man","spa","steamroom"],
 		char: "🧖‍♂️",
-		skinTones: [1: "🧖🏻‍♂️", 2: "🧖🏼‍♂️", 3: "🧖🏽‍♂️", 4: "🧖🏾‍♂️", 5: "🧖🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧖🏻‍♂️", "2": "🧖🏼‍♂️", "3": "🧖🏽‍♂️", "4": "🧖🏾‍♂️", "5": "🧖🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman in steamy room",
 		oldId: "woman_in_steamy_room",
 		keywords: ["sauna","steam room","woman_in_steamy_room","female","woman","spa","steamroom"],
 		char: "🧖‍♀️",
-		skinTones: [1: "🧖🏻‍♀️", 2: "🧖🏼‍♀️", 3: "🧖🏽‍♀️", 4: "🧖🏾‍♀️", 5: "🧖🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧖🏻‍♀️", "2": "🧖🏼‍♀️", "3": "🧖🏽‍♀️", "4": "🧖🏾‍♀️", "5": "🧖🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person climbing",
 		oldId: nil,
 		keywords: ["climber","human","person","climbing","person_climbing","sport"],
 		char: "🧗",
-		skinTones: [1: "🧗🏻", 2: "🧗🏼", 3: "🧗🏽", 4: "🧗🏾", 5: "🧗🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧗🏻", "2": "🧗🏼", "3": "🧗🏽", "4": "🧗🏾", "5": "🧗🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man climbing",
 		oldId: "climbing_man",
 		keywords: ["climber","man_climbing","sports","hobby","man","male","rock"],
 		char: "🧗‍♂️",
-		skinTones: [1: "🧗🏻‍♂️", 2: "🧗🏼‍♂️", 3: "🧗🏽‍♂️", 4: "🧗🏾‍♂️", 5: "🧗🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧗🏻‍♂️", "2": "🧗🏼‍♂️", "3": "🧗🏽‍♂️", "4": "🧗🏾‍♂️", "5": "🧗🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman climbing",
 		oldId: "climbing_woman",
 		keywords: ["climber","woman_climbing","sports","hobby","woman","female","rock"],
 		char: "🧗‍♀️",
-		skinTones: [1: "🧗🏻‍♀️", 2: "🧗🏼‍♀️", 3: "🧗🏽‍♀️", 4: "🧗🏾‍♀️", 5: "🧗🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧗🏻‍♀️", "2": "🧗🏼‍♀️", "3": "🧗🏽‍♀️", "4": "🧗🏾‍♀️", "5": "🧗🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person fencing",
@@ -3922,17 +3489,15 @@ var emojis: Array<Emoji> = [
 		keywords: ["fencer","fencing","sword","epee","sports","person_fencing"],
 		char: "🤺",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "horse racing",
 		oldId: "horse_racing",
 		keywords: ["horse","jockey","racehorse","racing","animal","sports","betting","competition","gambling","luck","horse_racing"],
 		char: "🏇",
-		skinTones: [1: "🏇🏻", 2: "🏇🏼", 3: "🏇🏽", 4: "🏇🏾", 5: "🏇🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🏇🏻", "2": "🏇🏼", "3": "🏇🏽", "4": "🏇🏾", "5": "🏇🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "skier",
@@ -3940,260 +3505,231 @@ var emojis: Array<Emoji> = [
 		keywords: ["ski","snow","winter","sports","person_skiing","skier","skiing"],
 		char: "⛷️",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "snowboarder",
 		oldId: "snowboarder",
 		keywords: ["ski","snow","snowboard","winter","sports","person_snowboarding","snowboarder","snowboarding"],
 		char: "🏂️",
-		skinTones: [1: "🏂🏻", 2: "🏂🏼", 3: "🏂🏽", 4: "🏂🏾", 5: "🏂🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🏂🏻", "2": "🏂🏼", "3": "🏂🏽", "4": "🏂🏾", "5": "🏂🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person golfing",
 		oldId: "golfing_man",
 		keywords: ["ball","golf","sports","golfer","business","golfing","person_golfing"],
 		char: "🏌️",
-		skinTones: [1: "🏌🏻", 2: "🏌🏼", 3: "🏌🏽", 4: "🏌🏾", 5: "🏌🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🏌🏻", "2": "🏌🏼", "3": "🏌🏽", "4": "🏌🏾", "5": "🏌🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man golfing",
 		oldId: nil,
 		keywords: ["golf","man","man_golfing","sport"],
 		char: "🏌️‍♂️",
-		skinTones: [1: "🏌🏻‍♂️", 2: "🏌🏼‍♂️", 3: "🏌🏽‍♂️", 4: "🏌🏾‍♂️", 5: "🏌🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🏌🏻‍♂️", "2": "🏌🏼‍♂️", "3": "🏌🏽‍♂️", "4": "🏌🏾‍♂️", "5": "🏌🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman golfing",
 		oldId: "golfing_woman",
 		keywords: ["golf","woman","woman_golfing","sports","business","female"],
 		char: "🏌️‍♀️",
-		skinTones: [1: "🏌🏻‍♀️", 2: "🏌🏼‍♀️", 3: "🏌🏽‍♀️", 4: "🏌🏾‍♀️", 5: "🏌🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🏌🏻‍♀️", "2": "🏌🏼‍♀️", "3": "🏌🏽‍♀️", "4": "🏌🏾‍♀️", "5": "🏌🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person surfing",
 		oldId: "surfing_man",
 		keywords: ["surfing","water","ocean","sea","wave","surfer","sports","person","sport","person_surfing"],
 		char: "🏄️",
-		skinTones: [1: "🏄🏻", 2: "🏄🏼", 3: "🏄🏽", 4: "🏄🏾", 5: "🏄🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🏄🏻", "2": "🏄🏼", "3": "🏄🏽", "4": "🏄🏾", "5": "🏄🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man surfing",
 		oldId: nil,
 		keywords: ["man","surfing","man_surfing","sports","ocean","sea","summer","beach"],
 		char: "🏄‍♂️",
-		skinTones: [1: "🏄🏻‍♂️", 2: "🏄🏼‍♂️", 3: "🏄🏽‍♂️", 4: "🏄🏾‍♂️", 5: "🏄🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🏄🏻‍♂️", "2": "🏄🏼‍♂️", "3": "🏄🏽‍♂️", "4": "🏄🏾‍♂️", "5": "🏄🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman surfing",
 		oldId: "surfing_woman",
 		keywords: ["surfing","woman","woman_surfing","sports","ocean","sea","summer","beach","female"],
 		char: "🏄‍♀️",
-		skinTones: [1: "🏄🏻‍♀️", 2: "🏄🏼‍♀️", 3: "🏄🏽‍♀️", 4: "🏄🏾‍♀️", 5: "🏄🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🏄🏻‍♀️", "2": "🏄🏼‍♀️", "3": "🏄🏽‍♀️", "4": "🏄🏾‍♀️", "5": "🏄🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person rowing boat",
 		oldId: "rowing_man",
 		keywords: ["boat","rowboat","sports","kayak","canoe","water","person","rowing","sport","move","person_rowing_boat"],
 		char: "🚣",
-		skinTones: [1: "🚣🏻", 2: "🚣🏼", 3: "🚣🏽", 4: "🚣🏾", 5: "🚣🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🚣🏻", "2": "🚣🏼", "3": "🚣🏽", "4": "🚣🏾", "5": "🚣🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man rowing boat",
 		oldId: nil,
 		keywords: ["boat","man","rowboat","man_rowing_boat","sports","hobby","water","ship"],
 		char: "🚣‍♂️",
-		skinTones: [1: "🚣🏻‍♂️", 2: "🚣🏼‍♂️", 3: "🚣🏽‍♂️", 4: "🚣🏾‍♂️", 5: "🚣🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🚣🏻‍♂️", "2": "🚣🏼‍♂️", "3": "🚣🏽‍♂️", "4": "🚣🏾‍♂️", "5": "🚣🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman rowing boat",
 		oldId: "rowing_woman",
 		keywords: ["boat","rowboat","woman","woman_rowing_boat","sports","hobby","water","ship","female"],
 		char: "🚣‍♀️",
-		skinTones: [1: "🚣🏻‍♀️", 2: "🚣🏼‍♀️", 3: "🚣🏽‍♀️", 4: "🚣🏾‍♀️", 5: "🚣🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🚣🏻‍♀️", "2": "🚣🏼‍♀️", "3": "🚣🏽‍♀️", "4": "🚣🏾‍♀️", "5": "🚣🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person swimming",
 		oldId: "swimming_man",
 		keywords: ["swim","sports","water","person","swimming","sport","pool","person_swimming","swimmer"],
 		char: "🏊️",
-		skinTones: [1: "🏊🏻", 2: "🏊🏼", 3: "🏊🏽", 4: "🏊🏾", 5: "🏊🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🏊🏻", "2": "🏊🏼", "3": "🏊🏽", "4": "🏊🏾", "5": "🏊🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man swimming",
 		oldId: nil,
 		keywords: ["man","swim","man_swimming","sports","exercise","human","athlete","water","summer"],
 		char: "🏊‍♂️",
-		skinTones: [1: "🏊🏻‍♂️", 2: "🏊🏼‍♂️", 3: "🏊🏽‍♂️", 4: "🏊🏾‍♂️", 5: "🏊🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🏊🏻‍♂️", "2": "🏊🏼‍♂️", "3": "🏊🏽‍♂️", "4": "🏊🏾‍♂️", "5": "🏊🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman swimming",
 		oldId: "swimming_woman",
 		keywords: ["swim","woman","woman_swimming","sports","exercise","human","athlete","water","summer","female"],
 		char: "🏊‍♀️",
-		skinTones: [1: "🏊🏻‍♀️", 2: "🏊🏼‍♀️", 3: "🏊🏽‍♀️", 4: "🏊🏾‍♀️", 5: "🏊🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🏊🏻‍♀️", "2": "🏊🏼‍♀️", "3": "🏊🏽‍♀️", "4": "🏊🏾‍♀️", "5": "🏊🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person bouncing ball",
 		oldId: "basketball_man",
 		keywords: ["ball","dribble","sports","with","human","person_bouncing_ball"],
 		char: "⛹️",
-		skinTones: [1: "⛹🏻", 2: "⛹🏼", 3: "⛹🏽", 4: "⛹🏾", 5: "⛹🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "⛹🏻", "2": "⛹🏼", "3": "⛹🏽", "4": "⛹🏾", "5": "⛹🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man bouncing ball",
 		oldId: nil,
 		keywords: ["ball","man","man_bouncing_ball","sport"],
 		char: "⛹️‍♂️",
-		skinTones: [1: "⛹🏻‍♂️", 2: "⛹🏼‍♂️", 3: "⛹🏽‍♂️", 4: "⛹🏾‍♂️", 5: "⛹🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "⛹🏻‍♂️", "2": "⛹🏼‍♂️", "3": "⛹🏽‍♂️", "4": "⛹🏾‍♂️", "5": "⛹🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman bouncing ball",
 		oldId: "basketball_woman",
 		keywords: ["ball","woman","woman_bouncing_ball","sports","human","female"],
 		char: "⛹️‍♀️",
-		skinTones: [1: "⛹🏻‍♀️", 2: "⛹🏼‍♀️", 3: "⛹🏽‍♀️", 4: "⛹🏾‍♀️", 5: "⛹🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "⛹🏻‍♀️", "2": "⛹🏼‍♀️", "3": "⛹🏽‍♀️", "4": "⛹🏾‍♀️", "5": "⛹🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person lifting weights",
 		oldId: "weight_lifting_man",
 		keywords: ["lifter","weight","sports","power","training","exercise","person_lifting_weights","weight_lifter","weight_lifting"],
 		char: "🏋️",
-		skinTones: [1: "🏋🏻", 2: "🏋🏼", 3: "🏋🏽", 4: "🏋🏾", 5: "🏋🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🏋🏻", "2": "🏋🏼", "3": "🏋🏽", "4": "🏋🏾", "5": "🏋🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man lifting weights",
 		oldId: nil,
 		keywords: ["man","weight lifter","man_lifting_weights","sport"],
 		char: "🏋️‍♂️",
-		skinTones: [1: "🏋🏻‍♂️", 2: "🏋🏼‍♂️", 3: "🏋🏽‍♂️", 4: "🏋🏾‍♂️", 5: "🏋🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🏋🏻‍♂️", "2": "🏋🏼‍♂️", "3": "🏋🏽‍♂️", "4": "🏋🏾‍♂️", "5": "🏋🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman lifting weights",
 		oldId: "weight_lifting_woman",
 		keywords: ["weight lifter","woman","woman_lifting_weights","sports","training","exercise","female"],
 		char: "🏋️‍♀️",
-		skinTones: [1: "🏋🏻‍♀️", 2: "🏋🏼‍♀️", 3: "🏋🏽‍♀️", 4: "🏋🏾‍♀️", 5: "🏋🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🏋🏻‍♀️", "2": "🏋🏼‍♀️", "3": "🏋🏽‍♀️", "4": "🏋🏾‍♀️", "5": "🏋🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person biking",
 		oldId: "biking_man",
 		keywords: ["bicycle","biking","cyclist","sports","person","sport","move","bicyclist","person_biking"],
 		char: "🚴",
-		skinTones: [1: "🚴🏻", 2: "🚴🏼", 3: "🚴🏽", 4: "🚴🏾", 5: "🚴🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🚴🏻", "2": "🚴🏼", "3": "🚴🏽", "4": "🚴🏾", "5": "🚴🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man biking",
 		oldId: nil,
 		keywords: ["bicycle","biking","cyclist","man","man_biking","sports","bike","exercise","hipster"],
 		char: "🚴‍♂️",
-		skinTones: [1: "🚴🏻‍♂️", 2: "🚴🏼‍♂️", 3: "🚴🏽‍♂️", 4: "🚴🏾‍♂️", 5: "🚴🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🚴🏻‍♂️", "2": "🚴🏼‍♂️", "3": "🚴🏽‍♂️", "4": "🚴🏾‍♂️", "5": "🚴🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman biking",
 		oldId: "biking_woman",
 		keywords: ["bicycle","biking","cyclist","woman","woman_biking","sports","bike","exercise","hipster","female"],
 		char: "🚴‍♀️",
-		skinTones: [1: "🚴🏻‍♀️", 2: "🚴🏼‍♀️", 3: "🚴🏽‍♀️", 4: "🚴🏾‍♀️", 5: "🚴🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🚴🏻‍♀️", "2": "🚴🏼‍♀️", "3": "🚴🏽‍♀️", "4": "🚴🏾‍♀️", "5": "🚴🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person mountain biking",
 		oldId: "mountain_biking_man",
 		keywords: ["bicycle","bicyclist","bike","cyclist","mountain","person","biking","sport","move","mountain_bicyclist","mountain_biking","person_mountain_biking"],
 		char: "🚵",
-		skinTones: [1: "🚵🏻", 2: "🚵🏼", 3: "🚵🏽", 4: "🚵🏾", 5: "🚵🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🚵🏻", "2": "🚵🏼", "3": "🚵🏽", "4": "🚵🏾", "5": "🚵🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man mountain biking",
 		oldId: nil,
 		keywords: ["bicycle","bike","cyclist","man","mountain","man_mountain_biking","transportation","sports","human","race"],
 		char: "🚵‍♂️",
-		skinTones: [1: "🚵🏻‍♂️", 2: "🚵🏼‍♂️", 3: "🚵🏽‍♂️", 4: "🚵🏾‍♂️", 5: "🚵🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🚵🏻‍♂️", "2": "🚵🏼‍♂️", "3": "🚵🏽‍♂️", "4": "🚵🏾‍♂️", "5": "🚵🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman mountain biking",
 		oldId: "mountain_biking_woman",
 		keywords: ["bicycle","bike","biking","cyclist","mountain","woman","woman_mountain_biking","transportation","sports","human","race","female"],
 		char: "🚵‍♀️",
-		skinTones: [1: "🚵🏻‍♀️", 2: "🚵🏼‍♀️", 3: "🚵🏽‍♀️", 4: "🚵🏾‍♀️", 5: "🚵🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🚵🏻‍♀️", "2": "🚵🏼‍♀️", "3": "🚵🏽‍♀️", "4": "🚵🏾‍♀️", "5": "🚵🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person cartwheeling",
 		oldId: nil,
 		keywords: ["cartwheel","gymnastics","sports","cartwheeling","person_cartwheel","person_cartwheeling","sport","gymnastic"],
 		char: "🤸",
-		skinTones: [1: "🤸🏻", 2: "🤸🏼", 3: "🤸🏽", 4: "🤸🏾", 5: "🤸🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤸🏻", "2": "🤸🏼", "3": "🤸🏽", "4": "🤸🏾", "5": "🤸🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man cartwheeling",
 		oldId: "man_cartwheeling",
 		keywords: ["cartwheel","gymnastics","man","man_cartwheeling"],
 		char: "🤸‍♂️",
-		skinTones: [1: "🤸🏻‍♂️", 2: "🤸🏼‍♂️", 3: "🤸🏽‍♂️", 4: "🤸🏾‍♂️", 5: "🤸🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤸🏻‍♂️", "2": "🤸🏼‍♂️", "3": "🤸🏽‍♂️", "4": "🤸🏾‍♂️", "5": "🤸🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman cartwheeling",
 		oldId: "woman_cartwheeling",
 		keywords: ["cartwheel","gymnastics","woman","woman_cartwheeling"],
 		char: "🤸‍♀️",
-		skinTones: [1: "🤸🏻‍♀️", 2: "🤸🏼‍♀️", 3: "🤸🏽‍♀️", 4: "🤸🏾‍♀️", 5: "🤸🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤸🏻‍♀️", "2": "🤸🏼‍♀️", "3": "🤸🏽‍♀️", "4": "🤸🏾‍♀️", "5": "🤸🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "people wrestling",
@@ -4201,8 +3737,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["wrestle","wrestler","fighting","sports","people_wrestling","wrestlers","wrestling","sport"],
 		char: "🤼",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "men wrestling",
@@ -4210,8 +3745,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["men","wrestle","men_wrestling","sports","wrestlers"],
 		char: "🤼‍♂️",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "women wrestling",
@@ -4219,242 +3753,215 @@ var emojis: Array<Emoji> = [
 		keywords: ["women","wrestle","women_wrestling","sports","wrestlers"],
 		char: "🤼‍♀️",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "person playing water polo",
 		oldId: nil,
 		keywords: ["polo","water","sports","person_playing_water_polo","water_polo","sport"],
 		char: "🤽",
-		skinTones: [1: "🤽🏻", 2: "🤽🏼", 3: "🤽🏽", 4: "🤽🏾", 5: "🤽🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤽🏻", "2": "🤽🏼", "3": "🤽🏽", "4": "🤽🏾", "5": "🤽🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man playing water polo",
 		oldId: "man_playing_water_polo",
 		keywords: ["man","water polo","man_playing_water_polo","sports","pool"],
 		char: "🤽‍♂️",
-		skinTones: [1: "🤽🏻‍♂️", 2: "🤽🏼‍♂️", 3: "🤽🏽‍♂️", 4: "🤽🏾‍♂️", 5: "🤽🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤽🏻‍♂️", "2": "🤽🏼‍♂️", "3": "🤽🏽‍♂️", "4": "🤽🏾‍♂️", "5": "🤽🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman playing water polo",
 		oldId: "woman_playing_water_polo",
 		keywords: ["water polo","woman","woman_playing_water_polo","sports","pool"],
 		char: "🤽‍♀️",
-		skinTones: [1: "🤽🏻‍♀️", 2: "🤽🏼‍♀️", 3: "🤽🏽‍♀️", 4: "🤽🏾‍♀️", 5: "🤽🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤽🏻‍♀️", "2": "🤽🏼‍♀️", "3": "🤽🏽‍♀️", "4": "🤽🏾‍♀️", "5": "🤽🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person playing handball",
 		oldId: nil,
 		keywords: ["ball","handball","sports","indoor","person_playing_handball","sport"],
 		char: "🤾",
-		skinTones: [1: "🤾🏻", 2: "🤾🏼", 3: "🤾🏽", 4: "🤾🏾", 5: "🤾🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤾🏻", "2": "🤾🏼", "3": "🤾🏽", "4": "🤾🏾", "5": "🤾🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man playing handball",
 		oldId: "man_playing_handball",
 		keywords: ["handball","man","man_playing_handball","sports"],
 		char: "🤾‍♂️",
-		skinTones: [1: "🤾🏻‍♂️", 2: "🤾🏼‍♂️", 3: "🤾🏽‍♂️", 4: "🤾🏾‍♂️", 5: "🤾🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤾🏻‍♂️", "2": "🤾🏼‍♂️", "3": "🤾🏽‍♂️", "4": "🤾🏾‍♂️", "5": "🤾🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman playing handball",
 		oldId: "woman_playing_handball",
 		keywords: ["handball","woman","woman_playing_handball","sports"],
 		char: "🤾‍♀️",
-		skinTones: [1: "🤾🏻‍♀️", 2: "🤾🏼‍♀️", 3: "🤾🏽‍♀️", 4: "🤾🏾‍♀️", 5: "🤾🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤾🏻‍♀️", "2": "🤾🏼‍♀️", "3": "🤾🏽‍♀️", "4": "🤾🏾‍♀️", "5": "🤾🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person juggling",
 		oldId: nil,
 		keywords: ["balance","juggle","multitask","skill","artist","juggler","juggling","person_juggling","performance"],
 		char: "🤹",
-		skinTones: [1: "🤹🏻", 2: "🤹🏼", 3: "🤹🏽", 4: "🤹🏾", 5: "🤹🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤹🏻", "2": "🤹🏼", "3": "🤹🏽", "4": "🤹🏾", "5": "🤹🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man juggling",
 		oldId: "man_juggling",
 		keywords: ["juggling","man","multitask","man_juggling","juggle","balance","skill"],
 		char: "🤹‍♂️",
-		skinTones: [1: "🤹🏻‍♂️", 2: "🤹🏼‍♂️", 3: "🤹🏽‍♂️", 4: "🤹🏾‍♂️", 5: "🤹🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤹🏻‍♂️", "2": "🤹🏼‍♂️", "3": "🤹🏽‍♂️", "4": "🤹🏾‍♂️", "5": "🤹🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman juggling",
 		oldId: "woman_juggling",
 		keywords: ["juggling","multitask","woman","woman_juggling","juggle","balance","skill"],
 		char: "🤹‍♀️",
-		skinTones: [1: "🤹🏻‍♀️", 2: "🤹🏼‍♀️", 3: "🤹🏽‍♀️", 4: "🤹🏾‍♀️", 5: "🤹🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🤹🏻‍♀️", "2": "🤹🏼‍♀️", "3": "🤹🏽‍♀️", "4": "🤹🏾‍♀️", "5": "🤹🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person in lotus position",
 		oldId: nil,
 		keywords: ["meditation","yoga","human","person","exercise","person_in_lotus_position","meditate"],
 		char: "🧘",
-		skinTones: [1: "🧘🏻", 2: "🧘🏼", 3: "🧘🏽", 4: "🧘🏾", 5: "🧘🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧘🏻", "2": "🧘🏼", "3": "🧘🏽", "4": "🧘🏾", "5": "🧘🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "man in lotus position",
 		oldId: "man_in_lotus_position",
 		keywords: ["meditation","yoga","man_in_lotus_position","man","male","serenity","zen","mindfulness"],
 		char: "🧘‍♂️",
-		skinTones: [1: "🧘🏻‍♂️", 2: "🧘🏼‍♂️", 3: "🧘🏽‍♂️", 4: "🧘🏾‍♂️", 5: "🧘🏿‍♂️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧘🏻‍♂️", "2": "🧘🏼‍♂️", "3": "🧘🏽‍♂️", "4": "🧘🏾‍♂️", "5": "🧘🏿‍♂️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman in lotus position",
 		oldId: "woman_in_lotus_position",
 		keywords: ["meditation","yoga","woman_in_lotus_position","woman","female","serenity","zen","mindfulness"],
 		char: "🧘‍♀️",
-		skinTones: [1: "🧘🏻‍♀️", 2: "🧘🏼‍♀️", 3: "🧘🏽‍♀️", 4: "🧘🏾‍♀️", 5: "🧘🏿‍♀️"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧘🏻‍♀️", "2": "🧘🏼‍♀️", "3": "🧘🏽‍♀️", "4": "🧘🏾‍♀️", "5": "🧘🏿‍♀️"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person taking bath",
 		oldId: "bath",
 		keywords: ["bath","bathtub","person","taking","clean","shower","bathroom","person_taking_bath"],
 		char: "🛀",
-		skinTones: [1: "🛀🏻", 2: "🛀🏼", 3: "🛀🏽", 4: "🛀🏾", 5: "🛀🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🛀🏻", "2": "🛀🏼", "3": "🛀🏽", "4": "🛀🏾", "5": "🛀🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "person in bed",
 		oldId: "sleeping_bed",
 		keywords: ["good night","hotel","sleep","human","person","sleeping","accommodation","rest","person_in_bed","sleeping_accommodation","bed"],
 		char: "🛌",
-		skinTones: [1: "🛌🏻", 2: "🛌🏼", 3: "🛌🏽", 4: "🛌🏾", 5: "🛌🏿"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🛌🏻", "2": "🛌🏼", "3": "🛌🏽", "4": "🛌🏾", "5": "🛌🏿"],
+		category: "people-body"),
 
 	Emoji(
 		id: "people holding hands",
 		oldId: nil,
 		keywords: ["couple","hand","hold","holding hands","person","people_holding_hands","friendship"],
 		char: "🧑‍🤝‍🧑",
-		skinTones: [1: "🧑🏻‍🤝‍🧑🏻", 2: "🧑🏼‍🤝‍🧑🏼", 3: "🧑🏽‍🤝‍🧑🏽", 4: "🧑🏾‍🤝‍🧑🏾", 5: "🧑🏿‍🤝‍🧑🏿", 1,2: "🧑🏻‍🤝‍🧑🏼", 1,3: "🧑🏻‍🤝‍🧑🏽", 1,4: "🧑🏻‍🤝‍🧑🏾", 1,5: "🧑🏻‍🤝‍🧑🏿", 2,1: "🧑🏼‍🤝‍🧑🏻", 2,3: "🧑🏼‍🤝‍🧑🏽", 2,4: "🧑🏼‍🤝‍🧑🏾", 2,5: "🧑🏼‍🤝‍🧑🏿", 3,1: "🧑🏽‍🤝‍🧑🏻", 3,2: "🧑🏽‍🤝‍🧑🏼", 3,4: "🧑🏽‍🤝‍🧑🏾", 3,5: "🧑🏽‍🤝‍🧑🏿", 4,1: "🧑🏾‍🤝‍🧑🏻", 4,2: "🧑🏾‍🤝‍🧑🏼", 4,3: "🧑🏾‍🤝‍🧑🏽", 4,5: "🧑🏾‍🤝‍🧑🏿", 5,1: "🧑🏿‍🤝‍🧑🏻", 5,2: "🧑🏿‍🤝‍🧑🏼", 5,3: "🧑🏿‍🤝‍🧑🏽", 5,4: "🧑🏿‍🤝‍🧑🏾"],
-		category: "people-body",
-	),
+		skinTones: ["1": "🧑🏻‍🤝‍🧑🏻", "2": "🧑🏼‍🤝‍🧑🏼", "3": "🧑🏽‍🤝‍🧑🏽", "4": "🧑🏾‍🤝‍🧑🏾", "5": "🧑🏿‍🤝‍🧑🏿", "1,2": "🧑🏻‍🤝‍🧑🏼", "1,3": "🧑🏻‍🤝‍🧑🏽", "1,4": "🧑🏻‍🤝‍🧑🏾", "1,5": "🧑🏻‍🤝‍🧑🏿", "2,1": "🧑🏼‍🤝‍🧑🏻", "2,3": "🧑🏼‍🤝‍🧑🏽", "2,4": "🧑🏼‍🤝‍🧑🏾", "2,5": "🧑🏼‍🤝‍🧑🏿", "3,1": "🧑🏽‍🤝‍🧑🏻", "3,2": "🧑🏽‍🤝‍🧑🏼", "3,4": "🧑🏽‍🤝‍🧑🏾", "3,5": "🧑🏽‍🤝‍🧑🏿", "4,1": "🧑🏾‍🤝‍🧑🏻", "4,2": "🧑🏾‍🤝‍🧑🏼", "4,3": "🧑🏾‍🤝‍🧑🏽", "4,5": "🧑🏾‍🤝‍🧑🏿", "5,1": "🧑🏿‍🤝‍🧑🏻", "5,2": "🧑🏿‍🤝‍🧑🏼", "5,3": "🧑🏿‍🤝‍🧑🏽", "5,4": "🧑🏿‍🤝‍🧑🏾"],
+		category: "people-body"),
 
 	Emoji(
 		id: "women holding hands",
 		oldId: "two_women_holding_hands",
 		keywords: ["couple","hand","holding hands","women","together","girlfriend","lesbian","homosexual","two","pair","friendship","love","like","female","people","human","two_women_holding_hands","women_holding_hands"],
 		char: "👭",
-		skinTones: [1: "👭🏻", 2: "👭🏼", 3: "👭🏽", 4: "👭🏾", 5: "👭🏿", 1,2: "👩🏻‍🤝‍👩🏼", 1,3: "👩🏻‍🤝‍👩🏽", 1,4: "👩🏻‍🤝‍👩🏾", 1,5: "👩🏻‍🤝‍👩🏿", 2,1: "👩🏼‍🤝‍👩🏻", 2,3: "👩🏼‍🤝‍👩🏽", 2,4: "👩🏼‍🤝‍👩🏾", 2,5: "👩🏼‍🤝‍👩🏿", 3,1: "👩🏽‍🤝‍👩🏻", 3,2: "👩🏽‍🤝‍👩🏼", 3,4: "👩🏽‍🤝‍👩🏾", 3,5: "👩🏽‍🤝‍👩🏿", 4,1: "👩🏾‍🤝‍👩🏻", 4,2: "👩🏾‍🤝‍👩🏼", 4,3: "👩🏾‍🤝‍👩🏽", 4,5: "👩🏾‍🤝‍👩🏿", 5,1: "👩🏿‍🤝‍👩🏻", 5,2: "👩🏿‍🤝‍👩🏼", 5,3: "👩🏿‍🤝‍👩🏽", 5,4: "👩🏿‍🤝‍👩🏾"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👭🏻", "2": "👭🏼", "3": "👭🏽", "4": "👭🏾", "5": "👭🏿", "1,2": "👩🏻‍🤝‍👩🏼", "1,3": "👩🏻‍🤝‍👩🏽", "1,4": "👩🏻‍🤝‍👩🏾", "1,5": "👩🏻‍🤝‍👩🏿", "2,1": "👩🏼‍🤝‍👩🏻", "2,3": "👩🏼‍🤝‍👩🏽", "2,4": "👩🏼‍🤝‍👩🏾", "2,5": "👩🏼‍🤝‍👩🏿", "3,1": "👩🏽‍🤝‍👩🏻", "3,2": "👩🏽‍🤝‍👩🏼", "3,4": "👩🏽‍🤝‍👩🏾", "3,5": "👩🏽‍🤝‍👩🏿", "4,1": "👩🏾‍🤝‍👩🏻", "4,2": "👩🏾‍🤝‍👩🏼", "4,3": "👩🏾‍🤝‍👩🏽", "4,5": "👩🏾‍🤝‍👩🏿", "5,1": "👩🏿‍🤝‍👩🏻", "5,2": "👩🏿‍🤝‍👩🏼", "5,3": "👩🏿‍🤝‍👩🏽", "5,4": "👩🏿‍🤝‍👩🏾"],
+		category: "people-body"),
 
 	Emoji(
 		id: "woman and man holding hands",
 		oldId: "couple",
 		keywords: ["couple","hand","hold","holding hands","man","woman","together","heterosexual","straight","pair","people","human","love","date","dating","like","affection","valentines","marriage","woman_and_man_holding_hands"],
 		char: "👫",
-		skinTones: [1: "👫🏻", 2: "👫🏼", 3: "👫🏽", 4: "👫🏾", 5: "👫🏿", 1,2: "👩🏻‍🤝‍👨🏼", 1,3: "👩🏻‍🤝‍👨🏽", 1,4: "👩🏻‍🤝‍👨🏾", 1,5: "👩🏻‍🤝‍👨🏿", 2,1: "👩🏼‍🤝‍👨🏻", 2,3: "👩🏼‍🤝‍👨🏽", 2,4: "👩🏼‍🤝‍👨🏾", 2,5: "👩🏼‍🤝‍👨🏿", 3,1: "👩🏽‍🤝‍👨🏻", 3,2: "👩🏽‍🤝‍👨🏼", 3,4: "👩🏽‍🤝‍👨🏾", 3,5: "👩🏽‍🤝‍👨🏿", 4,1: "👩🏾‍🤝‍👨🏻", 4,2: "👩🏾‍🤝‍👨🏼", 4,3: "👩🏾‍🤝‍👨🏽", 4,5: "👩🏾‍🤝‍👨🏿", 5,1: "👩🏿‍🤝‍👨🏻", 5,2: "👩🏿‍🤝‍👨🏼", 5,3: "👩🏿‍🤝‍👨🏽", 5,4: "👩🏿‍🤝‍👨🏾"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👫🏻", "2": "👫🏼", "3": "👫🏽", "4": "👫🏾", "5": "👫🏿", "1,2": "👩🏻‍🤝‍👨🏼", "1,3": "👩🏻‍🤝‍👨🏽", "1,4": "👩🏻‍🤝‍👨🏾", "1,5": "👩🏻‍🤝‍👨🏿", "2,1": "👩🏼‍🤝‍👨🏻", "2,3": "👩🏼‍🤝‍👨🏽", "2,4": "👩🏼‍🤝‍👨🏾", "2,5": "👩🏼‍🤝‍👨🏿", "3,1": "👩🏽‍🤝‍👨🏻", "3,2": "👩🏽‍🤝‍👨🏼", "3,4": "👩🏽‍🤝‍👨🏾", "3,5": "👩🏽‍🤝‍👨🏿", "4,1": "👩🏾‍🤝‍👨🏻", "4,2": "👩🏾‍🤝‍👨🏼", "4,3": "👩🏾‍🤝‍👨🏽", "4,5": "👩🏾‍🤝‍👨🏿", "5,1": "👩🏿‍🤝‍👨🏻", "5,2": "👩🏿‍🤝‍👨🏼", "5,3": "👩🏿‍🤝‍👨🏽", "5,4": "👩🏿‍🤝‍👨🏾"],
+		category: "people-body"),
 
 	Emoji(
 		id: "men holding hands",
 		oldId: "two_men_holding_hands",
 		keywords: ["couple","gemini","holding hands","man","men","twins","zodiac","together","gay","homosexual","two","pair","love","like","bromance","friendship","people","human","two_men_holding_hands","men_holding_hands"],
 		char: "👬",
-		skinTones: [1: "👬🏻", 2: "👬🏼", 3: "👬🏽", 4: "👬🏾", 5: "👬🏿", 1,2: "👨🏻‍🤝‍👨🏼", 1,3: "👨🏻‍🤝‍👨🏽", 1,4: "👨🏻‍🤝‍👨🏾", 1,5: "👨🏻‍🤝‍👨🏿", 2,1: "👨🏼‍🤝‍👨🏻", 2,3: "👨🏼‍🤝‍👨🏽", 2,4: "👨🏼‍🤝‍👨🏾", 2,5: "👨🏼‍🤝‍👨🏿", 3,1: "👨🏽‍🤝‍👨🏻", 3,2: "👨🏽‍🤝‍👨🏼", 3,4: "👨🏽‍🤝‍👨🏾", 3,5: "👨🏽‍🤝‍👨🏿", 4,1: "👨🏾‍🤝‍👨🏻", 4,2: "👨🏾‍🤝‍👨🏼", 4,3: "👨🏾‍🤝‍👨🏽", 4,5: "👨🏾‍🤝‍👨🏿", 5,1: "👨🏿‍🤝‍👨🏻", 5,2: "👨🏿‍🤝‍👨🏼", 5,3: "👨🏿‍🤝‍👨🏽", 5,4: "👨🏿‍🤝‍👨🏾"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👬🏻", "2": "👬🏼", "3": "👬🏽", "4": "👬🏾", "5": "👬🏿", "1,2": "👨🏻‍🤝‍👨🏼", "1,3": "👨🏻‍🤝‍👨🏽", "1,4": "👨🏻‍🤝‍👨🏾", "1,5": "👨🏻‍🤝‍👨🏿", "2,1": "👨🏼‍🤝‍👨🏻", "2,3": "👨🏼‍🤝‍👨🏽", "2,4": "👨🏼‍🤝‍👨🏾", "2,5": "👨🏼‍🤝‍👨🏿", "3,1": "👨🏽‍🤝‍👨🏻", "3,2": "👨🏽‍🤝‍👨🏼", "3,4": "👨🏽‍🤝‍👨🏾", "3,5": "👨🏽‍🤝‍👨🏿", "4,1": "👨🏾‍🤝‍👨🏻", "4,2": "👨🏾‍🤝‍👨🏼", "4,3": "👨🏾‍🤝‍👨🏽", "4,5": "👨🏾‍🤝‍👨🏿", "5,1": "👨🏿‍🤝‍👨🏻", "5,2": "👨🏿‍🤝‍👨🏼", "5,3": "👨🏿‍🤝‍👨🏽", "5,4": "👨🏿‍🤝‍👨🏾"],
+		category: "people-body"),
 
 	Emoji(
 		id: "kiss",
 		oldId: "couplekiss_man_woman",
 		keywords: ["couple","man","woman","face","kiss","boy","girl","couplekiss","pair","valentines","love","like","dating","marriage","couple_kiss"],
 		char: "💏",
-		skinTones: [1: "💏🏻", 2: "💏🏼", 3: "💏🏽", 4: "💏🏾", 5: "💏🏿", 1,2: "🧑🏻‍❤️‍💋‍🧑🏼", 1,3: "🧑🏻‍❤️‍💋‍🧑🏽", 1,4: "🧑🏻‍❤️‍💋‍🧑🏾", 1,5: "🧑🏻‍❤️‍💋‍🧑🏿", 2,1: "🧑🏼‍❤️‍💋‍🧑🏻", 2,3: "🧑🏼‍❤️‍💋‍🧑🏽", 2,4: "🧑🏼‍❤️‍💋‍🧑🏾", 2,5: "🧑🏼‍❤️‍💋‍🧑🏿", 3,1: "🧑🏽‍❤️‍💋‍🧑🏻", 3,2: "🧑🏽‍❤️‍💋‍🧑🏼", 3,4: "🧑🏽‍❤️‍💋‍🧑🏾", 3,5: "🧑🏽‍❤️‍💋‍🧑🏿", 4,1: "🧑🏾‍❤️‍💋‍🧑🏻", 4,2: "🧑🏾‍❤️‍💋‍🧑🏼", 4,3: "🧑🏾‍❤️‍💋‍🧑🏽", 4,5: "🧑🏾‍❤️‍💋‍🧑🏿", 5,1: "🧑🏿‍❤️‍💋‍🧑🏻", 5,2: "🧑🏿‍❤️‍💋‍🧑🏼", 5,3: "🧑🏿‍❤️‍💋‍🧑🏽", 5,4: "🧑🏿‍❤️‍💋‍🧑🏾"],
-		category: "people-body",
-	),
+		skinTones: ["1": "💏🏻", "2": "💏🏼", "3": "💏🏽", "4": "💏🏾", "5": "💏🏿", "1,2": "🧑🏻‍❤️‍💋‍🧑🏼", "1,3": "🧑🏻‍❤️‍💋‍🧑🏽", "1,4": "🧑🏻‍❤️‍💋‍🧑🏾", "1,5": "🧑🏻‍❤️‍💋‍🧑🏿", "2,1": "🧑🏼‍❤️‍💋‍🧑🏻", "2,3": "🧑🏼‍❤️‍💋‍🧑🏽", "2,4": "🧑🏼‍❤️‍💋‍🧑🏾", "2,5": "🧑🏼‍❤️‍💋‍🧑🏿", "3,1": "🧑🏽‍❤️‍💋‍🧑🏻", "3,2": "🧑🏽‍❤️‍💋‍🧑🏼", "3,4": "🧑🏽‍❤️‍💋‍🧑🏾", "3,5": "🧑🏽‍❤️‍💋‍🧑🏿", "4,1": "🧑🏾‍❤️‍💋‍🧑🏻", "4,2": "🧑🏾‍❤️‍💋‍🧑🏼", "4,3": "🧑🏾‍❤️‍💋‍🧑🏽", "4,5": "🧑🏾‍❤️‍💋‍🧑🏿", "5,1": "🧑🏿‍❤️‍💋‍🧑🏻", "5,2": "🧑🏿‍❤️‍💋‍🧑🏼", "5,3": "🧑🏿‍❤️‍💋‍🧑🏽", "5,4": "🧑🏿‍❤️‍💋‍🧑🏾"],
+		category: "people-body"),
 
 	Emoji(
 		id: "kiss: woman, man",
 		oldId: nil,
 		keywords: ["couple","kiss","man","woman","kiss_mw","kiss_wm","kiss_woman_man","love"],
 		char: "👩‍❤️‍💋‍👨",
-		skinTones: [1: "👩🏻‍❤️‍💋‍👨🏻", 2: "👩🏼‍❤️‍💋‍👨🏼", 3: "👩🏽‍❤️‍💋‍👨🏽", 4: "👩🏾‍❤️‍💋‍👨🏾", 5: "👩🏿‍❤️‍💋‍👨🏿", 1,2: "👩🏻‍❤️‍💋‍👨🏼", 1,3: "👩🏻‍❤️‍💋‍👨🏽", 1,4: "👩🏻‍❤️‍💋‍👨🏾", 1,5: "👩🏻‍❤️‍💋‍👨🏿", 2,1: "👩🏼‍❤️‍💋‍👨🏻", 2,3: "👩🏼‍❤️‍💋‍👨🏽", 2,4: "👩🏼‍❤️‍💋‍👨🏾", 2,5: "👩🏼‍❤️‍💋‍👨🏿", 3,1: "👩🏽‍❤️‍💋‍👨🏻", 3,2: "👩🏽‍❤️‍💋‍👨🏼", 3,4: "👩🏽‍❤️‍💋‍👨🏾", 3,5: "👩🏽‍❤️‍💋‍👨🏿", 4,1: "👩🏾‍❤️‍💋‍👨🏻", 4,2: "👩🏾‍❤️‍💋‍👨🏼", 4,3: "👩🏾‍❤️‍💋‍👨🏽", 4,5: "👩🏾‍❤️‍💋‍👨🏿", 5,1: "👩🏿‍❤️‍💋‍👨🏻", 5,2: "👩🏿‍❤️‍💋‍👨🏼", 5,3: "👩🏿‍❤️‍💋‍👨🏽", 5,4: "👩🏿‍❤️‍💋‍👨🏾"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍❤️‍💋‍👨🏻", "2": "👩🏼‍❤️‍💋‍👨🏼", "3": "👩🏽‍❤️‍💋‍👨🏽", "4": "👩🏾‍❤️‍💋‍👨🏾", "5": "👩🏿‍❤️‍💋‍👨🏿", "1,2": "👩🏻‍❤️‍💋‍👨🏼", "1,3": "👩🏻‍❤️‍💋‍👨🏽", "1,4": "👩🏻‍❤️‍💋‍👨🏾", "1,5": "👩🏻‍❤️‍💋‍👨🏿", "2,1": "👩🏼‍❤️‍💋‍👨🏻", "2,3": "👩🏼‍❤️‍💋‍👨🏽", "2,4": "👩🏼‍❤️‍💋‍👨🏾", "2,5": "👩🏼‍❤️‍💋‍👨🏿", "3,1": "👩🏽‍❤️‍💋‍👨🏻", "3,2": "👩🏽‍❤️‍💋‍👨🏼", "3,4": "👩🏽‍❤️‍💋‍👨🏾", "3,5": "👩🏽‍❤️‍💋‍👨🏿", "4,1": "👩🏾‍❤️‍💋‍👨🏻", "4,2": "👩🏾‍❤️‍💋‍👨🏼", "4,3": "👩🏾‍❤️‍💋‍👨🏽", "4,5": "👩🏾‍❤️‍💋‍👨🏿", "5,1": "👩🏿‍❤️‍💋‍👨🏻", "5,2": "👩🏿‍❤️‍💋‍👨🏼", "5,3": "👩🏿‍❤️‍💋‍👨🏽", "5,4": "👩🏿‍❤️‍💋‍👨🏾"],
+		category: "people-body"),
 
 	Emoji(
 		id: "kiss: man, man",
 		oldId: "couplekiss_man_man",
 		keywords: ["couple","kiss","man","gay","kiss_mm","kiss_man_man","pair","valentines","love","like","dating","marriage"],
 		char: "👨‍❤️‍💋‍👨",
-		skinTones: [1: "👨🏻‍❤️‍💋‍👨🏻", 2: "👨🏼‍❤️‍💋‍👨🏼", 3: "👨🏽‍❤️‍💋‍👨🏽", 4: "👨🏾‍❤️‍💋‍👨🏾", 5: "👨🏿‍❤️‍💋‍👨🏿", 1,2: "👨🏻‍❤️‍💋‍👨🏼", 1,3: "👨🏻‍❤️‍💋‍👨🏽", 1,4: "👨🏻‍❤️‍💋‍👨🏾", 1,5: "👨🏻‍❤️‍💋‍👨🏿", 2,1: "👨🏼‍❤️‍💋‍👨🏻", 2,3: "👨🏼‍❤️‍💋‍👨🏽", 2,4: "👨🏼‍❤️‍💋‍👨🏾", 2,5: "👨🏼‍❤️‍💋‍👨🏿", 3,1: "👨🏽‍❤️‍💋‍👨🏻", 3,2: "👨🏽‍❤️‍💋‍👨🏼", 3,4: "👨🏽‍❤️‍💋‍👨🏾", 3,5: "👨🏽‍❤️‍💋‍👨🏿", 4,1: "👨🏾‍❤️‍💋‍👨🏻", 4,2: "👨🏾‍❤️‍💋‍👨🏼", 4,3: "👨🏾‍❤️‍💋‍👨🏽", 4,5: "👨🏾‍❤️‍💋‍👨🏿", 5,1: "👨🏿‍❤️‍💋‍👨🏻", 5,2: "👨🏿‍❤️‍💋‍👨🏼", 5,3: "👨🏿‍❤️‍💋‍👨🏽", 5,4: "👨🏿‍❤️‍💋‍👨🏾"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻‍❤️‍💋‍👨🏻", "2": "👨🏼‍❤️‍💋‍👨🏼", "3": "👨🏽‍❤️‍💋‍👨🏽", "4": "👨🏾‍❤️‍💋‍👨🏾", "5": "👨🏿‍❤️‍💋‍👨🏿", "1,2": "👨🏻‍❤️‍💋‍👨🏼", "1,3": "👨🏻‍❤️‍💋‍👨🏽", "1,4": "👨🏻‍❤️‍💋‍👨🏾", "1,5": "👨🏻‍❤️‍💋‍👨🏿", "2,1": "👨🏼‍❤️‍💋‍👨🏻", "2,3": "👨🏼‍❤️‍💋‍👨🏽", "2,4": "👨🏼‍❤️‍💋‍👨🏾", "2,5": "👨🏼‍❤️‍💋‍👨🏿", "3,1": "👨🏽‍❤️‍💋‍👨🏻", "3,2": "👨🏽‍❤️‍💋‍👨🏼", "3,4": "👨🏽‍❤️‍💋‍👨🏾", "3,5": "👨🏽‍❤️‍💋‍👨🏿", "4,1": "👨🏾‍❤️‍💋‍👨🏻", "4,2": "👨🏾‍❤️‍💋‍👨🏼", "4,3": "👨🏾‍❤️‍💋‍👨🏽", "4,5": "👨🏾‍❤️‍💋‍👨🏿", "5,1": "👨🏿‍❤️‍💋‍👨🏻", "5,2": "👨🏿‍❤️‍💋‍👨🏼", "5,3": "👨🏿‍❤️‍💋‍👨🏽", "5,4": "👨🏿‍❤️‍💋‍👨🏾"],
+		category: "people-body"),
 
 	Emoji(
 		id: "kiss: woman, woman",
 		oldId: "couplekiss_woman_woman",
 		keywords: ["couple","kiss","woman","lesbian","girlfriend","kiss_ww","kiss_woman_woman","pair","valentines","love","like","dating","marriage"],
 		char: "👩‍❤️‍💋‍👩",
-		skinTones: [1: "👩🏻‍❤️‍💋‍👩🏻", 2: "👩🏼‍❤️‍💋‍👩🏼", 3: "👩🏽‍❤️‍💋‍👩🏽", 4: "👩🏾‍❤️‍💋‍👩🏾", 5: "👩🏿‍❤️‍💋‍👩🏿", 1,2: "👩🏻‍❤️‍💋‍👩🏼", 1,3: "👩🏻‍❤️‍💋‍👩🏽", 1,4: "👩🏻‍❤️‍💋‍👩🏾", 1,5: "👩🏻‍❤️‍💋‍👩🏿", 2,1: "👩🏼‍❤️‍💋‍👩🏻", 2,3: "👩🏼‍❤️‍💋‍👩🏽", 2,4: "👩🏼‍❤️‍💋‍👩🏾", 2,5: "👩🏼‍❤️‍💋‍👩🏿", 3,1: "👩🏽‍❤️‍💋‍👩🏻", 3,2: "👩🏽‍❤️‍💋‍👩🏼", 3,4: "👩🏽‍❤️‍💋‍👩🏾", 3,5: "👩🏽‍❤️‍💋‍👩🏿", 4,1: "👩🏾‍❤️‍💋‍👩🏻", 4,2: "👩🏾‍❤️‍💋‍👩🏼", 4,3: "👩🏾‍❤️‍💋‍👩🏽", 4,5: "👩🏾‍❤️‍💋‍👩🏿", 5,1: "👩🏿‍❤️‍💋‍👩🏻", 5,2: "👩🏿‍❤️‍💋‍👩🏼", 5,3: "👩🏿‍❤️‍💋‍👩🏽", 5,4: "👩🏿‍❤️‍💋‍👩🏾"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍❤️‍💋‍👩🏻", "2": "👩🏼‍❤️‍💋‍👩🏼", "3": "👩🏽‍❤️‍💋‍👩🏽", "4": "👩🏾‍❤️‍💋‍👩🏾", "5": "👩🏿‍❤️‍💋‍👩🏿", "1,2": "👩🏻‍❤️‍💋‍👩🏼", "1,3": "👩🏻‍❤️‍💋‍👩🏽", "1,4": "👩🏻‍❤️‍💋‍👩🏾", "1,5": "👩🏻‍❤️‍💋‍👩🏿", "2,1": "👩🏼‍❤️‍💋‍👩🏻", "2,3": "👩🏼‍❤️‍💋‍👩🏽", "2,4": "👩🏼‍❤️‍💋‍👩🏾", "2,5": "👩🏼‍❤️‍💋‍👩🏿", "3,1": "👩🏽‍❤️‍💋‍👩🏻", "3,2": "👩🏽‍❤️‍💋‍👩🏼", "3,4": "👩🏽‍❤️‍💋‍👩🏾", "3,5": "👩🏽‍❤️‍💋‍👩🏿", "4,1": "👩🏾‍❤️‍💋‍👩🏻", "4,2": "👩🏾‍❤️‍💋‍👩🏼", "4,3": "👩🏾‍❤️‍💋‍👩🏽", "4,5": "👩🏾‍❤️‍💋‍👩🏿", "5,1": "👩🏿‍❤️‍💋‍👩🏻", "5,2": "👩🏿‍❤️‍💋‍👩🏼", "5,3": "👩🏿‍❤️‍💋‍👩🏽", "5,4": "👩🏿‍❤️‍💋‍👩🏾"],
+		category: "people-body"),
 
 	Emoji(
 		id: "couple with heart",
 		oldId: "couple_with_heart_woman_man",
 		keywords: ["couple","love","man","woman","heart","pair","like","affection","human","dating","valentines","marriage","couple_with_heart"],
 		char: "💑",
-		skinTones: [1: "💑🏻", 2: "💑🏼", 3: "💑🏽", 4: "💑🏾", 5: "💑🏿", 1,2: "🧑🏻‍❤️‍🧑🏼", 1,3: "🧑🏻‍❤️‍🧑🏽", 1,4: "🧑🏻‍❤️‍🧑🏾", 1,5: "🧑🏻‍❤️‍🧑🏿", 2,1: "🧑🏼‍❤️‍🧑🏻", 2,3: "🧑🏼‍❤️‍🧑🏽", 2,4: "🧑🏼‍❤️‍🧑🏾", 2,5: "🧑🏼‍❤️‍🧑🏿", 3,1: "🧑🏽‍❤️‍🧑🏻", 3,2: "🧑🏽‍❤️‍🧑🏼", 3,4: "🧑🏽‍❤️‍🧑🏾", 3,5: "🧑🏽‍❤️‍🧑🏿", 4,1: "🧑🏾‍❤️‍🧑🏻", 4,2: "🧑🏾‍❤️‍🧑🏼", 4,3: "🧑🏾‍❤️‍🧑🏽", 4,5: "🧑🏾‍❤️‍🧑🏿", 5,1: "🧑🏿‍❤️‍🧑🏻", 5,2: "🧑🏿‍❤️‍🧑🏼", 5,3: "🧑🏿‍❤️‍🧑🏽", 5,4: "🧑🏿‍❤️‍🧑🏾"],
-		category: "people-body",
-	),
+		skinTones: ["1": "💑🏻", "2": "💑🏼", "3": "💑🏽", "4": "💑🏾", "5": "💑🏿", "1,2": "🧑🏻‍❤️‍🧑🏼", "1,3": "🧑🏻‍❤️‍🧑🏽", "1,4": "🧑🏻‍❤️‍🧑🏾", "1,5": "🧑🏻‍❤️‍🧑🏿", "2,1": "🧑🏼‍❤️‍🧑🏻", "2,3": "🧑🏼‍❤️‍🧑🏽", "2,4": "🧑🏼‍❤️‍🧑🏾", "2,5": "🧑🏼‍❤️‍🧑🏿", "3,1": "🧑🏽‍❤️‍🧑🏻", "3,2": "🧑🏽‍❤️‍🧑🏼", "3,4": "🧑🏽‍❤️‍🧑🏾", "3,5": "🧑🏽‍❤️‍🧑🏿", "4,1": "🧑🏾‍❤️‍🧑🏻", "4,2": "🧑🏾‍❤️‍🧑🏼", "4,3": "🧑🏾‍❤️‍🧑🏽", "4,5": "🧑🏾‍❤️‍🧑🏿", "5,1": "🧑🏿‍❤️‍🧑🏻", "5,2": "🧑🏿‍❤️‍🧑🏼", "5,3": "🧑🏿‍❤️‍🧑🏽", "5,4": "🧑🏿‍❤️‍🧑🏾"],
+		category: "people-body"),
 
 	Emoji(
 		id: "couple with heart: woman, man",
 		oldId: nil,
 		keywords: ["couple","couple with heart","love","man","woman","couple_with_heart_mw","couple_with_heart_wm","couple_with_heart_woman_man"],
 		char: "👩‍❤️‍👨",
-		skinTones: [1: "👩🏻‍❤️‍👨🏻", 2: "👩🏼‍❤️‍👨🏼", 3: "👩🏽‍❤️‍👨🏽", 4: "👩🏾‍❤️‍👨🏾", 5: "👩🏿‍❤️‍👨🏿", 1,2: "👩🏻‍❤️‍👨🏼", 1,3: "👩🏻‍❤️‍👨🏽", 1,4: "👩🏻‍❤️‍👨🏾", 1,5: "👩🏻‍❤️‍👨🏿", 2,1: "👩🏼‍❤️‍👨🏻", 2,3: "👩🏼‍❤️‍👨🏽", 2,4: "👩🏼‍❤️‍👨🏾", 2,5: "👩🏼‍❤️‍👨🏿", 3,1: "👩🏽‍❤️‍👨🏻", 3,2: "👩🏽‍❤️‍👨🏼", 3,4: "👩🏽‍❤️‍👨🏾", 3,5: "👩🏽‍❤️‍👨🏿", 4,1: "👩🏾‍❤️‍👨🏻", 4,2: "👩🏾‍❤️‍👨🏼", 4,3: "👩🏾‍❤️‍👨🏽", 4,5: "👩🏾‍❤️‍👨🏿", 5,1: "👩🏿‍❤️‍👨🏻", 5,2: "👩🏿‍❤️‍👨🏼", 5,3: "👩🏿‍❤️‍👨🏽", 5,4: "👩🏿‍❤️‍👨🏾"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍❤️‍👨🏻", "2": "👩🏼‍❤️‍👨🏼", "3": "👩🏽‍❤️‍👨🏽", "4": "👩🏾‍❤️‍👨🏾", "5": "👩🏿‍❤️‍👨🏿", "1,2": "👩🏻‍❤️‍👨🏼", "1,3": "👩🏻‍❤️‍👨🏽", "1,4": "👩🏻‍❤️‍👨🏾", "1,5": "👩🏻‍❤️‍👨🏿", "2,1": "👩🏼‍❤️‍👨🏻", "2,3": "👩🏼‍❤️‍👨🏽", "2,4": "👩🏼‍❤️‍👨🏾", "2,5": "👩🏼‍❤️‍👨🏿", "3,1": "👩🏽‍❤️‍👨🏻", "3,2": "👩🏽‍❤️‍👨🏼", "3,4": "👩🏽‍❤️‍👨🏾", "3,5": "👩🏽‍❤️‍👨🏿", "4,1": "👩🏾‍❤️‍👨🏻", "4,2": "👩🏾‍❤️‍👨🏼", "4,3": "👩🏾‍❤️‍👨🏽", "4,5": "👩🏾‍❤️‍👨🏿", "5,1": "👩🏿‍❤️‍👨🏻", "5,2": "👩🏿‍❤️‍👨🏼", "5,3": "👩🏿‍❤️‍👨🏽", "5,4": "👩🏿‍❤️‍👨🏾"],
+		category: "people-body"),
 
 	Emoji(
 		id: "couple with heart: man, man",
 		oldId: "couple_with_heart_man_man",
 		keywords: ["couple","couple with heart","love","man","gay","couple_with_heart_mm","couple_with_heart_man_man","pair","like","affection","human","dating","valentines","marriage"],
 		char: "👨‍❤️‍👨",
-		skinTones: [1: "👨🏻‍❤️‍👨🏻", 2: "👨🏼‍❤️‍👨🏼", 3: "👨🏽‍❤️‍👨🏽", 4: "👨🏾‍❤️‍👨🏾", 5: "👨🏿‍❤️‍👨🏿", 1,2: "👨🏻‍❤️‍👨🏼", 1,3: "👨🏻‍❤️‍👨🏽", 1,4: "👨🏻‍❤️‍👨🏾", 1,5: "👨🏻‍❤️‍👨🏿", 2,1: "👨🏼‍❤️‍👨🏻", 2,3: "👨🏼‍❤️‍👨🏽", 2,4: "👨🏼‍❤️‍👨🏾", 2,5: "👨🏼‍❤️‍👨🏿", 3,1: "👨🏽‍❤️‍👨🏻", 3,2: "👨🏽‍❤️‍👨🏼", 3,4: "👨🏽‍❤️‍👨🏾", 3,5: "👨🏽‍❤️‍👨🏿", 4,1: "👨🏾‍❤️‍👨🏻", 4,2: "👨🏾‍❤️‍👨🏼", 4,3: "👨🏾‍❤️‍👨🏽", 4,5: "👨🏾‍❤️‍👨🏿", 5,1: "👨🏿‍❤️‍👨🏻", 5,2: "👨🏿‍❤️‍👨🏼", 5,3: "👨🏿‍❤️‍👨🏽", 5,4: "👨🏿‍❤️‍👨🏾"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👨🏻‍❤️‍👨🏻", "2": "👨🏼‍❤️‍👨🏼", "3": "👨🏽‍❤️‍👨🏽", "4": "👨🏾‍❤️‍👨🏾", "5": "👨🏿‍❤️‍👨🏿", "1,2": "👨🏻‍❤️‍👨🏼", "1,3": "👨🏻‍❤️‍👨🏽", "1,4": "👨🏻‍❤️‍👨🏾", "1,5": "👨🏻‍❤️‍👨🏿", "2,1": "👨🏼‍❤️‍👨🏻", "2,3": "👨🏼‍❤️‍👨🏽", "2,4": "👨🏼‍❤️‍👨🏾", "2,5": "👨🏼‍❤️‍👨🏿", "3,1": "👨🏽‍❤️‍👨🏻", "3,2": "👨🏽‍❤️‍👨🏼", "3,4": "👨🏽‍❤️‍👨🏾", "3,5": "👨🏽‍❤️‍👨🏿", "4,1": "👨🏾‍❤️‍👨🏻", "4,2": "👨🏾‍❤️‍👨🏼", "4,3": "👨🏾‍❤️‍👨🏽", "4,5": "👨🏾‍❤️‍👨🏿", "5,1": "👨🏿‍❤️‍👨🏻", "5,2": "👨🏿‍❤️‍👨🏼", "5,3": "👨🏿‍❤️‍👨🏽", "5,4": "👨🏿‍❤️‍👨🏾"],
+		category: "people-body"),
 
 	Emoji(
 		id: "couple with heart: woman, woman",
 		oldId: "couple_with_heart_woman_woman",
 		keywords: ["couple","couple with heart","love","woman","lesbian","girlfried","couple_with_heart_ww","couple_with_heart_woman_woman","pair","like","affection","human","dating","valentines","marriage"],
 		char: "👩‍❤️‍👩",
-		skinTones: [1: "👩🏻‍❤️‍👩🏻", 2: "👩🏼‍❤️‍👩🏼", 3: "👩🏽‍❤️‍👩🏽", 4: "👩🏾‍❤️‍👩🏾", 5: "👩🏿‍❤️‍👩🏿", 1,2: "👩🏻‍❤️‍👩🏼", 1,3: "👩🏻‍❤️‍👩🏽", 1,4: "👩🏻‍❤️‍👩🏾", 1,5: "👩🏻‍❤️‍👩🏿", 2,1: "👩🏼‍❤️‍👩🏻", 2,3: "👩🏼‍❤️‍👩🏽", 2,4: "👩🏼‍❤️‍👩🏾", 2,5: "👩🏼‍❤️‍👩🏿", 3,1: "👩🏽‍❤️‍👩🏻", 3,2: "👩🏽‍❤️‍👩🏼", 3,4: "👩🏽‍❤️‍👩🏾", 3,5: "👩🏽‍❤️‍👩🏿", 4,1: "👩🏾‍❤️‍👩🏻", 4,2: "👩🏾‍❤️‍👩🏼", 4,3: "👩🏾‍❤️‍👩🏽", 4,5: "👩🏾‍❤️‍👩🏿", 5,1: "👩🏿‍❤️‍👩🏻", 5,2: "👩🏿‍❤️‍👩🏼", 5,3: "👩🏿‍❤️‍👩🏽", 5,4: "👩🏿‍❤️‍👩🏾"],
-		category: "people-body",
-	),
+		skinTones: ["1": "👩🏻‍❤️‍👩🏻", "2": "👩🏼‍❤️‍👩🏼", "3": "👩🏽‍❤️‍👩🏽", "4": "👩🏾‍❤️‍👩🏾", "5": "👩🏿‍❤️‍👩🏿", "1,2": "👩🏻‍❤️‍👩🏼", "1,3": "👩🏻‍❤️‍👩🏽", "1,4": "👩🏻‍❤️‍👩🏾", "1,5": "👩🏻‍❤️‍👩🏿", "2,1": "👩🏼‍❤️‍👩🏻", "2,3": "👩🏼‍❤️‍👩🏽", "2,4": "👩🏼‍❤️‍👩🏾", "2,5": "👩🏼‍❤️‍👩🏿", "3,1": "👩🏽‍❤️‍👩🏻", "3,2": "👩🏽‍❤️‍👩🏼", "3,4": "👩🏽‍❤️‍👩🏾", "3,5": "👩🏽‍❤️‍👩🏿", "4,1": "👩🏾‍❤️‍👩🏻", "4,2": "👩🏾‍❤️‍👩🏼", "4,3": "👩🏾‍❤️‍👩🏽", "4,5": "👩🏾‍❤️‍👩🏿", "5,1": "👩🏿‍❤️‍👩🏻", "5,2": "👩🏿‍❤️‍👩🏼", "5,3": "👩🏿‍❤️‍👩🏽", "5,4": "👩🏿‍❤️‍👩🏾"],
+		category: "people-body"),
 
 	Emoji(
 		id: "family",
@@ -4462,8 +3969,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["family","man","woman","boy","child","home","parents","mom","dad","father","mother","people","human"],
 		char: "👪️",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "family: man, woman, boy",
@@ -4471,8 +3977,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["boy","family","man","woman","family_mwb","family_man_woman_boy","love"],
 		char: "👨‍👩‍👦",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "family: man, woman, girl",
@@ -4480,8 +3985,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["family","girl","man","woman","child","family_mwg","family_man_woman_girl","home","parents","people","human"],
 		char: "👨‍👩‍👧",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "family: man, woman, girl, boy",
@@ -4489,8 +3993,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["boy","family","girl","man","woman","family_mwgb","family_man_woman_girl_boy","home","parents","people","human","children"],
 		char: "👨‍👩‍👧‍👦",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "family: man, woman, boy, boy",
@@ -4498,8 +4001,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["boy","family","man","woman","family_mwbb","family_man_woman_boy_boy","home","parents","people","human","children"],
 		char: "👨‍👩‍👦‍👦",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "family: man, woman, girl, girl",
@@ -4507,8 +4009,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["family","girl","man","woman","family_mwgg","family_man_woman_girl_girl","home","parents","people","human","children"],
 		char: "👨‍👩‍👧‍👧",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "family: man, man, boy",
@@ -4516,8 +4017,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["boy","family","man","family_mmb","family_man_man_boy","home","parents","people","human","children"],
 		char: "👨‍👨‍👦",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "family: man, man, girl",
@@ -4525,8 +4025,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["family","girl","man","family_mmg","family_man_man_girl","home","parents","people","human","children"],
 		char: "👨‍👨‍👧",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "family: man, man, girl, boy",
@@ -4534,8 +4033,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["boy","family","girl","man","family_mmgb","family_man_man_girl_boy","home","parents","people","human","children"],
 		char: "👨‍👨‍👧‍👦",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "family: man, man, boy, boy",
@@ -4543,8 +4041,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["boy","family","man","family_mmbb","family_man_man_boy_boy","home","parents","people","human","children"],
 		char: "👨‍👨‍👦‍👦",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "family: man, man, girl, girl",
@@ -4552,8 +4049,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["family","girl","man","family_mmgg","family_man_man_girl_girl","home","parents","people","human","children"],
 		char: "👨‍👨‍👧‍👧",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "family: woman, woman, boy",
@@ -4561,8 +4057,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["boy","family","woman","family_wwb","family_woman_woman_boy","home","parents","people","human","children"],
 		char: "👩‍👩‍👦",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "family: woman, woman, girl",
@@ -4570,8 +4065,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["family","girl","woman","family_wwg","family_woman_woman_girl","home","parents","people","human","children"],
 		char: "👩‍👩‍👧",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "family: woman, woman, girl, boy",
@@ -4579,8 +4073,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["boy","family","girl","woman","family_wwgb","family_woman_woman_girl_boy","home","parents","people","human","children"],
 		char: "👩‍👩‍👧‍👦",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "family: woman, woman, boy, boy",
@@ -4588,8 +4081,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["boy","family","woman","family_wwbb","family_woman_woman_boy_boy","home","parents","people","human","children"],
 		char: "👩‍👩‍👦‍👦",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "family: woman, woman, girl, girl",
@@ -4597,8 +4089,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["family","girl","woman","family_wwgg","family_woman_woman_girl_girl","home","parents","people","human","children"],
 		char: "👩‍👩‍👧‍👧",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "family: man, boy",
@@ -4606,8 +4097,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["boy","family","man","family_mb","family_man_boy","home","parent","people","human","child"],
 		char: "👨‍👦",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "family: man, boy, boy",
@@ -4615,8 +4105,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["boy","family","man","family_mbb","family_man_boy_boy","home","parent","people","human","children"],
 		char: "👨‍👦‍👦",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "family: man, girl",
@@ -4624,8 +4113,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["family","girl","man","family_mg","family_man_girl","home","parent","people","human","child"],
 		char: "👨‍👧",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "family: man, girl, boy",
@@ -4633,8 +4121,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["boy","family","girl","man","family_mgb","family_man_girl_boy","home","parent","people","human","children"],
 		char: "👨‍👧‍👦",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "family: man, girl, girl",
@@ -4642,8 +4129,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["family","girl","man","family_mgg","family_man_girl_girl","home","parent","people","human","children"],
 		char: "👨‍👧‍👧",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "family: woman, boy",
@@ -4651,8 +4137,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["boy","family","woman","family_wb","family_woman_boy","home","parent","people","human","child"],
 		char: "👩‍👦",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "family: woman, boy, boy",
@@ -4660,8 +4145,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["boy","family","woman","family_wbb","family_woman_boy_boy","home","parent","people","human","children"],
 		char: "👩‍👦‍👦",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "family: woman, girl",
@@ -4669,8 +4153,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["family","girl","woman","family_wg","family_woman_girl","home","parent","people","human","child"],
 		char: "👩‍👧",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "family: woman, girl, boy",
@@ -4678,8 +4161,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["boy","family","girl","woman","family_wgb","family_woman_girl_boy","home","parent","people","human","children"],
 		char: "👩‍👧‍👦",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "family: woman, girl, girl",
@@ -4687,8 +4169,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["family","girl","woman","family_wgg","family_woman_girl_girl","home","parent","people","human","children"],
 		char: "👩‍👧‍👧",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "speaking head",
@@ -4696,8 +4177,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","head","silhouette","speak","speaking","human","person","in","user","sing","say","talk","speaking_head"],
 		char: "🗣️",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "bust in silhouette",
@@ -4705,8 +4185,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bust","silhouette","human","person","user","bust_in_silhouette"],
 		char: "👤",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "busts in silhouette",
@@ -4714,8 +4193,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bust","silhouette","human","person","user","group","team","busts_in_silhouette"],
 		char: "👥",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "people hugging",
@@ -4723,8 +4201,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["goodbye","hello","hug","thanks","love","harmony","humans","like","making out","arms","people_hugging","people hugging","care"],
 		char: "🫂",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "footprints",
@@ -4732,8 +4209,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clothing","footprint","print","feet","tracking","walking","beach","footprints"],
 		char: "👣",
 		skinTones: [:],
-		category: "people-body",
-	),
+		category: "people-body"),
 
 	Emoji(
 		id: "light skin tone",
@@ -4741,8 +4217,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["skin tone","type 1–2","tone1","tone_light"],
 		char: "🏻",
 		skinTones: [:],
-		category: "component",
-	),
+		category: "component"),
 
 	Emoji(
 		id: "medium-light skin tone",
@@ -4750,8 +4225,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["skin tone","type 3","tone2","tone_medium_light"],
 		char: "🏼",
 		skinTones: [:],
-		category: "component",
-	),
+		category: "component"),
 
 	Emoji(
 		id: "medium skin tone",
@@ -4759,8 +4233,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["skin tone","type 4","tone3","tone_medium"],
 		char: "🏽",
 		skinTones: [:],
-		category: "component",
-	),
+		category: "component"),
 
 	Emoji(
 		id: "medium-dark skin tone",
@@ -4768,8 +4241,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["skin tone","type 5","tone4","tone_medium_dark"],
 		char: "🏾",
 		skinTones: [:],
-		category: "component",
-	),
+		category: "component"),
 
 	Emoji(
 		id: "dark skin tone",
@@ -4777,8 +4249,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["skin tone","type 6","tone5","tone_dark"],
 		char: "🏿",
 		skinTones: [:],
-		category: "component",
-	),
+		category: "component"),
 
 	Emoji(
 		id: "red hair",
@@ -4786,8 +4257,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ginger","redhead","red_hair"],
 		char: "🦰",
 		skinTones: [:],
-		category: "component",
-	),
+		category: "component"),
 
 	Emoji(
 		id: "curly hair",
@@ -4795,8 +4265,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["afro","curly","ringlets","curly_hair"],
 		char: "🦱",
 		skinTones: [:],
-		category: "component",
-	),
+		category: "component"),
 
 	Emoji(
 		id: "white hair",
@@ -4804,8 +4273,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["gray","hair","old","white","white_hair"],
 		char: "🦳",
 		skinTones: [:],
-		category: "component",
-	),
+		category: "component"),
 
 	Emoji(
 		id: "bald",
@@ -4813,8 +4281,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["chemotherapy","hairless","no hair","shaven","no_hair"],
 		char: "🦲",
 		skinTones: [:],
-		category: "component",
-	),
+		category: "component"),
 
 	Emoji(
 		id: "monkey face",
@@ -4822,8 +4289,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","monkey","jungle","ape","evolution","primate","africa","animal","nature","circus","monkey_face"],
 		char: "🐵",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "monkey",
@@ -4831,8 +4297,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["monkey","jungle","ape","evolution","primate","animal","nature","banana","circus"],
 		char: "🐒",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "gorilla",
@@ -4840,8 +4305,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["gorilla","monkey","primate","evolution","animal","nature","circus"],
 		char: "🦍",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "orangutan",
@@ -4849,8 +4313,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ape","orangutan","animal"],
 		char: "🦧",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "dog face",
@@ -4858,8 +4321,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["dog","face","pet","friend","puppy","doggy","animal","nature","woof","faithful","dog_face"],
 		char: "🐶",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "dog",
@@ -4867,8 +4329,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["pet","puppy","doggy","dog2","animal","nature","friend","doge","faithful","dog"],
 		char: "🐕️",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "guide dog",
@@ -4876,8 +4337,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["accessibility","blind","guide","guide_dog","animal"],
 		char: "🦮",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "service dog",
@@ -4885,8 +4345,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["accessibility","assistance","dog","service","service_dog","blind","animal"],
 		char: "🐕‍🦺",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "poodle",
@@ -4894,8 +4353,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["dog","animal","101","nature","pet","poodle"],
 		char: "🐩",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "wolf",
@@ -4903,8 +4361,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","pack","wild","free","forest","dog","animal","nature","wolf","wolf_face"],
 		char: "🐺",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "fox",
@@ -4912,8 +4369,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","smart","red","quick","intelligent","fox","fox_face","animal","nature"],
 		char: "🦊",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "raccoon",
@@ -4921,8 +4377,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["curious","sly","raccoon","animal","nature"],
 		char: "🦝",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "cat face",
@@ -4930,8 +4385,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cat","face","pet","kitty","kitten","miau","animal","meow","nature","cat_face"],
 		char: "🐱",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "cat",
@@ -4939,8 +4393,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["pet","kitty","kitten","miau","cat2","animal","meow","cats","cat"],
 		char: "🐈️",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "black cat",
@@ -4948,8 +4401,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["black","cat","unlucky","bad luck","black_cat","black cat","superstition","luck"],
 		char: "🐈‍⬛",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "lion",
@@ -4957,8 +4409,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","leo","zodiac","king","simba","royal","wild","cat","animal","nature","lion","lion_face"],
 		char: "🦁",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "tiger face",
@@ -4966,8 +4417,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","tiger","stripes","strong","cat","wild","animal","danger","nature","roar","tiger_face"],
 		char: "🐯",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "tiger",
@@ -4975,8 +4425,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["tiger","stripes","strong","cat","wild","tiger2","animal","nature","roar"],
 		char: "🐅",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "leopard",
@@ -4984,8 +4433,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["leopard","dots","strong","cat","wild","spots","animal","nature"],
 		char: "🐆",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "horse face",
@@ -4993,8 +4441,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","horse","riding","sport","animal","brown","nature","horse_face"],
 		char: "🐴",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "horse",
@@ -5002,8 +4449,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["equestrian","racehorse","racing","riding","sport","animal","gamble","luck","horse"],
 		char: "🐎",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "unicorn",
@@ -5011,8 +4457,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","fabulous","magical","rainbow","schwäbisch","gmünd","animal","nature","mystical","unicorn","unicorn_face"],
 		char: "🦄",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "zebra",
@@ -5020,8 +4465,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["stripe","horse","black","white","zebra","animal","nature","stripes","safari"],
 		char: "🦓",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "deer",
@@ -5029,8 +4473,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["deer","forest","hunt","antler","animal","nature","horns","venison"],
 		char: "🦌",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "bison",
@@ -5038,8 +4481,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["buffalo","herd","wisent","bison","ox"],
 		char: "🦬",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "cow face",
@@ -5047,8 +4489,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cow","face","farm","milk","beef","grass","dairy","horns","cheese","ox","animal","nature","moo","cow_face"],
 		char: "🐮",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "ox",
@@ -5056,8 +4497,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bull","taurus","zodiac","strong","farm","acre","horns","beef","animal","cow","ox"],
 		char: "🐂",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "water buffalo",
@@ -5065,8 +4505,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["buffalo","water","black","horns","beef","animal","nature","ox","cow","water_buffalo"],
 		char: "🐃",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "cow",
@@ -5074,8 +4513,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cow","farm","milk","beef","grass","dairy","horns","cheese","cow2","ox","animal","nature","moo"],
 		char: "🐄",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "pig face",
@@ -5083,8 +4521,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","pig","pork","farm","pink","meat","oink","animal","nature","pig_face"],
 		char: "🐷",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "pig",
@@ -5092,8 +4529,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["sow","pork","farm","pink","meat","oink","pig2","animal","nature","pig"],
 		char: "🐖",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "boar",
@@ -5101,8 +4537,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["pig","wild","strong","forest","angry","teeth","tusk","animal","nature","boar"],
 		char: "🐗",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "pig nose",
@@ -5110,8 +4545,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","nose","pig","smell","socket","animal","oink","pig_nose"],
 		char: "🐽",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "ram",
@@ -5119,8 +4553,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["aries","male","sheep","zodiac","horns","grass","hooves","wool","animal","nature","ram"],
 		char: "🐏",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "ewe",
@@ -5128,8 +4561,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["female","sheep","horns","grass","hooves","wool","farm","animal","nature","shipit","ewe"],
 		char: "🐑",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "goat",
@@ -5137,8 +4569,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["capricorn","zodiac","horns","farm","milk","cheese","animal","nature","goat"],
 		char: "🐐",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "camel",
@@ -5146,8 +4577,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["dromedary","hump","desert","oasis","sahara","sun","hot","animal","dromedary_camel","camel"],
 		char: "🐪",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "two-hump camel",
@@ -5155,8 +4585,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bactrian","camel","hump","desert","oasis","sahara","sun","hot","two","animal","nature","two_hump_camel"],
 		char: "🐫",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "llama",
@@ -5164,8 +4593,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alpaca","guanaco","vicuña","wool","llama","animal","nature"],
 		char: "🦙",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "giraffe",
@@ -5173,8 +4601,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["spots","long","neck","trees","big","giraffe","animal","nature","safari"],
 		char: "🦒",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "elephant",
@@ -5182,8 +4609,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["elephant","big","wrinkles","trunk","töröö","animal","nature","nose","th","circus"],
 		char: "🐘",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "mammoth",
@@ -5191,8 +4617,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["extinction","large","tusk","woolly","mammoth","elephant","tusks"],
 		char: "🦣",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "rhinoceros",
@@ -5200,8 +4625,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["rhinoceros","rhino","horn","africa","animal","nature"],
 		char: "🦏",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "hippopotamus",
@@ -5209,8 +4633,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hippo","hippopotamus","animal","nature"],
 		char: "🦛",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "mouse face",
@@ -5218,8 +4641,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","mouse","cute","whiskers","tiny","rodent","animal","nature","cheese","wedge","mouse_face","cheese_wedge"],
 		char: "🐭",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "mouse",
@@ -5227,8 +4649,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["mouse","small","cute","whiskers","tiny","rodent","mouse2","animal","nature"],
 		char: "🐁",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "rat",
@@ -5236,8 +4657,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["rat","rodent","plaque","fleas","canal","garbage","animal","mouse"],
 		char: "🐀",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "hamster",
@@ -5245,8 +4665,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","pet","rodent","fat","fluffy","corn","animal","nature","hamster","hamster_face"],
 		char: "🐹",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "rabbit face",
@@ -5254,8 +4673,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bunny","face","pet","rabbit","rodent","teeth","cute","ears","hopping","easter","animal","nature","spring","magic","rabbit_face"],
 		char: "🐰",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "rabbit",
@@ -5263,8 +4681,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bunny","pet","rodent","teeth","cute","ears","hopping","easter","rabbit2","animal","nature","magic","spring","rabbit"],
 		char: "🐇",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "chipmunk",
@@ -5272,8 +4689,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["squirrel","alvin","animal","nature","rodent","chipmunk"],
 		char: "🐿️",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "beaver",
@@ -5281,8 +4697,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["dam","beaver","animal","rodent"],
 		char: "🦫",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "hedgehog",
@@ -5290,8 +4705,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["spiny","prickly","hedgehog","animal","nature"],
 		char: "🦔",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "bat",
@@ -5299,8 +4713,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["vampire","batman","dracula","bat","animal","nature","blind"],
 		char: "🦇",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "bear",
@@ -5308,8 +4721,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","brown","animal","nature","wild","bear","bear_face"],
 		char: "🐻",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "polar bear",
@@ -5317,8 +4729,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arctic","bear","white","ice","animal","ursa","polar_bear","polar_bear_face","polar bear"],
 		char: "🐻‍❄️",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "koala",
@@ -5326,8 +4737,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","marsupial","grey","fluffy","eucalyptus","australia","clingy","animal","nature","koala","koala_face"],
 		char: "🐨",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "panda",
@@ -5335,8 +4745,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","kawaii","cute","japan","animal","nature","panda","panda_face"],
 		char: "🐼",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "sloth",
@@ -5344,8 +4753,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["lazy","slow","sloth","animal"],
 		char: "🦥",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "otter",
@@ -5353,8 +4761,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fishing","playful","otter","animal"],
 		char: "🦦",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "skunk",
@@ -5362,8 +4769,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["stink","skunk","animal"],
 		char: "🦨",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "kangaroo",
@@ -5371,8 +4777,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["australia","joey","jump","marsupial","kangaroo","animal","nature","hop"],
 		char: "🦘",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "badger",
@@ -5380,8 +4785,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["honey badger","pester","badger","animal","nature","honey"],
 		char: "🦡",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "paw prints",
@@ -5389,8 +4793,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["feet","paw","print","paws","pet","animal","tracking","footprints","dog","cat","paw_prints"],
 		char: "🐾",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "turkey",
@@ -5398,8 +4801,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bird","animal","turkey"],
 		char: "🦃",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "chicken",
@@ -5407,8 +4809,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bird","egg","animal","cluck","nature","chicken","chicken_face"],
 		char: "🐔",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "rooster",
@@ -5416,8 +4817,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bird","egg","animal","nature","chicken","rooster"],
 		char: "🐓",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "hatching chick",
@@ -5425,8 +4825,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["baby","bird","chick","hatching","egg","animal","chicken","born","hatching_chick"],
 		char: "🐣",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "baby chick",
@@ -5434,8 +4833,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["baby","bird","chick","small","egg","animal","chicken","baby_chick"],
 		char: "🐤",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "front-facing baby chick",
@@ -5443,8 +4841,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["baby","bird","chick","hatched","front","facing","animal","chicken","hatched_chick","front_facing_baby_chick"],
 		char: "🐥",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "bird",
@@ -5452,8 +4849,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bird","fly","colourful","animal","nature","tweet","spring","bird_face"],
 		char: "🐦️",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "penguin",
@@ -5461,8 +4857,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bird","animal","nature","penguin","penguin_face"],
 		char: "🐧",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "dove",
@@ -5470,8 +4865,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bird","fly","peace","of","animal","dove"],
 		char: "🕊️",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "eagle",
@@ -5479,8 +4873,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bird","fly","eagle","animal","nature"],
 		char: "🦅",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "duck",
@@ -5488,8 +4881,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bird","water","fly","duck","animal","nature","mallard"],
 		char: "🦆",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "swan",
@@ -5497,8 +4889,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bird","cygnet","ugly duckling","swan","animal","nature"],
 		char: "🦢",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "owl",
@@ -5506,8 +4897,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bird","wise","owl","animal","nature","hoot"],
 		char: "🦉",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "dodo",
@@ -5515,8 +4905,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["extinction","large","mauritius","dodo","animal","bird"],
 		char: "🦤",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "feather",
@@ -5524,8 +4913,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bird","flight","light","plumage","feather","fly"],
 		char: "🪶",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "flamingo",
@@ -5533,8 +4921,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["flamboyant","tropical","flamingo","animal"],
 		char: "🦩",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "peacock",
@@ -5542,8 +4929,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bird","ostentatious","peahen","proud","peacock","animal","nature"],
 		char: "🦚",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "parrot",
@@ -5551,8 +4937,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bird","pirate","talk","parrot","animal","nature"],
 		char: "🦜",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "frog",
@@ -5560,8 +4945,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","jump","green","animal","nature","croak","toad","frog","frog_face"],
 		char: "🐸",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "crocodile",
@@ -5569,8 +4953,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["crocodile","dinosaur","animal","nature","reptile","lizard","alligator"],
 		char: "🐊",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "turtle",
@@ -5578,8 +4961,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["terrapin","tortoise","slow","water","sand","animal","nature","turtle"],
 		char: "🐢",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "lizard",
@@ -5587,8 +4969,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["reptile","fast","small","lizard","animal","nature"],
 		char: "🦎",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "snake",
@@ -5596,8 +4977,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bearer","ophiuchus","serpent","zodiac","wriggle","fast","animal","evil","nature","hiss","python","snake"],
 		char: "🐍",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "dragon face",
@@ -5605,8 +4985,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["dragon","face","fairy tale","fire","fly","animal","myth","nature","chinese","green","dragon_face"],
 		char: "🐲",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "dragon",
@@ -5614,8 +4993,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fairy tale","fire","fly","animal","myth","nature","chinese","green","dragon"],
 		char: "🐉",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "sauropod",
@@ -5623,8 +5001,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["brachiosaurus","brontosaurus","diplodocus","dinosaur","sauropod","animal","nature","extinct"],
 		char: "🦕",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "T-Rex",
@@ -5632,8 +5009,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["t-rex","tyrannosaurus rex","dinosaur","trex","t_rex","animal","nature","tyrannosaurus","extinct"],
 		char: "🦖",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "spouting whale",
@@ -5641,8 +5017,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","spouting","whale","cetacean","swim","animal","water","nature","sea","ocean","spouting_whale"],
 		char: "🐳",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "whale",
@@ -5650,8 +5025,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["whale","cetacean","swim","animal","water","whale2","nature","sea","ocean"],
 		char: "🐋",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "dolphin",
@@ -5659,8 +5033,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["flipper","cetacean","swim","animal","water","nature","fish","sea","ocean","fins","beach","dolphin"],
 		char: "🐬",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "seal",
@@ -5668,8 +5041,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["sea lion","seal","animal","creature","sea"],
 		char: "🦭",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "fish",
@@ -5677,8 +5049,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["pisces","zodiac","swim","animal","water","food","nature","fish"],
 		char: "🐟️",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "tropical fish",
@@ -5686,8 +5057,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fish","tropical","swim","animal","water","ocean","beach","nemo","tropical_fish"],
 		char: "🐠",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "blowfish",
@@ -5695,8 +5065,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fish","swim","animal","water","nature","food","sea","ocean","blowfish"],
 		char: "🐡",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "shark",
@@ -5704,8 +5073,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fish","swim","animal","water","shark","nature","sea","ocean","jaws","fins","beach"],
 		char: "🦈",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "octopus",
@@ -5713,8 +5081,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["octopus","swim","animal","water","creature","ocean","sea","nature","beach"],
 		char: "🐙",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "spiral shell",
@@ -5722,8 +5089,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["shell","spiral","beach","sand","water","nature","sea","spiral_shell"],
 		char: "🐚",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "coral",
@@ -5731,8 +5097,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ocean","reef","coral","sea"],
 		char: "🪸",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "snail",
@@ -5740,8 +5105,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["snail","slow","animal","shell"],
 		char: "🐌",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "butterfly",
@@ -5749,8 +5113,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["insect","pretty","butterfly","animal","nature","caterpillar"],
 		char: "🦋",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "bug",
@@ -5758,8 +5121,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["insect","animal","nature","worm","bug"],
 		char: "🐛",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "ant",
@@ -5767,8 +5129,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["insect","animal","nature","bug","ant"],
 		char: "🐜",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "honeybee",
@@ -5776,8 +5137,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bee","insect","animal","nature","bug","spring","honey","honeybee"],
 		char: "🐝",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "beetle",
@@ -5785,8 +5145,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bug","insect","beetle"],
 		char: "🪲",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "lady beetle",
@@ -5794,8 +5153,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["beetle","insect","ladybird","ladybug","animal","nature","lady_beetle"],
 		char: "🐞",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "cricket",
@@ -5803,8 +5161,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["grasshopper","cricket","animal","chirp"],
 		char: "🦗",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "cockroach",
@@ -5812,8 +5169,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["insect","pest","roach","cockroach","pests"],
 		char: "🪳",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "spider",
@@ -5821,8 +5177,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["insect","animal","arachnid","spider"],
 		char: "🕷️",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "spider web",
@@ -5830,8 +5185,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["spider","web","animal","insect","arachnid","silk","spider_web"],
 		char: "🕸️",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "scorpion",
@@ -5839,8 +5193,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["scorpio","zodiac","animal","arachnid","scorpion"],
 		char: "🦂",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "mosquito",
@@ -5848,8 +5201,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["disease","fever","malaria","pest","virus","mosquito","animal","nature","insect"],
 		char: "🦟",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "fly",
@@ -5857,8 +5209,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["disease","maggot","pest","rotting","fly","insect"],
 		char: "🪰",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "worm",
@@ -5866,8 +5217,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["annelid","earthworm","parasite","worm","animal"],
 		char: "🪱",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "microbe",
@@ -5875,8 +5225,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["amoeba","bacteria","virus","corona","COVID-19","microbe","germs","covid"],
 		char: "🦠",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "bouquet",
@@ -5884,8 +5233,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["flower","present","tulip","bouquet","flowers","nature","spring"],
 		char: "💐",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "cherry blossom",
@@ -5893,8 +5241,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["blossom","cherry","flower","pink","nature","plant","spring","cherry_blossom"],
 		char: "🌸",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "white flower",
@@ -5902,8 +5249,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["flower","japanese","spring","white_flower"],
 		char: "💮",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "lotus",
@@ -5911,8 +5257,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["buddhism","flower","hinduism","india","purity","vietnam","lotus","calm","meditation"],
 		char: "🪷",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "rosette",
@@ -5920,8 +5265,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["plant","flower","decoration","military","rosette"],
 		char: "🏵️",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "rose",
@@ -5929,8 +5273,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["flower","rose","red","nature","present","valentines day","flowers","valentines","love","spring"],
 		char: "🌹",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "wilted flower",
@@ -5938,8 +5281,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["flower","wilted","rose","red","sad","plant","wilted_flower","nature"],
 		char: "🥀",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "hibiscus",
@@ -5947,8 +5289,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["flower","pink","plant","vegetable","flowers","beach","hibiscus"],
 		char: "🌺",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "sunflower",
@@ -5956,8 +5297,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["flower","sun","yellow","summer","nature","plant","fall","sunflower"],
 		char: "🌻",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "blossom",
@@ -5965,8 +5305,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["flower","yellow","nature","flowers","blossom"],
 		char: "🌼",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "tulip",
@@ -5974,8 +5313,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["flower","pink","eastern","flowers","plant","nature","summer","spring","tulip"],
 		char: "🌷",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "seedling",
@@ -5983,8 +5321,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["young","farming","growing","green","leaf","leaves","plant","nature","grass","lawn","spring","seedling"],
 		char: "🌱",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "potted plant",
@@ -5992,8 +5329,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["boring","grow","house","nurturing","plant","useless","potted_plant","potted plant","greenery"],
 		char: "🪴",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "evergreen tree",
@@ -6001,8 +5337,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["tree","green","fir","plant","nature","evergreen_tree"],
 		char: "🌲",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "deciduous tree",
@@ -6010,8 +5345,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["deciduous","shedding","tree","green","plant","nature","deciduous_tree"],
 		char: "🌳",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "palm tree",
@@ -6019,8 +5353,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["palm","tree","sea","vacation","beach","relax","plant","vegetable","nature","summer","mojito","tropical","palm_tree"],
 		char: "🌴",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "cactus",
@@ -6028,8 +5361,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["plant","desert","sun","warm","hot","texas","vegetable","nature","cactus"],
 		char: "🌵",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "sheaf of rice",
@@ -6037,8 +5369,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ear","grain","rice","sheaf","nature","plant","ear_of_rice","sheaf_of_rice"],
 		char: "🌾",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "herb",
@@ -6046,8 +5377,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["leaf","green","leaves","plant","vegetable","medicine","weed","grass","lawn","herb"],
 		char: "🌿",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "shamrock",
@@ -6055,8 +5385,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["plant","green","leaf","leaves","vegetable","nature","irish","clover","shamrock"],
 		char: "☘️",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "four leaf clover",
@@ -6064,8 +5393,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["4","clover","four","four-leaf clover","leaf","luck","leaves","green","plant","vegetable","nature","lucky","irish","four_leaf_clover"],
 		char: "🍀",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "maple leaf",
@@ -6073,8 +5401,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["falling","leaf","maple","autumn","fall","orange","nature","plant","vegetable","ca","maple_leaf"],
 		char: "🍁",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "fallen leaf",
@@ -6082,8 +5409,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["falling","leaf","nature","plant","vegetable","leaves","fallen_leaf"],
 		char: "🍂",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "leaf fluttering in wind",
@@ -6091,8 +5417,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["blow","flutter","leaf","wind","leaves","nature","plant","tree","vegetable","grass","lawn","spring","leaf_fluttering_in_wind"],
 		char: "🍃",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "empty nest",
@@ -6100,8 +5425,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["nesting","empty_nest","nest","empty nest","bird"],
 		char: "🪹",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "nest with eggs",
@@ -6109,8 +5433,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["nesting","nest_with_eggs","nest with eggs","bird"],
 		char: "🪺",
 		skinTones: [:],
-		category: "animals-nature",
-	),
+		category: "animals-nature"),
 
 	Emoji(
 		id: "grapes",
@@ -6118,8 +5441,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fruit","grape","food","wine","grapes"],
 		char: "🍇",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "melon",
@@ -6127,8 +5449,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fruit","nature","food","melon"],
 		char: "🍈",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "watermelon",
@@ -6136,8 +5457,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fruit","melon","red","food","picnic","summer","watermelon"],
 		char: "🍉",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "tangerine",
@@ -6145,8 +5465,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fruit","orange","food","nature","tangerine"],
 		char: "🍊",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "lemon",
@@ -6154,8 +5473,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["citrus","fruit","yellow","nature","lemon"],
 		char: "🍋",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "banana",
@@ -6163,8 +5481,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fruit","yellow","food","monkey","banana"],
 		char: "🍌",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "pineapple",
@@ -6172,8 +5489,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fruit","tropical","nature","food","pineapple"],
 		char: "🍍",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "mango",
@@ -6181,8 +5497,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fruit","tropical","mango","food"],
 		char: "🥭",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "red apple",
@@ -6190,8 +5505,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["apple","fruit","red","mac","school","red_apple"],
 		char: "🍎",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "green apple",
@@ -6199,8 +5513,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["apple","fruit","green","nature","green_apple"],
 		char: "🍏",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "pear",
@@ -6208,8 +5521,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fruit","green","nature","food","pear"],
 		char: "🍐",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "peach",
@@ -6217,8 +5529,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fruit","pink","red","nature","food","peach"],
 		char: "🍑",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "cherries",
@@ -6226,8 +5537,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["berries","cherry","fruit","red","food","cherries"],
 		char: "🍒",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "strawberry",
@@ -6235,8 +5545,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["berry","fruit","food","nature","strawberry"],
 		char: "🍓",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "blueberries",
@@ -6244,8 +5553,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["berry","bilberry","blue","blueberry","blueberries","fruit"],
 		char: "🫐",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "kiwi fruit",
@@ -6253,8 +5561,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["food","fruit","kiwi","green","kiwi_fruit"],
 		char: "🥝",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "tomato",
@@ -6262,8 +5569,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fruit","vegetable","red","nature","food","tomato"],
 		char: "🍅",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "olive",
@@ -6271,8 +5577,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["food","olive","fruit"],
 		char: "🫒",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "coconut",
@@ -6280,8 +5585,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["palm","piña colada","nut","coconut","fruit","nature","food"],
 		char: "🥥",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "avocado",
@@ -6289,8 +5593,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["food","fruit","avocado"],
 		char: "🥑",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "eggplant",
@@ -6298,8 +5601,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["aubergine","vegetable","purple","nature","food","eggplant"],
 		char: "🍆",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "potato",
@@ -6307,8 +5609,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["food","vegetable","potato","tuber","vegatable","starch"],
 		char: "🥔",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "carrot",
@@ -6316,8 +5617,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["food","vegetable","carrot","orange"],
 		char: "🥕",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "ear of corn",
@@ -6325,8 +5625,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["corn","ear","maize","maze","yellow","food","vegetable","plant","ear_of_corn"],
 		char: "🌽",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "hot pepper",
@@ -6334,8 +5633,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hot","pepper","red","food","spicy","chilli","chili","hot_pepper"],
 		char: "🌶️",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "bell pepper",
@@ -6343,8 +5641,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["capsicum","pepper","vegetable","bell_pepper","bell pepper","fruit","plant"],
 		char: "🫑",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "cucumber",
@@ -6352,8 +5649,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["food","pickle","vegetable","cucumber","fruit"],
 		char: "🥒",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "leafy green",
@@ -6361,8 +5657,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bok choy","cabbage","kale","lettuce","leafy_green","food","vegetable","plant"],
 		char: "🥬",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "broccoli",
@@ -6370,8 +5665,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["wild cabbage","broccoli","fruit","food","vegetable"],
 		char: "🥦",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "garlic",
@@ -6379,8 +5673,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["flavoring","garlic","food","spice","cook"],
 		char: "🧄",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "onion",
@@ -6388,8 +5681,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["flavoring","onion","cook","food","spice"],
 		char: "🧅",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "mushroom",
@@ -6397,8 +5689,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["toadstool","mushroom","plant","vegetable"],
 		char: "🍄",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "peanuts",
@@ -6406,8 +5697,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["food","nut","peanut","vegetable","peanuts"],
 		char: "🥜",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "beans",
@@ -6415,8 +5705,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["food","kidney","legume","beans"],
 		char: "🫘",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "chestnut",
@@ -6424,8 +5713,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["plant","food","squirrel","chestnut"],
 		char: "🌰",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "bread",
@@ -6433,8 +5721,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["loaf","food","wheat","breakfast","toast","bread"],
 		char: "🍞",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "croissant",
@@ -6442,8 +5729,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bread","breakfast","food","french","roll","croissant"],
 		char: "🥐",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "baguette bread",
@@ -6451,8 +5737,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["baguette","bread","food","french","baguette_bread","france","bakery"],
 		char: "🥖",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "flatbread",
@@ -6460,8 +5745,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arepa","lavash","naan","pita","flatbread","flour","food","bakery"],
 		char: "🫓",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "pretzel",
@@ -6469,8 +5753,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["twisted","pretzel","food","bread","germany","bakery"],
 		char: "🥨",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "bagel",
@@ -6478,8 +5761,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bakery","breakfast","schmear","bagel","food","bread","jewish"],
 		char: "🥯",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "pancakes",
@@ -6487,8 +5769,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["breakfast","crêpe","food","hotcake","pancake","pancakes","flapjacks","hotcakes","brunch"],
 		char: "🥞",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "waffle",
@@ -6496,8 +5777,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["breakfast","indecisive","iron","waffle","food","brunch"],
 		char: "🧇",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "cheese wedge",
@@ -6505,8 +5785,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cheese","food","chadder","cheese_wedge","swiss"],
 		char: "🧀",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "meat on bone",
@@ -6514,8 +5793,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bone","meat","good","food","drumstick","meat_on_bone"],
 		char: "🍖",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "poultry leg",
@@ -6523,8 +5801,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bone","chicken","drumstick","leg","poultry","food","meat","bird","turkey","poultry_leg"],
 		char: "🍗",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "cut of meat",
@@ -6532,8 +5809,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["chop","lambchop","porkchop","steak","cut_of_meat","food","cow","meat","cut"],
 		char: "🥩",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "bacon",
@@ -6541,8 +5817,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["breakfast","food","meat","bacon","pork","pig","brunch"],
 		char: "🥓",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "hamburger",
@@ -6550,8 +5825,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["burger","meat","fast","food","beef","cheeseburger","mcdonalds","king","hamburger","fast food","burger king"],
 		char: "🍔",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "french fries",
@@ -6559,8 +5833,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["french","fries","chips","snack","fast","food","french_fries","fast food","potato"],
 		char: "🍟",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "pizza",
@@ -6568,8 +5841,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cheese","slice","food","party","pizza","italy"],
 		char: "🍕",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "hot dog",
@@ -6577,8 +5849,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["frankfurter","hotdog","sausage","food","hot_dog","america"],
 		char: "🌭",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "sandwich",
@@ -6586,8 +5857,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bread","sandwich","food","lunch","toast","bakery"],
 		char: "🥪",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "taco",
@@ -6595,8 +5865,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["mexican","food","taco"],
 		char: "🌮",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "burrito",
@@ -6604,8 +5873,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["mexican","wrap","food","burrito"],
 		char: "🌯",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "tamale",
@@ -6613,8 +5881,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["mexican","wrapped","tamale","food","masa"],
 		char: "🫔",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "stuffed flatbread",
@@ -6622,8 +5889,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["falafel","flatbread","food","gyro","kebab","stuffed","stuffed_flatbread","mediterranean"],
 		char: "🥙",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "falafel",
@@ -6631,8 +5897,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["chickpea","meatball","hummus","pita","falafel","food","mediterranean"],
 		char: "🧆",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "egg",
@@ -6640,8 +5905,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["breakfast","food","egg","chicken"],
 		char: "🥚",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "cooking",
@@ -6649,8 +5913,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["breakfast","egg","frying","pan","fried","food","kitchen","cooking","fried_egg","skillet"],
 		char: "🍳",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "shallow pan of food",
@@ -6658,8 +5921,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["casserole","food","paella","pan","shallow","shallow_pan_of_food","cooking","skillet"],
 		char: "🥘",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "pot of food",
@@ -6667,8 +5929,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["pot","stew","meat","soup","pot_of_food","food","hot pot"],
 		char: "🍲",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "fondue",
@@ -6676,8 +5937,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cheese","chocolate","melted","pot","swiss","fondue","food"],
 		char: "🫕",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "bowl with spoon",
@@ -6685,8 +5945,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["breakfast","cereal","congee","bowl_with_spoon","food","oatmeal","porridge"],
 		char: "🥣",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "green salad",
@@ -6694,8 +5953,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["food","green","salad","green_salad","healthy","lettuce","vegetable"],
 		char: "🥗",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "popcorn",
@@ -6703,8 +5961,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["popcorn","food","movie","theater","films","snack","movie theater","drama"],
 		char: "🍿",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "butter",
@@ -6712,8 +5969,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["dairy","butter","food","cook"],
 		char: "🧈",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "salt",
@@ -6721,8 +5977,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["condiment","shaker","salt"],
 		char: "🧂",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "canned food",
@@ -6730,8 +5985,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["can","canned_food","food","soup","tomatoes"],
 		char: "🥫",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "bento box",
@@ -6739,8 +5993,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bento","box","food","japanese","bento_box","lunch"],
 		char: "🍱",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "rice cracker",
@@ -6748,8 +6001,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cracker","rice","food","japanese","rice_cracker","snack"],
 		char: "🍘",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "rice ball",
@@ -6757,8 +6009,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ball","japanese","rice","food","rice_ball"],
 		char: "🍙",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "cooked rice",
@@ -6766,8 +6017,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cooked","rice","food","china","asian","cooked_rice"],
 		char: "🍚",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "curry rice",
@@ -6775,8 +6025,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["curry","rice","food","spicy","hot","indian","curry_rice"],
 		char: "🍛",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "steaming bowl",
@@ -6784,8 +6033,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bowl","noodle","ramen","steaming","food","japanese","chopsticks","steaming_bowl"],
 		char: "🍜",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "spaghetti",
@@ -6793,8 +6041,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["pasta","food","italian","noodle","spaghetti"],
 		char: "🍝",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "roasted sweet potato",
@@ -6802,8 +6049,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["potato","roasted","sweet","food","nature","sweet_potato","roasted_sweet_potato","plant"],
 		char: "🍠",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "oden",
@@ -6811,8 +6057,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["kebab","seafood","skewer","stick","food","japanese","oden"],
 		char: "🍢",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "sushi",
@@ -6820,8 +6065,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["sushi","food","fish","japanese","rice"],
 		char: "🍣",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "fried shrimp",
@@ -6829,8 +6073,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fried","prawn","shrimp","tempura","food","animal","appetizer","summer","fried_shrimp"],
 		char: "🍤",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "fish cake with swirl",
@@ -6838,8 +6081,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cake","fish","pastry","swirl","food","japan","sea","beach","narutomaki","pink","kamaboko","surimi","ramen","fish_cake","fish_cake_with_swirl"],
 		char: "🍥",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "moon cake",
@@ -6847,8 +6089,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["autumn","festival","yuèbǐng","moon_cake","food","dessert"],
 		char: "🥮",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "dango",
@@ -6856,8 +6097,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["dessert","japanese","skewer","stick","sweet","food","barbecue","meat","dango"],
 		char: "🍡",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "dumpling",
@@ -6865,8 +6105,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["empanada","gyōza","jiaozi","pierogi","potsticker","dumpling","food","gyoza"],
 		char: "🥟",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "fortune cookie",
@@ -6874,8 +6113,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["prophecy","fortune_cookie","food","dessert"],
 		char: "🥠",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "takeout box",
@@ -6883,8 +6121,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["oyster pail","takeout_box","food","leftovers"],
 		char: "🥡",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "crab",
@@ -6892,8 +6129,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cancer","zodiac","animal","crustacean","crab"],
 		char: "🦀",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "lobster",
@@ -6901,8 +6137,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bisque","claws","seafood","lobster","animal","nature"],
 		char: "🦞",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "shrimp",
@@ -6910,8 +6145,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["food","shellfish","small","swim","animal","water","shrimp","ocean","nature","seafood"],
 		char: "🦐",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "squid",
@@ -6919,8 +6153,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["food","molusc","swim","animal","water","squid","nature","ocean","sea"],
 		char: "🦑",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "oyster",
@@ -6928,8 +6161,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["diving","pearl","shell","oyster","food"],
 		char: "🦪",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "soft ice cream",
@@ -6937,8 +6169,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cream","dessert","ice","icecream","soft","sweet","food","hot","summer","soft_serve","soft_ice_cream"],
 		char: "🍦",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "shaved ice",
@@ -6946,8 +6177,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["dessert","ice","shaved","sweet","hot","summer","shaved_ice"],
 		char: "🍧",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "ice cream",
@@ -6955,8 +6185,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cream","dessert","ice","sweet","food","hot","ice_cream"],
 		char: "🍨",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "doughnut",
@@ -6964,8 +6193,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["breakfast","dessert","donut","sweet","food","snack","doughnut"],
 		char: "🍩",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "cookie",
@@ -6973,8 +6201,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["dessert","sweet","food","snack","oreo","chocolate","cookie"],
 		char: "🍪",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "birthday cake",
@@ -6982,8 +6209,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["birthday","cake","celebration","dessert","pastry","sweet","food","birthday_cake"],
 		char: "🎂",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "shortcake",
@@ -6991,8 +6217,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cake","dessert","pastry","slice","sweet","food","shortcake"],
 		char: "🍰",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "cupcake",
@@ -7000,8 +6225,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bakery","sweet","cupcake","food","dessert"],
 		char: "🧁",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "pie",
@@ -7009,8 +6233,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["filling","pastry","pie","food","dessert"],
 		char: "🥧",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "chocolate bar",
@@ -7018,8 +6241,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bar","chocolate","dessert","sweet","food","snack","chocolate_bar"],
 		char: "🍫",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "candy",
@@ -7027,8 +6249,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["dessert","sweet","snack","lolly","candy"],
 		char: "🍬",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "lollipop",
@@ -7036,8 +6257,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["candy","dessert","sweet","food","snack","lollipop"],
 		char: "🍭",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "custard",
@@ -7045,8 +6265,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["dessert","pudding","sweet","food","custard"],
 		char: "🍮",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "honey pot",
@@ -7054,8 +6273,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["honey","honeypot","pot","sweet","bees","kitchen","honey_pot"],
 		char: "🍯",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "baby bottle",
@@ -7063,8 +6281,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["baby","bottle","drink","milk","sweet","food","container","baby_bottle"],
 		char: "🍼",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "glass of milk",
@@ -7072,8 +6289,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["drink","glass","milk","glass_of_milk","beverage","cow"],
 		char: "🥛",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "hot beverage",
@@ -7081,8 +6297,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["beverage","coffee","drink","hot","steaming","tea","caffeine","latte","espresso","hot_beverage","mug"],
 		char: "☕️",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "teapot",
@@ -7090,8 +6305,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["drink","pot","tea","teapot","hot"],
 		char: "🫖",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "teacup without handle",
@@ -7099,8 +6313,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["beverage","cup","drink","tea","teacup","glass","hot","bowl","breakfast","green","british","teacup_without_handle"],
 		char: "🍵",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "sake",
@@ -7108,8 +6321,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bar","beverage","bottle","cup","drink","wine","drunk","japanese","alcohol","booze","sake"],
 		char: "🍶",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "bottle with popping cork",
@@ -7117,8 +6329,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bar","bottle","cork","drink","popping","party","celebrate","event","champagne","wine","celebration","bottle_with_popping_cork"],
 		char: "🍾",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "wine glass",
@@ -7126,8 +6337,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bar","beverage","drink","glass","wine","classic","alcohol","drunk","booze","wine_glass"],
 		char: "🍷",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "cocktail glass",
@@ -7135,8 +6345,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bar","cocktail","drink","glass","classic","alcohol","elegant","party","drunk","beverage","booze","mojito","cocktail_glass"],
 		char: "🍸️",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "tropical drink",
@@ -7144,8 +6353,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bar","drink","tropical","cocktail","glass","party","summer","beverage","beach","alcohol","booze","mojito","tropical_drink"],
 		char: "🍹",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "beer mug",
@@ -7153,8 +6361,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bar","beer","drink","mug","german","alcohol","bavaria","party","relax","beverage","drunk","pub","summer","booze","beer_mug"],
 		char: "🍺",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "clinking beer mugs",
@@ -7162,8 +6369,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bar","beer","clink","drink","mug","german","party","alcohol","bavaria","beers","relax","beverage","drunk","pub","summer","booze","clinking_beer_mugs"],
 		char: "🍻",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "clinking glasses",
@@ -7171,8 +6377,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["celebrate","clink","drink","glass","party","secco","clinking_glasses","beverage","alcohol","cheers","wine","champagne","toast"],
 		char: "🥂",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "tumbler glass",
@@ -7180,8 +6385,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["glass","liquor","shot","tumbler","whisky","alcohol","classic","tumbler_glass","drink","beverage","drunk","booze","bourbon","scotch"],
 		char: "🥃",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "pouring liquid",
@@ -7189,8 +6393,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["drink","empty","glass","spill","pour","pouring_liquid","pouring liquid","cup","water"],
 		char: "🫗",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "cup with straw",
@@ -7198,8 +6401,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["juice","soda","beverage","fastfood","cup_with_straw","drink"],
 		char: "🥤",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "bubble tea",
@@ -7207,8 +6409,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bubble","milk","pearl","tea","boba_drink","bubble_tea","bubble tea","taiwan","boba","milk tea","straw"],
 		char: "🧋",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "beverage box",
@@ -7216,8 +6417,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["beverage","box","juice","straw","sweet","beverage_box","juice_box","drink"],
 		char: "🧃",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "mate",
@@ -7225,8 +6425,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["drink","mate","tea","beverage"],
 		char: "🧉",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "ice",
@@ -7234,8 +6433,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cold","ice cube","iceberg","isometric","ice","ice_cube","water"],
 		char: "🧊",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "chopsticks",
@@ -7243,8 +6441,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hashi","sticks","eat","chopstick","chopsticks","food"],
 		char: "🥢",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "fork and knife with plate",
@@ -7252,8 +6449,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cooking","fork","knife","plate","eat","food","meal","lunch","dinner","restaurant","fork_knife_plate","fork_and_knife_with_plate"],
 		char: "🍽️",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "fork and knife",
@@ -7261,8 +6457,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cooking","cutlery","fork","knife","eat","kitchen","fork_and_knife"],
 		char: "🍴",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "spoon",
@@ -7270,8 +6465,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["tableware","metal","spoon","eat","cutlery","kitchen"],
 		char: "🥄",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "kitchen knife",
@@ -7279,8 +6473,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cooking","hocho","knife","tool","weapon","eat","kitchen","blade","cutlery","kitchen_knife"],
 		char: "🔪",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "jar",
@@ -7288,8 +6481,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["condiment","container","empty","sauce","store","jar"],
 		char: "🫙",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "amphora",
@@ -7297,8 +6489,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["aquarius","cooking","drink","jug","zodiac","vase","jar","amphora"],
 		char: "🏺",
 		skinTones: [:],
-		category: "food-drink",
-	),
+		category: "food-drink"),
 
 	Emoji(
 		id: "globe showing Europe-Africa",
@@ -7306,8 +6497,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["africa","earth","europe","globe","globe showing europe-africa","world","geographic","continent","global","planet","showing","international","earth_africa","earth_europe","globe_showing_europe_africa"],
 		char: "🌍️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "globe showing Americas",
@@ -7315,8 +6505,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["americas","earth","globe","globe showing americas","world","geographic","continent","global","planet","showing","USA","international","earth_americas","globe_showing_americas"],
 		char: "🌎️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "globe showing Asia-Australia",
@@ -7324,8 +6513,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["asia","australia","earth","globe","globe showing asia-australia","world","geographic","continent","global","planet","showing","east","international","earth_asia","globe_showing_asia_australia"],
 		char: "🌏️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "globe with meridians",
@@ -7333,8 +6521,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["earth","globe","meridians","world","geographic","continent","global","planet","grid","international","internet","interweb","i18n","globe_with_meridians"],
 		char: "🌐",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "world map",
@@ -7342,8 +6529,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["map","world","geographic","continent","global","planet","earth","location","direction","world_map"],
 		char: "🗺️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "map of Japan",
@@ -7351,8 +6537,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["japan","map","map of japan","nation","country","japanese","asia","japan_map","map_of_japan"],
 		char: "🗾",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "compass",
@@ -7360,8 +6545,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["magnetic","navigation","orienteering","wayfinding","direction","compass"],
 		char: "🧭",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "snow-capped mountain",
@@ -7369,8 +6553,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cold","mountain","snow","landscape","nature","hiking","climbing","white","outdoor","adventure","capped","photo","environment","winter","mountain_snow","snow_capped_mountain"],
 		char: "🏔️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "mountain",
@@ -7378,8 +6561,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["mountain","landscape","nature","hiking","climbing","outdoor","adventure","photo","environment"],
 		char: "⛰️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "volcano",
@@ -7387,8 +6569,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["eruption","mountain","vulcano","landscape","nature","fire","smoke","hot","photo","disaster","volcano"],
 		char: "🌋",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "mount fuji",
@@ -7396,8 +6577,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fuji","mountain","japan","japanese","geographic","photo","nature","mount_fuji"],
 		char: "🗻",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "camping",
@@ -7405,8 +6585,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["camping","nature","outdoor","tent","adventure","sleeping","photo","outdoors"],
 		char: "🏕️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "beach with umbrella",
@@ -7414,8 +6593,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["beach","umbrella","nature","summer","sun","sand","water","holidays","weather","sunny","mojito","beach_with_umbrella"],
 		char: "🏖️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "desert",
@@ -7423,8 +6601,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["desert","nature","hot","sun","sand","dry","photo","warm","saharah"],
 		char: "🏜️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "desert island",
@@ -7432,8 +6609,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["desert","island","sun","lonely","sand","water","stranded","palm","nature","photo","tropical","mojito","desert_island"],
 		char: "🏝️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "national park",
@@ -7441,8 +6617,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["park","nature","outdoor","adventure","woods","mountain","photo","environment","national_park"],
 		char: "🏞️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "stadium",
@@ -7450,8 +6625,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["stadium","building","football","sports","olympic","photo","place","concert","venue"],
 		char: "🏟️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "classical building",
@@ -7459,8 +6633,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["classical","building","historical","old","antique","art","culture","history","classical_building"],
 		char: "🏛️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "building construction",
@@ -7468,8 +6641,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["construction","work","building lot","crane","wip","working","progress","building_construction","construction_site"],
 		char: "🏗️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "brick",
@@ -7477,8 +6649,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bricks","clay","mortar","wall","brick"],
 		char: "🧱",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "rock",
@@ -7486,8 +6657,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["boulder","heavy","solid","stone","rock"],
 		char: "🪨",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "wood",
@@ -7495,8 +6665,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["log","lumber","timber","wood","nature","trunk"],
 		char: "🪵",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "hut",
@@ -7504,8 +6673,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["house","roundhouse","yurt","hut","structure"],
 		char: "🛖",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "houses",
@@ -7513,8 +6681,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["houses","buildings","neighbourhood","house","photo","homes"],
 		char: "🏘️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "derelict house",
@@ -7522,8 +6689,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["derelict","house","building","old","rotten","dangerous","abandon","evict","broken","derelict_house","house_abandoned"],
 		char: "🏚️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "house",
@@ -7531,8 +6697,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["home","building","house"],
 		char: "🏠️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "house with garden",
@@ -7540,8 +6705,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["garden","home","house","building","grass","green","tree","plant","nature","house_with_garden"],
 		char: "🏡",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "office building",
@@ -7549,8 +6713,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["building","workplace","company","firm","business","bureau","work","office","office_building"],
 		char: "🏢",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "Japanese post office",
@@ -7558,8 +6721,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["japanese","japanese post office","post","delivery","mailing","communication","building","envelope","post_office","japanese_post_office"],
 		char: "🏣",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "post office",
@@ -7567,8 +6729,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["european","post","delivery","mailing","yellow","communication","building","email","european_post_office","post_office"],
 		char: "🏤",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "hospital",
@@ -7576,8 +6737,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["doctor","medicine","building","cross","help","social","public","health","surgery","hospital"],
 		char: "🏥",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "bank",
@@ -7585,8 +6745,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["building","money","business","finance","venture","sales","cash","enterprise","bank"],
 		char: "🏦",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "hotel",
@@ -7594,8 +6753,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["building","sleep","travel","business","holiday","vacation","accomodation","checkin","hotel"],
 		char: "🏨",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "love hotel",
@@ -7603,8 +6761,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hotel","love","building","sex","affair","like","affection","dating","love_hotel"],
 		char: "🏩",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "convenience store",
@@ -7612,8 +6769,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["convenience","store","building","shopping","buying","24","groceries","convenience_store"],
 		char: "🏪",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "school",
@@ -7621,8 +6777,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["building","learning","public","teaching","education","student","learn","teach","school"],
 		char: "🏫",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "department store",
@@ -7630,8 +6785,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["department","store","building","shopping","buying","mall","department_store"],
 		char: "🏬",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "factory",
@@ -7639,8 +6793,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["building","firm","workplace","business","industry","pollution","smoke","factory"],
 		char: "🏭️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "Japanese castle",
@@ -7648,8 +6801,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["castle","japanese","building","culture","historical","war","photo","japanese_castle"],
 		char: "🏯",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "castle",
@@ -7657,8 +6809,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["european","building","culture","historical","war","royalty","history","castle","european_castle"],
 		char: "🏰",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "wedding",
@@ -7666,8 +6817,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["chapel","romance","building","love","marriage","heart","like","affection","couple","bride","groom","wedding"],
 		char: "💒",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "Tokyo tower",
@@ -7675,8 +6825,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["tokyo","tower","photo","japanese","tokyo_tower"],
 		char: "🗼",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "Statue of Liberty",
@@ -7684,8 +6833,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["liberty","statue","statue of liberty","american","newyork","statue_of_liberty"],
 		char: "🗽",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "church",
@@ -7693,8 +6841,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["christian","cross","religion","religious","pray","building","god","mess","faith","christ","church"],
 		char: "⛪️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "mosque",
@@ -7702,8 +6849,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["islam","muslim","religion","religious","pray","building","god","faith","worship","minaret","mosque"],
 		char: "🕌",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "hindu temple",
@@ -7711,8 +6857,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hindu","temple","hindu_temple","religion"],
 		char: "🛕",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "synagogue",
@@ -7720,8 +6865,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["jew","jewish","religion","temple","religious","pray","building","god","faith","judaism","worship","synagogue"],
 		char: "🕍",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "shinto shrine",
@@ -7729,8 +6873,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["religion","shinto","shrine","religious","pray","building","god","faith","temple","japan","kyoto","shinto_shrine"],
 		char: "⛩️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "kaaba",
@@ -7738,8 +6881,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["islam","muslim","religion","religious","pray","building","god","black","mecca","faith","mosque","kaaba"],
 		char: "🕋",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "fountain",
@@ -7747,8 +6889,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fountain","photo","summer","water","fresh"],
 		char: "⛲️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "tent",
@@ -7756,8 +6897,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["camping","nature","outdoor","adventure","photo","outdoors","tent"],
 		char: "⛺️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "foggy",
@@ -7765,8 +6905,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fog","photo","mountain","foggy"],
 		char: "🌁",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "night with stars",
@@ -7774,8 +6913,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["night","star","evening","city","downtown","night_with_stars"],
 		char: "🌃",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "cityscape",
@@ -7783,8 +6921,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["city","buildings","metropolis","photo","night","life","urban","cityscape","night life"],
 		char: "🏙️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "sunrise over mountains",
@@ -7792,8 +6929,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["morning","mountain","sun","sunrise","view","vacation","photo","sunrise_over_mountains"],
 		char: "🌄",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "sunrise",
@@ -7801,8 +6937,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["morning","sun","view","vacation","photo","sunrise"],
 		char: "🌅",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "cityscape at dusk",
@@ -7810,8 +6945,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["city","dusk","evening","landscape","sunset","photo","sky","buildings","city_dusk","cityscape_at_dusk"],
 		char: "🌆",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "sunset",
@@ -7819,8 +6953,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["dusk","sun","city","sunrise","photo","good","morning","dawn","city_sunrise","city_sunset","sunset","good morning"],
 		char: "🌇",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "bridge at night",
@@ -7828,8 +6961,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bridge","night","photo","sanfrancisco","bridge_at_night"],
 		char: "🌉",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "hot springs",
@@ -7837,8 +6969,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hot","hotsprings","springs","steaming","bath","warm","relax","hot_springs"],
 		char: "♨️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "carousel horse",
@@ -7846,8 +6977,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["carousel","horse","photo","carnival","carousel_horse"],
 		char: "🎠",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "playground slide",
@@ -7855,8 +6985,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["amusement park","play","playground_slide","slide","playground slide","fun","park"],
 		char: "🛝",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "ferris wheel",
@@ -7864,8 +6993,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["amusement park","ferris","wheel","photo","carnival","londoneye","ferris_wheel"],
 		char: "🎡",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "roller coaster",
@@ -7873,8 +7001,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["amusement park","coaster","roller","carnival","playground","photo","fun","roller_coaster"],
 		char: "🎢",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "barber pole",
@@ -7882,8 +7009,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["barber","haircut","pole","beauty","hairdresser","hair","salon","style","barber_pole"],
 		char: "💈",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "circus tent",
@@ -7891,8 +7017,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["circus","tent","fun","leisure","entertainment","red","white","festival","carnival","party","circus_tent"],
 		char: "🎪",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "locomotive",
@@ -7900,8 +7025,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["engine","railway","steam","train","locomotive","travel","drive","transportation","vehicle","steam_locomotive"],
 		char: "🚂",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "railway car",
@@ -7909,8 +7033,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["car","electric","railway","train","tram","trolleybus","locomotive","railway car","travel","transportation","vehicle","railway_car"],
 		char: "🚃",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "high-speed train",
@@ -7918,8 +7041,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["railway","shinkansen","speed","train","bullettrain","side","high","transportation","vehicle","bullettrain_side","high_speed_train"],
 		char: "🚄",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "bullet train",
@@ -7927,8 +7049,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bullet","railway","shinkansen","speed","train","locomotive","railway car","travel","transportation","bullettrain","front","vehicle","fast","public","bullettrain_front","bullet_train"],
 		char: "🚅",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "train",
@@ -7936,8 +7057,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["railway","train2","transportation","vehicle","train"],
 		char: "🚆",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "metro",
@@ -7945,8 +7065,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["subway","transportation","blue","square","mrt","underground","tube","metro","blue-square"],
 		char: "🚇️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "light rail",
@@ -7954,8 +7073,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["railway","transportation","vehicle","light_rail"],
 		char: "🚈",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "station",
@@ -7963,8 +7081,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["railway","train","train station","station","stop","travel","departure","arrives","transportation","vehicle","public"],
 		char: "🚉",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "tram",
@@ -7972,8 +7089,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["trolleybus","transportation","vehicle","tram"],
 		char: "🚊",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "monorail",
@@ -7981,8 +7097,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["vehicle","train","locomotive","monorail","travel","transportation"],
 		char: "🚝",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "mountain railway",
@@ -7990,8 +7105,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["car","mountain","railway","transportation","vehicle","mountain_railway"],
 		char: "🚞",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "tram car",
@@ -7999,8 +7113,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["car","tram","trolleybus","train","transportation","vehicle","carriage","public","travel","tram_car"],
 		char: "🚋",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "bus",
@@ -8008,8 +7121,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["vehicle","bus","travel","transportation","car"],
 		char: "🚌",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "oncoming bus",
@@ -8017,8 +7129,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bus","oncoming","vehicle","transportation","oncoming_bus"],
 		char: "🚍️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "trolleybus",
@@ -8026,8 +7137,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bus","tram","trolley","bart","transportation","vehicle","trolleybus"],
 		char: "🚎",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "minibus",
@@ -8035,8 +7145,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bus","travel","transportation","car","vehicle","minibus"],
 		char: "🚐",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "ambulance",
@@ -8044,8 +7153,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["vehicle","travel","hospital","ambulance","alarm","doctor","help","health","911"],
 		char: "🚑️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "fire engine",
@@ -8053,8 +7161,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["engine","fire","truck","travel","fire engine","red","alarm","transportation","cars","vehicle","fire_engine"],
 		char: "🚒",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "police car",
@@ -8062,8 +7169,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["car","patrol","police","travel","vehicle","cars","transportation","law","legal","enforcement","police_car"],
 		char: "🚓",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "oncoming police car",
@@ -8071,8 +7177,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["car","oncoming","police","vehicle","law","legal","enforcement","911","oncoming_police_car"],
 		char: "🚔️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "taxi",
@@ -8080,8 +7185,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["vehicle","travel","transportation","car","taxi","cab","uber","cars"],
 		char: "🚕",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "oncoming taxi",
@@ -8089,8 +7193,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["oncoming","taxi","vehicle","cars","uber","oncoming_taxi"],
 		char: "🚖",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "automobile",
@@ -8098,8 +7201,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["car","travel","automobile","vehicle","transportation","red","red_car"],
 		char: "🚗",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "oncoming automobile",
@@ -8107,8 +7209,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["automobile","car","oncoming","vehicle","transportation","oncoming_automobile"],
 		char: "🚘️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "sport utility vehicle",
@@ -8116,8 +7217,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["recreational","sport utility","car","travel","automobile","vehicle","transportation","sport","utility","blue","blue_car","suv","sport_utility_vehicle"],
 		char: "🚙",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "pickup truck",
@@ -8125,8 +7225,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["pick-up","pickup","truck","pickup_truck","pickup truck","car","transportation"],
 		char: "🛻",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "delivery truck",
@@ -8134,8 +7233,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["delivery","truck","car","transportation","travel","trucker","driver","cars","delivery_truck"],
 		char: "🚚",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "articulated lorry",
@@ -8143,8 +7241,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["lorry","semi","truck","delivery truck","car","transportation","travel","trucker","truck driver","vehicle","cars","express","articulated_lorry"],
 		char: "🚛",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "tractor",
@@ -8152,8 +7249,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["vehicle","tractor","towing","farm","farming","field","acre","car","agriculture"],
 		char: "🚜",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "racing car",
@@ -8161,8 +7257,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["car","racing","sports","motor","race","fast","formula","f1","racing_car"],
 		char: "🏎️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "motorcycle",
@@ -8170,8 +7265,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["racing","motorsports","vehicle","race","sports","fast","motorcycle"],
 		char: "🏍️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "motor scooter",
@@ -8179,8 +7273,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["motor","scooter","transportation","bicycle","motor_scooter","vehicle","vespa","sasha"],
 		char: "🛵",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "manual wheelchair",
@@ -8188,8 +7281,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["accessibility","manual_wheelchair"],
 		char: "🦽",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "motorized wheelchair",
@@ -8197,8 +7289,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["accessibility","motorized_wheelchair"],
 		char: "🦼",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "auto rickshaw",
@@ -8206,8 +7297,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["tuk tuk","auto_rickshaw","move","transportation"],
 		char: "🛺",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "bicycle",
@@ -8215,8 +7305,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bike","vehicle","bicycle","sports","exercise","hipster"],
 		char: "🚲️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "kick scooter",
@@ -8224,8 +7313,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["kick","scooter","city roller","kick_scooter","vehicle","razor"],
 		char: "🛴",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "skateboard",
@@ -8233,8 +7321,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["board","skateboard"],
 		char: "🛹",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "roller skate",
@@ -8242,8 +7329,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["roller","skate","roller_skate","roller skate","footwear","sports"],
 		char: "🛼",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "bus stop",
@@ -8251,8 +7337,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bus","stop","station","traffic","travel","bus stop","departure","arrive","busstop","transportation","wait","bus_stop"],
 		char: "🚏",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "motorway",
@@ -8260,8 +7345,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["highway","road","cupertino","interstate","motorway"],
 		char: "🛣️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "railway track",
@@ -8269,8 +7353,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["railway","train","transportation","railway_track"],
 		char: "🛤️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "oil drum",
@@ -8278,8 +7361,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["drum","oil","barrell","oil_drum"],
 		char: "🛢️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "fuel pump",
@@ -8287,8 +7369,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["diesel","fuel","fuelpump","gas","pump","station","transportation","petroleum","fuel_pump","gas station"],
 		char: "⛽️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "wheel",
@@ -8296,8 +7377,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["circle","tire","turn","wheel","car","transport"],
 		char: "🛞",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "police car light",
@@ -8305,8 +7385,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["beacon","car","light","police","revolving","rotating","ambulance","911","emergency","alert","error","pinged","law","legal","rotating_light","police_car_light"],
 		char: "🚨",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "horizontal traffic light",
@@ -8314,8 +7393,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["light","signal","traffic","red","green","yellow","traffic light","transportation","traffic_light","horizontal_traffic_light"],
 		char: "🚥",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "vertical traffic light",
@@ -8323,8 +7401,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["light","signal","traffic","red","green","yellow","vertical","transportation","driving","vertical_traffic_light"],
 		char: "🚦",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "stop sign",
@@ -8332,8 +7409,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["octagonal","sign","stop","signal","warning","octagonal_sign","stop_sign"],
 		char: "🛑",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "construction",
@@ -8341,8 +7417,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["barrier","warning","stop","attention","traffic","wip","progress","caution","construction"],
 		char: "🚧",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "anchor",
@@ -8350,8 +7425,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ship","tool","boat","travel","sea","atlantic","ocean","water","anchor","metal","ferry"],
 		char: "⚓️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "ring buoy",
@@ -8359,8 +7433,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["float","life preserver","life saver","rescue","safety","lifebuoy","ring_buoy","ring buoy"],
 		char: "🛟",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "sailboat",
@@ -8368,8 +7441,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["boat","resort","sea","yacht","passengers","ship","travel","atlantic","ocean","water","sail","sailboat","summer","transportation","sailing"],
 		char: "⛵️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "canoe",
@@ -8377,8 +7449,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["boat","canoe","paddle","water","ship"],
 		char: "🛶",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "speedboat",
@@ -8386,8 +7457,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["boat","passengers","ship","travel","sea","atlantic","ocean","water","speed","transportation","vehicle","summer","speedboat"],
 		char: "🚤",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "passenger ship",
@@ -8395,8 +7465,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["passenger","ship","boat","passengers","travel","sea","atlantic","ocean","water","yacht","cruise","ferry","cruise_ship","passenger_ship"],
 		char: "🛳️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "ferry",
@@ -8404,8 +7473,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["boat","passenger","ship","yacht","ferry"],
 		char: "⛴️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "motor boat",
@@ -8413,8 +7481,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["boat","motorboat","passengers","ship","travel","sea","atlantic","ocean","water","motor","motor_boat"],
 		char: "🛥️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "ship",
@@ -8422,8 +7489,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["boat","passenger","passengers","ship","travel","sea","atlantic","ocean","water","transportation","titanic","deploy"],
 		char: "🚢",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "airplane",
@@ -8431,8 +7497,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["aeroplane","fly","airplane","air","sky","travel","departure","arrive","vehicle","transportation","flight"],
 		char: "✈️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "small airplane",
@@ -8440,8 +7505,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["aeroplane","airplane","fly","air","sky","travel","flight","transportation","vehicle","small_airplane"],
 		char: "🛩️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "airplane departure",
@@ -8449,8 +7513,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["aeroplane","airplane","check-in","departure","departures","fly","air","sky","travel","airport","flight","landing","airplane_departure"],
 		char: "🛫",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "airplane arrival",
@@ -8458,8 +7521,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["aeroplane","airplane","arrivals","arriving","landing","fly","air","sky","travel","arrive","airport","flight","boarding","airplane_arriving","airplane_arrival"],
 		char: "🛬",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "parachute",
@@ -8467,8 +7529,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hang-glide","parasail","skydive","parachute","fly","glide"],
 		char: "🪂",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "seat",
@@ -8476,8 +7537,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["chair","seat","lounge","airplane","sitting","comfort","sit","transport","bus","flight","fly"],
 		char: "💺",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "helicopter",
@@ -8485,8 +7545,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["vehicle","helicopter","air","transportation","sky","fly","flying"],
 		char: "🚁",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "suspension railway",
@@ -8494,8 +7553,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["railway","suspension","vehicle","transportation","suspension_railway"],
 		char: "🚟",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "mountain cableway",
@@ -8503,8 +7561,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cable","gondola","mountain","travel","high","transportation","vehicle","ski","mountain_cableway"],
 		char: "🚠",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "aerial tramway",
@@ -8512,8 +7569,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["aerial","cable","car","gondola","tramway","transportation","vehicle","ski","aerial_tramway"],
 		char: "🚡",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "satellite",
@@ -8521,8 +7577,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["space","galaxy","satellite","communication","gps","orbit","spaceflight","NASA","ISS"],
 		char: "🛰️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "rocket",
@@ -8530,8 +7585,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["space","rocket","galaxy","adventure","alien","transportation","launch","ship","staffmode","NASA","outer","fly","outer space","outer_space"],
 		char: "🚀",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "flying saucer",
@@ -8539,8 +7593,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ufo","alien","UFO","space","planets","adventures","flying_saucer","transportation","vehicle"],
 		char: "🛸",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "bellhop bell",
@@ -8548,8 +7601,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bell","bellhop","hotel","service","bellhop_bell"],
 		char: "🛎️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "luggage",
@@ -8557,8 +7609,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["packing","travel","luggage"],
 		char: "🧳",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "hourglass done",
@@ -8566,8 +7617,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["sand","timer","countdown","hourglass","done","time","clock","oldschool","limit","exam","quiz","test","hourglass_done"],
 		char: "⌛️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "hourglass not done",
@@ -8575,8 +7625,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hourglass","sand","timer","flowing","oldschool","time","countdown","hourglass_flowing_sand","hourglass_not_done"],
 		char: "⏳️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "watch",
@@ -8584,8 +7633,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clock","watch","time","accessories"],
 		char: "⌚️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "alarm clock",
@@ -8593,8 +7641,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alarm","clock","time","wake","alarm_clock"],
 		char: "⏰",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "stopwatch",
@@ -8602,8 +7649,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clock","time","deadline","stopwatch"],
 		char: "⏱️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "timer clock",
@@ -8611,8 +7657,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clock","timer","time","alarm","timer_clock"],
 		char: "⏲️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "mantelpiece clock",
@@ -8620,8 +7665,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clock","time","mantelpiece_clock"],
 		char: "🕰️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "twelve o’clock",
@@ -8629,8 +7673,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["00","12","12:00","clock","o’clock","twelve","time","clock12","o","noon","midnight","midday","late","early","schedule","twelve_o_clock"],
 		char: "🕛️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "twelve-thirty",
@@ -8638,8 +7681,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["12","12:30","clock","thirty","twelve","time","clock1230","late","early","schedule","twelve_thirty"],
 		char: "🕧️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "one o’clock",
@@ -8647,8 +7689,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["00","1","1:00","clock","one","o’clock","time","clock1","o","late","early","schedule","one_o_clock"],
 		char: "🕐️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "one-thirty",
@@ -8656,8 +7697,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["1","1:30","clock","one","thirty","time","clock130","late","early","schedule","one_thirty"],
 		char: "🕜️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "two o’clock",
@@ -8665,8 +7705,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["00","2","2:00","clock","o’clock","two","time","clock2","o","late","early","schedule","two_o_clock"],
 		char: "🕑️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "two-thirty",
@@ -8674,8 +7713,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["2","2:30","clock","thirty","two","time","clock230","late","early","schedule","two_thirty"],
 		char: "🕝️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "three o’clock",
@@ -8683,8 +7721,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["00","3","3:00","clock","o’clock","three","time","clock3","o","late","early","schedule","three_o_clock"],
 		char: "🕒️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "three-thirty",
@@ -8692,8 +7729,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["3","3:30","clock","thirty","three","time","clock330","late","early","schedule","three_thirty"],
 		char: "🕞️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "four o’clock",
@@ -8701,8 +7737,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["00","4","4:00","clock","four","o’clock","time","clock4","o","late","early","schedule","four_o_clock"],
 		char: "🕓️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "four-thirty",
@@ -8710,8 +7745,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["4","4:30","clock","four","thirty","time","clock430","late","early","schedule","four_thirty"],
 		char: "🕟️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "five o’clock",
@@ -8719,8 +7753,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["00","5","5:00","clock","five","o’clock","time","clock5","o","late","early","schedule","five_o_clock"],
 		char: "🕔️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "five-thirty",
@@ -8728,8 +7761,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["5","5:30","clock","five","thirty","time","clock530","late","early","schedule","five_thirty"],
 		char: "🕠️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "six o’clock",
@@ -8737,8 +7769,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["00","6","6:00","clock","o’clock","six","time","clock6","o","late","early","schedule","dawn","dusk","six_o_clock"],
 		char: "🕕️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "six-thirty",
@@ -8746,8 +7777,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["6","6:30","clock","six","thirty","time","clock630","late","early","schedule","six_thirty"],
 		char: "🕡️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "seven o’clock",
@@ -8755,8 +7785,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["00","7","7:00","clock","o’clock","seven","time","clock7","o","late","early","schedule","seven_o_clock"],
 		char: "🕖️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "seven-thirty",
@@ -8764,8 +7793,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["7","7:30","clock","seven","thirty","time","clock730","late","early","schedule","seven_thirty"],
 		char: "🕢️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "eight o’clock",
@@ -8773,8 +7801,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["00","8","8:00","clock","eight","o’clock","time","clock8","o","late","early","schedule","eight_o_clock"],
 		char: "🕗️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "eight-thirty",
@@ -8782,8 +7809,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["8","8:30","clock","eight","thirty","time","clock830","late","early","schedule","eight_thirty"],
 		char: "🕣️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "nine o’clock",
@@ -8791,8 +7817,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["00","9","9:00","clock","nine","o’clock","time","clock9","o","late","early","schedule","nine_o_clock"],
 		char: "🕘️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "nine-thirty",
@@ -8800,8 +7825,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["9","9:30","clock","nine","thirty","time","clock930","late","early","schedule","nine_thirty"],
 		char: "🕤️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "ten o’clock",
@@ -8809,8 +7833,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["00","10","10:00","clock","o’clock","ten","time","clock10","o","late","early","schedule","ten_o_clock"],
 		char: "🕙️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "ten-thirty",
@@ -8818,8 +7841,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["10","10:30","clock","ten","thirty","time","clock1030","late","early","schedule","ten_thirty"],
 		char: "🕥️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "eleven o’clock",
@@ -8827,8 +7849,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["00","11","11:00","clock","eleven","o’clock","time","clock11","o","late","early","schedule","eleven_o_clock"],
 		char: "🕚️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "eleven-thirty",
@@ -8836,8 +7857,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["11","11:30","clock","eleven","thirty","time","clock1130","late","early","schedule","eleven_thirty"],
 		char: "🕦️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "new moon",
@@ -8845,8 +7865,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["dark","moon","nature","twilight","planet","space","night","evening","sleep","new_moon"],
 		char: "🌑",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "waxing crescent moon",
@@ -8854,8 +7873,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["crescent","moon","waxing","nature","twilight","planet","space","night","evening","sleep","waxing_crescent_moon"],
 		char: "🌒",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "first quarter moon",
@@ -8863,8 +7881,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["moon","quarter","nature","twilight","planet","space","night","evening","sleep","first_quarter_moon"],
 		char: "🌓",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "waxing gibbous moon",
@@ -8872,8 +7889,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["gibbous","moon","waxing","nature","night","sky","gray","twilight","planet","space","evening","sleep","waxing_gibbous_moon"],
 		char: "🌔",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "full moon",
@@ -8881,8 +7897,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["full","moon","nature","yellow","twilight","planet","space","night","evening","sleep","full_moon"],
 		char: "🌕️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "waning gibbous moon",
@@ -8890,8 +7905,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["gibbous","moon","waning","nature","twilight","planet","space","night","evening","sleep","waxing","waning_gibbous_moon","waxing_gibbous_moon"],
 		char: "🌖",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "last quarter moon",
@@ -8899,8 +7913,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["moon","quarter","nature","twilight","planet","space","night","evening","sleep","last_quarter_moon"],
 		char: "🌗",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "waning crescent moon",
@@ -8908,8 +7921,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["crescent","moon","waning","nature","twilight","planet","space","night","evening","sleep","waning_crescent_moon"],
 		char: "🌘",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "crescent moon",
@@ -8917,8 +7929,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["crescent","moon","crescent moon","full moon","night","night sky","celestial body","planet","far away","sleep","sky","evening","magic","crescent_moon"],
 		char: "🌙",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "new moon face",
@@ -8926,8 +7937,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","moon","with","nature","twilight","planet","space","night","evening","sleep","new_moon_with_face","new_moon_face"],
 		char: "🌚",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "first quarter moon face",
@@ -8935,8 +7945,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","moon","quarter","first quarter","half moon","full moon","night","night sky","starry sky","light","moonlight","round","celestial bodies","sickle","planet","with","nature","twilight","space","evening","sleep","first_quarter_moon_with_face","first_quarter_moon_face"],
 		char: "🌛",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "last quarter moon face",
@@ -8944,8 +7953,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","moon","quarter","last quarter","half moon","full moon","night","night sky","starry sky","light","moonlight","round","celestial bodies","sickle","planet","with","nature","twilight","space","evening","sleep","last_quarter_moon_with_face","last_quarter_moon_face"],
 		char: "🌜️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "thermometer",
@@ -8953,8 +7961,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["weather","temperatures","room temperatures","degrees","heat","warming","fever","cold","celsius","measure","sick","temperature","hot","thermometer"],
 		char: "🌡️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "sun",
@@ -8962,8 +7969,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bright","rays","sunny","sun","sunrise","warm","sunbeams","feel good","beach","tanning","fire","fireball","hot","heavenly body","weather","nature","brightness","summer","spring"],
 		char: "☀️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "full moon face",
@@ -8971,8 +7977,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bright","face","full","moon","full moon","night","stars","moonlight","disc","no clouds","with","nature","twilight","planet","space","evening","sleep","full_moon_with_face","full_moon_face"],
 		char: "🌝",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "sun with face",
@@ -8980,8 +7985,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bright","face","sun","sunrise","warm","rays","beach","tanning","fire","fireball","hot","celestial bodies","star","nature","morning","sky","sun_with_face"],
 		char: "🌞",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "ringed planet",
@@ -8989,8 +7993,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["saturn","saturnine","ringed_planet","outerspace"],
 		char: "🪐",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "star",
@@ -8998,8 +8001,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["star","shine","small planet","sky","yellow","sparkle","far away","night"],
 		char: "⭐️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "glowing star",
@@ -9007,8 +8009,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["glittery","glow","shining","sparkle","star","shine","bright","small planet","sky","yellow","far away","constellation","shooting star","milky way","star2","night","awesome","good","magic","glowing_star"],
 		char: "🌟",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "shooting star",
@@ -9016,8 +8017,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["falling","shooting","star","shooting star","sparkle","shine","bright","far away","sky","star sky","night","wish","lightning","stars","photo","shooting_star"],
 		char: "🌠",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "milky way",
@@ -9025,8 +8025,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["space","photo","stars","milky_way"],
 		char: "🌌",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "cloud",
@@ -9034,8 +8033,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["weather","cloud","cloudy","rain","gray","misty","diffuse","sky","dream","fleecy clouds"],
 		char: "☁️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "sun behind cloud",
@@ -9043,8 +8041,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cloud","sun","behind","appear","cloudy","cool","sunny","weather","partly","nature","morning","fall","spring","partly_sunny","sun_behind_cloud"],
 		char: "⛅️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "cloud with lightning and rain",
@@ -9052,8 +8049,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cloud","rain","thunder","lightning","weather","storm","thunderstorm","stormy","thunder_cloud_and_rain","cloud_with_lightning_and_rain"],
 		char: "⛈️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "sun behind small cloud",
@@ -9061,8 +8057,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cloud","sun","behind","small","sunny","cloudy","rain","cool","sky","weather","mostly","sun_behind_small_cloud"],
 		char: "🌤️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "sun behind large cloud",
@@ -9070,8 +8065,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cloud","sun","behind","large","gray","cloudy","rain","diffuse","sky","weather","barely","sunny","sun_behind_large_cloud"],
 		char: "🌥️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "sun behind rain cloud",
@@ -9079,8 +8073,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cloud","rain","sun","behind","wet","rainy","cloudy","cool","weather","partly","sunny","sun_and_rain","sun_behind_rain_cloud"],
 		char: "🌦️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "cloud with rain",
@@ -9088,8 +8081,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cloud","rain","raindrops","falling","down","wet","cool","cloudy","weather","stormy","cloud_with_rain","rainy"],
 		char: "🌧️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "cloud with snow",
@@ -9097,8 +8089,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cloud","cold","snow","falling","ice","wet","cloudy","stormy","weather","cloud_with_snow","snowy"],
 		char: "🌨️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "cloud with lightning",
@@ -9106,8 +8097,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cloud","lightning","glaring","wet","cold","cloudy","gray","weather","storm","current","voltage","light up","light","thunder","cloud_with_lightning"],
 		char: "🌩️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "tornado",
@@ -9115,8 +8105,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cloud","whirlwind","tornado","wind","blow","sky","dangerous","severe weather","storm","hurricane","typhoon","cyclone","weather","twister"],
 		char: "🌪️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "fog",
@@ -9124,8 +8113,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cloud","weather","fog"],
 		char: "🌫️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "wind face",
@@ -9133,8 +8121,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["blow","cloud","face","wind","blowing","air","mouth","mother nature","sky","gust","wind_blowing_face","wind_face"],
 		char: "🌬️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "cyclone",
@@ -9142,8 +8129,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["dizzy","hurricane","twister","typhoon","whirl","swirl","spiral","funnel","rotation","rotate","air","turbulent","weather","blue","cloud","vortex","whirlpool","spin","tornado","cyclone"],
 		char: "🌀",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "rainbow",
@@ -9151,8 +8137,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["rain","rainbow","color","colorful","colors formed in the sky","sunbeams","sunlight","facet","sparkle","unicorn","nature","happy","face","photo","sky","spring","unicorn_face"],
 		char: "🌈",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "closed umbrella",
@@ -9160,8 +8145,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clothing","rain","umbrella","weather","drizzle","closed_umbrella"],
 		char: "🌂",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "umbrella",
@@ -9169,8 +8153,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clothing","rain","purple","umbrella","wet","drop","raindrops","weather","spring"],
 		char: "☂️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "umbrella with rain drops",
@@ -9178,8 +8161,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clothing","drop","rain","umbrella","raindrops","wet","drops","windy","rain falling","rainy","weather","spring","umbrella_with_rain","umbrella_with_rain_drops"],
 		char: "☔️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "umbrella on ground",
@@ -9187,8 +8169,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["rain","sun","umbrella","weather","summer","beach_umbrella","umbrella_on_ground"],
 		char: "⛱️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "high voltage",
@@ -9196,8 +8177,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["danger","electric","lightning","voltage","zap","high voltage","storm","current","volts","lights","light","thunder","weather","bolt","fast","high_voltage","lightning bolt"],
 		char: "⚡️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "snowflake",
@@ -9205,8 +8185,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cold","snow","snowflake","ice","icy","wintry","snow storm","white","frosty","season","weather","melting","winter","christmas","xmas"],
 		char: "❄️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "snowman",
@@ -9214,8 +8193,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cold","snow","winter","season","weather","christmas","xmas","frozen","snowman2","snowman"],
 		char: "☃️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "snowman without snow",
@@ -9223,8 +8201,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cold","snow","snowman","frosty","frosty the snowman","olaf","winter","not snowing","season","weather","christmas","xmas","frozen","snowman_without_snow","without_snow"],
 		char: "⛄️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "comet",
@@ -9232,8 +8209,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["space","comet"],
 		char: "☄️",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "fire",
@@ -9241,8 +8217,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["flame","tool","fire","burn","hot","high temperature","glow","cook"],
 		char: "🔥",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "droplet",
@@ -9250,8 +8225,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cold","comic","drop","sweat","drops","droplets","raindrops","wet","rain","fluid","liquid","puddle","pearl","tear","water","drip","faucet","spring","droplet"],
 		char: "💧",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "water wave",
@@ -9259,8 +8233,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ocean","water","wave","salty","sea","wet","cold","sun","beach","vacation","air","surf","sough","listen","nature","tsunami","disaster","water_wave"],
 		char: "🌊",
 		skinTones: [:],
-		category: "travel-places",
-	),
+		category: "travel-places"),
 
 	Emoji(
 		id: "jack-o-lantern",
@@ -9268,8 +8241,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["celebration","halloween","jack","lantern","pumpkin","o","light","creepy","fall","jack_o_lantern"],
 		char: "🎃",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "Christmas tree",
@@ -9277,8 +8249,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["celebration","christmas","tree","xmas","festival","vacation","december","christmas_tree"],
 		char: "🎄",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "fireworks",
@@ -9286,8 +8257,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["celebration","photo","festival","carnival","congratulations","fireworks"],
 		char: "🎆",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "sparkler",
@@ -9295,8 +8265,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["celebration","fireworks","sparkle","stars","night","shine","sparkler"],
 		char: "🎇",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "firecracker",
@@ -9304,8 +8273,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["dynamite","explosive","fireworks","firecracker","boom","explode","explosion"],
 		char: "🧨",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "sparkles",
@@ -9313,8 +8281,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["*","sparkle","star","magic","beautiful","stars","shine","shiny","cool","awesome","good","sparkles"],
 		char: "✨",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "balloon",
@@ -9322,8 +8289,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["celebration","balloon","birthday","party","decoration","circus"],
 		char: "🎈",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "party popper",
@@ -9331,8 +8297,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["celebration","party","popper","tada","decoration","happy","congratulations","birthday","magic","circus","party_popper"],
 		char: "🎉",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "confetti ball",
@@ -9340,8 +8305,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ball","celebration","confetti","decoration","happy","festival","party","birthday","circus","confetti_ball"],
 		char: "🎊",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "tanabata tree",
@@ -9349,8 +8313,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["banner","celebration","japanese","tree","plant","nature","branch","summer","tanabata_tree","bamboo","wish","star_festival","tanzaku"],
 		char: "🎋",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "pine decoration",
@@ -9358,8 +8321,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bamboo","celebration","japanese","pine","plant","nature","vegetable","panda","pine_decoration","new_years"],
 		char: "🎍",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "Japanese dolls",
@@ -9367,8 +8329,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["celebration","doll","festival","japanese","japanese dolls","toy","kimono","dolls","japanese_dolls"],
 		char: "🎎",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "carp streamer",
@@ -9376,8 +8337,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["carp","celebration","streamer","flags","fish","japanese","koinobori","banner","carp_streamer"],
 		char: "🎏",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "wind chime",
@@ -9385,8 +8345,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bell","celebration","chime","wind","nature","ding","spring","wind_chime"],
 		char: "🎐",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "moon viewing ceremony",
@@ -9394,8 +8353,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["celebration","ceremony","moon","rice","scene","photo","japan","asia","tsukimi","moon_ceremony","rice_scene","moon_viewing_ceremony"],
 		char: "🎑",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "red envelope",
@@ -9403,8 +8361,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["gift","good luck","hóngbāo","lai see","money","red_envelope"],
 		char: "🧧",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "ribbon",
@@ -9412,8 +8369,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["celebration","present","gift","decoration","party","girl","girly","fashion","pink","bowtie","ribbon"],
 		char: "🎀",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "wrapped gift",
@@ -9421,8 +8377,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["box","celebration","gift","present","wrapped","birthday","christmas","xmas","wrapped_gift"],
 		char: "🎁",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "reminder ribbon",
@@ -9430,8 +8385,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["celebration","reminder","ribbon","sports","cause","support","awareness","reminder_ribbon"],
 		char: "🎗️",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "admission tickets",
@@ -9439,8 +8393,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["admission","ticket","sports","concert","entrance","admission_tickets","tickets"],
 		char: "🎟️",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "ticket",
@@ -9448,8 +8401,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["admission","event","concert","pass","ticket"],
 		char: "🎫",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "military medal",
@@ -9457,8 +8409,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["celebration","medal","military","medallion","ribbon","award","winning","army","military_medal"],
 		char: "🎖️",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "trophy",
@@ -9466,8 +8417,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["prize","trophy","championship","winner","gold cup","award","win","contest","place","ftw","ceremony"],
 		char: "🏆️",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "sports medal",
@@ -9475,8 +8425,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["medal","sports","sporting","award","winning","sports_medal"],
 		char: "🏅",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "1st place medal",
@@ -9484,8 +8433,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["first","gold","medal","gold medal","1st place medal","first place medal","1st","first_place_medal","1st_place_medal","award","winning"],
 		char: "🥇",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "2nd place medal",
@@ -9493,8 +8441,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["medal","second","silver","silver medal","second place","second place medal","2nd place medal","2nd","second_place_medal","2nd_place_medal","award"],
 		char: "🥈",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "3rd place medal",
@@ -9502,8 +8449,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bronze","medal","third","bronze medal","third place","third place medal","3rd place medal","3rd","third_place_medal","3rd_place_medal","award"],
 		char: "🥉",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "soccer ball",
@@ -9511,8 +8457,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ball","football","soccer","game","ball game","team sports","sports","soccer_ball"],
 		char: "⚽️",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "baseball",
@@ -9520,8 +8465,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ball","baseball","white","american","game","ball game","team sports","sports","balls"],
 		char: "⚾️",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "softball",
@@ -9529,8 +8473,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ball","glove","underarm","softball","sports","balls"],
 		char: "🥎",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "basketball",
@@ -9538,8 +8481,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ball","hoop","basketball","orange ball","team sport","sport","canadian sport","game","sports","balls","NBA"],
 		char: "🏀",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "volleyball",
@@ -9547,8 +8489,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ball","game","ball game","team sport","sport","hobby","olympic games","sports","balls","volleyball"],
 		char: "🏐",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "american football",
@@ -9556,8 +8497,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["american","ball","football","american game","oval ball","ball game","superbowl","team sport","sports","balls","NFL","american_football"],
 		char: "🏈",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "rugby football",
@@ -9565,8 +8505,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ball","football","rugby","brown ball","league","union","team sport","british sports","sport","sports","team","rugby_football"],
 		char: "🏉",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "tennis",
@@ -9574,8 +8513,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ball","racquet","tennis","tennis ball","ball game","game","racket","sport","sports","balls","green"],
 		char: "🎾",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "flying disc",
@@ -9583,8 +8521,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ultimate","flying_disc","sports","frisbee"],
 		char: "🥏",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "bowling",
@@ -9592,8 +8529,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ball","game","sports","fun","play","bowling"],
 		char: "🎳",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "cricket game",
@@ -9601,8 +8537,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ball","bat","game","cricket","cricket bat and ball","hobby","activity","and","sports","cricket_game"],
 		char: "🏏",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "field hockey",
@@ -9610,8 +8545,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ball","field","game","hockey","stick","field hockey stick and ball","ice hockey","team sport","hockey stick","puck","and","sports","field_hockey"],
 		char: "🏑",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "ice hockey",
@@ -9619,8 +8553,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["game","hockey","ice","puck","stick","ice hockey","hockey stick","field hockey","team sport","and","sports","ice_hockey"],
 		char: "🏒",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "lacrosse",
@@ -9628,8 +8561,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ball","goal","stick","lacrosse","sports"],
 		char: "🥍",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "ping pong",
@@ -9637,8 +8569,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ball","bat","game","paddle","table tennis","ping pong","ball game","hobby","table","tennis","and","sports","pingpong","ping_pong"],
 		char: "🏓",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "badminton",
@@ -9646,8 +8577,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["birdie","game","racquet","shuttlecock","and","sports","badminton"],
 		char: "🏸",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "boxing glove",
@@ -9655,8 +8585,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["boxing","glove","red","mitt","sport","fist","beat","slap","slap in your face","muhammad ali","boxing_glove","sports","fighting"],
 		char: "🥊",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "martial arts uniform",
@@ -9664,8 +8593,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["judo","karate","martial arts","taekwondo","uniform","white","keikogi","sport","martial_arts_uniform"],
 		char: "🥋",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "goal net",
@@ -9673,8 +8601,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["goal","net","goal_net","sports"],
 		char: "🥅",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "flag in hole",
@@ -9682,8 +8609,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["golf","hole","flag","golf flag","golf hole with flag","sport","ball","goal","sports","business","summer","flag_in_hole"],
 		char: "⛳️",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "ice skate",
@@ -9691,8 +8617,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ice","skate","sports","ice_skate"],
 		char: "⛸️",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "fishing pole",
@@ -9700,8 +8625,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fish","pole","fishing rod","fishing pole","line","caught","hobby","and","food","summer","fishing_pole","fishing_pole_and_fish"],
 		char: "🎣",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "diving mask",
@@ -9709,8 +8633,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["diving","scuba","snorkeling","diving_mask","sport","ocean"],
 		char: "🤿",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "running shirt",
@@ -9718,8 +8641,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["athletics","running","sash","shirt","with","play","pageant","running_shirt","running_shirt_with_sash"],
 		char: "🎽",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "skis",
@@ -9727,8 +8649,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ski","snow","skis","skiing","ski boot","to ski","winter","hobby","sport","sports","cold"],
 		char: "🎿",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "sled",
@@ -9736,8 +8657,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["sledge","sleigh","sled","luge","toboggan"],
 		char: "🛷",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "curling stone",
@@ -9745,8 +8665,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["game","rock","curling_stone","sports"],
 		char: "🥌",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "bullseye",
@@ -9754,8 +8673,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["dart","direct hit","game","hit","target","direct","dart board","archery","bullseye","darts","play","bar","direct_hit"],
 		char: "🎯",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "yo-yo",
@@ -9763,8 +8681,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fluctuate","toy","yo_yo"],
 		char: "🪀",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "kite",
@@ -9772,8 +8689,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fly","soar","kite","wind"],
 		char: "🪁",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "pool 8 ball",
@@ -9781,8 +8697,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["8","ball","billiard","eight","game","pool ball","8 ball","black ball","cue ball","magic 8 ball","pool","snooker","billiards","8ball","hobby","luck","magic","pool_8_ball"],
 		char: "🎱",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "crystal ball",
@@ -9790,8 +8705,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ball","crystal","fairy tale","fantasy","fortune","tool","mystery","disco","party","magic","circus","teller","crystal_ball","fortune_teller"],
 		char: "🔮",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "magic wand",
@@ -9799,8 +8713,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["magic","witch","wizard","magic_wand","magic wand","supernature","power"],
 		char: "🪄",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "nazar amulet",
@@ -9808,8 +8721,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bead","charm","evil-eye","nazar","talisman","nazar_amulet"],
 		char: "🧿",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "hamsa",
@@ -9817,8 +8729,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["amulet","fatima","hand","mary","miriam","protection","hamsa","religion"],
 		char: "🪬",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "video game",
@@ -9826,8 +8737,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["controller","game","gamble","play","console","PS4","video_game"],
 		char: "🎮️",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "joystick",
@@ -9835,8 +8745,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["game","video game","play","joystick"],
 		char: "🕹️",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "slot machine",
@@ -9844,8 +8753,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["game","slot","bet","gamble","vegas","fruit","luck","casino","slot_machine","fruit machine"],
 		char: "🎰",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "game die",
@@ -9853,8 +8761,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["dice","die","game","board game","isometric","random","tabletop","play","luck","game_die"],
 		char: "🎲",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "puzzle piece",
@@ -9862,8 +8769,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clue","interlocking","jigsaw","piece","puzzle","puzzle_piece"],
 		char: "🧩",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "teddy bear",
@@ -9871,8 +8777,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["plaything","plush","stuffed","toy","teddy_bear"],
 		char: "🧸",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "piñata",
@@ -9880,8 +8785,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["celebration","party","pinata","mexico","candy"],
 		char: "🪅",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "mirror ball",
@@ -9889,8 +8793,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["dance","disco","glitter","party","disco_ball","mirror_ball","mirror ball"],
 		char: "🪩",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "nesting dolls",
@@ -9898,8 +8801,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["doll","nesting","russia","nesting_dolls","nesting dolls","matryoshka","toy"],
 		char: "🪆",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "spade suit",
@@ -9907,8 +8809,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["card","game","spades","poker","cards","suits","magic","spade_suit"],
 		char: "♠️",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "heart suit",
@@ -9916,8 +8817,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["card","game","hearts","poker","cards","magic","suits","heart_suit"],
 		char: "♥️",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "diamond suit",
@@ -9925,8 +8825,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["card","game","diamonds","poker","cards","magic","suits","diamond_suit"],
 		char: "♦️",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "club suit",
@@ -9934,8 +8833,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["card","game","clubs","poker","cards","magic","suits","club_suit"],
 		char: "♣️",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "chess pawn",
@@ -9943,8 +8841,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["chess","dupe","expendable","chess_pawn"],
 		char: "♟️",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "joker",
@@ -9952,8 +8849,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["card","game","wildcard","black","poker","cards","play","magic","black_joker","joker"],
 		char: "🃏",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "mahjong red dragon",
@@ -9961,8 +8857,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["game","mahjong","red","play","chinese","kanji","mahjong_red_dragon"],
 		char: "🀄️",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "flower playing cards",
@@ -9970,8 +8865,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["card","flower","game","japanese","playing","sunset","red","flower_playing_cards"],
 		char: "🎴",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "performing arts",
@@ -9979,8 +8873,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["art","mask","performing","theater","theatre","culture","entertainment","education","acting","drama","performing_arts"],
 		char: "🎭️",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "framed picture",
@@ -9988,8 +8881,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["art","frame","museum","painting","picture","culture","artist","entertainment","with","photography","frame_with_picture","framed_picture"],
 		char: "🖼️",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "artist palette",
@@ -9997,8 +8889,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["art","museum","painting","palette","culture","artist","leisure","entertainment","design","paint","draw","colors","artist_palette"],
 		char: "🎨",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "thread",
@@ -10006,8 +8897,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["needle","sewing","spool","string","thread"],
 		char: "🧵",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "sewing needle",
@@ -10015,8 +8905,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["embroidery","needle","sewing","stitches","sutures","tailoring","sewing_needle","sewing needle"],
 		char: "🪡",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "yarn",
@@ -10024,8 +8913,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ball","crochet","knit","yarn"],
 		char: "🧶",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "knot",
@@ -10033,8 +8921,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["rope","tangled","tie","twine","twist","knot","scout"],
 		char: "🪢",
 		skinTones: [:],
-		category: "activities",
-	),
+		category: "activities"),
 
 	Emoji(
 		id: "glasses",
@@ -10042,8 +8929,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clothing","eye","eyeglasses","eyewear","fashion","accessories","eyesight","nerdy","dork","geek","glasses"],
 		char: "👓️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "sunglasses",
@@ -10051,8 +8937,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["dark","eye","eyewear","glasses","sunglasses","face","cool","accessories"],
 		char: "🕶️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "goggles",
@@ -10060,8 +8945,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["eye protection","swimming","welding","goggles","eyes","protection","safety"],
 		char: "🥽",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "lab coat",
@@ -10069,8 +8953,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["doctor","experiment","scientist","lab_coat","chemist"],
 		char: "🥼",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "safety vest",
@@ -10078,8 +8961,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["emergency","safety","vest","safety_vest","protection"],
 		char: "🦺",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "necktie",
@@ -10087,8 +8969,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clothing","tie","cravatte","smart","shirt","suitup","formal","fashion","cloth","business","necktie"],
 		char: "👔",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "t-shirt",
@@ -10096,8 +8977,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clothing","shirt","tshirt","t","fashion","cloth","casual","tee","t_shirt"],
 		char: "👕",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "jeans",
@@ -10105,8 +8985,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clothing","pants","trousers","fashion","shopping","jeans"],
 		char: "👖",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "scarf",
@@ -10114,8 +8993,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["neck","scarf","winter","clothes"],
 		char: "🧣",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "gloves",
@@ -10123,8 +9001,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hand","gloves","hands","winter","clothes"],
 		char: "🧤",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "coat",
@@ -10132,8 +9009,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["jacket","coat"],
 		char: "🧥",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "socks",
@@ -10141,8 +9017,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["stocking","socks","stockings","clothes"],
 		char: "🧦",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "dress",
@@ -10150,8 +9025,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clothing","beautiful","dress","woman","clothes","fashion","shopping"],
 		char: "👗",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "kimono",
@@ -10159,8 +9033,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clothing","japan","dress","fashion","women","female","japanese","kimono"],
 		char: "👘",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "sari",
@@ -10168,8 +9041,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clothing","dress","sari"],
 		char: "🥻",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "one-piece swimsuit",
@@ -10177,8 +9049,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bathing suit","one_piece_swimsuit","fashion"],
 		char: "🩱",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "briefs",
@@ -10186,8 +9057,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bathing suit","one-piece","swimsuit","underwear","briefs","clothing"],
 		char: "🩲",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "shorts",
@@ -10195,8 +9065,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bathing suit","pants","underwear","shorts","clothing"],
 		char: "🩳",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "bikini",
@@ -10204,8 +9073,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clothing","swim","summer","swimming","female","woman","girl","fashion","beach","bikini"],
 		char: "👙",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "woman’s clothes",
@@ -10213,8 +9081,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clothing","woman","s","fashion","shopping","bags","female","womans_clothes","woman_s_clothes","shopping_bags"],
 		char: "👚",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "purse",
@@ -10222,8 +9089,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clothing","coin","money","fashion","accessories","sales","shopping","purse"],
 		char: "👛",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "handbag",
@@ -10231,8 +9097,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bag","clothing","purse","fashion","accessory","accessories","shopping","handbag"],
 		char: "👜",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "clutch bag",
@@ -10240,8 +9105,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bag","clothing","pouch","clutch","accessories","shopping","clutch_bag"],
 		char: "👝",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "shopping bags",
@@ -10249,8 +9113,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bag","hotel","shopping","buy","mall","purchase","shopping_bags"],
 		char: "🛍️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "backpack",
@@ -10258,8 +9121,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bag","rucksack","satchel","school","young","student","education","backpack","school_satchel"],
 		char: "🎒",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "thong sandal",
@@ -10267,8 +9129,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["beach sandals","sandals","thong sandals","thongs","zōri","thong_sandal","thong sandal","footwear","summer"],
 		char: "🩴",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "man’s shoe",
@@ -10276,8 +9137,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clothing","man","shoe","s","fashion","male","mans_shoe","man_s_shoe"],
 		char: "👞",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "running shoe",
@@ -10285,8 +9145,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["athletic","clothing","shoe","sneaker","shoes","sports","sneakers","athletic_shoe","running_shoe"],
 		char: "👟",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "hiking boot",
@@ -10294,8 +9153,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["backpacking","boot","camping","hiking","hiking_boot"],
 		char: "🥾",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "flat shoe",
@@ -10303,8 +9161,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ballet flat","slip-on","slipper","flat_shoe","womans_flat_shoe","ballet"],
 		char: "🥿",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "high-heeled shoe",
@@ -10312,8 +9169,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clothing","heel","shoe","woman","high","heeled","fashion","shoes","female","pumps","stiletto","high_heel","high_heeled_shoe"],
 		char: "👠",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "woman’s sandal",
@@ -10321,8 +9177,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clothing","sandal","shoe","woman","s","shoes","fashion","flip","flops","woman_s_sandal","flip flops"],
 		char: "👡",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "ballet shoes",
@@ -10330,8 +9185,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ballet","dance","ballet_shoes"],
 		char: "🩰",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "woman’s boot",
@@ -10339,8 +9193,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["boot","clothing","shoe","woman","s","shoes","fashion","woman_s_boot"],
 		char: "👢",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "crown",
@@ -10348,8 +9201,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clothing","king","queen","crone","gold","kod","leader","royalty","lord","crown"],
 		char: "👑",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "woman’s hat",
@@ -10357,8 +9209,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clothing","hat","woman","beautiful","s","fashion","accessories","female","lady","spring","womans_hat","woman_s_hat"],
 		char: "👒",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "top hat",
@@ -10366,8 +9217,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clothing","hat","top","tophat","magic","gentleman","classy","circus","top_hat"],
 		char: "🎩",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "graduation cap",
@@ -10375,8 +9225,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cap","celebration","clothing","graduation","hat","mortar","board","school","college","degree","university","legal","learn","education","graduation_cap","mortar_board"],
 		char: "🎓️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "billed cap",
@@ -10384,8 +9233,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["baseball cap","billed_cap","cap","baseball"],
 		char: "🧢",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "military helmet",
@@ -10393,8 +9241,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["army","helmet","military","soldier","warrior","military_helmet","military helmet","protection"],
 		char: "🪖",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "rescue worker’s helmet",
@@ -10402,8 +9249,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["aid","cross","face","hat","helmet","with","white","worker","s","construction","build","helmet_with_cross","rescue_worker_helmet","rescue_worker_s_helmet"],
 		char: "⛑️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "prayer beads",
@@ -10411,8 +9257,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["beads","clothing","necklace","prayer","religion","expensive","jewelry","dhikr","religious","prayer_beads"],
 		char: "📿",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "lipstick",
@@ -10420,8 +9265,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cosmetics","makeup","female","girl","fashion","woman","lipstick"],
 		char: "💄",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "ring",
@@ -10429,8 +9273,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["diamond","expensive","jewelry","wedding","propose","marriage","valentines","fashion","gem","engagement","ring"],
 		char: "💍",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "gem stone",
@@ -10438,8 +9281,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["diamond","gem","jewel","expensive","blue","ruby","jewelry","gem_stone"],
 		char: "💎",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "muted speaker",
@@ -10447,8 +9289,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["mute","quiet","silent","speaker","sound","volume","silence","no_sound","muted_speaker"],
 		char: "🔇",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "speaker low volume",
@@ -10456,8 +9297,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["soft","sound","low","volume","silence","broadcast","low_volume","quiet_sound","speaker","speaker_low_volume"],
 		char: "🔈️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "speaker medium volume",
@@ -10465,8 +9305,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["medium","sound","broadcast","medium_volumne","speaker_medium_volume","volume","speaker"],
 		char: "🔉",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "speaker high volume",
@@ -10474,8 +9313,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["loud","sound","noise","noisy","broadcast","high_volume","loud_sound","speaker_high_volume","volume","speaker"],
 		char: "🔊",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "loudspeaker",
@@ -10483,8 +9321,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["loud","public address","sound","volume","loudspeaker"],
 		char: "📢",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "megaphone",
@@ -10492,8 +9329,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cheering","mega","sound","speaker","volume","megaphone"],
 		char: "📣",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "postal horn",
@@ -10501,8 +9337,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["horn","post","postal","instrument","music","postal_horn"],
 		char: "📯",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "bell",
@@ -10510,8 +9345,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bell","sound","notification","christmas","xmas","chime"],
 		char: "🔔",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "bell with slash",
@@ -10519,8 +9353,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bell","forbidden","mute","quiet","silent","no","sound","volume","no_bell","bell_with_slash"],
 		char: "🔕",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "musical score",
@@ -10528,8 +9361,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["music","score","violin key","rhythm","treble","clef","compose","musical_score"],
 		char: "🎼",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "musical note",
@@ -10537,8 +9369,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["music","note","song","melody","sounds","tone","score","sound","musical_note"],
 		char: "🎵",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "musical notes",
@@ -10546,8 +9377,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["music","note","notes","melody","harmony","sounds","rhythm","score","musical_notes"],
 		char: "🎶",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "studio microphone",
@@ -10555,8 +9385,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["mic","microphone","music","studio","stereo","recording","sing","artist","talkshow","studio_microphone"],
 		char: "🎙️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "level slider",
@@ -10564,8 +9393,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["level","music","slider","studio","music slider","scale","level_slider"],
 		char: "🎚️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "control knobs",
@@ -10573,8 +9401,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["control","knobs","music","mix","recording","tool","dial","control_knobs"],
 		char: "🎛️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "microphone",
@@ -10582,8 +9409,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["karaoke","mic","sound","loud","stage","speech","singing","microphone","tone","music","PA","sing","talkshow"],
 		char: "🎤",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "headphone",
@@ -10591,8 +9417,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["earbud","music","headphones","score","gadgets","headphone"],
 		char: "🎧️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "radio",
@@ -10600,8 +9425,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["video","radio","stereo radio","analog radio","communication","music","podcast","program"],
 		char: "📻️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "saxophone",
@@ -10609,8 +9433,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["instrument","music","sax","saxophone","jazz","blues"],
 		char: "🎷",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "accordion",
@@ -10618,8 +9441,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["concertina","squeeze box","accordion","music"],
 		char: "🪗",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "guitar",
@@ -10627,8 +9449,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["instrument","music","guitar","e-guitar","instrumental","acoustic","chords"],
 		char: "🎸",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "musical keyboard",
@@ -10636,8 +9457,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["instrument","keyboard","music","piano","piano keys","chords","compose","musical_keyboard"],
 		char: "🎹",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "trumpet",
@@ -10645,8 +9465,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["instrument","music","trumpet","horns","woodwind instrument","brass"],
 		char: "🎺",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "violin",
@@ -10654,8 +9473,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["instrument","music","string","violin","fiddle","bow","orchestra","symphony"],
 		char: "🎻",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "banjo",
@@ -10663,8 +9481,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["music","stringed","banjo","instructment"],
 		char: "🪕",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "drum",
@@ -10672,8 +9489,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["drumsticks","music","drum","beat","instrument","snare"],
 		char: "🥁",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "long drum",
@@ -10681,8 +9497,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["beat","conga","drum","rhythm","long_drum","long drum","music"],
 		char: "🪘",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "mobile phone",
@@ -10690,8 +9505,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cell","mobile","phone","telephone","smartphone","message","voice","communication","iphone","technology","apple","gadgets","dial","android","mobile_phone"],
 		char: "📱",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "mobile phone with arrow",
@@ -10699,8 +9513,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","cell","mobile","phone","receive","voice","smartphone","message","calling","iphone","incoming","mobile_phone_arrow","mobile_phone_with_arrow"],
 		char: "📲",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "telephone",
@@ -10708,8 +9521,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["phone","call","voice","communication","technology","dial","telephone"],
 		char: "☎️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "telephone receiver",
@@ -10717,8 +9529,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["phone","receiver","telephone","call","voice","communication","technology","dial","telephone_receiver"],
 		char: "📞",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "pager",
@@ -10726,8 +9537,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["pager","bbcall","oldschool","90s"],
 		char: "📟️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "fax machine",
@@ -10735,8 +9545,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fax","office","paper","communication","technology","fax_machine"],
 		char: "📠",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "battery",
@@ -10744,8 +9553,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["battery","electricity","energy","electric","power","sustain"],
 		char: "🔋",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "low battery",
@@ -10753,8 +9561,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["electronic","low energy","low_battery","low battery","drained","dead"],
 		char: "🪫",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "electric plug",
@@ -10762,8 +9569,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["electric","electricity","plug","charger","power","electric_plug"],
 		char: "🔌",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "laptop",
@@ -10771,8 +9577,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["computer","pc","personal","old","retro","technology","screen","display","monitor","laptop"],
 		char: "💻️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "desktop computer",
@@ -10780,8 +9585,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["computer","desktop","electric","screen","technology","computing","desktop_computer"],
 		char: "🖥️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "printer",
@@ -10789,8 +9593,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["computer","color","electric","paper","ink","printer"],
 		char: "🖨️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "keyboard",
@@ -10798,8 +9601,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["computer","key","write","electric","technology","type","input","text","keyboard"],
 		char: "⌨️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "computer mouse",
@@ -10807,8 +9609,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["computer","electric","mouse","three","button","click","computer_mouse"],
 		char: "🖱️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "trackball",
@@ -10816,8 +9617,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["computer","technology","trackpad","trackball"],
 		char: "🖲️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "computer disk",
@@ -10825,8 +9625,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["computer","disk","minidisk","optical","old","retro","technology","record","data","90s","computer_disk","minidisc"],
 		char: "💽",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "floppy disk",
@@ -10834,8 +9633,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["computer","disk","floppy","old","retro","oldschool","technology","save","90s","80s","floppy_disk"],
 		char: "💾",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "optical disk",
@@ -10843,8 +9641,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cd","computer","disk","optical","analog","technology","dvd","90s","optical_disk","disc"],
 		char: "💿️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "dvd",
@@ -10852,8 +9649,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["blu-ray","computer","disk","optical","film","cd","disc","dvd"],
 		char: "📀",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "abacus",
@@ -10861,8 +9657,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["calculation","abacus"],
 		char: "🧮",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "movie camera",
@@ -10870,8 +9665,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["camera","cinema","movie","film","record","movie_camera"],
 		char: "🎥",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "film frames",
@@ -10879,8 +9673,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cinema","film","frames","movie","clip","film_frames"],
 		char: "🎞️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "film projector",
@@ -10888,8 +9681,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cinema","film","movie","projector","video","play","film clip","tape","record","film_projector"],
 		char: "📽️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "clapper board",
@@ -10897,8 +9689,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clapper","movie","cut","new recording","film","record","clapper_board"],
 		char: "🎬️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "television",
@@ -10906,8 +9697,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["tv","video","flat screen","modern","technology","program","oldschool","show","television"],
 		char: "📺️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "camera",
@@ -10915,8 +9705,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["video","camera","digital","gadgets","photography"],
 		char: "📷️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "camera with flash",
@@ -10924,8 +9713,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["camera","flash","video","bright","photography","gadgets","camera_with_flash"],
 		char: "📸",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "video camera",
@@ -10933,8 +9721,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["camera","video","record","recording","film","movie","video_camera"],
 		char: "📹️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "videocassette",
@@ -10942,8 +9729,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["tape","vhs","video","movie","film","cassette","record","recording","oldschool","90s","80s","videocassette"],
 		char: "📼",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "magnifying glass tilted left",
@@ -10951,8 +9737,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["glass","magnifying","search","tool","detail","big","zoom","detective","mag","find","magnifying_glass_tilted_left"],
 		char: "🔍️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "magnifying glass tilted right",
@@ -10960,8 +9745,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["glass","magnifying","search","tool","detail","big","zoom","detective","mag","find","mag_right","magnifying_glass_tilted_right"],
 		char: "🔎",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "candle",
@@ -10969,8 +9753,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["light","fire","bright","shine","wax","candle"],
 		char: "🕯️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "light bulb",
@@ -10978,8 +9761,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bulb","comic","electric","idea","light","shine","power","on","electricity","light_bulb"],
 		char: "💡",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "flashlight",
@@ -10987,8 +9769,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["electric","light","tool","torch","bright","shine","flashlight","gadget","dark","camping","sight","night"],
 		char: "🔦",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "red paper lantern",
@@ -10996,8 +9777,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bar","lantern","light","red","paper","halloween","spooky","izakaya_lantern","red_paper_lantern"],
 		char: "🏮",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "diya lamp",
@@ -11005,8 +9785,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["diya","lamp","oil","diya_lamp","lighting"],
 		char: "🪔",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "notebook with decorative cover",
@@ -11014,8 +9793,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["book","cover","decorated","notebook","classroom","notes","record","paper","study","notebook_with_decorative_cover"],
 		char: "📔",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "closed book",
@@ -11023,8 +9801,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["book","closed","read","write","library","knowledge","textbook","learn","closed_book"],
 		char: "📕",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "open book",
@@ -11032,8 +9809,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["book","open","read","write","library","knowledge","literature","learn","study","open_book"],
 		char: "📖",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "green book",
@@ -11041,8 +9817,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["book","green","read","library","knowledge","study","green_book"],
 		char: "📗",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "blue book",
@@ -11050,8 +9825,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["blue","book","read","library","knowledge","learn","study","blue_book"],
 		char: "📘",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "orange book",
@@ -11059,8 +9833,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["book","orange","read","library","knowledge","textbook","study","orange_book"],
 		char: "📙",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "books",
@@ -11068,8 +9841,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["book","read","write","isometric","literature","library","study","books"],
 		char: "📚️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "notebook",
@@ -11077,8 +9849,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["notebook","book","read","write","stationery","record","notes","paper","study"],
 		char: "📓",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "ledger",
@@ -11086,8 +9857,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["notebook","book","read","write","notes","paper","ledger"],
 		char: "📒",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "page with curl",
@@ -11095,8 +9865,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["curl","document","page","rolled","text","documents","office","paper","page_with_curl"],
 		char: "📃",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "scroll",
@@ -11104,8 +9873,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["paper","old","papyrus","text","documents","ancient","history","scroll"],
 		char: "📜",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "page facing up",
@@ -11113,8 +9881,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["document","page","write","text","paper","documents","office","information","page_facing_up"],
 		char: "📄",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "newspaper",
@@ -11122,8 +9889,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["news","paper","read","text","press","headline","newspaper"],
 		char: "📰",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "rolled-up newspaper",
@@ -11131,8 +9897,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["news","newspaper","paper","rolled","up","press","headline","rolled_up_newspaper"],
 		char: "🗞️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "bookmark tabs",
@@ -11140,8 +9905,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bookmark","mark","marker","tabs","favorite","save","order","tidy","bookmark_tabs"],
 		char: "📑",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "bookmark",
@@ -11149,8 +9913,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["mark","remember","favorite","label","save","bookmark"],
 		char: "🔖",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "label",
@@ -11158,8 +9921,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["label","stick","sale","tag"],
 		char: "🏷️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "money bag",
@@ -11167,8 +9929,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bag","dollar","money","moneybag","payment","coins","sale","money_bag"],
 		char: "💰️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "coin",
@@ -11176,8 +9937,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["gold","metal","money","silver","treasure","coin","currency"],
 		char: "🪙",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "yen banknote",
@@ -11185,8 +9945,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["banknote","bill","currency","money","note","yen","sales","japanese","dollar","yen_banknote"],
 		char: "💴",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "dollar banknote",
@@ -11194,8 +9953,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["banknote","bill","currency","dollar","money","note","sales","dollar_banknote"],
 		char: "💵",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "euro banknote",
@@ -11203,8 +9961,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["banknote","bill","currency","euro","money","note","sales","dollar","euro_banknote"],
 		char: "💶",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "pound banknote",
@@ -11212,8 +9969,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["banknote","bill","currency","money","note","pound","british","sterling","sales","bills","uk","england","pound_banknote"],
 		char: "💷",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "money with wings",
@@ -11221,8 +9977,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["banknote","bill","fly","money","wings","dollar","bills","payment","sale","money_with_wings"],
 		char: "💸",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "credit card",
@@ -11230,8 +9985,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["card","credit","money","sales","dollar","bill","payment","shopping","credit_card"],
 		char: "💳️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "receipt",
@@ -11239,8 +9993,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["accounting","bookkeeping","evidence","proof","receipt","expenses"],
 		char: "🧾",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "chart increasing with yen",
@@ -11248,8 +10001,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["chart","graph","growth","money","yen","green","square","presentation","stats","chart_increasing_with_yen","green-square"],
 		char: "💹",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "envelope",
@@ -11257,8 +10009,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["email","letter","post","message","postal","inbox","communication","envelope"],
 		char: "✉️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "e-mail",
@@ -11266,8 +10017,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["email","letter","mail","message","electronic","e","communication","inbox","e-mail","e_mail"],
 		char: "📧",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "incoming envelope",
@@ -11275,8 +10025,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["e-mail","email","envelope","incoming","letter","receive","inbox","incoming_envelope"],
 		char: "📨",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "envelope with arrow",
@@ -11284,8 +10033,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","e-mail","email","envelope","outgoing","post","communication","envelope_with_arrow"],
 		char: "📩",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "outbox tray",
@@ -11293,8 +10041,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["box","letter","mail","outbox","sent","tray","post","inbox","email","outbox_tray"],
 		char: "📤️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "inbox tray",
@@ -11302,8 +10049,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["box","inbox","letter","mail","receive","tray","post","email","documents","inbox_tray"],
 		char: "📥️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "package",
@@ -11311,8 +10057,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["box","parcel","shipping","post","mail","gift","cardboard","moving","package"],
 		char: "📦️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "closed mailbox with raised flag",
@@ -11320,8 +10065,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["closed","mail","mailbox","postbox","post","email","inbox","communication","closed_mailbox_with_raised_flag"],
 		char: "📫️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "closed mailbox with lowered flag",
@@ -11329,8 +10073,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["closed","lowered","mail","mailbox","postbox","post","email","communication","inbox","mailbox_closed","closed_mailbox_with_lowered_flag"],
 		char: "📪️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "open mailbox with raised flag",
@@ -11338,8 +10081,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["mail","mailbox","open","postbox","email","inbox","communication","mailbox_with_mail","open_mailbox_with_raised_flag"],
 		char: "📬️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "open mailbox with lowered flag",
@@ -11347,8 +10089,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["lowered","mail","mailbox","open","postbox","no","email","inbox","mailbox_with_no_mail","open_mailbox_with_lowered_flag"],
 		char: "📭️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "postbox",
@@ -11356,8 +10097,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["mail","mailbox","post","email","letter","envelope","postbox"],
 		char: "📮",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "ballot box with ballot",
@@ -11365,8 +10105,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ballot","box","election","vote","ballot_box","ballot_box_with_ballot"],
 		char: "🗳️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "pencil",
@@ -11374,8 +10113,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["pencil","pencil2","stationery","write","paper","writing","school","study"],
 		char: "✏️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "black nib",
@@ -11383,8 +10121,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["nib","pen","stationery","writing","write","black_nib"],
 		char: "✒️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "fountain pen",
@@ -11392,8 +10129,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fountain","pen","lower","left","stationery","writing","write","fountain_pen"],
 		char: "🖋️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "pen",
@@ -11401,8 +10137,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ballpoint","lower","left","stationery","writing","write","pen"],
 		char: "🖊️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "paintbrush",
@@ -11410,8 +10145,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["painting","colors","pain","brush","lower","left","drawing","creativity","art","paintbrush"],
 		char: "🖌️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "crayon",
@@ -11419,8 +10153,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["crayon","painting","colors","lower","left","drawing","creativity"],
 		char: "🖍️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "memo",
@@ -11428,8 +10161,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["pencil","paper","notice","write","documents","stationery","writing","legal","exam","quiz","test","study","compose","memo"],
 		char: "📝",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "briefcase",
@@ -11437,8 +10169,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["briefcase","bag","office bag","leather bag","business","documents","work","law","legal","job","career"],
 		char: "💼",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "file folder",
@@ -11446,8 +10177,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["file","folder","paper","organise","structure","office","box","documents","business","file_folder"],
 		char: "📁",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "open file folder",
@@ -11455,8 +10185,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["file","folder","open","open file","organise","structure","office","box","documents","load","open_file_folder"],
 		char: "📂",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "card index dividers",
@@ -11464,8 +10193,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["card","dividers","index","organizing","business","stationery","card_index_dividers"],
 		char: "🗂️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "calendar",
@@ -11473,8 +10201,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["date","calendar","day view","pages","analog","schedule"],
 		char: "📅",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "tear-off calendar",
@@ -11482,8 +10209,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["calendar","tear off","tear","off","schedule","date","planning","tear_off_calendar"],
 		char: "📆",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "spiral notepad",
@@ -11491,8 +10217,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["note","pad","spiral","notes","handwrite","paper","pen","spiral block","college","memo","stationery","notepad_spiral","spiral_notepad"],
 		char: "🗒️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "spiral calendar",
@@ -11500,8 +10225,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["calendar","pad","spiral","year","month view","date","schedule","planning","calendar_spiral","spiral_calendar"],
 		char: "🗓️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "card index",
@@ -11509,8 +10233,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["card","index","rolodex","business","stationery","card_index"],
 		char: "📇",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "chart increasing",
@@ -11518,8 +10241,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["chart","graph","growth","trend","upward","graph going up","upward trend","with","upwards","presentation","stats","recovery","business","economics","money","sales","good","success","chart_increasing","chart_with_upwards_trend"],
 		char: "📈",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "chart decreasing",
@@ -11527,8 +10249,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["chart","down","graph","trend","graph going down","downtrend","with","downwards","presentation","stats","recession","business","economics","money","sales","bad","failure","chart_decreasing","chart_with_downwards_trend"],
 		char: "📉",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "bar chart",
@@ -11536,8 +10257,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bar","chart","graph","data","sheet","presentation","stats","bar_chart"],
 		char: "📊",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "clipboard",
@@ -11545,8 +10265,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clipboard","board","clip","metal","wood","handwriting","stationery","documents"],
 		char: "📋️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "pushpin",
@@ -11554,8 +10273,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["pin","wall","push","paper","stationery","mark","here","pushpin"],
 		char: "📌",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "round pushpin",
@@ -11563,8 +10281,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["pin","pushpin","wall","push","paper","notes","stationery","location","map","here","round_pushpin"],
 		char: "📍",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "paperclip",
@@ -11572,8 +10289,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["paperclip","office","organisation","documents","stationery"],
 		char: "📎",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "linked paperclips",
@@ -11581,8 +10297,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["link","paperclip","documents","stationery","paperclips","linked_paperclips"],
 		char: "🖇️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "straight ruler",
@@ -11590,8 +10305,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ruler","straight edge","straight","line","measure","detail","stationery","calculate","length","math","school","drawing","architect","sketch","straight_ruler"],
 		char: "📏",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "triangular ruler",
@@ -11599,8 +10313,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ruler","set","triangle","line","measure","detail","stationery","math","architect","sketch","triangular_ruler"],
 		char: "📐",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "scissors",
@@ -11608,8 +10321,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cutting","tool","scissors","cut","work","paper","material","stationery"],
 		char: "✂️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "card file box",
@@ -11617,8 +10329,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["box","card","file","system","organising","structure","tidy","business","stationery","card_file_box"],
 		char: "🗃️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "file cabinet",
@@ -11626,8 +10337,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cabinet","file","filing","box","file system","file organising","organizing","file_cabinet"],
 		char: "🗄️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "wastebasket",
@@ -11635,8 +10345,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["wastebasket","paper","bin","trash","rubbish","garbage","toss","trashcan"],
 		char: "🗑️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "locked",
@@ -11644,8 +10353,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["closed","locker","padlock","locked","security","password","lock"],
 		char: "🔒️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "unlocked",
@@ -11653,8 +10361,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["lock","open","unlock","locker","padlock","privacy","security","unlocked"],
 		char: "🔓️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "locked with pen",
@@ -11662,8 +10369,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ink","lock","nib","pen","privacy","security","secret","lock_with_ink_pen","locked_with_pen"],
 		char: "🔏",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "locked with key",
@@ -11671,8 +10377,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["closed","key","lock","secure","security","privacy","closed_lock_with_key","locked_with_key"],
 		char: "🔐",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "key",
@@ -11680,8 +10385,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["lock","password","closing","door","key"],
 		char: "🔑",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "old key",
@@ -11689,8 +10393,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clue","key","lock","old","door","password","old_key"],
 		char: "🗝️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "hammer",
@@ -11698,8 +10401,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["tool","toolbox","metal","wood","tools","build","create","hammer"],
 		char: "🔨",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "axe",
@@ -11707,8 +10409,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["chop","hatchet","split","wood","axe","tool","cut"],
 		char: "🪓",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "pick",
@@ -11716,8 +10417,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["mining","tool","weapon","tools","dig","pick"],
 		char: "⛏️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "hammer and pick",
@@ -11725,8 +10425,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hammer","pick","tool","tools","build","create","hammer_and_pick"],
 		char: "⚒️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "hammer and wrench",
@@ -11734,8 +10433,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hammer","spanner","tool","wrench","craft mans","logo","tools","build","create","hammer_and_wrench"],
 		char: "🛠️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "dagger",
@@ -11743,8 +10441,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["knife","weapon","metal","dagger"],
 		char: "🗡️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "crossed swords",
@@ -11752,8 +10449,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["crossed","swords","weapon","crossed_swords"],
 		char: "⚔️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "water pistol",
@@ -11761,8 +10457,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["gun","handgun","pistol","revolver","tool","water","weapon","violence"],
 		char: "🔫",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "boomerang",
@@ -11770,8 +10465,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["australia","rebound","repercussion","boomerang","weapon"],
 		char: "🪃",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "bow and arrow",
@@ -11779,8 +10473,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["archer","arrow","bow","sagittarius","zodiac","sports","bow_and_arrow"],
 		char: "🏹",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "shield",
@@ -11788,8 +10481,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["weapon","protection","fight","middle ages","security","shield"],
 		char: "🛡️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "carpentry saw",
@@ -11797,8 +10489,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["carpenter","lumber","saw","tool","carpentry_saw","carpentry saw","cut","chop"],
 		char: "🪚",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "wrench",
@@ -11806,8 +10497,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["spanner","tool","toolbox","silver","tools","diy","ikea","fix","maintainer","wrench"],
 		char: "🔧",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "screwdriver",
@@ -11815,8 +10505,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["screw","tool","screwdriver","tools"],
 		char: "🪛",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "nut and bolt",
@@ -11824,8 +10513,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bolt","nut","tool","handy","tools","fix","nut_and_bolt"],
 		char: "🔩",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "gear",
@@ -11833,8 +10521,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cog","cogwheel","tool","metal","silver","gear"],
 		char: "⚙️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "clamp",
@@ -11842,8 +10529,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["compress","tool","vice","toolbox","compression","clamp"],
 		char: "🗜️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "balance scale",
@@ -11851,8 +10537,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["balance","justice","libra","scale","zodiac","silver","scales","law","fairness","weight","balance_scale"],
 		char: "⚖️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "white cane",
@@ -11860,8 +10545,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["accessibility","blind","probing_cane","white_cane"],
 		char: "🦯",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "link",
@@ -11869,8 +10553,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["link","silver","rings","url"],
 		char: "🔗",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "chains",
@@ -11878,8 +10561,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["chain","metal","silver","lock","arrest","chains"],
 		char: "⛓️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "hook",
@@ -11887,8 +10569,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["catch","crook","curve","ensnare","selling point","fishing","hook","tools"],
 		char: "🪝",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "toolbox",
@@ -11896,8 +10577,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["chest","mechanic","tool","toolbox","tools","diy","fix","maintainer"],
 		char: "🧰",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "magnet",
@@ -11905,8 +10585,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["attraction","horseshoe","magnetic","magnet"],
 		char: "🧲",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "ladder",
@@ -11914,8 +10593,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["climb","rung","step","ladder","tools"],
 		char: "🪜",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "alembic",
@@ -11923,8 +10601,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["chemistry","tool","distilling","science","experiment","alembic"],
 		char: "⚗️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "test tube",
@@ -11932,8 +10609,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["chemist","chemistry","experiment","lab","science","test_tube"],
 		char: "🧪",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "petri dish",
@@ -11941,8 +10617,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bacteria","biologist","biology","culture","lab","petri_dish"],
 		char: "🧫",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "dna",
@@ -11950,8 +10625,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["biologist","evolution","gene","genetics","life","dna","double_helix"],
 		char: "🧬",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "microscope",
@@ -11959,8 +10633,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["science","tool","laboratory","experiment","zoomin","study","microscope"],
 		char: "🔬",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "telescope",
@@ -11968,8 +10641,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["science","tool","stars","sky","space","zoom","astronomy","telescope"],
 		char: "🔭",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "satellite antenna",
@@ -11977,8 +10649,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["antenna","dish","satellite","signal","receive","radiation","communication","future","radio","space","satellite_antenna"],
 		char: "📡",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "syringe",
@@ -11986,8 +10657,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["medicine","needle","shot","sick","health","injection","IV","drug","hospital","drugs","blood","doctor","nurse","syringe"],
 		char: "💉",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "drop of blood",
@@ -11995,8 +10665,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bleed","blood donation","injury","medicine","menstruation","drop_of_blood","period","hurt","harm","wound"],
 		char: "🩸",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "pill",
@@ -12004,8 +10673,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["doctor","medicine","sick","health","pharmacy","drug","pill"],
 		char: "💊",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "adhesive bandage",
@@ -12013,8 +10681,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bandage","adhesive_bandage","bandaid","heal"],
 		char: "🩹",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "crutch",
@@ -12022,8 +10689,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cane","disability","hurt","mobility aid","stick","crutch","accessibility","assist"],
 		char: "🩼",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "stethoscope",
@@ -12031,8 +10697,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["doctor","heart","medicine","stethoscope","health"],
 		char: "🩺",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "x-ray",
@@ -12040,8 +10705,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bones","doctor","medical","skeleton","x-ray","xray","medicine"],
 		char: "🩻",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "door",
@@ -12049,8 +10713,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["door","house","entry","exit"],
 		char: "🚪",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "elevator",
@@ -12058,8 +10721,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["accessibility","hoist","lift","elevator"],
 		char: "🛗",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "mirror",
@@ -12067,8 +10729,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["reflection","reflector","speculum","mirror"],
 		char: "🪞",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "window",
@@ -12076,8 +10737,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["frame","fresh air","opening","transparent","view","window","scenery"],
 		char: "🪟",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "bed",
@@ -12085,8 +10745,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hotel","sleep","furniture","rest","bed"],
 		char: "🛏️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "couch and lamp",
@@ -12094,8 +10753,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["couch","hotel","lamp","furniture","read","chill","couch_and_lamp"],
 		char: "🛋️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "chair",
@@ -12103,8 +10761,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["seat","sit","chair","furniture"],
 		char: "🪑",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "toilet",
@@ -12112,8 +10769,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["toilet","restroom","wc","washroom","bathroom","potty"],
 		char: "🚽",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "plunger",
@@ -12121,8 +10777,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["force cup","plumber","suction","toilet","plunger"],
 		char: "🪠",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "shower",
@@ -12130,8 +10785,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["water","wash","clean","bathroom","shower"],
 		char: "🚿",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "bathtub",
@@ -12139,8 +10793,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bath","wash","water","foam","clean","shower","bathroom","bathtub"],
 		char: "🛁",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "mouse trap",
@@ -12148,8 +10801,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bait","mousetrap","snare","trap","isometric","mouse_trap","mouse trap","cheese"],
 		char: "🪤",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "razor",
@@ -12157,8 +10809,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["sharp","shave","razor","cut"],
 		char: "🪒",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "lotion bottle",
@@ -12166,8 +10817,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["lotion","moisturizer","shampoo","sunscreen","lotion_bottle"],
 		char: "🧴",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "safety pin",
@@ -12175,8 +10825,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["diaper","punk rock","safety_pin"],
 		char: "🧷",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "broom",
@@ -12184,8 +10833,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cleaning","sweeping","witch","broom"],
 		char: "🧹",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "basket",
@@ -12193,8 +10841,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["farming","laundry","picnic","basket"],
 		char: "🧺",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "roll of paper",
@@ -12202,8 +10849,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["paper towels","toilet paper","isometric","roll_of_paper","toilet_paper","roll"],
 		char: "🧻",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "bucket",
@@ -12211,8 +10857,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cask","pail","vat","bucket","water","container"],
 		char: "🪣",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "soap",
@@ -12220,8 +10865,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bar","bathing","cleaning","lather","soapdish","soap"],
 		char: "🧼",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "bubbles",
@@ -12229,8 +10873,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["burp","clean","soap","underwater","bubbles","fun","carbonation","sparkling"],
 		char: "🫧",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "toothbrush",
@@ -12238,8 +10881,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bathroom","brush","clean","dental","hygiene","teeth","toothbrush"],
 		char: "🪥",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "sponge",
@@ -12247,8 +10889,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["absorbing","cleaning","porous","sponge"],
 		char: "🧽",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "fire extinguisher",
@@ -12256,8 +10897,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["extinguish","fire","quench","fire_extinguisher"],
 		char: "🧯",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "shopping cart",
@@ -12265,8 +10905,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cart","shopping","trolley","shopping_cart"],
 		char: "🛒",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "cigarette",
@@ -12274,8 +10913,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["smoking","tobacco","smoke","kills","joint","cigarette"],
 		char: "🚬",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "coffin",
@@ -12283,8 +10921,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["death","funeral","dead","vampire","die","rip","graveyard","cemetery","casket","box","coffin"],
 		char: "⚰️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "headstone",
@@ -12292,8 +10929,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cemetery","grave","graveyard","tombstone","headstone","death","rip"],
 		char: "🪦",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "funeral urn",
@@ -12301,8 +10937,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ashes","death","funeral","urn","dead","die","rip","funeral_urn"],
 		char: "⚱️",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "moai",
@@ -12310,8 +10945,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["face","moyai","statue","shibuya","japan","meet","meeting point","rock","easter","island","moai","easter island"],
 		char: "🗿",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "placard",
@@ -12319,8 +10953,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["demonstration","picket","protest","sign","placard","announcement"],
 		char: "🪧",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "identification card",
@@ -12328,8 +10961,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["credentials","id","license","security","id_card","identification card","document"],
 		char: "🪪",
 		skinTones: [:],
-		category: "objects",
-	),
+		category: "objects"),
 
 	Emoji(
 		id: "ATM sign",
@@ -12337,8 +10969,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["atm","atm sign","automated","bank","teller","money","sales","cash","blue","square","payment","atm_sign","blue-square"],
 		char: "🏧",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "litter in bin sign",
@@ -12346,8 +10977,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["litter","litter bin","trash","bin","garbage","can","throw","away","put","its","place","blue","square","human","info","litter_bin","put_litter_in_its_place","litter_in_bin_sign","blue-square","sign"],
 		char: "🚮",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "potable water",
@@ -12355,8 +10985,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["drinking","potable","water","faucet","tap","glass","blue","square","liquid","restroom","cleaning","potable_water","blue-square"],
 		char: "🚰",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "wheelchair symbol",
@@ -12364,8 +10993,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["access","disabled person","wheel chair","toilet","restroom","blue","square","disabled","accessibility","handicapped","wheelchair","wheelchair_symbol","blue-square"],
 		char: "♿️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "men’s room",
@@ -12373,8 +11001,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bathroom","lavatory","man","restroom","toilet","wc","guy","dude","male","mens","men","s","blue","square","gender","men_s_room","blue-square"],
 		char: "🚹️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "women’s room",
@@ -12382,8 +11009,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bathroom","lavatory","restroom","toilet","wc","woman","female","chick","women","womens","s","purple","square","loo","gender","women_s_room","purple-square"],
 		char: "🚺️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "restroom",
@@ -12391,8 +11017,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bathroom","lavatory","toilet","wc","unisex","restroom","male","woman","female","blue","square","refresh","gender","blue-square"],
 		char: "🚻",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "baby symbol",
@@ -12400,8 +11025,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["baby","changing","station","restroom","toilet","orange","square","child","baby_symbol","orange-square"],
 		char: "🚼️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "water closet",
@@ -12409,8 +11033,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bathroom","closet","lavatory","restroom","toilet","water","wc","WC","blue","square","water_closet","blue-square"],
 		char: "🚾",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "passport control",
@@ -12418,8 +11041,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["control","passport","custom","blue","square","passport_control","blue-square"],
 		char: "🛂",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "customs",
@@ -12427,8 +11049,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["customs","passport","border","blue","square","blue-square"],
 		char: "🛃",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "baggage claim",
@@ -12436,8 +11057,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["baggage","claim","blue","square","airport","transport","baggage_claim","blue-square"],
 		char: "🛄",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "left luggage",
@@ -12445,8 +11065,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["baggage","locker","luggage","blue","square","travel","left_luggage","blue-square"],
 		char: "🛅",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "warning",
@@ -12454,8 +11073,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["warning","exclamation","wip","alert","error","problem","issue"],
 		char: "⚠️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "children crossing",
@@ -12463,8 +11081,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["child","crossing","pedestrian","traffic","school","warning","danger","sign","driving","yellow","diamond","children_crossing","yellow-diamond"],
 		char: "🚸",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "no entry",
@@ -12472,8 +11089,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["entry","forbidden","no","not","prohibited","traffic","limit","security","privacy","bad","denied","stop","circle","no_entry"],
 		char: "⛔️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "prohibited",
@@ -12481,8 +11097,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["entry","forbidden","no","not","sign","forbid","stop","limit","denied","disallow","circle","no_entry_sign","prohibited"],
 		char: "🚫",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "no bicycles",
@@ -12490,8 +11105,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bicycle","bike","forbidden","no","prohibited","cyclist","circle","no_bicycles"],
 		char: "🚳",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "no smoking",
@@ -12499,8 +11113,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["forbidden","no","not","prohibited","smoking","cigarette","blue","square","smell","smoke","no_smoking","blue-square"],
 		char: "🚭️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "no littering",
@@ -12508,8 +11121,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["forbidden","litter","no","not","prohibited","do","trash","bin","garbage","circle","do_not_litter","no_littering"],
 		char: "🚯",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "non-potable water",
@@ -12517,8 +11129,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["non-drinking","non-potable","water","non","potable","drink","faucet","tap","circle","non-potable_water","non_potable_water"],
 		char: "🚱",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "no pedestrians",
@@ -12526,8 +11137,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["forbidden","no","not","pedestrian","prohibited","rules","crossing","walking","circle","no_pedestrians"],
 		char: "🚷",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "no mobile phones",
@@ -12535,8 +11145,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cell","forbidden","mobile","no","phone","iphone","mute","circle","no_mobile_phones"],
 		char: "📵",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "no one under eighteen",
@@ -12544,8 +11153,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["18","age restriction","eighteen","prohibited","underage","drink","pub","night","minor","circle","no_one_under_18","no_one_under_eighteen"],
 		char: "🔞",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "radioactive",
@@ -12553,8 +11161,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["sign","nuclear","danger","radioactive"],
 		char: "☢️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "biohazard",
@@ -12562,8 +11169,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["sign","danger","biohazard"],
 		char: "☣️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "up arrow",
@@ -12571,8 +11177,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","cardinal","direction","north","up","above","blue","square","continue","top","arrow_up","up_arrow","blue-square"],
 		char: "⬆️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "up-right arrow",
@@ -12580,8 +11185,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","direction","intercardinal","northeast","diagonal","right up","upper","right","up","blue","square","point","arrow_upper_right","up_right_arrow","blue-square"],
 		char: "↗️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "right arrow",
@@ -12589,8 +11193,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","cardinal","direction","east","right","soon","future","blue","square","next","arrow_right","right_arrow","blue-square"],
 		char: "➡️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "down-right arrow",
@@ -12598,8 +11201,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","direction","intercardinal","southeast","diagonal","right down","lower","right","down","blue","square","arrow_lower_right","down_right_arrow","blue-square"],
 		char: "↘️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "down arrow",
@@ -12607,8 +11209,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","cardinal","direction","down","south","underneath","blue","square","bottom","arrow_down","down_arrow","blue-square"],
 		char: "⬇️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "down-left arrow",
@@ -12616,8 +11217,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","direction","intercardinal","southwest","diagonal","left down","lower","left","down","blue","square","arrow_lower_left","down_left_arrow","blue-square"],
 		char: "↙️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "left arrow",
@@ -12625,8 +11225,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","cardinal","direction","west","left","past","blue","square","previous","back","arrow_left","left_arrow","blue-square"],
 		char: "⬅️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "up-left arrow",
@@ -12634,8 +11233,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","direction","intercardinal","northwest","diagonal","left up","upper","left","up","blue","square","point","arrow_upper_left","up_left_arrow","blue-square"],
 		char: "↖️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "up-down arrow",
@@ -12643,8 +11241,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","directions","opposite","up and down","blue","square","direction","way","vertical","arrow_up_down","up_down_arrow","blue-square"],
 		char: "↕️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "left-right arrow",
@@ -12652,8 +11249,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","directions","opposite","left and right","shape","direction","horizontal","sideways","left_right_arrow"],
 		char: "↔️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "right arrow curving left",
@@ -12661,8 +11257,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","directions","turn around","leftwards","with","hook","back","return","blue","square","undo","enter","arrow_left_hook","leftwards_arrow_with_hook","right_arrow_curving_left","blue-square"],
 		char: "↩️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "left arrow curving right",
@@ -12670,8 +11265,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","directions","turn around","hook","blue","square","return","rotate","direction","arrow_right_hook","rightwards_arrow_with_hook","left_arrow_curving_right","blue-square"],
 		char: "↪️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "right arrow curving up",
@@ -12679,8 +11273,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","direction","curve up","heading","blue","square","top","arrow_heading_up","right_arrow_curving_up","blue-square"],
 		char: "⤴️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "right arrow curving down",
@@ -12688,8 +11281,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","down","direction","curve down","heading","blue","square","bottom","arrow_heading_down","right_arrow_curving_down","blue-square"],
 		char: "⤵️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "clockwise vertical arrows",
@@ -12697,8 +11289,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","clockwise","reload","sync","cycle","round","repeat","arrows_clockwise","clockwise_vertical_arrows"],
 		char: "🔃",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "counterclockwise arrows button",
@@ -12706,8 +11297,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["anticlockwise","arrow","counterclockwise","withershins","cycle","blue","square","sync","arrows_counterclockwise","counterclockwise_arrows_button","blue-square"],
 		char: "🔄",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "BACK arrow",
@@ -12715,8 +11305,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","back","words","return","back_arrow"],
 		char: "🔙",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "END arrow",
@@ -12724,8 +11313,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","end","words","end_arrow"],
 		char: "🔚",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "ON! arrow",
@@ -12733,8 +11321,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","mark","on","on!","words","on_arrow"],
 		char: "🔛",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "SOON arrow",
@@ -12742,8 +11329,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","soon","words","soon_arrow"],
 		char: "🔜",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "TOP arrow",
@@ -12751,8 +11337,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","top","up","words","blue","square","top_arrow","blue-square"],
 		char: "🔝",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "place of worship",
@@ -12760,8 +11345,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["religion","worship","pray","church","temple","prayer","place_of_worship"],
 		char: "🛐",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "atom symbol",
@@ -12769,8 +11353,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["atheist","atom","science","physics","chemistry","atom_symbol"],
 		char: "⚛️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "om",
@@ -12778,8 +11361,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hindu","religion","symbol","hinduism","buddhism","sikhism","jainism","om"],
 		char: "🕉️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "star of David",
@@ -12787,8 +11369,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["david","jew","jewish","religion","star","star of david","judaism","star_of_david"],
 		char: "✡️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "wheel of dharma",
@@ -12796,8 +11377,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["buddhist","dharma","religion","wheel","hinduism","buddhism","sikhism","jainism","wheel_of_dharma"],
 		char: "☸️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "yin yang",
@@ -12805,8 +11385,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["religion","tao","taoist","yang","yin","balance","yin_yang"],
 		char: "☯️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "latin cross",
@@ -12814,8 +11393,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["christian","cross","religion","christianity","latin_cross"],
 		char: "✝️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "orthodox cross",
@@ -12823,8 +11401,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["christian","cross","religion","suppedaneum","orthodox_cross"],
 		char: "☦️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "star and crescent",
@@ -12832,8 +11409,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["islam","muslim","religion","star_and_crescent"],
 		char: "☪️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "peace symbol",
@@ -12841,8 +11417,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["peace","hippie","peace_symbol"],
 		char: "☮️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "menorah",
@@ -12850,8 +11425,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["candelabrum","candlestick","religion","with","nine","branches","hanukkah","candles","jewish","menorah"],
 		char: "🕎",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "dotted six-pointed star",
@@ -12859,8 +11433,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fortune","star","six","pointed","purple","square","religion","jewish","hexagram","six_pointed_star","dotted_six_pointed_star","purple-square"],
 		char: "🔯",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Aries",
@@ -12868,8 +11441,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["aries","ram","zodiac","sign","purple","square","astrology","purple-square"],
 		char: "♈️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Taurus",
@@ -12877,8 +11449,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bull","ox","taurus","zodiac","purple","square","sign","astrology","purple-square"],
 		char: "♉️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Gemini",
@@ -12886,8 +11457,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["gemini","twins","zodiac","sign","purple","square","astrology","purple-square"],
 		char: "♊️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Cancer",
@@ -12895,8 +11465,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cancer","crab","zodiac","sign","purple","square","astrology","purple-square"],
 		char: "♋️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Leo",
@@ -12904,8 +11473,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["leo","lion","zodiac","sign","purple","square","astrology","purple-square"],
 		char: "♌️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Virgo",
@@ -12913,8 +11481,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["virgo","zodiac","sign","purple","square","astrology","purple-square"],
 		char: "♍️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Libra",
@@ -12922,8 +11489,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["balance","justice","libra","scales","zodiac","sign","purple","square","astrology","purple-square"],
 		char: "♎️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Scorpio",
@@ -12931,8 +11497,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["scorpio","scorpion","scorpius","zodiac","sign","purple","square","astrology","purple-square"],
 		char: "♏️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Sagittarius",
@@ -12940,8 +11505,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["archer","sagittarius","zodiac","sign","purple","square","astrology","purple-square"],
 		char: "♐️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Capricorn",
@@ -12949,8 +11513,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["capricorn","goat","zodiac","sign","purple","square","astrology","purple-square"],
 		char: "♑️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Aquarius",
@@ -12958,8 +11521,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["aquarius","bearer","water","zodiac","sign","purple","square","astrology","purple-square"],
 		char: "♒️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Pisces",
@@ -12967,8 +11529,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fish","pisces","zodiac","purple","square","sign","astrology","purple-square"],
 		char: "♓️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Ophiuchus",
@@ -12976,8 +11537,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bearer","ophiuchus","serpent","snake","zodiac","sign","purple","square","constellation","astrology","purple-square"],
 		char: "⛎",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "shuffle tracks button",
@@ -12985,8 +11545,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","crossed","random","twisted","rightwards","arrows","blue","square","music","shuffle","twisted_rightwards_arrows","shuffle_tracks_button","blue-square"],
 		char: "🔀",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "repeat button",
@@ -12994,8 +11553,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","clockwise","repeat","cycle","loop","record","repeat_button"],
 		char: "🔁",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "repeat single button",
@@ -13003,8 +11561,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","clockwise","once","one","blue","square","loop","repeat_one","repeat_single_button","blue-square"],
 		char: "🔂",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "play button",
@@ -13012,8 +11569,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","play","right","triangle","forward","blue","square","direction","arrow_forward","play_button","blue-square"],
 		char: "▶️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "fast-forward button",
@@ -13021,8 +11577,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","double","fast","forward","blue","square","play","speed","continue","fast_forward","fast_forward_button","blue-square"],
 		char: "⏩️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "next track button",
@@ -13030,8 +11585,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","next scene","next track","triangle","black","right","pointing","double","with","vertical","bar","forward","blue","square","next_track","next_track_button","next","blue-square"],
 		char: "⏭️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "play or pause button",
@@ -13039,8 +11593,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","pause","play","right","triangle","black","pointing","with","double","vertical","bar","blue","square","play_pause","play_or_pause_button","blue-square"],
 		char: "⏯️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "reverse button",
@@ -13048,8 +11601,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","left","reverse","triangle","backward","blue","square","direction","arrow_backward","reverse_button","blue-square"],
 		char: "◀️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "fast reverse button",
@@ -13057,8 +11609,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","double","rewind","play","blue","square","fast_reverse","fast_reverse_button","blue-square"],
 		char: "⏪️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "last track button",
@@ -13066,8 +11617,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","previous scene","previous track","triangle","black","left","pointing","double","with","vertical","bar","backward","previous_track","last_track_button"],
 		char: "⏮️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "upwards button",
@@ -13075,8 +11625,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","button","red","improve","up","small","blue","square","triangle","direction","point","forward","top","arrow_up_small","upwards_button","blue-square"],
 		char: "🔼",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "fast up button",
@@ -13084,8 +11633,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","double","blue","square","direction","top","arrow_double_up","fast_up","fast_up_button","blue-square"],
 		char: "⏫",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "downwards button",
@@ -13093,8 +11641,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","button","down","red","decline","decrease","small","blue","square","direction","bottom","arrow_down_small","downwards_button","blue-square"],
 		char: "🔽",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "fast down button",
@@ -13102,8 +11649,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow","double","down","blue","square","direction","bottom","arrow_double_down","fast_down","fast_down_button","blue-square"],
 		char: "⏬",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "pause button",
@@ -13111,8 +11657,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bar","double","pause","vertical","blue","square","pause_button","blue-square"],
 		char: "⏸️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "stop button",
@@ -13120,8 +11665,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["square","stop","black","for","blue","stop_button","blue-square"],
 		char: "⏹️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "record button",
@@ -13129,8 +11673,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["circle","record","black","for","blue","square","record_button","blue-square"],
 		char: "⏺️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "eject button",
@@ -13138,8 +11681,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["eject","blue","square","eject_button","blue-square"],
 		char: "⏏️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "cinema",
@@ -13147,8 +11689,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["camera","film","movie","blue","square","record","curtain","stage","theater","cinema","blue-square"],
 		char: "🎦",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "dim button",
@@ -13156,8 +11697,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["brightness","dim","low","sun","afternoon","warm","summer","dim_button","low_brightness"],
 		char: "🔅",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "bright button",
@@ -13165,8 +11705,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bright","brightness","high","sun","light","bright_button","high_brightness"],
 		char: "🔆",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "antenna bars",
@@ -13174,8 +11713,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["antenna","bar","cell","mobile","phone","signal","strength","blue","square","reception","internet","connection","wifi","bluetooth","antenna_bars","signal_strength","blue-square","bars"],
 		char: "📶",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "vibration mode",
@@ -13183,8 +11721,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cell","mobile","mode","phone","telephone","vibration","silent mode","orange","square","vibration_mode","orange-square"],
 		char: "📳",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "mobile phone off",
@@ -13192,8 +11729,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cell","mobile","off","phone","telephone","caos","mute","orange","square","silence","quiet","mobile_phone_off","orange-square"],
 		char: "📴",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "female sign",
@@ -13201,8 +11737,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["woman","sign","gender","female","female_sign","women","lady","girl"],
 		char: "♀️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "male sign",
@@ -13210,8 +11745,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["man","sign","gender","male","male_sign","boy","men"],
 		char: "♂️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "transgender symbol",
@@ -13219,8 +11753,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["transgender","LGBT","trans","queer","gender","transgender_symbol","transgender symbol","lgbtq"],
 		char: "⚧️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "multiply",
@@ -13228,8 +11761,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cancel","multiplication","sign","x","×","wrong","heavy","math","calculation","multiply","multiplication_sign"],
 		char: "✖️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "plus",
@@ -13237,8 +11769,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["+","math","sign","plus","heavy","calculation","addition","more","increase","plus_sign"],
 		char: "➕",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "minus",
@@ -13246,8 +11777,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["-","math","sign","−","minus","heavy","calculation","subtract","less","minus_sign"],
 		char: "➖",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "divide",
@@ -13255,8 +11785,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["division","math","sign","÷","heavy","calculation","divide","division_sign"],
 		char: "➗",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "heavy equals sign",
@@ -13264,8 +11793,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["equality","math","heavy_equals_sign","heavy equals sign"],
 		char: "🟰",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "infinity",
@@ -13273,8 +11801,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["forever","unbounded","universal","infinity"],
 		char: "♾️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "double exclamation mark",
@@ -13282,8 +11809,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["!","!!","bangbang","exclamation","mark","surprise","double_exclamation","double_exclamation_mark"],
 		char: "‼️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "exclamation question mark",
@@ -13291,8 +11817,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["!","!?","?","exclamation","interrobang","mark","punctuation","question","wat","surprise","exclamation_question","exclamation_question_mark"],
 		char: "⁉️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "red question mark",
@@ -13300,8 +11825,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["?","mark","punctuation","question","doubt","confused","question_mark"],
 		char: "❓️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "white question mark",
@@ -13309,8 +11833,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["?","mark","outlined","punctuation","question","white","grey","doubts","gray","huh","confused","white_question","white_question_mark"],
 		char: "❔",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "white exclamation mark",
@@ -13318,8 +11841,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["!","exclamation","mark","outlined","punctuation","white","grey","surprise","gray","wow","warning","white_exclamation","white_exclamation_mark"],
 		char: "❕",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "red exclamation mark",
@@ -13327,8 +11849,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["!","exclamation","mark","punctuation","heavy","danger","surprise","wow","warning","exclamation_mark","heavy_exclamation_mark"],
 		char: "❗️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "wavy dash",
@@ -13336,8 +11857,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["dash","punctuation","wavy","draw","line","moustache","mustache","squiggle","scribble","wavy_dash"],
 		char: "〰️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "currency exchange",
@@ -13345,8 +11865,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bank","currency","exchange","money","sales","dollar","travel","currency_exchange"],
 		char: "💱",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "heavy dollar sign",
@@ -13354,8 +11873,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["currency","dollar","money","sales","payment","buck","heavy_dollar_sign"],
 		char: "💲",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "medical symbol",
@@ -13363,8 +11881,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["aesculapius","medicine","staff","medical","medical_symbol","health","hospital"],
 		char: "⚕️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "recycling symbol",
@@ -13372,8 +11889,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["recycle","nature","arrow","environment","garbage","trash","recycling_symbol"],
 		char: "♻️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "fleur-de-lis",
@@ -13381,8 +11897,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fleur-de-lis","fleur","de","lis","decorative","scout","fleur_de_lis"],
 		char: "⚜️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "trident emblem",
@@ -13390,8 +11905,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["anchor","emblem","ship","tool","trident","weapon","spear","trident_emblem"],
 		char: "🔱",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "name badge",
@@ -13399,8 +11913,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["badge","name","fire","forbid","name_badge"],
 		char: "📛",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Japanese symbol for beginner",
@@ -13408,8 +11921,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["beginner","chevron","japanese","japanese symbol for beginner","leaf","badge","shield","japanese_symbol_for_beginner"],
 		char: "🔰",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "hollow red circle",
@@ -13417,8 +11929,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["circle","large","o","red","round","hollow_red_circle","red_o"],
 		char: "⭕️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "check mark button",
@@ -13426,8 +11937,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["button","check","mark","✓","white","right","green","square","ok","agree","vote","election","answer","tick","check_mark_button","white_check_mark","green-square"],
 		char: "✅",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "check box with check",
@@ -13435,8 +11945,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["box","check","✓","right","ballot","ok","agree","confirm","black","square","vote","election","yes","tick","ballot_box_with_check","check_box_with_check","black-square"],
 		char: "☑️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "check mark",
@@ -13444,8 +11953,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["check","mark","✓","right","todo","heavy","ok","nike","answer","yes","tick","check_mark","heavy_check_mark"],
 		char: "✔️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "cross mark",
@@ -13453,8 +11961,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cancel","cross","mark","multiplication","multiply","x","×","wrong","no","delete","remove","red","cross_mark"],
 		char: "❌",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "cross mark button",
@@ -13462,8 +11969,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["mark","square","x","×","button","negative","squared","green","no","deny","cross_mark_button","negative_squared_cross_mark","green-square"],
 		char: "❎",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "curly loop",
@@ -13471,8 +11977,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["curl","loop","scribble","draw","shape","squiggle","curly_loop"],
 		char: "➰",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "double curly loop",
@@ -13480,8 +11985,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["curl","double","loop","tape","cassette","double_curly_loop"],
 		char: "➿",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "part alternation mark",
@@ -13489,8 +11993,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["mark","part","graph","presentation","stats","business","economics","bad","part_alternation_mark"],
 		char: "〽️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "eight-spoked asterisk",
@@ -13498,8 +12001,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["*","asterisk","star","sparkle","green","square","eight_spoked_asterisk","green-square"],
 		char: "✳️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "eight-pointed star",
@@ -13507,8 +12009,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["*","star","eight","pointed","black","orange","square","shape","polygon","eight_pointed_black_star","eight_pointed_star","orange-square"],
 		char: "✴️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "sparkle",
@@ -13516,8 +12017,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["*","stars","green","square","awesome","good","fireworks","sparkle","green-square"],
 		char: "❇️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "copyright",
@@ -13525,8 +12025,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["c","copyright","sign","ip","license","circle","law","legal"],
 		char: "©️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "registered",
@@ -13534,8 +12033,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["r","registered","sign","alphabet","circle"],
 		char: "®️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "trade mark",
@@ -13543,8 +12041,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["mark","tm","trademark","brand","law","legal","trade_mark"],
 		char: "™️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "keycap: #",
@@ -13552,8 +12049,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["keycap","symbol","blue","square","twitter","hash","number_sign","keycap_","blue-square"],
 		char: "#️⃣",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "keycap: *",
@@ -13561,8 +12057,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["keycap","asterisk","keycap_","star"],
 		char: "*️⃣",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "keycap: 0",
@@ -13570,8 +12065,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["keycap","zero","numbers","blue","square","null","keycap_0","0","blue-square"],
 		char: "0️⃣",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "keycap: 1",
@@ -13579,8 +12073,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["keycap","one","blue","square","numbers","keycap_1","blue-square","1"],
 		char: "1️⃣",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "keycap: 2",
@@ -13588,8 +12081,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["keycap","two","numbers","prime","blue","square","keycap_2","2","blue-square"],
 		char: "2️⃣",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "keycap: 3",
@@ -13597,8 +12089,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["keycap","three","numbers","prime","blue","square","keycap_3","3","blue-square"],
 		char: "3️⃣",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "keycap: 4",
@@ -13606,8 +12097,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["keycap","four","numbers","blue","square","keycap_4","4","blue-square"],
 		char: "4️⃣",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "keycap: 5",
@@ -13615,8 +12105,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["keycap","five","numbers","blue","square","prime","keycap_5","5","blue-square"],
 		char: "5️⃣",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "keycap: 6",
@@ -13624,8 +12113,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["keycap","six","numbers","blue","square","keycap_6","6","blue-square"],
 		char: "6️⃣",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "keycap: 7",
@@ -13633,8 +12121,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["keycap","seven","numbers","blue","square","prime","keycap_7","7","blue-square"],
 		char: "7️⃣",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "keycap: 8",
@@ -13642,8 +12129,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["keycap","eight","blue","square","numbers","keycap_8","8","blue-square"],
 		char: "8️⃣",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "keycap: 9",
@@ -13651,8 +12137,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["keycap","nine","blue","square","numbers","keycap_9","blue-square","9"],
 		char: "9️⃣",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "keycap: 10",
@@ -13660,8 +12145,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["keycap","ten","numbers","blue","square","keycap_10","10","blue-square"],
 		char: "🔟",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "input latin uppercase",
@@ -13669,8 +12153,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["abcd","input","latin","letters","uppercase","alphabet","capital","words","blue","square","capital_abcd","input_latin_uppercase","blue-square"],
 		char: "🔠",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "input latin lowercase",
@@ -13678,8 +12161,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["abcd","input","latin","letters","lowercase","alphabet","blue","square","input_latin_lowercase","blue-square"],
 		char: "🔡",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "input numbers",
@@ -13687,8 +12169,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["1234","input","numbers","blue","square","input_numbers","blue-square"],
 		char: "🔢",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "input symbols",
@@ -13696,8 +12177,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["input","〒♪&%","ampersand","music","note","percentage","blue","square","percent","glyphs","characters","symbols","input_symbols","blue-square"],
 		char: "🔣",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "input latin letters",
@@ -13705,8 +12185,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["abc","alphabet","input","latin","letters","blue","square","input_latin_letters","blue-square"],
 		char: "🔤",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "A button (blood type)",
@@ -13714,8 +12193,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["a","a button (blood type)","blood type","red","square","alphabet","letter","a_blood","a_button","red-square"],
 		char: "🅰️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "AB button (blood type)",
@@ -13723,8 +12201,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ab","ab button (blood type)","blood type","button","red","square","alphabet","ab_blood","ab_button","red-square"],
 		char: "🆎",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "B button (blood type)",
@@ -13732,8 +12209,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["b","b button (blood type)","blood type","red","square","alphabet","letter","b_blood","b_button","red-square"],
 		char: "🅱️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "CL button",
@@ -13741,8 +12217,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cl","cl button","alphabet","words","red","square","cl_button","red-square"],
 		char: "🆑",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "COOL button",
@@ -13750,8 +12225,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cool","cool button","popular","nice","words","blue","square","cool_button","blue-square"],
 		char: "🆒",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "FREE button",
@@ -13759,8 +12233,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["free","free button","blue","square","words","free_button","blue-square"],
 		char: "🆓",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "information",
@@ -13768,8 +12241,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["i","advice","info","source","blue","square","alphabet","letter","information_source","information","blue-square"],
 		char: "ℹ️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "ID button",
@@ -13777,8 +12249,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["id","id button","identity","id card","purple","square","words","id_button","purple-square"],
 		char: "🆔",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "circled M",
@@ -13786,8 +12257,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["circle","circled m","m","alphabet","blue","letter","circled_m","blue-circle"],
 		char: "Ⓜ️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "NEW button",
@@ -13795,8 +12265,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["new","new button","modern","recent","blue","square","words","start","new_button","blue-square"],
 		char: "🆕",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "NG button",
@@ -13804,8 +12273,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ng","ng button","blue","square","words","shape","icon","ng_button","blue-square"],
 		char: "🆖",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "O button (blood type)",
@@ -13813,8 +12281,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["blood type","o","o button (blood type)","o2","alphabet","red","square","letter","o_blood","o_button","red-square"],
 		char: "🅾️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "OK button",
@@ -13822,8 +12289,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ok","ok button","okay","good","agree","yes","blue","square","ok_button","blue-square"],
 		char: "🆗",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "P button",
@@ -13831,8 +12297,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["p","p button","parking","place","drive","cars","blue","square","alphabet","letter","p_button","blue-square"],
 		char: "🅿️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "SOS button",
@@ -13840,8 +12305,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["help","sos","sos button","emergency","warning","red","square","words","911","sos_button","red-square"],
 		char: "🆘",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "UP! button",
@@ -13849,8 +12313,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["mark","up","up!","up! button","blue","square","above","high","up2","up_button","blue-square"],
 		char: "🆙",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "VS button",
@@ -13858,8 +12321,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["versus","vs","vs button","against","words","orange","square","vs_button","orange-square"],
 		char: "🆚",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Japanese “here” button",
@@ -13867,8 +12329,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["japanese","japanese “here” button","katakana","“here”","ココ","here","button","blue","square","destination","ja_here","koko","japanese_here_button","blue-square"],
 		char: "🈁",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Japanese “service charge” button",
@@ -13876,8 +12337,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["japanese","japanese “service charge” button","katakana","“service charge”","サ","service","charge","button","blue","square","ja_service_charge","japanese_service_charge_button","blue-square"],
 		char: "🈂️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Japanese “monthly amount” button",
@@ -13885,8 +12345,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ideograph","japanese","japanese “monthly amount” button","“monthly amount”","月","u6708","monthly","amount","chinese","month","moon","orange","square","kanji","ja_monthly_amount","japanese_monthly_amount_button","orange-square"],
 		char: "🈷️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Japanese “not free of charge” button",
@@ -13894,8 +12353,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ideograph","japanese","japanese “not free of charge” button","“not free of charge”","有","u6709","not","free","of","charge","button","orange","square","chinese","have","kanji","ja_not_free_of_carge","japanese_not_free_of_charge_button","orange-square"],
 		char: "🈶",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Japanese “reserved” button",
@@ -13903,8 +12361,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ideograph","japanese","japanese “reserved” button","“reserved”","指","u6307","reserved","chinese","point","green","square","kanji","ja_reserved","japanese_reserved_button","green-square"],
 		char: "🈯️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Japanese “bargain” button",
@@ -13912,8 +12369,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ideograph","japanese","japanese “bargain” button","“bargain”","得","advantage","bargain","chinese","kanji","obtain","get","circle","ideograph_advantage","ja_bargain","japanese_bargain_button"],
 		char: "🉐",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Japanese “discount” button",
@@ -13921,8 +12377,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ideograph","japanese","japanese “discount” button","“discount”","割","u5272","discount","cut","divide","chinese","kanji","pink","square","ja_discount","japanese_discount_button","pink-square"],
 		char: "🈹",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Japanese “free of charge” button",
@@ -13930,8 +12385,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ideograph","japanese","japanese “free of charge” button","“free of charge”","無","u7121","free","charge","nothing","chinese","kanji","orange","square","ja_free_of_charge","japanese_free_of_charge_button","orange-square"],
 		char: "🈚️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Japanese “prohibited” button",
@@ -13939,8 +12393,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ideograph","japanese","japanese “prohibited” button","“prohibited”","禁","u7981","prohibited","kanji","chinese","forbidden","limit","restricted","red","square","ja_prohibited","japanese_prohibited_button","red-square"],
 		char: "🈲",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Japanese “acceptable” button",
@@ -13948,8 +12401,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ideograph","japanese","japanese “acceptable” button","“acceptable”","可","acceptable","button","ok","good","chinese","kanji","agree","yes","orange","circle","accept","ja_acceptable","japanese_acceptable_button","orange-circle"],
 		char: "🉑",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Japanese “application” button",
@@ -13957,8 +12409,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ideograph","japanese","japanese “application” button","“application”","申","u7533","application","chinese","kanji","orange","square","ja_application","japanese_application_button","orange-square"],
 		char: "🈸",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Japanese “passing grade” button",
@@ -13966,8 +12417,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ideograph","japanese","japanese “passing grade” button","“passing grade”","合","u5408","passing","grade","chinese","join","kanji","red","square","ja_passing_grade","japanese_passing_grade_button","red-square"],
 		char: "🈴",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Japanese “vacancy” button",
@@ -13975,8 +12425,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ideograph","japanese","japanese “vacancy” button","“vacancy”","空","u7a7a","vacancy","kanji","chinese","empty","sky","blue","square","ja_vacancy","japanese_vacancy_button","blue-square"],
 		char: "🈳",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Japanese “congratulations” button",
@@ -13984,8 +12433,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ideograph","japanese","japanese “congratulations” button","“congratulations”","祝","compliments","congratulations","button","chinese","kanji","red","circle","ja_congratulations","japanese_congratulations_button","red-circle"],
 		char: "㊗️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Japanese “secret” button",
@@ -13993,8 +12441,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ideograph","japanese","japanese “secret” button","“secret”","秘","mysterious","button","privacy","chinese","sshh","kanji","red","circle","ja_secret","secret","japanese_secret_button","red-circle"],
 		char: "㊙️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Japanese “open for business” button",
@@ -14002,8 +12449,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ideograph","japanese","japanese “open for business” button","“open for business”","営","u55b6","open","for","business","button","opening","hours","orange","square","ja_open_for_business","japanese_open_for_business_button","opening hours","orange-square"],
 		char: "🈺",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "Japanese “no vacancy” button",
@@ -14011,8 +12457,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ideograph","japanese","japanese “no vacancy” button","“no vacancy”","満","u6e80","no","vacancy","full","chinese","red","square","kanji","ja_no_vacancy","japanese_no_vacancy_button","red-square"],
 		char: "🈵",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "red circle",
@@ -14020,8 +12465,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["circle","geometric","red","shape","error","danger","red_circle"],
 		char: "🔴",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "orange circle",
@@ -14029,8 +12473,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["circle","orange","orange_circle","round"],
 		char: "🟠",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "yellow circle",
@@ -14038,8 +12481,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["circle","yellow","yellow_circle","round"],
 		char: "🟡",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "green circle",
@@ -14047,8 +12489,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["circle","green","green_circle","round"],
 		char: "🟢",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "blue circle",
@@ -14056,8 +12497,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["blue","circle","geometric","large","shape","icon","button","blue_circle"],
 		char: "🔵",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "purple circle",
@@ -14065,8 +12505,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["circle","purple","purple_circle","round"],
 		char: "🟣",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "brown circle",
@@ -14074,8 +12513,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["brown","circle","brown_circle","round"],
 		char: "🟤",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "black circle",
@@ -14083,8 +12521,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["circle","geometric","shape","button","round","black_circle"],
 		char: "⚫️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "white circle",
@@ -14092,8 +12529,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["circle","geometric","shape","round","white_circle"],
 		char: "⚪️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "red square",
@@ -14101,8 +12537,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["red","square","red_square"],
 		char: "🟥",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "orange square",
@@ -14110,8 +12545,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["orange","square","orange_square"],
 		char: "🟧",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "yellow square",
@@ -14119,8 +12553,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["square","yellow","yellow_square"],
 		char: "🟨",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "green square",
@@ -14128,8 +12561,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["green","square","green_square"],
 		char: "🟩",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "blue square",
@@ -14137,8 +12569,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["blue","square","blue_square"],
 		char: "🟦",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "purple square",
@@ -14146,8 +12577,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["purple","square","purple_square"],
 		char: "🟪",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "brown square",
@@ -14155,8 +12585,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["brown","square","brown_square"],
 		char: "🟫",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "black large square",
@@ -14164,8 +12593,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["geometric","square","shape","icon","button","black_large_square"],
 		char: "⬛️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "white large square",
@@ -14173,8 +12601,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["geometric","square","shape","icon","stone","button","white_large_square"],
 		char: "⬜️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "black medium square",
@@ -14182,8 +12609,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["geometric","square","shape","button","icon","black_medium_square"],
 		char: "◼️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "white medium square",
@@ -14191,8 +12617,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["geometric","square","shape","stone","icon","white_medium_square"],
 		char: "◻️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "black medium-small square",
@@ -14200,8 +12625,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["geometric","square","icon","shape","button","black_medium_small_square"],
 		char: "◾️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "white medium-small square",
@@ -14209,8 +12633,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["geometric","square","shape","stone","icon","button","white_medium_small_square"],
 		char: "◽️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "black small square",
@@ -14218,8 +12641,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["geometric","square","shape","icon","black_small_square"],
 		char: "▪️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "white small square",
@@ -14227,8 +12649,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["geometric","square","shape","icon","white_small_square"],
 		char: "▫️",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "large orange diamond",
@@ -14236,8 +12657,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["diamond","geometric","orange","shape","jewel","gem","large_orange_diamond"],
 		char: "🔶",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "large blue diamond",
@@ -14245,8 +12665,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["blue","diamond","geometric","shape","jewel","gem","large_blue_diamond"],
 		char: "🔷",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "small orange diamond",
@@ -14254,8 +12673,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["diamond","geometric","orange","shape","jewel","gem","small_orange_diamond"],
 		char: "🔸",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "small blue diamond",
@@ -14263,8 +12681,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["blue","diamond","geometric","shape","jewel","gem","small_blue_diamond"],
 		char: "🔹",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "red triangle pointed up",
@@ -14272,8 +12689,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["geometric","red","arrow","small","shape","direction","top","small_red_triangle","red_triangle_pointed_up","up"],
 		char: "🔺",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "red triangle pointed down",
@@ -14281,8 +12697,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["down","geometric","red","arrow","small","shape","direction","bottom","small_red_triangle_down","red_triangle_pointed_down"],
 		char: "🔻",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "diamond with a dot",
@@ -14290,8 +12705,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["comic","diamond","geometric","inside","shape","jewel","blue","gem","crystal","fancy","diamond_shape_with_a_dot_inside","diamond_with_a_dot"],
 		char: "💠",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "radio button",
@@ -14299,8 +12713,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["button","geometric","radio","input","old","music","circle","radio_button"],
 		char: "🔘",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "white square button",
@@ -14308,8 +12721,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["button","geometric","outlined","square","shape","input","white_square_button"],
 		char: "🔳",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "black square button",
@@ -14317,8 +12729,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["button","geometric","square","shape","input","frame","black_square_button"],
 		char: "🔲",
 		skinTones: [:],
-		category: "symbols",
-	),
+		category: "symbols"),
 
 	Emoji(
 		id: "chequered flag",
@@ -14326,8 +12737,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["checkered","chequered","racing","black","white","grid","contest","finishline","race","gokart","checkered_flag","chequered_flag"],
 		char: "🏁",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "triangular flag",
@@ -14335,8 +12745,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["post","on","mark","milestone","place","triangular_flag","triangular_flag_on_post"],
 		char: "🚩",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "crossed flags",
@@ -14344,8 +12753,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["celebration","cross","crossed","japanese","nation","country","border","crossed_flags"],
 		char: "🎌",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "black flag",
@@ -14353,8 +12761,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["waving","pirate","black_flag"],
 		char: "🏴",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "white flag",
@@ -14362,8 +12769,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["waving","white","surrender","losing","loser","lost","give","up","fail","white_flag","give up"],
 		char: "🏳️",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "rainbow flag",
@@ -14371,8 +12777,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["pride","rainbow","color","rainbow_flag","flag","gay","lgbt","glbt","queer","homosexual","lesbian","bisexual","transgender"],
 		char: "🏳️‍🌈",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "transgender flag",
@@ -14380,8 +12785,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["flag","light blue","pink","transgender","white","LGBT","trans","queer","gender","transgender_flag","transgender flag","lgbtq"],
 		char: "🏳️‍⚧️",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "pirate flag",
@@ -14389,8 +12793,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["jolly roger","pirate","plunder","treasure","jolly_roger","pirate_flag","skull","crossbones","flag","banner"],
 		char: "🏴‍☠️",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Ascension Island",
@@ -14398,8 +12801,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["AC","flag","ascension_island","flag_ac","flag_ascension_island"],
 		char: "🇦🇨",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Andorra",
@@ -14407,8 +12809,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["AD","flag","andorra","flag_ad","flag_andorra","ad","nation","country","banner"],
 		char: "🇦🇩",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: United Arab Emirates",
@@ -14416,8 +12817,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["AE","flag","flag_ae","united_arab_emirates","flag_united_arab_emirates","united","arab","emirates","nation","country","banner"],
 		char: "🇦🇪",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Afghanistan",
@@ -14425,8 +12825,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["AF","flag","afghanistan","flag_af","flag_afghanistan","af","nation","country","banner"],
 		char: "🇦🇫",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Antigua & Barbuda",
@@ -14434,8 +12833,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["AG","flag","antigua_barbuda","flag_ag","flag_antigua_barbuda","antigua","barbuda","nation","country","banner"],
 		char: "🇦🇬",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Anguilla",
@@ -14443,8 +12841,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["AI","flag","anguilla","flag_ai","flag_anguilla","ai","nation","country","banner"],
 		char: "🇦🇮",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Albania",
@@ -14452,8 +12849,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["AL","flag","albania","flag_al","flag_albania","al","nation","country","banner"],
 		char: "🇦🇱",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Armenia",
@@ -14461,8 +12857,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["AM","flag","armenia","flag_am","flag_armenia","am","nation","country","banner"],
 		char: "🇦🇲",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Angola",
@@ -14470,8 +12865,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["AO","flag","angola","flag_ao","flag_angola","ao","nation","country","banner"],
 		char: "🇦🇴",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Antarctica",
@@ -14479,8 +12873,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["AQ","flag","antarctica","flag_aq","flag_antarctica","aq","nation","country","banner"],
 		char: "🇦🇶",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Argentina",
@@ -14488,8 +12881,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["AR","flag","argentina","flag_ar","flag_argentina","ar","nation","country","banner"],
 		char: "🇦🇷",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: American Samoa",
@@ -14497,8 +12889,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["AS","flag","american_samoa","flag_as","flag_american_samoa","american","ws","nation","country","banner"],
 		char: "🇦🇸",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Austria",
@@ -14506,8 +12897,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["AT","flag","austria","flag_at","flag_austria","at","nation","country","banner"],
 		char: "🇦🇹",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Australia",
@@ -14515,8 +12905,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["AU","flag","australia","flag_au","flag_australia","au","nation","country","banner"],
 		char: "🇦🇺",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Aruba",
@@ -14524,8 +12913,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["AW","flag","aruba","flag_aw","flag_aruba","aw","nation","country","banner"],
 		char: "🇦🇼",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Åland Islands",
@@ -14533,8 +12921,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["AX","flag","aland_islands","flag_ax","flag_aland_islands","Åland","islands","nation","country","banner"],
 		char: "🇦🇽",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Azerbaijan",
@@ -14542,8 +12929,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["AZ","flag","azerbaijan","flag_az","flag_azerbaijan","az","nation","country","banner"],
 		char: "🇦🇿",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Bosnia & Herzegovina",
@@ -14551,8 +12937,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["BA","flag","bosnia_herzegovina","flag_ba","flag_bosnia_herzegovina","bosnia","herzegovina","nation","country","banner"],
 		char: "🇧🇦",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Barbados",
@@ -14560,8 +12945,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["BB","flag","barbados","flag_bb","flag_barbados","bb","nation","country","banner"],
 		char: "🇧🇧",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Bangladesh",
@@ -14569,8 +12953,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["BD","flag","bangladesh","flag_bd","flag_bangladesh","bd","nation","country","banner"],
 		char: "🇧🇩",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Belgium",
@@ -14578,8 +12961,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["BE","flag","belgium","flag_be","flag_belgium","be","nation","country","banner"],
 		char: "🇧🇪",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Burkina Faso",
@@ -14587,8 +12969,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["BF","flag","burkina_faso","flag_bf","flag_burkina_faso","burkina","faso","nation","country","banner"],
 		char: "🇧🇫",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Bulgaria",
@@ -14596,8 +12977,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["BG","flag","bulgaria","flag_bg","flag_bulgaria","bg","nation","country","banner"],
 		char: "🇧🇬",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Bahrain",
@@ -14605,8 +12985,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["BH","flag","bahrain","flag_bh","flag_bahrain","bh","nation","country","banner"],
 		char: "🇧🇭",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Burundi",
@@ -14614,8 +12993,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["BI","flag","burundi","flag_bi","flag_burundi","bi","nation","country","banner"],
 		char: "🇧🇮",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Benin",
@@ -14623,8 +13001,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["BJ","flag","benin","flag_bj","flag_benin","bj","nation","country","banner"],
 		char: "🇧🇯",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: St. Barthélemy",
@@ -14632,8 +13009,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["BL","flag","flag_bl","st_barthelemy","flag_st_barthelemy","saint","barthélemy","nation","country","banner"],
 		char: "🇧🇱",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Bermuda",
@@ -14641,8 +13017,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["BM","flag","bermuda","flag_bm","flag_bermuda","bm","nation","country","banner"],
 		char: "🇧🇲",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Brunei",
@@ -14650,8 +13025,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["BN","flag","brunei","flag_bn","flag_brunei","bn","darussalam","nation","country","banner"],
 		char: "🇧🇳",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Bolivia",
@@ -14659,8 +13033,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["BO","flag","bolivia","flag_bo","flag_bolivia","bo","nation","country","banner"],
 		char: "🇧🇴",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Caribbean Netherlands",
@@ -14668,8 +13041,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["BQ","flag","caribbean_netherlands","flag_bq","flag_caribbean_netherlands","bonaire","nation","country","banner"],
 		char: "🇧🇶",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Brazil",
@@ -14677,8 +13049,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["BR","flag","brazil","flag_br","flag_brazil","br","nation","country","banner"],
 		char: "🇧🇷",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Bahamas",
@@ -14686,8 +13057,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["BS","flag","bahamas","flag_bs","flag_bahamas","bs","nation","country","banner"],
 		char: "🇧🇸",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Bhutan",
@@ -14695,8 +13065,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["BT","flag","bhutan","flag_bt","flag_bhutan","bt","nation","country","banner"],
 		char: "🇧🇹",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Bouvet Island",
@@ -14704,8 +13073,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["BV","flag","bouvet_island","flag_bv","flag_bouvet_island","norway"],
 		char: "🇧🇻",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Botswana",
@@ -14713,8 +13081,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["BW","flag","botswana","flag_bw","flag_botswana","bw","nation","country","banner"],
 		char: "🇧🇼",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Belarus",
@@ -14722,8 +13089,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["BY","flag","belarus","flag_by","flag_belarus","by","nation","country","banner"],
 		char: "🇧🇾",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Belize",
@@ -14731,8 +13097,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["BZ","flag","belize","flag_bz","flag_belize","bz","nation","country","banner"],
 		char: "🇧🇿",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Canada",
@@ -14740,8 +13105,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["CA","flag","canada","flag_ca","flag_canada","ca","nation","country","banner"],
 		char: "🇨🇦",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Cocos (Keeling) Islands",
@@ -14749,8 +13113,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["CC","flag","cocos_islands","flag_cc","flag_cocos_islands","cocos","keeling","islands","nation","country","banner"],
 		char: "🇨🇨",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Congo - Kinshasa",
@@ -14758,8 +13121,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["CD","flag","congo_kinshasa","flag_cd","flag_congo_kinshasa","congo","democratic","republic","nation","country","banner"],
 		char: "🇨🇩",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Central African Republic",
@@ -14767,8 +13129,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["CF","flag","central_african_republic","flag_cf","flag_central_african_republic","central","african","republic","nation","country","banner"],
 		char: "🇨🇫",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Congo - Brazzaville",
@@ -14776,8 +13137,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["CG","flag","congo_brazzaville","flag_cg","flag_congo_brazzaville","congo","nation","country","banner"],
 		char: "🇨🇬",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Switzerland",
@@ -14785,8 +13145,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["CH","flag","flag_ch","switzerland","flag_switzerland","ch","nation","country","banner"],
 		char: "🇨🇭",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Côte d’Ivoire",
@@ -14794,8 +13153,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["CI","flag","cote_divoire","flag_ci","flag_cote_d_ivoire","ivory","coast","nation","country","banner","cote_d_ivoire"],
 		char: "🇨🇮",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Cook Islands",
@@ -14803,8 +13161,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["CK","flag","cook_islands","flag_ck","flag_cook_islands","cook","islands","nation","country","banner"],
 		char: "🇨🇰",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Chile",
@@ -14812,8 +13169,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["CL","flag","chile","flag_cl","flag_chile","nation","country","banner"],
 		char: "🇨🇱",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Cameroon",
@@ -14821,8 +13177,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["CM","flag","cameroon","flag_cm","flag_cameroon","cm","nation","country","banner"],
 		char: "🇨🇲",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: China",
@@ -14830,8 +13185,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["CN","flag","cn","chinese","prc","country","nation","banner","china","flag_cn","flag_china"],
 		char: "🇨🇳",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Colombia",
@@ -14839,8 +13193,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["CO","flag","colombia","flag_co","flag_colombia","co","nation","country","banner"],
 		char: "🇨🇴",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Clipperton Island",
@@ -14848,8 +13201,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["CP","flag","clipperton_island","flag_cp","flag_clipperton_island"],
 		char: "🇨🇵",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Costa Rica",
@@ -14857,8 +13209,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["CR","flag","costa_rica","flag_cr","flag_costa_rica","costa","rica","nation","country","banner"],
 		char: "🇨🇷",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Cuba",
@@ -14866,8 +13217,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["CU","flag","cuba","flag_cu","flag_cuba","cu","nation","country","banner"],
 		char: "🇨🇺",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Cape Verde",
@@ -14875,8 +13225,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["CV","flag","cape_verde","flag_cv","flag_cape_verde","cabo","verde","nation","country","banner"],
 		char: "🇨🇻",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Curaçao",
@@ -14884,8 +13233,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["CW","flag","curacao","flag_cw","flag_curacao","curaçao","nation","country","banner"],
 		char: "🇨🇼",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Christmas Island",
@@ -14893,8 +13241,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["CX","flag","christmas_island","flag_cx","flag_christmas_island","christmas","island","nation","country","banner"],
 		char: "🇨🇽",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Cyprus",
@@ -14902,8 +13249,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["CY","flag","cyprus","flag_cy","flag_cyprus","cy","nation","country","banner"],
 		char: "🇨🇾",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Czechia",
@@ -14911,8 +13257,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["CZ","flag","czech_republic","czechia","flag_cz","flag_czechia","cz","nation","country","banner"],
 		char: "🇨🇿",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Germany",
@@ -14920,8 +13265,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["DE","flag","de","german","nation","country","banner","flag_de","germany","flag_germany"],
 		char: "🇩🇪",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Diego Garcia",
@@ -14929,8 +13273,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["DG","flag","diego_garcia","flag_dg","flag_diego_garcia"],
 		char: "🇩🇬",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Djibouti",
@@ -14938,8 +13281,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["DJ","flag","djibouti","flag_dj","flag_djibouti","dj","nation","country","banner"],
 		char: "🇩🇯",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Denmark",
@@ -14947,8 +13289,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["DK","flag","denmark","flag_dk","flag_denmark","dk","nation","country","banner"],
 		char: "🇩🇰",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Dominica",
@@ -14956,8 +13297,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["DM","flag","dominica","flag_dm","flag_dominica","dm","nation","country","banner"],
 		char: "🇩🇲",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Dominican Republic",
@@ -14965,8 +13305,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["DO","flag","dominican_republic","flag_do","flag_dominican_republic","dominican","republic","nation","country","banner"],
 		char: "🇩🇴",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Algeria",
@@ -14974,8 +13313,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["DZ","flag","algeria","flag_dz","flag_algeria","dz","nation","country","banner"],
 		char: "🇩🇿",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Ceuta & Melilla",
@@ -14983,8 +13321,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["EA","flag","ceuta_melilla","flag_ea","flag_ceuta_melilla"],
 		char: "🇪🇦",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Ecuador",
@@ -14992,8 +13329,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["EC","flag","ecuador","flag_ec","flag_ecuador","ec","nation","country","banner"],
 		char: "🇪🇨",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Estonia",
@@ -15001,8 +13337,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["EE","flag","estonia","flag_ee","flag_estonia","ee","nation","country","banner"],
 		char: "🇪🇪",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Egypt",
@@ -15010,8 +13345,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["EG","flag","egypt","flag_eg","flag_egypt","eg","nation","country","banner"],
 		char: "🇪🇬",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Western Sahara",
@@ -15019,8 +13353,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["EH","flag","flag_eh","western_sahara","flag_western_sahara","western","sahara","nation","country","banner"],
 		char: "🇪🇭",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Eritrea",
@@ -15028,8 +13361,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ER","flag","eritrea","flag_er","flag_eritrea","er","nation","country","banner"],
 		char: "🇪🇷",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Spain",
@@ -15037,8 +13369,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ES","flag","es","nation","country","banner","flag_es","spain","flag_spain"],
 		char: "🇪🇸",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Ethiopia",
@@ -15046,8 +13377,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ET","flag","ethiopia","flag_et","flag_ethiopia","et","nation","country","banner"],
 		char: "🇪🇹",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: European Union",
@@ -15055,8 +13385,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["EU","flag","european_union","flag_eu","flag_european_union","european","union","banner"],
 		char: "🇪🇺",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Finland",
@@ -15064,8 +13393,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["FI","flag","finland","flag_fi","flag_finland","fi","nation","country","banner"],
 		char: "🇫🇮",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Fiji",
@@ -15073,8 +13401,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["FJ","flag","fiji","flag_fj","flag_fiji","fj","nation","country","banner"],
 		char: "🇫🇯",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Falkland Islands",
@@ -15082,8 +13409,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["FK","flag","falkland_islands","flag_fk","flag_falkland_islands","falkland","islands","malvinas","nation","country","banner"],
 		char: "🇫🇰",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Micronesia",
@@ -15091,8 +13417,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["FM","flag","flag_fm","micronesia","flag_micronesia","federated","states","nation","country","banner"],
 		char: "🇫🇲",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Faroe Islands",
@@ -15100,8 +13425,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["FO","flag","faroe_islands","flag_fo","flag_faroe_islands","faroe","islands","nation","country","banner"],
 		char: "🇫🇴",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: France",
@@ -15109,8 +13433,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["FR","flag","fr","banner","nation","french","country","flag_fr","france","flag_france"],
 		char: "🇫🇷",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Gabon",
@@ -15118,8 +13441,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["GA","flag","flag_ga","gabon","flag_gabon","ga","nation","country","banner"],
 		char: "🇬🇦",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: United Kingdom",
@@ -15127,8 +13449,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["GB","flag","union jack","england","uk","great britain","gb","great","britain","northern","ireland","nation","country","banner","british","UK","english","union","jack","flag_gb","united_kingdom","flag_united_kingdom","united","kingdom"],
 		char: "🇬🇧",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Grenada",
@@ -15136,8 +13457,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["GD","flag","flag_gd","grenada","flag_grenada","gd","nation","country","banner"],
 		char: "🇬🇩",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Georgia",
@@ -15145,8 +13465,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["GE","flag","flag_ge","georgia","flag_georgia","ge","nation","country","banner"],
 		char: "🇬🇪",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: French Guiana",
@@ -15154,8 +13473,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["GF","flag","flag_gf","french_guiana","flag_french_guiana","french","guiana","nation","country","banner"],
 		char: "🇬🇫",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Guernsey",
@@ -15163,8 +13481,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["GG","flag","flag_gg","guernsey","flag_guernsey","gg","nation","country","banner"],
 		char: "🇬🇬",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Ghana",
@@ -15172,8 +13489,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["GH","flag","flag_gh","ghana","flag_ghana","gh","nation","country","banner"],
 		char: "🇬🇭",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Gibraltar",
@@ -15181,8 +13497,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["GI","flag","flag_gi","gibraltar","flag_gibraltar","gi","nation","country","banner"],
 		char: "🇬🇮",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Greenland",
@@ -15190,8 +13505,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["GL","flag","flag_gl","greenland","flag_greenland","gl","nation","country","banner"],
 		char: "🇬🇱",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Gambia",
@@ -15199,8 +13513,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["GM","flag","flag_gm","gambia","flag_gambia","gm","nation","country","banner"],
 		char: "🇬🇲",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Guinea",
@@ -15208,8 +13521,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["GN","flag","flag_gn","guinea","flag_guinea","gn","nation","country","banner"],
 		char: "🇬🇳",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Guadeloupe",
@@ -15217,8 +13529,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["GP","flag","flag_gp","guadeloupe","flag_guadeloupe","gp","nation","country","banner"],
 		char: "🇬🇵",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Equatorial Guinea",
@@ -15226,8 +13537,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["GQ","flag","equatorial_guinea","flag_gq","flag_equatorial_guinea","equatorial","gn","nation","country","banner"],
 		char: "🇬🇶",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Greece",
@@ -15235,8 +13545,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["GR","flag","flag_gr","greece","flag_greece","gr","nation","country","banner"],
 		char: "🇬🇷",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: South Georgia & South Sandwich Islands",
@@ -15244,8 +13553,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["GS","flag","flag_gs","south_georgia_south_sandwich_islands","flag_south_georgia_south_sandwich_islands","south","georgia","sandwich","islands","nation","country","banner"],
 		char: "🇬🇸",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Guatemala",
@@ -15253,8 +13561,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["GT","flag","flag_gt","guatemala","flag_guatemala","gt","nation","country","banner"],
 		char: "🇬🇹",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Guam",
@@ -15262,8 +13569,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["GU","flag","flag_gu","guam","flag_guam","gu","nation","country","banner"],
 		char: "🇬🇺",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Guinea-Bissau",
@@ -15271,8 +13577,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["GW","flag","flag_gw","guinea_bissau","flag_guinea_bissau","gw","bissau","nation","country","banner"],
 		char: "🇬🇼",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Guyana",
@@ -15280,8 +13585,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["GY","flag","flag_gy","guyana","flag_guyana","gy","nation","country","banner"],
 		char: "🇬🇾",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Hong Kong SAR China",
@@ -15289,8 +13593,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["HK","flag","flag_hk","hong_kong","flag_hong_kong_sar_china","hong","kong","nation","country","banner","hong_kong_sar_china"],
 		char: "🇭🇰",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Heard & McDonald Islands",
@@ -15298,8 +13601,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["HM","flag","flag_hm","heard_mcdonald_islands","flag_heard_mcdonald_islands"],
 		char: "🇭🇲",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Honduras",
@@ -15307,8 +13609,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["HN","flag","flag_hn","honduras","flag_honduras","hn","nation","country","banner"],
 		char: "🇭🇳",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Croatia",
@@ -15316,8 +13617,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["HR","flag","croatia","flag_hr","flag_croatia","hr","nation","country","banner"],
 		char: "🇭🇷",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Haiti",
@@ -15325,8 +13625,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["HT","flag","flag_ht","haiti","flag_haiti","ht","nation","country","banner"],
 		char: "🇭🇹",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Hungary",
@@ -15334,8 +13633,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["HU","flag","flag_hu","hungary","flag_hungary","hu","nation","country","banner"],
 		char: "🇭🇺",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Canary Islands",
@@ -15343,8 +13641,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["IC","flag","canary_islands","flag_ic","flag_canary_islands","canary","islands","nation","country","banner"],
 		char: "🇮🇨",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Indonesia",
@@ -15352,8 +13649,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ID","flag","flag_id","indonesia","flag_indonesia","nation","country","banner"],
 		char: "🇮🇩",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Ireland",
@@ -15361,8 +13657,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["IE","flag","flag_ie","ireland","flag_ireland","ie","nation","country","banner"],
 		char: "🇮🇪",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Israel",
@@ -15370,8 +13665,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["IL","flag","flag_il","israel","flag_israel","il","nation","country","banner"],
 		char: "🇮🇱",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Isle of Man",
@@ -15379,8 +13673,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["IM","flag","flag_im","isle_of_man","flag_isle_of_man","isle","man","nation","country","banner"],
 		char: "🇮🇲",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: India",
@@ -15388,8 +13681,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["IN","flag","flag_in","india","flag_india","in","nation","country","banner"],
 		char: "🇮🇳",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: British Indian Ocean Territory",
@@ -15397,8 +13689,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["IO","flag","british_indian_ocean_territory","flag_io","flag_british_indian_ocean_territory","british","indian","ocean","territory","nation","country","banner"],
 		char: "🇮🇴",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Iraq",
@@ -15406,8 +13697,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["IQ","flag","flag_iq","iraq","flag_iraq","iq","nation","country","banner"],
 		char: "🇮🇶",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Iran",
@@ -15415,8 +13705,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["IR","flag","flag_ir","iran","flag_iran","islamic","republic","nation","country","banner"],
 		char: "🇮🇷",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Iceland",
@@ -15424,8 +13713,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["IS","flag","flag_is","iceland","flag_iceland","is","nation","country","banner"],
 		char: "🇮🇸",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Italy",
@@ -15433,8 +13721,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["IT","flag","it","nation","country","banner","flag_it","italy","flag_italy"],
 		char: "🇮🇹",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Jersey",
@@ -15442,8 +13729,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["JE","flag","flag_je","jersey","flag_jersey","je","nation","country","banner"],
 		char: "🇯🇪",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Jamaica",
@@ -15451,8 +13737,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["JM","flag","flag_jm","jamaica","flag_jamaica","jm","nation","country","banner"],
 		char: "🇯🇲",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Jordan",
@@ -15460,8 +13745,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["JO","flag","flag_jo","jordan","flag_jordan","jo","nation","country","banner"],
 		char: "🇯🇴",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Japan",
@@ -15469,8 +13753,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["JP","flag","jp","japanese","nation","country","banner","flag_jp","japan","flag_japan","ja"],
 		char: "🇯🇵",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Kenya",
@@ -15478,8 +13761,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["KE","flag","flag_ke","kenya","flag_kenya","ke","nation","country","banner"],
 		char: "🇰🇪",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Kyrgyzstan",
@@ -15487,8 +13769,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["KG","flag","flag_kg","kyrgyzstan","flag_kyrgyzstan","kg","nation","country","banner"],
 		char: "🇰🇬",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Cambodia",
@@ -15496,8 +13777,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["KH","flag","cambodia","flag_kh","flag_cambodia","kh","nation","country","banner"],
 		char: "🇰🇭",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Kiribati",
@@ -15505,8 +13785,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["KI","flag","flag_ki","kiribati","flag_kiribati","ki","nation","country","banner"],
 		char: "🇰🇮",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Comoros",
@@ -15514,8 +13793,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["KM","flag","comoros","flag_km","flag_comoros","km","nation","country","banner"],
 		char: "🇰🇲",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: St. Kitts & Nevis",
@@ -15523,8 +13801,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["KN","flag","flag_kn","st_kitts_nevis","flag_st_kitts_nevis","saint","kitts","nevis","nation","country","banner"],
 		char: "🇰🇳",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: North Korea",
@@ -15532,8 +13809,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["KP","flag","flag_kp","north_korea","flag_north_korea","north","korea","nation","country","banner"],
 		char: "🇰🇵",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: South Korea",
@@ -15541,8 +13817,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["KR","flag","kr","nation","country","banner","flag_kr","south_korea","flag_south_korea","south","korea"],
 		char: "🇰🇷",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Kuwait",
@@ -15550,8 +13825,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["KW","flag","flag_kw","kuwait","flag_kuwait","kw","nation","country","banner"],
 		char: "🇰🇼",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Cayman Islands",
@@ -15559,8 +13833,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["KY","flag","cayman_islands","flag_ky","flag_cayman_islands","cayman","islands","nation","country","banner"],
 		char: "🇰🇾",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Kazakhstan",
@@ -15568,8 +13841,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["KZ","flag","flag_kz","kazakhstan","flag_kazakhstan","kz","nation","country","banner"],
 		char: "🇰🇿",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Laos",
@@ -15577,8 +13849,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["LA","flag","flag_la","laos","flag_laos","lao","democratic","republic","nation","country","banner"],
 		char: "🇱🇦",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Lebanon",
@@ -15586,8 +13857,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["LB","flag","flag_lb","lebanon","flag_lebanon","lb","nation","country","banner"],
 		char: "🇱🇧",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: St. Lucia",
@@ -15595,8 +13865,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["LC","flag","flag_lc","st_lucia","flag_st_lucia","saint","lucia","nation","country","banner"],
 		char: "🇱🇨",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Liechtenstein",
@@ -15604,8 +13873,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["LI","flag","flag_li","liechtenstein","flag_liechtenstein","li","nation","country","banner"],
 		char: "🇱🇮",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Sri Lanka",
@@ -15613,8 +13881,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["LK","flag","flag_lk","sri_lanka","flag_sri_lanka","sri","lanka","nation","country","banner"],
 		char: "🇱🇰",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Liberia",
@@ -15622,8 +13889,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["LR","flag","flag_lr","liberia","flag_liberia","lr","nation","country","banner"],
 		char: "🇱🇷",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Lesotho",
@@ -15631,8 +13897,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["LS","flag","flag_ls","lesotho","flag_lesotho","ls","nation","country","banner"],
 		char: "🇱🇸",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Lithuania",
@@ -15640,8 +13905,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["LT","flag","flag_lt","lithuania","flag_lithuania","lt","nation","country","banner"],
 		char: "🇱🇹",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Luxembourg",
@@ -15649,8 +13913,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["LU","flag","flag_lu","luxembourg","flag_luxembourg","lu","nation","country","banner"],
 		char: "🇱🇺",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Latvia",
@@ -15658,8 +13921,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["LV","flag","flag_lv","latvia","flag_latvia","lv","nation","country","banner"],
 		char: "🇱🇻",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Libya",
@@ -15667,8 +13929,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["LY","flag","flag_ly","libya","flag_libya","ly","nation","country","banner"],
 		char: "🇱🇾",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Morocco",
@@ -15676,8 +13937,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["MA","flag","flag_ma","morocco","flag_morocco","ma","nation","country","banner"],
 		char: "🇲🇦",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Monaco",
@@ -15685,8 +13945,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["MC","flag","flag_mc","monaco","flag_monaco","mc","nation","country","banner"],
 		char: "🇲🇨",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Moldova",
@@ -15694,8 +13953,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["MD","flag","flag_md","moldova","flag_moldova","republic","nation","country","banner"],
 		char: "🇲🇩",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Montenegro",
@@ -15703,8 +13961,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ME","flag","flag_me","montenegro","flag_montenegro","me","nation","country","banner"],
 		char: "🇲🇪",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: St. Martin",
@@ -15712,8 +13969,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["MF","flag","flag_mf","st_martin","flag_st_martin"],
 		char: "🇲🇫",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Madagascar",
@@ -15721,8 +13977,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["MG","flag","flag_mg","madagascar","flag_madagascar","mg","nation","country","banner"],
 		char: "🇲🇬",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Marshall Islands",
@@ -15730,8 +13985,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["MH","flag","flag_mh","marshall_islands","flag_marshall_islands","marshall","islands","nation","country","banner"],
 		char: "🇲🇭",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: North Macedonia",
@@ -15739,8 +13993,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["MK","flag","flag_mk","macedonia","flag_north_macedonia","nation","country","banner","north_macedonia"],
 		char: "🇲🇰",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Mali",
@@ -15748,8 +14001,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ML","flag","flag_ml","mali","flag_mali","ml","nation","country","banner"],
 		char: "🇲🇱",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Myanmar (Burma)",
@@ -15757,8 +14009,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["MM","flag","burma","flag_mm","myanmar","flag_myanmar","mm","nation","country","banner"],
 		char: "🇲🇲",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Mongolia",
@@ -15766,8 +14017,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["MN","flag","flag_mn","mongolia","flag_mongolia","mn","nation","country","banner"],
 		char: "🇲🇳",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Macao SAR China",
@@ -15775,8 +14025,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["MO","flag","flag_mo","macao","macau","flag_macao_sar_china","nation","country","banner","macao_sar_china"],
 		char: "🇲🇴",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Northern Mariana Islands",
@@ -15784,8 +14033,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["MP","flag","flag_mp","northern_mariana_islands","flag_northern_mariana_islands","northern","mariana","islands","nation","country","banner"],
 		char: "🇲🇵",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Martinique",
@@ -15793,8 +14041,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["MQ","flag","flag_mq","martinique","flag_martinique","mq","nation","country","banner"],
 		char: "🇲🇶",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Mauritania",
@@ -15802,8 +14049,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["MR","flag","flag_mr","mauritania","flag_mauritania","mr","nation","country","banner"],
 		char: "🇲🇷",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Montserrat",
@@ -15811,8 +14057,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["MS","flag","flag_ms","montserrat","flag_montserrat","ms","nation","country","banner"],
 		char: "🇲🇸",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Malta",
@@ -15820,8 +14065,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["MT","flag","flag_mt","malta","flag_malta","mt","nation","country","banner"],
 		char: "🇲🇹",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Mauritius",
@@ -15829,8 +14073,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["MU","flag","flag_mu","mauritius","flag_mauritius","mu","nation","country","banner"],
 		char: "🇲🇺",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Maldives",
@@ -15838,8 +14081,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["MV","flag","flag_mv","maldives","flag_maldives","mv","nation","country","banner"],
 		char: "🇲🇻",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Malawi",
@@ -15847,8 +14089,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["MW","flag","flag_mw","malawi","flag_malawi","mw","nation","country","banner"],
 		char: "🇲🇼",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Mexico",
@@ -15856,8 +14097,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["MX","flag","flag_mx","mexico","flag_mexico","mx","nation","country","banner"],
 		char: "🇲🇽",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Malaysia",
@@ -15865,8 +14105,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["MY","flag","flag_my","malaysia","flag_malaysia","my","nation","country","banner"],
 		char: "🇲🇾",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Mozambique",
@@ -15874,8 +14113,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["MZ","flag","flag_mz","mozambique","flag_mozambique","mz","nation","country","banner"],
 		char: "🇲🇿",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Namibia",
@@ -15883,8 +14121,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["NA","flag","flag_na","namibia","flag_namibia","na","nation","country","banner"],
 		char: "🇳🇦",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: New Caledonia",
@@ -15892,8 +14129,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["NC","flag","flag_nc","new_caledonia","flag_new_caledonia","new","caledonia","nation","country","banner"],
 		char: "🇳🇨",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Niger",
@@ -15901,8 +14137,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["NE","flag","flag_ne","niger","flag_niger","ne","nation","country","banner"],
 		char: "🇳🇪",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Norfolk Island",
@@ -15910,8 +14145,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["NF","flag","flag_nf","norfolk_island","flag_norfolk_island","norfolk","island","nation","country","banner"],
 		char: "🇳🇫",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Nigeria",
@@ -15919,8 +14153,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["NG","flag","flag_ng","nigeria","flag_nigeria","nation","country","banner"],
 		char: "🇳🇬",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Nicaragua",
@@ -15928,8 +14161,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["NI","flag","flag_ni","nicaragua","flag_nicaragua","ni","nation","country","banner"],
 		char: "🇳🇮",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Netherlands",
@@ -15937,8 +14169,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["NL","flag","flag_nl","netherlands","flag_netherlands","nl","nation","country","banner"],
 		char: "🇳🇱",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Norway",
@@ -15946,8 +14177,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["NO","flag","flag_no","norway","flag_norway","no","nation","country","banner"],
 		char: "🇳🇴",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Nepal",
@@ -15955,8 +14185,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["NP","flag","flag_np","nepal","flag_nepal","np","nation","country","banner"],
 		char: "🇳🇵",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Nauru",
@@ -15964,8 +14193,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["NR","flag","flag_nr","nauru","flag_nauru","nr","nation","country","banner"],
 		char: "🇳🇷",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Niue",
@@ -15973,8 +14201,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["NU","flag","flag_nu","niue","flag_niue","nu","nation","country","banner"],
 		char: "🇳🇺",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: New Zealand",
@@ -15982,8 +14209,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["NZ","flag","flag_nz","new_zealand","flag_new_zealand","new","zealand","nation","country","banner"],
 		char: "🇳🇿",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Oman",
@@ -15991,8 +14217,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["OM","flag","flag_om","oman","flag_oman","om_symbol","nation","country","banner"],
 		char: "🇴🇲",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Panama",
@@ -16000,8 +14225,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["PA","flag","flag_pa","panama","flag_panama","pa","nation","country","banner"],
 		char: "🇵🇦",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Peru",
@@ -16009,8 +14233,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["PE","flag","flag_pe","peru","flag_peru","pe","nation","country","banner"],
 		char: "🇵🇪",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: French Polynesia",
@@ -16018,8 +14241,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["PF","flag","flag_pf","french_polynesia","flag_french_polynesia","french","polynesia","nation","country","banner"],
 		char: "🇵🇫",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Papua New Guinea",
@@ -16027,8 +14249,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["PG","flag","flag_pg","papua_new_guinea","flag_papua_new_guinea","papua","new","guinea","nation","country","banner"],
 		char: "🇵🇬",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Philippines",
@@ -16036,8 +14257,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["PH","flag","flag_ph","philippines","flag_philippines","ph","nation","country","banner"],
 		char: "🇵🇭",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Pakistan",
@@ -16045,8 +14265,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["PK","flag","flag_pk","pakistan","flag_pakistan","pk","nation","country","banner"],
 		char: "🇵🇰",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Poland",
@@ -16054,8 +14273,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["PL","flag","flag_pl","poland","flag_poland","pl","nation","country","banner"],
 		char: "🇵🇱",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: St. Pierre & Miquelon",
@@ -16063,8 +14281,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["PM","flag","flag_pm","st_pierre_miquelon","flag_st_pierre_miquelon","saint","pierre","miquelon","nation","country","banner"],
 		char: "🇵🇲",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Pitcairn Islands",
@@ -16072,8 +14289,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["PN","flag","flag_pn","pitcairn_islands","flag_pitcairn_islands","pitcairn","nation","country","banner"],
 		char: "🇵🇳",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Puerto Rico",
@@ -16081,8 +14297,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["PR","flag","flag_pr","puerto_rico","flag_puerto_rico","puerto","rico","nation","country","banner"],
 		char: "🇵🇷",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Palestinian Territories",
@@ -16090,8 +14305,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["PS","flag","flag_ps","palestinian_territories","flag_palestinian_territories","palestine","palestinian","territories","nation","country","banner"],
 		char: "🇵🇸",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Portugal",
@@ -16099,8 +14313,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["PT","flag","flag_pt","portugal","flag_portugal","pt","nation","country","banner"],
 		char: "🇵🇹",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Palau",
@@ -16108,8 +14321,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["PW","flag","flag_pw","palau","flag_palau","pw","nation","country","banner"],
 		char: "🇵🇼",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Paraguay",
@@ -16117,8 +14329,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["PY","flag","flag_py","paraguay","flag_paraguay","py","nation","country","banner"],
 		char: "🇵🇾",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Qatar",
@@ -16126,8 +14337,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["QA","flag","flag_qa","qatar","flag_qatar","qa","nation","country","banner"],
 		char: "🇶🇦",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Réunion",
@@ -16135,8 +14345,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["RE","flag","flag_re","reunion","flag_reunion","réunion","nation","country","banner"],
 		char: "🇷🇪",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Romania",
@@ -16144,8 +14353,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["RO","flag","flag_ro","romania","flag_romania","ro","nation","country","banner"],
 		char: "🇷🇴",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Serbia",
@@ -16153,8 +14361,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["RS","flag","flag_rs","serbia","flag_serbia","rs","nation","country","banner"],
 		char: "🇷🇸",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Russia",
@@ -16162,8 +14369,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["RU","flag","ru","russian","federation","nation","country","banner","flag_ru","russia","flag_russia"],
 		char: "🇷🇺",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Rwanda",
@@ -16171,8 +14377,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["RW","flag","flag_rw","rwanda","flag_rwanda","rw","nation","country","banner"],
 		char: "🇷🇼",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Saudi Arabia",
@@ -16180,8 +14385,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["SA","flag","flag_sa","saudi_arabia","flag_saudi_arabia","nation","country","banner"],
 		char: "🇸🇦",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Solomon Islands",
@@ -16189,8 +14393,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["SB","flag","flag_sb","solomon_islands","flag_solomon_islands","solomon","islands","nation","country","banner"],
 		char: "🇸🇧",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Seychelles",
@@ -16198,8 +14401,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["SC","flag","flag_sc","seychelles","flag_seychelles","sc","nation","country","banner"],
 		char: "🇸🇨",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Sudan",
@@ -16207,8 +14409,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["SD","flag","flag_sd","sudan","flag_sudan","sd","nation","country","banner"],
 		char: "🇸🇩",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Sweden",
@@ -16216,8 +14417,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["SE","flag","flag_se","sweden","flag_sweden","se","nation","country","banner"],
 		char: "🇸🇪",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Singapore",
@@ -16225,8 +14425,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["SG","flag","flag_sg","singapore","flag_singapore","sg","nation","country","banner"],
 		char: "🇸🇬",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: St. Helena",
@@ -16234,8 +14433,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["SH","flag","flag_sh","st_helena","flag_st_helena","saint","helena","ascension","tristan","cunha","nation","country","banner"],
 		char: "🇸🇭",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Slovenia",
@@ -16243,8 +14441,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["SI","flag","flag_si","slovenia","flag_slovenia","si","nation","country","banner"],
 		char: "🇸🇮",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Svalbard & Jan Mayen",
@@ -16252,8 +14449,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["SJ","flag","flag_sj","svalbard_jan_mayen","flag_svalbard_jan_mayen"],
 		char: "🇸🇯",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Slovakia",
@@ -16261,8 +14457,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["SK","flag","flag_sk","slovakia","flag_slovakia","sk","nation","country","banner"],
 		char: "🇸🇰",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Sierra Leone",
@@ -16270,8 +14465,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["SL","flag","flag_sl","sierra_leone","flag_sierra_leone","sierra","leone","nation","country","banner"],
 		char: "🇸🇱",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: San Marino",
@@ -16279,8 +14473,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["SM","flag","flag_sm","san_marino","flag_san_marino","san","marino","nation","country","banner"],
 		char: "🇸🇲",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Senegal",
@@ -16288,8 +14481,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["SN","flag","flag_sn","senegal","flag_senegal","sn","nation","country","banner"],
 		char: "🇸🇳",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Somalia",
@@ -16297,8 +14489,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["SO","flag","flag_so","somalia","flag_somalia","so","nation","country","banner"],
 		char: "🇸🇴",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Suriname",
@@ -16306,8 +14497,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["SR","flag","flag_sr","suriname","flag_suriname","sr","nation","country","banner"],
 		char: "🇸🇷",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: South Sudan",
@@ -16315,8 +14505,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["SS","flag","flag_ss","south_sudan","flag_south_sudan","south","sd","nation","country","banner"],
 		char: "🇸🇸",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: São Tomé & Príncipe",
@@ -16324,8 +14513,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ST","flag","flag_st","sao_tome_principe","flag_sao_tome_principe","sao","tome","principe","nation","country","banner"],
 		char: "🇸🇹",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: El Salvador",
@@ -16333,8 +14521,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["SV","flag","el_salvador","flag_sv","flag_el_salvador","el","salvador","nation","country","banner"],
 		char: "🇸🇻",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Sint Maarten",
@@ -16342,8 +14529,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["SX","flag","flag_sx","sint_maarten","flag_sint_maarten","sint","maarten","dutch","nation","country","banner"],
 		char: "🇸🇽",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Syria",
@@ -16351,8 +14537,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["SY","flag","flag_sy","syria","flag_syria","syrian","arab","republic","nation","country","banner"],
 		char: "🇸🇾",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Eswatini",
@@ -16360,8 +14545,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["SZ","flag","eswatini","flag_sz","swaziland","flag_eswatini","sz","nation","country","banner"],
 		char: "🇸🇿",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Tristan da Cunha",
@@ -16369,8 +14553,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["TA","flag","flag_ta","tristan_da_cunha","flag_tristan_da_cunha"],
 		char: "🇹🇦",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Turks & Caicos Islands",
@@ -16378,8 +14561,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["TC","flag","flag_tc","turks_caicos_islands","flag_turks_caicos_islands","turks","caicos","islands","nation","country","banner"],
 		char: "🇹🇨",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Chad",
@@ -16387,8 +14569,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["TD","flag","chad","flag_td","flag_chad","td","nation","country","banner"],
 		char: "🇹🇩",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: French Southern Territories",
@@ -16396,8 +14577,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["TF","flag","flag_tf","french_southern_territories","flag_french_southern_territories","french","southern","territories","nation","country","banner"],
 		char: "🇹🇫",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Togo",
@@ -16405,8 +14585,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["TG","flag","flag_tg","togo","flag_togo","tg","nation","country","banner"],
 		char: "🇹🇬",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Thailand",
@@ -16414,8 +14593,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["TH","flag","flag_th","thailand","flag_thailand","th","nation","country","banner"],
 		char: "🇹🇭",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Tajikistan",
@@ -16423,8 +14601,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["TJ","flag","flag_tj","tajikistan","flag_tajikistan","tj","nation","country","banner"],
 		char: "🇹🇯",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Tokelau",
@@ -16432,8 +14609,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["TK","flag","flag_tk","tokelau","flag_tokelau","tk","nation","country","banner"],
 		char: "🇹🇰",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Timor-Leste",
@@ -16441,8 +14617,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["TL","flag","flag_tl","timor_leste","flag_timor_leste","timor","leste","nation","country","banner"],
 		char: "🇹🇱",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Turkmenistan",
@@ -16450,8 +14625,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["TM","flag","flag_tm","turkmenistan","flag_turkmenistan","nation","country","banner"],
 		char: "🇹🇲",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Tunisia",
@@ -16459,8 +14633,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["TN","flag","flag_tn","tunisia","flag_tunisia","tn","nation","country","banner"],
 		char: "🇹🇳",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Tonga",
@@ -16468,8 +14641,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["TO","flag","flag_to","tonga","flag_tonga","to","nation","country","banner"],
 		char: "🇹🇴",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Turkey",
@@ -16477,8 +14649,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["TR","flag","flag_tr","turkey_tr","flag_turkey","turkey","nation","country","banner"],
 		char: "🇹🇷",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Trinidad & Tobago",
@@ -16486,8 +14657,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["TT","flag","flag_tt","trinidad_tobago","flag_trinidad_tobago","trinidad","tobago","nation","country","banner"],
 		char: "🇹🇹",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Tuvalu",
@@ -16495,8 +14665,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["TV","flag","flag_tv","tuvalu","flag_tuvalu","nation","country","banner"],
 		char: "🇹🇻",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Taiwan",
@@ -16504,8 +14673,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["TW","flag","flag_tw","taiwan","flag_taiwan","tw","nation","country","banner"],
 		char: "🇹🇼",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Tanzania",
@@ -16513,8 +14681,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["TZ","flag","flag_tz","tanzania","flag_tanzania","united","republic","nation","country","banner"],
 		char: "🇹🇿",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Ukraine",
@@ -16522,8 +14689,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["UA","flag","flag_ua","ukraine","flag_ukraine","ua","nation","country","banner"],
 		char: "🇺🇦",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Uganda",
@@ -16531,8 +14697,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["UG","flag","flag_ug","uganda","flag_uganda","ug","nation","country","banner"],
 		char: "🇺🇬",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: U.S. Outlying Islands",
@@ -16540,8 +14705,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["UM","flag","usa","united states","us","america","flag_um","us_outlying_islands","flag_u_s_outlying_islands"],
 		char: "🇺🇲",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: United Nations",
@@ -16549,8 +14713,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["UN","flag","flag_un","un","united_nations","flag_united_nations","banner"],
 		char: "🇺🇳",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: United States",
@@ -16558,8 +14721,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["US","flag","usa","united states","us","america","nation","country","banner","flag_us","united_states","flag_united_states","united","states"],
 		char: "🇺🇸",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Uruguay",
@@ -16567,8 +14729,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["UY","flag","flag_uy","uruguay","flag_uruguay","uy","nation","country","banner"],
 		char: "🇺🇾",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Uzbekistan",
@@ -16576,8 +14737,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["UZ","flag","flag_uz","uzbekistan","flag_uzbekistan","uz","nation","country","banner"],
 		char: "🇺🇿",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Vatican City",
@@ -16585,8 +14745,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["VA","flag","flag_va","vatican_city","flag_vatican_city","vatican","city","nation","country","banner"],
 		char: "🇻🇦",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: St. Vincent & Grenadines",
@@ -16594,8 +14753,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["VC","flag","flag_vc","st_vincent_grenadines","flag_st_vincent_grenadines","saint","vincent","grenadines","nation","country","banner"],
 		char: "🇻🇨",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Venezuela",
@@ -16603,8 +14761,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["VE","flag","flag_ve","venezuela","flag_venezuela","ve","bolivarian","republic","nation","country","banner"],
 		char: "🇻🇪",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: British Virgin Islands",
@@ -16612,8 +14769,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["VG","flag","british_virgin_islands","flag_vg","flag_british_virgin_islands","british","virgin","islands","bvi","nation","country","banner"],
 		char: "🇻🇬",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: U.S. Virgin Islands",
@@ -16621,8 +14777,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["VI","flag","flag_vi","us_virgin_islands","flag_u_s_virgin_islands","virgin","islands","us","nation","country","banner","u_s_virgin_islands"],
 		char: "🇻🇮",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Vietnam",
@@ -16630,8 +14785,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["VN","flag","flag_vn","vietnam","flag_vietnam","viet","nam","nation","country","banner"],
 		char: "🇻🇳",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Vanuatu",
@@ -16639,8 +14793,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["VU","flag","flag_vu","vanuatu","flag_vanuatu","vu","nation","country","banner"],
 		char: "🇻🇺",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Wallis & Futuna",
@@ -16648,8 +14801,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["WF","flag","flag_wf","wallis_futuna","flag_wallis_futuna","wallis","futuna","nation","country","banner"],
 		char: "🇼🇫",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Samoa",
@@ -16657,8 +14809,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["WS","flag","flag_ws","samoa","flag_samoa","ws","nation","country","banner"],
 		char: "🇼🇸",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Kosovo",
@@ -16666,8 +14817,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["XK","flag","flag_xk","kosovo","flag_kosovo","xk","nation","country","banner"],
 		char: "🇽🇰",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Yemen",
@@ -16675,8 +14825,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["YE","flag","flag_ye","yemen","flag_yemen","ye","nation","country","banner"],
 		char: "🇾🇪",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Mayotte",
@@ -16684,8 +14833,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["YT","flag","flag_yt","mayotte","flag_mayotte","yt","nation","country","banner"],
 		char: "🇾🇹",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: South Africa",
@@ -16693,8 +14841,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ZA","flag","flag_za","south_africa","flag_south_africa","south","africa","nation","country","banner"],
 		char: "🇿🇦",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Zambia",
@@ -16702,8 +14849,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ZM","flag","flag_zm","zambia","flag_zambia","zm","nation","country","banner"],
 		char: "🇿🇲",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Zimbabwe",
@@ -16711,8 +14857,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ZW","flag","flag_zw","zimbabwe","flag_zimbabwe","zw","nation","country","banner"],
 		char: "🇿🇼",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: England",
@@ -16720,8 +14865,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["flag","gbeng","england","flag_gbeng","flag_england","english"],
 		char: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Scotland",
@@ -16729,8 +14873,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["flag","gbsct","flag_gbsct","scotland","flag_scotland","scottish"],
 		char: "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "flag: Wales",
@@ -16738,8 +14881,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["flag","gbwls","dragon","flag_gbwls","wales","flag_wales","welsh"],
 		char: "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
 		skinTones: [:],
-		category: "flags",
-	),
+		category: "flags"),
 
 	Emoji(
 		id: "goldfish",
@@ -16747,8 +14889,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["goldfish","fish","water"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "donkey",
@@ -16756,8 +14897,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "poppy",
@@ -16765,8 +14905,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["poppy","remembrance","veterans"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "doe",
@@ -16774,8 +14913,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["forest","hunt","antler","deer"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "spouting-orca",
@@ -16783,8 +14921,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cetacean","whale","spouting","orca","killer whale","blackfish","swim","animal","water"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "orca",
@@ -16792,8 +14929,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cetacean","whale","orca","killer whale","blackfish","swim","animal","water"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "narwhal",
@@ -16801,8 +14937,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cetacean","whale","swim","animal","water"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "beluga",
@@ -16810,8 +14945,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cetacean","whale","swim","animal","water"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "porpoise",
@@ -16819,8 +14953,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cetacean","swim","animal","water"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "pigeon",
@@ -16828,8 +14961,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["vermin","rock dove","bird","city"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "macaw",
@@ -16837,8 +14969,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["tropical","jungle","exotic","parrots"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "Twitter",
@@ -16846,8 +14977,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "pinterest",
@@ -16855,8 +14985,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["social","platform","pins"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "facebook",
@@ -16864,8 +14993,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["facebook","company","social-media"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "instagram",
@@ -16873,8 +15001,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["instagram","facebook","company","social-media"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "youtube",
@@ -16882,8 +15009,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["social","platform","video","brand"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "github",
@@ -16891,8 +15017,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["social","platform","code","git","brand"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "linkedin",
@@ -16900,8 +15025,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["business"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "android",
@@ -16909,8 +15033,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["google play"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "musicbrainz",
@@ -16918,8 +15041,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["music metadata"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "openfoodfact",
@@ -16927,8 +15049,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["nutrition data"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "openstreetmap",
@@ -16936,8 +15057,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["map","osm","geodata"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "wikidata",
@@ -16945,8 +15065,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["open knowledge graph"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "Firefox",
@@ -16954,8 +15073,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["browser","fire","fox"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "Safari",
@@ -16963,8 +15081,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["browser","compass","webkit","apple"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "Opera",
@@ -16972,8 +15089,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["browser"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "Chromium",
@@ -16981,8 +15097,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["browser"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "Chrome",
@@ -16990,8 +15105,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["browser","google"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "Netscape Navigator",
@@ -16999,8 +15113,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["browser"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "Internet Explorer",
@@ -17008,8 +15121,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["browser","ie","microsoft"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "Edge",
@@ -17017,8 +15129,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["browser","microsoft"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "iNaturalist",
@@ -17026,8 +15137,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["opendata","nature","observation"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "gitlab",
@@ -17035,8 +15145,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["git","code"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "mastodon",
@@ -17044,8 +15153,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["social media","twitter"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "peertube",
@@ -17053,8 +15161,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["social media","youtube"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "pixelfed",
@@ -17062,8 +15169,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["social media","image sharing platform","photo"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "signal",
@@ -17071,8 +15177,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["social media","messenger","whatsapp","app"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "ubuntu",
@@ -17080,8 +15185,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["Linux"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "windows",
@@ -17089,8 +15193,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["Microsoft"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "apple",
@@ -17098,8 +15201,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["iOS","OSX"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "iceberg",
@@ -17107,8 +15209,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["Titanic","ship wreck","ice","cold","sea"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "floating ice",
@@ -17116,8 +15217,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["glacier","polar","sea","melt"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "floating ice broken",
@@ -17125,8 +15225,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["glacier","polar","sea","melt"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "polar research station",
@@ -17134,8 +15233,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["Neumayer station","arctic","science"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "ice core sample",
@@ -17143,8 +15241,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["science","research","arctic","polar"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "ice shelf",
@@ -17152,8 +15249,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["glacier","polar","sea","melt"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "ice shelf melting",
@@ -17161,8 +15257,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["glacier","sea","melt","climate","global","warming"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "polar explorer",
@@ -17170,8 +15265,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["inuit","anorak with fur"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "polar explorer man",
@@ -17179,8 +15273,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["research"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "polar explorer woman",
@@ -17188,8 +15281,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["research"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "oil spill",
@@ -17197,8 +15289,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["pollution","petrol","fossil","fuel"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "exhaust gases factory",
@@ -17206,8 +15297,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["pollution","CO2","carbon"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "solar energy",
@@ -17215,8 +15305,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["sun","panel","clean","power","renewable"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "meat consumption",
@@ -17224,8 +15313,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["carnivore"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "exhaust gases car",
@@ -17233,8 +15321,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["pollution","carbon","CO2"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "sea level rise",
@@ -17242,8 +15329,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["flood","tsunami","sinking"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "wind energy",
@@ -17251,8 +15337,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["turbine","clean","power","renewable"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "reusable bag",
@@ -17260,8 +15345,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["recycle","nondisposable","tote","paper"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "radioactive waste",
@@ -17269,8 +15353,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["nuclear","hazardous"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "nuclear power plant",
@@ -17278,8 +15361,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["reactor","stacks","cooling"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "nuclear power plant ruin",
@@ -17287,8 +15369,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["Chernobyl","Fukushima","reactor"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "geiger counter",
@@ -17296,8 +15377,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["radiation","radioactive","science","research"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "nuclear worker man",
@@ -17305,8 +15385,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["radiation","protection suit"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "nuclear worker woman",
@@ -17314,8 +15393,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["radiation","protection suit"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "nuclear protection",
@@ -17323,8 +15401,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["radiation","suit","gas mask","nbc suit","hazmat"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "atom bomb",
@@ -17332,8 +15409,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["nuclear","radioactive","nuke","WW2"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "assembly point",
@@ -17341,8 +15417,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "assembly group",
@@ -17350,8 +15425,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "authority instruction",
@@ -17359,8 +15433,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "help others",
@@ -17368,8 +15441,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["help elderly","help wheelchair"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "drop cover hold",
@@ -17377,8 +15449,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["earthquake safety"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "evacuate",
@@ -17386,8 +15457,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "evacuate vertical",
@@ -17395,8 +15465,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "evacuate downstairs",
@@ -17404,8 +15473,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "evacuate to shelter",
@@ -17413,8 +15481,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "structural fire",
@@ -17422,8 +15489,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "wild fire",
@@ -17431,8 +15497,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "evacuate fire",
@@ -17440,8 +15505,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "warning tsunami",
@@ -17449,8 +15513,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "warning volcano",
@@ -17458,8 +15521,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "warning fire",
@@ -17467,8 +15529,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "authority",
@@ -17476,8 +15537,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "first aid",
@@ -17485,8 +15545,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["red cross"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "flagged point",
@@ -17494,8 +15553,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["white flag"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "flagged building",
@@ -17503,8 +15561,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["white flag"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "authority building",
@@ -17512,8 +15569,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["white flag"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "signpost",
@@ -17521,8 +15577,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["orientation","crossroad"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "mobile info",
@@ -17530,8 +15585,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "mobile message",
@@ -17539,8 +15593,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "charge plug",
@@ -17548,8 +15601,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["low battery"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "shelter",
@@ -17557,8 +15609,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "volcano eruption",
@@ -17566,8 +15617,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["volcano fumarole"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "volcano ashes",
@@ -17575,8 +15625,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["volcano eruption"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "tsunami",
@@ -17584,8 +15633,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "earthquake",
@@ -17593,8 +15641,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "landslide",
@@ -17602,8 +15649,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "avalanche",
@@ -17611,8 +15657,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "flood",
@@ -17620,8 +15665,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "north",
@@ -17629,8 +15673,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "transmission",
@@ -17638,8 +15681,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "sos stencil",
@@ -17647,8 +15689,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "ok stencil",
@@ -17656,8 +15697,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "no stencil",
@@ -17665,8 +15705,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "warning strip",
@@ -17674,8 +15713,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "warning strip right",
@@ -17683,8 +15721,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arrow"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "arrow turn right",
@@ -17692,8 +15729,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "emergency exit door",
@@ -17701,8 +15737,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "location indicator red",
@@ -17710,8 +15745,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "electric plug red",
@@ -17719,8 +15753,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "timer",
@@ -17728,8 +15761,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clock","alarm"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "person with medical mask",
@@ -17737,8 +15769,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["coronavirus","COVID-19"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "woman with medical mask",
@@ -17746,8 +15777,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["coronavirus","COVID-19"],
 		char: "‍♀️",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "man with medical mask",
@@ -17755,8 +15785,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["coronavirus","COVID-19"],
 		char: "‍♂️",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "person sneezing into elbow",
@@ -17764,8 +15793,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["coronavirus","COVID-19","dab"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "woman sneezing into elbow",
@@ -17773,8 +15801,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["coronavirus","COVID-19","dab"],
 		char: "‍♀️",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "man sneezing into elbow",
@@ -17782,8 +15809,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["coronavirus","COVID-19","dab"],
 		char: "‍♂️",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "disinfect surface",
@@ -17791,8 +15817,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["coronavirus","COVID-19","sanitize","clean"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "quarantine",
@@ -17800,8 +15825,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["coronavirus","COVID-19"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "social distancing",
@@ -17809,8 +15833,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["coronavirus","COVID-19"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "sanitizer spray",
@@ -17818,8 +15841,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["coronavirus","COVID-19","disinfect","clean"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "wash hands",
@@ -17827,8 +15849,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["coronavirus","COVID-19","sanitize","clean"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "temperature taking",
@@ -17836,8 +15857,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["coronavirus","COVID-19","thermometer"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "medical gloves",
@@ -17845,8 +15865,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["coronavirus","COVID-19"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "true south (antarctica) flag",
@@ -17854,8 +15873,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["antarctica flag","antarctica","antarctic"],
 		char: "🇦🇶💎",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "berber flag",
@@ -17863,8 +15881,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "🏳🟦🟩🟨",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "nail and gear flag",
@@ -17872,8 +15889,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["Hello Internet","CGP Grey","Brady Haran"],
 		char: "🏳️‍📌‍⚙️",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "red flag",
@@ -17881,8 +15897,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["socialism","communism"],
 		char: "🏳️‍🟥",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "blue flag",
@@ -17890,8 +15905,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "🏳️‍🟦",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "united federation of planets flag (star trek)",
@@ -17899,8 +15913,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["Star Trek","future","utopia","trekkie","trekker","space"],
 		char: "🏳️‍🟦‍🌌",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "orange flag",
@@ -17908,8 +15921,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["maratha","pirate party","Christian democracy"],
 		char: "🏳️‍🟧",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "yellow flag",
@@ -17917,8 +15929,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["Quebec","yellow jack"],
 		char: "🏳️‍🟨",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "green flag",
@@ -17926,8 +15937,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["green party","environmentalism"],
 		char: "🏳️‍🟩",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "esperanto flag",
@@ -17935,8 +15945,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["constructed","Zamenhof"],
 		char: "🏳️‍🟩‍⭐‍🟩",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "purple flag",
@@ -17944,8 +15953,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "🏳️‍🟪",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "brown flag",
@@ -17953,8 +15961,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "🏳️‍🟫",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "red and black flag",
@@ -17962,8 +15969,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["anarchist flag","bisected flag"],
 		char: "🏴️‍🅰️",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "deep red flag",
@@ -17971,8 +15977,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["socialism","communism"],
 		char: "⚑️‍🟥",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "deep blue flag",
@@ -17980,8 +15985,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "⚑️‍🟦",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "deep orange flag",
@@ -17989,8 +15993,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["maratha","pirate party","Christian democracy"],
 		char: "⚑️‍🟧",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "deep yellow flag",
@@ -17998,8 +16001,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["Quebec","yellow jack"],
 		char: "⚑️‍🟨",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "deep green flag",
@@ -18007,8 +16009,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["green party","environmentalism"],
 		char: "⚑️‍🟩",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "browncoat flag",
@@ -18016,8 +16017,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["Firefly","Serenity","independent planets"],
 		char: "⚑️‍🟩‍★️",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "deep purple flag",
@@ -18025,8 +16025,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "⚑️‍🟪",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "deep brown flag",
@@ -18034,8 +16033,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "⚑️‍🟫",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "half orange fruit",
@@ -18043,8 +16041,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["citrus fruits","half"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "maultasche",
@@ -18052,8 +16049,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["swabian","schwäbisch","schwaebisch","meal","germany"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "lentils with spaetzle",
@@ -18061,8 +16057,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["swabian","schwäbisch","meal","germany"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "pomegranate",
@@ -18070,8 +16065,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["pomegranate","fruit","seeds"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "latte macchiato",
@@ -18079,8 +16073,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["coffee"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "roasted coffee bean",
@@ -18088,8 +16081,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "cake",
@@ -18097,8 +16089,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["custard","cherry"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "champignon brown",
@@ -18106,8 +16097,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["mushroom fungi"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "champignon white",
@@ -18115,8 +16105,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["mushroom fungi"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "boule bread",
@@ -18124,8 +16113,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["french bread","traditional bread","round bread"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "gardener man",
@@ -18133,8 +16121,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "gardener woman",
@@ -18142,8 +16129,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "gardening gloves",
@@ -18151,8 +16137,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "lawn mower",
@@ -18160,8 +16145,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "wheelbarrow",
@@ -18169,8 +16153,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["pushcart"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "spade",
@@ -18178,8 +16161,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["shovel"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "trowel",
@@ -18187,8 +16169,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["shovel"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "saw",
@@ -18196,8 +16177,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["foxtail","carpentry","wood","branch","rip saw"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "female doctor",
@@ -18205,8 +16185,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hospital","care","surgery"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "male doctor",
@@ -18214,8 +16193,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hospital","care","surgery"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "female nurse",
@@ -18223,8 +16201,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hospital","care","surgery"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "male nurse",
@@ -18232,8 +16209,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hospital","care","surgery"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "pills",
@@ -18241,8 +16217,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["drug","medicine","tablets","pain killers"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "plaster",
@@ -18250,8 +16225,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["patch","band aid","plaster","wound","dressing","bandage"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "medication",
@@ -18259,8 +16233,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["drug","medicine","tablets","pain killers"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "ecg waves",
@@ -18268,8 +16241,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["heartbeats","beat","hospital","electrocardiogram"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "first aid bag",
@@ -18277,8 +16249,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["briefcase","medicine","kit"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "patient file",
@@ -18286,8 +16257,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hospital","record","filing"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "patient clipboard",
@@ -18295,8 +16265,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hospital","notes","transcript"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "saline drip",
@@ -18304,8 +16273,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hospital","bag"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "blood transfusion",
@@ -18313,8 +16281,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["medical","bleeding","loss"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "swab pliers",
@@ -18322,8 +16289,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["surgery","scissors"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "hot-water bottle",
@@ -18331,8 +16297,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cramps","comfort","warm","period"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "liver",
@@ -18340,8 +16305,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["organ","toxins","bile"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "stomach",
@@ -18349,8 +16313,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["gut","digestion","bile","acid"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "large intestine",
@@ -18358,8 +16321,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["organ","colon","gut"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "intestine",
@@ -18367,8 +16329,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["organ","digestion","colon","gut"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "kidney",
@@ -18376,8 +16337,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["urine","toxins","blood","organ"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "forceps",
@@ -18385,8 +16345,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["surgery","tweezers","tongs"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "bed linen",
@@ -18394,8 +16353,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hospital","bedding","sheets"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "bandage change",
@@ -18403,8 +16361,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hospital","gauze","dressing","wound"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "eye pain",
@@ -18412,8 +16369,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["migraine","headache","strain","sore"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "headache",
@@ -18421,8 +16377,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["migraine","sore","tension","stress"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "earache",
@@ -18430,8 +16385,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["tinnitus","headache","sore"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "fracture leg",
@@ -18439,8 +16393,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["broken","cast","bone"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "knee pain",
@@ -18448,8 +16401,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ACL","ache","patella"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "backache",
@@ -18457,8 +16409,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["spine","ache","lumbar","pain"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "joint pain",
@@ -18466,8 +16417,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ache","arthritis","strain","cartilage"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "clinical thermometer",
@@ -18475,8 +16425,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["temperature","fever","mercury","heat"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "bandage scissors",
@@ -18484,8 +16433,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hospital","gauze","dressing"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "crutches",
@@ -18493,8 +16441,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["walk","broken leg","accessibility"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "wheel chair",
@@ -18502,8 +16449,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["accessibility","DACA","disability","mobility"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "stretcher",
@@ -18511,8 +16457,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hospital","ambulance","patient","gurney"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "ct scan",
@@ -18520,8 +16465,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["MRI","cat","cancer","tumour"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "scales",
@@ -18529,8 +16473,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["BMI","weight","mass","heavy"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "tap",
@@ -18538,8 +16481,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "double tap",
@@ -18547,8 +16489,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "three finger operation",
@@ -18556,8 +16497,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "move",
@@ -18565,8 +16505,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "swipe",
@@ -18574,8 +16513,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["swipe","finger","move","hand","sideways","app"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "scroll horizontal",
@@ -18583,8 +16521,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["x-axis","move","mouse","scrollwheel","scrolling"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "page move",
@@ -18592,8 +16529,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["movement","left","right","site","document","next","previous","paper"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "swipe left",
@@ -18601,8 +16537,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["finger","movement","gesture","touch","app","left","x-axis","hand"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "swipe up",
@@ -18610,8 +16545,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["finger","movement","gesture","touch","app","up","y-axis","hand"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "swipe right",
@@ -18619,8 +16553,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["finger","movement","gesture","touch","app","right","x-axis","hand"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "swipe down",
@@ -18628,8 +16561,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["finger","movement","gesture","touch","app","down","y-axis","hand"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "finger pushing button",
@@ -18637,8 +16569,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["pushing","pressing","red","alarm","nuclear missile","launch","start","stop"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "exit",
@@ -18646,8 +16577,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "first aid kit",
@@ -18655,8 +16585,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "armchair",
@@ -18664,8 +16593,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "picture",
@@ -18673,8 +16601,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["photo","picture","frame","landscape"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "lighter",
@@ -18682,8 +16609,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["lighter","bic"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "outlet",
@@ -18691,8 +16617,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["outlet"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "spätzlepresse",
@@ -18700,8 +16625,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["swabian","schwäbisch","schwaebisch","spätzle","germany"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "european name badge",
@@ -18709,8 +16633,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "kehrwoche",
@@ -18718,8 +16641,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["swabian","schwäbisch","schwaebisch","germany","broom"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "tardis",
@@ -18727,8 +16649,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["time machine","doctor who","police booth","police box"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "espresso machine",
@@ -18736,8 +16657,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["coffee"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "french press",
@@ -18745,8 +16665,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["coffee"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "moka pot",
@@ -18754,8 +16673,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["coffee"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "milk jug",
@@ -18763,8 +16681,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["coffee","latte"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "electric coffee percolator",
@@ -18772,8 +16689,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["burned coffee"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "drip coffee maker",
@@ -18781,8 +16697,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "coffee grinder",
@@ -18790,8 +16705,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "horse jumping hurdle",
@@ -18799,8 +16713,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["equestrian"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "dj man",
@@ -18808,8 +16721,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["party","disc jockey","Diskjockey","music","rave","techno"],
 		char: "👨‍🪩",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "dj woman",
@@ -18817,8 +16729,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["party","disc jockey","Diskjockey","music","rave","techno"],
 		char: "👩‍🪩",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "dj",
@@ -18826,8 +16737,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["party","disc jockey","Diskjockey","music","rave","techno"],
 		char: "🧑‍🪩",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "drunk person",
@@ -18835,8 +16745,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["person","person-activity","person-gesture","person-sport","drunk","alcohol","party","beer","drinking"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "person with dog",
@@ -18844,8 +16753,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["person","person-activity","dog","walking","animal","pet"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "trump",
@@ -18853,8 +16761,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["trump","donald","president","america","usa"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "horse riding",
@@ -18862,8 +16769,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["equestrian"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "barista",
@@ -18871,8 +16777,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["person"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "man barista",
@@ -18880,8 +16785,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["male"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "woman barista",
@@ -18889,8 +16793,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["female"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "Greta Thunberg",
@@ -18898,8 +16801,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["climate change","Sweden","activist","Fridays for Future","FFF"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "exhausted face",
@@ -18907,8 +16809,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["exhausted","sleepy","tired","face"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "incredulous face",
@@ -18916,8 +16817,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["incredulous","disbelief","shocked"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "dejected face",
@@ -18925,8 +16825,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["sigh","._.","pensive","disappointed"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "annoyed face with tongue",
@@ -18934,8 +16833,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["disappointed","playful","goofy","tongue out","annoyed","frustrated","childish","offended"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "stick figure with dress and arms raised",
@@ -18943,8 +16841,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["legacy computing"],
 		char: "🯆‍👗",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "stick figure with dress leaning left",
@@ -18952,8 +16849,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["legacy computing"],
 		char: "🯇‍👗",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "stick figure with dress leaning right",
@@ -18961,8 +16857,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["legacy computing"],
 		char: "🯈‍👗",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "rainbow hexagon",
@@ -18970,8 +16865,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["pride"],
 		char: "⬡️‍🌈",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "red hexagon",
@@ -18979,8 +16873,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "⬡️‍🟥",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "blue hexagon",
@@ -18988,8 +16881,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "⬡️‍🟦",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "orange hexagon",
@@ -18997,8 +16889,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "⬡️‍🟧",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "yellow hexagon",
@@ -19006,8 +16897,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "⬡️‍🟨",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "green hexagon",
@@ -19015,8 +16905,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "⬡️‍🟩",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "purple hexagon",
@@ -19024,8 +16913,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "⬡️‍🟪",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "brown hexagon",
@@ -19033,8 +16921,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "⬡️‍🟫",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "no handshaking",
@@ -19042,8 +16929,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hygiene","agreement","virus","meeting","spread","germs"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "web syndication",
@@ -19051,8 +16937,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["feed","RSS","atom feed","podcast","subscribe","web feed"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "red eye",
@@ -19060,8 +16945,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["turret","AI","rogue AI","Portal"],
 		char: "◉️‍🔴",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "HAL 9000",
@@ -19069,8 +16953,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["AI","artificial intelligence","rogue AI","I'm sorry Dave","I'm afraid I can't do that","2001","Space Odyssey","Stanley Kubrick","science fiction","movie","film"],
 		char: "◉️‍🔴‍▮️",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "wireframes",
@@ -19078,8 +16961,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "code editor",
@@ -19087,8 +16969,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "autonomous car",
@@ -19096,8 +16977,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "switch",
@@ -19105,8 +16985,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["toggling","changeover switch","exchange counter","left","right"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "surveillance",
@@ -19114,8 +16993,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["surveillance","camera","CCTV"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "augmented reality",
@@ -19123,8 +17001,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "led",
@@ -19132,8 +17009,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "motor",
@@ -19141,8 +17017,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "raspberry pi",
@@ -19150,8 +17025,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "virtual reality",
@@ -19159,8 +17033,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "cable",
@@ -19168,8 +17041,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "tablet",
@@ -19177,8 +17049,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["technology","device","portable","screen","phablet","ipad"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "gps",
@@ -19186,8 +17057,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["navigation","localization","location","reception","signal","wireless","crosshair","where"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "smartwatch",
@@ -19195,8 +17065,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clock","apps","monitor","intelligent","device","armlet"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "washing machine",
@@ -19204,8 +17073,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["clothing","garment","cleaner","home electronics","appliance"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "ibeacon",
@@ -19213,8 +17081,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["wireless","technology","iot","internet of things","navigation","localization","antenna","connection","reception"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "drone",
@@ -19222,8 +17089,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["drone","UAV","quadcopter","RC"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "arduino",
@@ -19231,8 +17097,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["arduino","prototyping","electric","sensor"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "wire",
@@ -19240,8 +17105,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["wire","cord","electric","litz-wire"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "potentiometer",
@@ -19249,8 +17113,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["potentiometer"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "solar cell",
@@ -19258,8 +17121,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["solar","module","cell","photovoltaic"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "circuit",
@@ -19267,8 +17129,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["circuit","electric","prototype"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "qr code",
@@ -19276,8 +17137,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["scan","tag","matrix","barcode","quick response"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "barcode",
@@ -19285,8 +17145,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["scan","tag","machine readable","data"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "cafeteria",
@@ -19294,8 +17153,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "emergency exit",
@@ -19303,8 +17161,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alarm","fire","escape","way","route","guidance","signage","run","person","people","humans"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "stairway",
@@ -19312,8 +17169,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["steps","up","down","ascend","descend","walk"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "town",
@@ -19321,8 +17177,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["city","village","town"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "eiffel tower",
@@ -19330,8 +17185,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["paris","tower","france"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "parking garage",
@@ -19339,8 +17193,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["parking lot","car","automobile","vehicle","sign","traffic sign","p"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "schwäbisch gmünd forum gold und silber",
@@ -19348,8 +17201,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["swabian","schwäbisch","schwaebisch","germany","schwaebisch gmuend"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "schwäbisch gmünd fünfknopfturm",
@@ -19357,8 +17209,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["tower","schwaebisch gmuend"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "schwäbisch gmünd ratshaus",
@@ -19366,8 +17217,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["town hall","schwaebisch gmuend"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "stuttgart fernsehturm",
@@ -19375,8 +17225,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["swabian","schwäbisch","schwaebisch","germany"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "space shuttle",
@@ -19384,8 +17233,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["nasa","shuttle","rocket","space","galaxy","adventure","alien","transportation"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "viennese coffee house",
@@ -19393,8 +17241,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["viennese coffee culture"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "black hole",
@@ -19402,8 +17249,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["interstellar","event horizon","accretion disc"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "foggy mountain",
@@ -19411,8 +17257,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fog","weather","berg","peak","elevation","hiking"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "great pyramid of giza",
@@ -19420,8 +17265,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["seven wonders of the ancient world","egypt"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "colossus of rhodes",
@@ -19429,8 +17273,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["seven wonders of the ancient world","greece"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "hanging gardens of babylon",
@@ -19438,8 +17281,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["seven wonders of the ancient world","iraq"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "lighthouse of alexandria",
@@ -19447,8 +17289,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["seven wonders of the ancient world","egypt"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "mausoleum at halicarnassus",
@@ -19456,8 +17297,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["seven wonders of the ancient world","turkey"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "statue of zeus at olympia",
@@ -19465,8 +17305,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["seven wonders of the ancient world","greece"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "temple of artemis at ephesus",
@@ -19474,8 +17313,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["seven wonders of the ancient world","turkey"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "mark",
@@ -19483,8 +17321,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "toggle button",
@@ -19492,8 +17329,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "location indicator",
@@ -19501,8 +17337,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "scale",
@@ -19510,8 +17345,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["measurement","scaling","size","distance","meters","inches","miles","kilometers"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "locomotion",
@@ -19519,8 +17353,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["movement","transport","driving","destination","start","end","distance","track"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "toggle button state B",
@@ -19528,8 +17361,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "people dialogue",
@@ -19537,8 +17369,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["communication","talking","chatting","users","humans","conversation","two","face-to-face"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "safety",
@@ -19546,8 +17377,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "chats",
@@ -19555,8 +17385,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["messaging","typing","message","text","writing","write","dialog"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "collaboration",
@@ -19564,8 +17393,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["collab","team","teamwork","group","work","communication","circle"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "interview",
@@ -19573,8 +17401,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["interview","talk","speak","bubble"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "intricate",
@@ -19582,8 +17409,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["intricate","abstract"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "simple",
@@ -19591,8 +17417,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["simple","abstract"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "return",
@@ -19600,8 +17425,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["back button"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "close",
@@ -19609,8 +17433,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "forward",
@@ -19618,8 +17441,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "hamburger menu",
@@ -19627,8 +17449,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "upload",
@@ -19636,8 +17457,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "download",
@@ -19645,8 +17465,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "share",
@@ -19654,8 +17473,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "wifi",
@@ -19663,8 +17481,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "copy",
@@ -19672,8 +17489,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "contacts",
@@ -19681,8 +17497,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "filter",
@@ -19690,8 +17505,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "cursor",
@@ -19699,8 +17513,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["pointer"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "details",
@@ -19708,8 +17521,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "hold",
@@ -19717,8 +17529,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "duplicate",
@@ -19726,8 +17537,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["make copy","second","file","create","page","document"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "save",
@@ -19735,8 +17545,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["store","hard drive","record","hdd","harddisk","download"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "edit",
@@ -19744,8 +17553,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["change","editing","pencil","page","document","file","write","writing","scribble"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "home button",
@@ -19753,8 +17561,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["house","main","page","website","navigation","app","ui","symbol","internet","homepage"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "add button",
@@ -19762,8 +17569,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["new","file","plus","more","create","set"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "archive",
@@ -19771,8 +17577,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["save","save to","library","cupboard","drawer"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "overview",
@@ -19780,8 +17585,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["overview","lines","list"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "delete",
@@ -19789,8 +17593,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["delete","bin","waste","remove"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "comment",
@@ -19798,8 +17601,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["comment","write"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "more information",
@@ -19807,8 +17609,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["more","plus","add","cross"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "sort",
@@ -19816,8 +17617,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["sort","list","hierarchy"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "inbox",
@@ -19825,8 +17625,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["entrance","inbox","in"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "compose",
@@ -19834,8 +17633,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["write","compose","author"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "add contact",
@@ -19843,8 +17641,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["add","contact"],
 		char: "",
 		skinTones: [:],
-		category: "extras-openmoji",
-	),
+		category: "extras-openmoji"),
 
 	Emoji(
 		id: "jar with red content",
@@ -19852,8 +17649,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["red potion","health potion","jam","jelly"],
 		char: "🫙‍🟥",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "jar with blue content",
@@ -19861,8 +17657,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["blue potion","magic potion","mana potion","water"],
 		char: "🫙‍🟦",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "jar with orange content",
@@ -19870,8 +17665,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["marmelade","jelly"],
 		char: "🫙‍🟧",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "jar with yellow content",
@@ -19879,8 +17673,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["urine","marmelade"],
 		char: "🫙‍🟨",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "jar with green content",
@@ -19888,8 +17681,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["kiwi jam"],
 		char: "🫙‍🟩",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "jar with purple content",
@@ -19897,8 +17689,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["potion of health and magic","jam"],
 		char: "🫙‍🟪",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "jar with brown content",
@@ -19906,8 +17697,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["nutella","peanut butter","nut spread","chocolate"],
 		char: "🫙‍🟫",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "regional indicator A",
@@ -19915,8 +17705,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alphabet","letter","upper case","type"],
 		char: "🇦",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "regional indicator B",
@@ -19924,8 +17713,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alphabet","letter","upper case","type"],
 		char: "🇧",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "regional indicator C",
@@ -19933,8 +17721,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alphabet","letter","upper case","type"],
 		char: "🇨",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "regional indicator D",
@@ -19942,8 +17729,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alphabet","letter","upper case","type"],
 		char: "🇩",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "regional indicator E",
@@ -19951,8 +17737,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alphabet","letter","upper case","type"],
 		char: "🇪",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "regional indicator F",
@@ -19960,8 +17745,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alphabet","letter","upper case","type"],
 		char: "🇫",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "regional indicator G",
@@ -19969,8 +17753,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alphabet","letter","upper case","type"],
 		char: "🇬",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "regional indicator H",
@@ -19978,8 +17761,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alphabet","letter","upper case","type"],
 		char: "🇭",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "regional indicator I",
@@ -19987,8 +17769,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alphabet","letter","upper case","type"],
 		char: "🇮",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "regional indicator J",
@@ -19996,8 +17777,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alphabet","letter","upper case","type"],
 		char: "🇯",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "regional indicator K",
@@ -20005,8 +17785,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alphabet","letter","upper case","type"],
 		char: "🇰",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "regional indicator L",
@@ -20014,8 +17793,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alphabet","letter","upper case","type"],
 		char: "🇱",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "regional indicator M",
@@ -20023,8 +17801,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alphabet","letter","upper case","type"],
 		char: "🇲",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "regional indicator N",
@@ -20032,8 +17809,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alphabet","letter","upper case","type"],
 		char: "🇳",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "regional indicator O",
@@ -20041,8 +17817,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alphabet","letter","upper case","type"],
 		char: "🇴",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "regional indicator P",
@@ -20050,8 +17825,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alphabet","letter","upper case","type"],
 		char: "🇵",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "regional indicator Q",
@@ -20059,8 +17833,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alphabet","letter","upper case","type"],
 		char: "🇶",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "regional indicator R",
@@ -20068,8 +17841,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alphabet","letter","upper case","type"],
 		char: "🇷",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "regional indicator S",
@@ -20077,8 +17849,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alphabet","letter","upper case","type"],
 		char: "🇸",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "regional indicator T",
@@ -20086,8 +17857,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alphabet","letter","upper case","type"],
 		char: "🇹",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "regional indicator U",
@@ -20095,8 +17865,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alphabet","letter","upper case","type"],
 		char: "🇺",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "regional indicator V",
@@ -20104,8 +17873,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alphabet","letter","upper case","type"],
 		char: "🇻",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "regional indicator W",
@@ -20113,8 +17881,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alphabet","letter","upper case","type"],
 		char: "🇼",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "regional indicator X",
@@ -20122,8 +17889,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alphabet","letter","upper case","type"],
 		char: "🇽",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "regional indicator Y",
@@ -20131,8 +17897,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alphabet","letter","upper case","type"],
 		char: "🇾",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "regional indicator Z",
@@ -20140,8 +17905,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["alphabet","letter","upper case","type"],
 		char: "🇿",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "quebec flag",
@@ -20149,8 +17913,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["fleur-de-lis","quebec","canada","province"],
 		char: "🏴󠁣󠁡󠁱󠁣󠁿",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "berlin flag",
@@ -20158,8 +17921,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bear","city","capital"],
 		char: "🏴󠁤󠁥󠁢󠁥󠁿",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "bavaria flag",
@@ -20167,8 +17929,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["state","lozenge"],
 		char: "🏴󠁤󠁥󠁢󠁹󠁿",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "asturian flag",
@@ -20176,8 +17937,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["asturian","asturina"],
 		char: "🏴󠁥󠁳󠁡󠁳󠁿",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "catalonia flag",
@@ -20185,8 +17945,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["catalan","senyera"],
 		char: "🏴󠁥󠁳󠁣󠁴󠁿",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "basque flag",
@@ -20194,8 +17953,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["basque","ikurrina","euskal"],
 		char: "🏴󠁥󠁳󠁰󠁶󠁿",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "bretagne flag",
@@ -20203,8 +17961,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["breton","brittany","gwenn-ha-du"],
 		char: "🏴󠁦󠁲󠁢󠁲󠁥󠁿",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "california flag",
@@ -20212,8 +17969,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["bear","republic","state"],
 		char: "🏴󠁵󠁳󠁣󠁡󠁿",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "texas flag",
@@ -20221,8 +17977,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["cowboy","lone star","republic","state"],
 		char: "🏴󠁵󠁳󠁴󠁸󠁿",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "hyphen-minus",
@@ -20230,8 +17985,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["hyphen","minus","dash","line"],
 		char: "-",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "circled zero with slash",
@@ -20239,8 +17993,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["license","copyright","creative commons","open","libre","public domain"],
 		char: "🄍",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "circled anticlockwise arrow",
@@ -20248,8 +18001,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["license","copyright","creative commons","open","libre","share alike"],
 		char: "🄎",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "circled dollar sign with overlaid backslash",
@@ -20257,8 +18009,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["license","copyright","creative commons","open","libre","non commercial"],
 		char: "🄏",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "copyleft symbol",
@@ -20266,8 +18017,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["open source","free","libre","reciprocal"],
 		char: "🄯",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "circled cc",
@@ -20275,8 +18025,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["license","copyright","creative commons","open","libre","public domain"],
 		char: "🅭",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "circled c with overlaid backslash",
@@ -20284,8 +18033,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["license","copyright","creative commons","open","libre","public domain"],
 		char: "🅮",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "circled human figure",
@@ -20293,8 +18041,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["license","copyright","creative commons","open","libre","by","attribution","credit"],
 		char: "🅯",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "rounded symbol for fu",
@@ -20302,8 +18049,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ideograph","chinese","religion","luck","福"],
 		char: "🉠",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "rounded symbol for lu",
@@ -20311,8 +18057,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ideograph","chinese","religion","prosperity","禄","祿"],
 		char: "🉡",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "rounded symbol for shou",
@@ -20320,8 +18065,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ideograph","chinese","religion","longevity","寿","壽"],
 		char: "🉢",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "rounded symbol for xi",
@@ -20329,8 +18073,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ideograph","chinese","religion","happiness","喜"],
 		char: "🉣",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "rounded symbol for shuangxi",
@@ -20338,8 +18081,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ideograph","chinese","religion","double happiness","love and marriage","囍"],
 		char: "🉤",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "rounded symbol for cai",
@@ -20347,8 +18089,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["ideograph","chinese","religion","wealth","财","財"],
 		char: "🉥",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "hacker cat",
@@ -20356,8 +18097,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["coder","developer","software","technologist","smart","clever","code","notebook","computer"],
 		char: "🐱‍💻",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "stick figure",
@@ -20365,8 +18105,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["legacy computing"],
 		char: "🯅",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "stick figure with arms raised",
@@ -20374,8 +18113,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["legacy computing"],
 		char: "🯆",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "stick figure leaning left",
@@ -20383,8 +18121,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["legacy computing"],
 		char: "🯇",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "stick figure leaning right",
@@ -20392,8 +18129,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["legacy computing"],
 		char: "🯈",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "stick figure with dress",
@@ -20401,8 +18137,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["legacy computing"],
 		char: "🯉",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "sound recording copyright",
@@ -20410,8 +18145,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["trademark","music","phonogram"],
 		char: "℗",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "service mark",
@@ -20419,8 +18153,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["trademark","sm"],
 		char: "℠",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "circled equals",
@@ -20428,8 +18161,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["license","copyright","creative commons","open","libre"],
 		char: "⊜",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "power symbol",
@@ -20437,8 +18169,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["enable","on","off"],
 		char: "⏻",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "power on-off symbol",
@@ -20446,8 +18177,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["enable","disable","on","off"],
 		char: "⏼",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "power on symbol",
@@ -20455,8 +18185,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["enable","on","I"],
 		char: "⏽",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "power sleep symbol",
@@ -20464,8 +18193,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["sleep","standby","crescent moon"],
 		char: "⏾",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "white square",
@@ -20473,8 +18201,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["missing glyph"],
 		char: "□",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "black rectangle",
@@ -20482,8 +18209,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "▬",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "white rectangle",
@@ -20491,8 +18217,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "▭",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "black vertical rectangle",
@@ -20500,8 +18225,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "▮",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "fisheye",
@@ -20509,8 +18233,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["iris"],
 		char: "◉",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "circle with left half black",
@@ -20518,8 +18241,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "◐",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "circle with right half black",
@@ -20527,8 +18249,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "◑",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "square with left half black",
@@ -20536,8 +18257,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "◧",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "square with right half black",
@@ -20545,8 +18265,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "◨",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "square with upper left diagonal black",
@@ -20554,8 +18273,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "◩",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "square with lower right diagonal black",
@@ -20563,8 +18281,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "◪",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "up-pointing triangle with left half black",
@@ -20572,8 +18289,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "◭",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "up-pointing triangle with right half black",
@@ -20581,8 +18297,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "◮",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "black star",
@@ -20590,8 +18305,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["full star"],
 		char: "★",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "left right black arrow",
@@ -20599,8 +18313,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "⬌",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "up down black arrow",
@@ -20608,8 +18321,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "⬍",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "black pentagon",
@@ -20617,8 +18329,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["equilateral polygon"],
 		char: "⬟",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "white pentagon",
@@ -20626,8 +18337,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["equilateral polygon"],
 		char: "⬠",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "white hexagon",
@@ -20635,8 +18345,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["equilateral polygon"],
 		char: "⬡",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "black hexagon",
@@ -20644,8 +18353,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["equilateral polygon"],
 		char: "⬢",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "horizontal black hexagon ",
@@ -20653,8 +18361,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["equilateral polygon"],
 		char: "⬣",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "black large circle",
@@ -20662,8 +18369,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "⬤",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "black vertical ellipse",
@@ -20671,8 +18377,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "⬮",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "white vertical ellipse",
@@ -20680,8 +18385,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "⬯",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "heavy circle",
@@ -20689,8 +18393,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["off","disable","power off","O"],
 		char: "⭘",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "anticlockwise triangle-headed top u-shaped arrow",
@@ -20698,8 +18401,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "⮏",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "overlapping white squares",
@@ -20707,8 +18409,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "⮺",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "overlapping white and black squares",
@@ -20716,8 +18417,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "⮻",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "overlapping black squares",
@@ -20725,8 +18425,7 @@ var emojis: Array<Emoji> = [
 		keywords: [],
 		char: "⮼",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "horizontal black octagon",
@@ -20734,8 +18433,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["equilateral polygon"],
 		char: "⯃",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "black octagon",
@@ -20743,8 +18441,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["equilateral polygon"],
 		char: "⯄",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "star with left half black",
@@ -20752,8 +18449,7 @@ var emojis: Array<Emoji> = [
 		keywords: ["half star"],
 		char: "⯪",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 
 	Emoji(
 		id: "star with right half black",
@@ -20761,6 +18457,5 @@ var emojis: Array<Emoji> = [
 		keywords: ["half star"],
 		char: "⯫",
 		skinTones: [:],
-		category: "extras-unicode",
-	),
+		category: "extras-unicode"),
 ]

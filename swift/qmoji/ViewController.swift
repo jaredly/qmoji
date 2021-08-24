@@ -90,7 +90,6 @@ class NewShortcutKey: NSViewController, NSTextFieldDelegate {
 class MyVC: NSViewController, NSTextFieldDelegate {
     var textField: NSTextField!
     var customView: CustomView!
-    var usages: [String:Usage] = [:]
     var descriptionField: NSTextField!
     var scroll: NSScrollView!
     var optionsMenu: NSMenu!
@@ -161,12 +160,6 @@ class MyVC: NSViewController, NSTextFieldDelegate {
         }
         shortcutPopover.contentViewController = ksvc
         
-        let decoder = JSONDecoder()
-        if let data = UserDefaults.standard.data(forKey: usageKey),
-           let decoded = try? decoder.decode([String:Usage].self, from: data) {
-            usages = decoded
-        }
-        
         let description = NSTextField.init(wrappingLabelWithString: " ")
         let newSize = description.sizeThatFits(NSSize(width: width, height: 400))
         description.setFrameSize(newSize)
@@ -177,7 +170,7 @@ class MyVC: NSViewController, NSTextFieldDelegate {
         
         let height = heightForCount(count: emojis.count)
         let custom = CustomView(frame: NSRect(x: 0, y: 0, width: width, height: height ))
-        custom.usages = usages
+        custom.usages = loadUsages()
         self.customView = custom
         scroll.documentView = custom
         self.view.addSubview(scroll)

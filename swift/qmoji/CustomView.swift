@@ -24,6 +24,35 @@ let h = 20
 let lineWidth = 10
 let width = numAcross * size + margin * 2
 
+func loadUsages() -> [String:Usage] {
+    if let data = UserDefaults.standard.data(forKey: usageKey) {
+        let decoder = JSONDecoder()
+        if let usages = try? decoder.decode([String:Usage].self, from: data) {
+            let migrated = [:]
+            let oldMap = [:]
+            let newMap = [:]
+            for emoji in emojis {
+                if let old = emoji.oldId {
+                    oldMap[old] = emoji.id
+                }
+                newMap[emoji.id] = true
+            }
+            for (k, v) in usages {
+                if let newId = oldMap[k] {
+                    migrated[newId] = v
+                } else if newMap[k] != nil {
+                    migrated[k] = v
+                } else {
+                    // print("Unknown emoji", k)
+                    fatalError()
+                }
+            }
+            return migrated
+        }
+    }
+    return [:]
+}
+
 func indexFromPoint(point: NSPoint) -> Int {
     let ox = (Int(point.x) - margin) / size
     let oy = (Int(point.y) - margin) / size
