@@ -28,6 +28,7 @@ func fourCharCodeValue(string: String) -> Int {
 }
 
 let showAtMouseKey = "showAtMouse"
+let shortcutKeyKey = "shortcutKey"
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
@@ -41,11 +42,23 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
     var popover: NSPopover!
     var window: NSWindow!
     var statusBarItem: NSStatusItem!
-    var hotKeyRef: UnsafeMutablePointer<EventHotKeyRef?>!
+//    var hotKeyRef: UnsafeMutablePointer<EventHotKeyRef?>?
     var showAtMouse: Bool = UserDefaults.standard.bool(forKey: showAtMouseKey)
+    var shortcutKey: Int = {
+        if UserDefaults.standard.string(forKey: shortcutKeyKey) == nil {
+            return 0x31
+        }
+        return UserDefaults.standard.integer(forKey: shortcutKeyKey)
+    }()
+    var hotKeyRef: EventHotKeyRef?
     
     @objc func onClick() {
         print("Hello")
+    }
+    
+    func setShortcutKey(key: Int) {
+        registerHotkey(keyCode: key)
+        UserDefaults.standard.set(key, forKey: shortcutKeyKey)
     }
     
     func toggleShowAtMouse() {
@@ -91,8 +104,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
              button.action = #selector(toggle(_:))
         }
 
-        let keyCode = 0x1F // 0x31
-        registerHotkey(keyCode: keyCode)
+//        let keyCode = 0x1F // 0x31
+        registerHotkey(keyCode: shortcutKey)
     }
     
     func windowDidResignKey(_ notification: Notification) {
@@ -100,6 +113,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
     }
 
     func registerHotkey(keyCode: Int) {
+        if let current = hotKeyRef {
+            UnregisterEventHotKey(current)
+        }
+
+        let hotKeyRef = UnsafeMutablePointer<EventHotKeyRef?>.allocate(capacity: 1)
+        
         var gMyHotKeyID = EventHotKeyID()
         gMyHotKeyID.signature = OSType(fourCharCodeValue(string: "hotk"))
         gMyHotKeyID.id = UInt32(keyCode)
@@ -109,7 +128,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
         eventType.eventClass = OSType(kEventClassKeyboard)
         eventType.eventKind = OSType(kEventHotKeyPressed)
         
-        hotKeyRef = UnsafeMutablePointer<EventHotKeyRef?>.allocate(capacity: 1)
         // Install handler.
         InstallEventHandler(GetApplicationEventTarget(), {(nextHanlder, theEvent, userData) -> OSStatus in
             var hkCom = EventHotKeyID()
@@ -130,6 +148,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
         // Register hotkey.
         let status = RegisterEventHotKey(UInt32(keyCode), UInt32(cmdKey + optionKey), gMyHotKeyID, GetApplicationEventTarget(), 0, hotKeyRef)
         print("The status", status)
+        
+        self.hotKeyRef = hotKeyRef.pointee
     }
     
     func togglePopover(_ sender: AnyObject?) {

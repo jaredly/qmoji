@@ -71,6 +71,14 @@ func sendKeystrokesToFrontmostApp(_ string: String) {
     keyup.postToPid(pid)
 }
 
+func sortUsages(one: Usage, two: Usage) -> Bool {
+    if one.count == two.count {
+        return one.date > two.date
+    } else {
+        return one.count > two.count
+    }
+}
+
 struct Cache {
     var cached: [Emoji]
     var searchTerm: String
@@ -81,15 +89,7 @@ struct Cache {
             var used = emojis.filter({emoji in usages[emoji.id] != nil})
             let unused = emojis.filter({emoji in usages[emoji.id] == nil})
             used.sort(by: { one, two in
-                let oc = usages[one.id]!.count
-                let od = usages[one.id]!.date
-                let tc = usages[two.id]!.count
-                let td = usages[two.id]!.date
-                if oc == tc {
-                    return od > td
-                } else {
-                    return oc > tc
-                }
+                return sortUsages(one: usages[one.id]!, two: usages[two.id]!)
             })
             used.append(contentsOf: unused)
             cached = used
@@ -205,14 +205,35 @@ class CustomView: NSView {
             usage.date = Date.init().timeIntervalSince1970
             self.usages[id] = usage
         } else {
+            // Bring it down to 20 if needed
+            if self.usages.count >= 20 {
+                let ids = self.usages.keys.sorted(by: {one, two in sortUsages(one: self.usages[one]!, two: self.usages[two]!)})
+                for i in 19...ids.count - 1 {
+                    self.usages.remove(at: self.usages.index(forKey: ids[i])!)
+                }
+            }
             self.usages[id] = Usage(name: id, count: 1, date: Date.init().timeIntervalSince1970)
         }
+        saveUsages()
+    }
+    
+    func saveUsages() {
         self.filterCache = Cache(searchTerm: _searchTerm, usages: usages)
         self.setNeedsDisplay(self.bounds)
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(self.usages) {
             UserDefaults.standard.set(encoded, forKey: usageKey)
         }
+    }
+    
+    func removeUsage() {
+        let filtered = sortedEmoijs()
+        if filtered.isEmpty || self.selected > filtered.count {
+            return
+        }
+        let emoji = filtered[self.selected]
+        self.usages.remove(at: self.usages.index(forKey: emoji.id)!)
+        saveUsages()
     }
 
     func sendKey() {
@@ -232,6 +253,10 @@ class CustomView: NSView {
         })
         onClear()
         searchTerm = ""
+    }
+    
+    override func rightMouseDown(with event: NSEvent) {
+        removeUsage()
     }
 
     override func mouseDown(with event: NSEvent) {

@@ -19,6 +19,69 @@ struct Usage: Codable {
     var date: Double
 }
 
+class MyText: NSTextField {
+    
+    
+    override func keyDown(with event: NSEvent) {
+        print("WHAT", event.keyCode)
+    }
+}
+
+class NewShortcutKey: NSViewController, NSTextFieldDelegate {
+    var label: NSTextField!
+    var onDismiss: (() -> ())!
+    var currentCode: Int = AppDelegate.shared.shortcutKey
+    
+    override func loadView() {
+        self.view = NSView()
+    }
+    
+    @objc func onSet() {
+        AppDelegate.shared.setShortcutKey(key: currentCode)
+        onDismiss()
+    }
+    
+    override func viewDidLoad() {
+        self.view.setFrameSize(NSSize(width: width, height: 60))
+        
+        NSEvent.addLocalMonitorForEvents(matching: .keyDown, handler: {event in
+            print("Event", event.keyCode)
+            if event.keyCode == 53 {
+                self.onDismiss()
+            }
+            self.currentCode = Int(event.keyCode)
+            self.label.stringValue = "Key code: \(self.currentCode)"
+            return nil
+        })
+        
+        let button = NSButton()
+        button.title = "Update shortcut key"
+        button.setFrameOrigin(NSPoint(x: margin, y: 0))
+        button.setFrameSize(NSSize(width: width - margin * 2, height: 20))
+        button.action = #selector(onSet)
+        button.target = self
+        
+        label = NSTextField(labelWithString: "Key code: \(currentCode)")
+        label.lineBreakMode = .byWordWrapping
+        label.setFrameOrigin(NSPoint(x: 0, y: 20))
+        label.setFrameSize(NSSize(width: width - margin * 2, height: 20))
+        self.view.addSubview(label)
+        
+        let description = NSTextField(labelWithString: "Type any key. Escape to cancel.")
+        description.setFrameOrigin(NSPoint(x: 0, y: 40))
+        description.setFrameSize(NSSize(width: width - margin * 2, height: 20))
+        self.view.addSubview(description)
+        
+        self.view.addSubview(button)
+        self.view.becomeFirstResponder()
+    }
+    
+    override func keyDown(with event: NSEvent) {
+        label.stringValue = "\(event.keyCode)"
+        print("OK")
+    }
+}
+
 class MyVC: NSViewController, NSTextFieldDelegate {
     var textField: NSTextField!
     var customView: CustomView!
@@ -28,6 +91,8 @@ class MyVC: NSViewController, NSTextFieldDelegate {
     var optionsMenu: NSMenu!
     var showAtCursor: NSMenuItem!
     var menuButton: NSButton!
+    
+    var shortcutPopover: NSPopover!
     
     override func loadView() {
         self.view = NSView()
@@ -46,6 +111,13 @@ class MyVC: NSViewController, NSTextFieldDelegate {
     
     @objc func onQuit() {
         NSApp.terminate(nil)
+    }
+    
+    @objc func setShortcutKey() {
+        print("Set shortcut key")
+//        AppDelegate.shared.registerHotkey(keyCode: 0x31)
+        shortcutPopover.show(relativeTo: menuButton.bounds, of: menuButton, preferredEdge: NSRectEdge.minY)
+//        shortcutPopover.pres
     }
     
     override func viewDidLoad() {
@@ -73,9 +145,16 @@ class MyVC: NSViewController, NSTextFieldDelegate {
         showAtCursor = NSMenuItem(title: "Show at cursor", action: #selector(toggleShowAtCursor), keyEquivalent: "")
         showAtCursor.state = AppDelegate.shared.showAtMouse ? .on : .off
         optionsMenu.addItem(showAtCursor)
+        optionsMenu.addItem(withTitle: "Change shortcut key", action: #selector(setShortcutKey), keyEquivalent: "")
         optionsMenu.addItem(withTitle: "Quit", action: #selector(onQuit), keyEquivalent: "")
         
         
+        shortcutPopover = NSPopover()
+        let ksvc = NewShortcutKey()
+        ksvc.onDismiss = {
+            self.shortcutPopover.performClose(nil)
+        }
+        shortcutPopover.contentViewController = ksvc
         
         let decoder = JSONDecoder()
         if let data = UserDefaults.standard.data(forKey: usageKey),
@@ -124,30 +203,36 @@ class MyVC: NSViewController, NSTextFieldDelegate {
         customView.searchTerm = textField.stringValue
     }
     
-    func textField(_ textField: NSTextField, textView: NSTextView, shouldSelectCandidateAt index: Int) -> Bool {
-        print("Text field select", index)
-        return true
-    }
-    
     func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
         print("Selector", commandSelector)
-        if commandSelector == #selector(insertTab(_:)) {
-            print("tab")
+        if commandSelector == #selector(moveRight(_:)) {
             self.customView.setSelected(proposed: self.customView.selected + 1)
+            return true
+        }
+        if commandSelector == #selector(moveLeft(_:)) {
+            self.customView.setSelected(proposed: self.customView.selected - 1)
+            return true
+        }
+        if commandSelector == #selector(moveDown(_:)) {
+            self.customView.setSelected(proposed: self.customView.selected + 10)
+            return true
+        }
+        if commandSelector == #selector(moveUp(_:)) {
+            self.customView.setSelected(proposed: self.customView.selected - 10)
+            return true
+        }
+        if commandSelector == #selector(insertTab(_:)) {
+            self.customView.setSelected(proposed: self.customView.selected + 1)
+            return true
         }
         if commandSelector == #selector(insertBacktab(_:)) {
-            print("back tab")
             self.customView.setSelected(proposed: self.customView.selected - 1)
+            return true
         }
         if commandSelector == #selector(cancelOperation(_:)) {
-            print("Escape")
             NSApp.hide(nil)
             return true
         }
         return false
-    }
-    
-    override func keyDown(with event: NSEvent) {
-        print(event.keyCode, "Key down here")
     }
 }
