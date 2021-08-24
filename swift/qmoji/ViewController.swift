@@ -42,7 +42,7 @@ class NewShortcutKey: NSViewController, NSTextFieldDelegate {
     }
     
     override func viewDidLoad() {
-        self.view.setFrameSize(NSSize(width: width, height: 60))
+        self.view.setFrameSize(NSSize(width: width, height: 80))
         
         NSEvent.addLocalMonitorForEvents(matching: .keyDown, handler: {event in
             print("Event", event.keyCode)
@@ -56,21 +56,26 @@ class NewShortcutKey: NSViewController, NSTextFieldDelegate {
         
         let button = NSButton()
         button.title = "Update shortcut key"
-        button.setFrameOrigin(NSPoint(x: margin, y: 0))
+        button.setFrameOrigin(NSPoint(x: margin, y: margin))
         button.setFrameSize(NSSize(width: width - margin * 2, height: 20))
         button.action = #selector(onSet)
         button.target = self
         
         label = NSTextField(labelWithString: "Key code: \(currentCode)")
         label.lineBreakMode = .byWordWrapping
-        label.setFrameOrigin(NSPoint(x: 0, y: 20))
+        label.setFrameOrigin(NSPoint(x: margin, y: 20 + margin))
         label.setFrameSize(NSSize(width: width - margin * 2, height: 20))
         self.view.addSubview(label)
         
-        let description = NSTextField(labelWithString: "Type any key. Escape to cancel.")
-        description.setFrameOrigin(NSPoint(x: 0, y: 40))
-        description.setFrameSize(NSSize(width: width - margin * 2, height: 20))
+        let description = NSTextField(labelWithString: "Type any key. Escape to cancel.\nPrefix cmd+opt+ automatically applied.")
+        description.setFrameOrigin(NSPoint(x: margin, y: 40 - margin))
+        description.setFrameSize(NSSize(width: width - margin * 2, height: 40))
         self.view.addSubview(description)
+        
+//        let line2 = NSTextField(labelWithString: "Type any key. Escape to cancel.\nPrefix cmd+opt+ automatically applied.")
+//        line2.setFrameOrigin(NSPoint(x: 0, y: 60))
+//        description.setFrameSize(NSSize(width: width - margin * 2, height: 20))
+//        self.view.addSubview(description)
         
         self.view.addSubview(button)
         self.view.becomeFirstResponder()
@@ -230,7 +235,12 @@ class MyVC: NSViewController, NSTextFieldDelegate {
             return true
         }
         if commandSelector == #selector(cancelOperation(_:)) {
-            NSApp.hide(nil)
+            if self.textField.stringValue != "" {
+                self.textField.stringValue = ""
+                customView.searchTerm = ""
+            } else {
+                AppDelegate.shared.toggle(nil)
+            }
             return true
         }
         return false
