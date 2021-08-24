@@ -11,6 +11,8 @@
 		7F2468D426CD50F8000B2AB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F2468D326CD50F8000B2AB5 /* Assets.xcassets */; };
 		7F2468D726CD50F8000B2AB5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F2468D626CD50F8000B2AB5 /* Preview Assets.xcassets */; };
 		7F2468DA26CD50F8000B2AB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F2468D826CD50F8000B2AB5 /* Main.storyboard */; };
+		7FDF23DD26D499DE00549271 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDF23DC26D499DD00549271 /* CustomView.swift */; };
+		7FDF23E226D49A2B00549271 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDF23E126D49A2B00549271 /* ViewController.swift */; };
 		7FE12E6126CD83C9001D1B24 /* Emojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE12E6026CD83C9001D1B24 /* Emojis.swift */; };
 		7FECA17526D0054A000E7276 /* Fuzzy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FECA17426D0054A000E7276 /* Fuzzy.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +44,8 @@
 		7F2468DC26CD50F8000B2AB5 /* qmoji.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = qmoji.entitlements; sourceTree = "<group>"; };
 		7F2468E126CD50F8000B2AB5 /* qmojiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = qmojiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F2468EC26CD50F8000B2AB5 /* qmojiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = qmojiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FDF23DC26D499DD00549271 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		7FDF23E126D49A2B00549271 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7FE12E6026CD83C9001D1B24 /* Emojis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emojis.swift; sourceTree = "<group>"; };
 		7FECA17426D0054A000E7276 /* Fuzzy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fuzzy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				7F2468CF26CD50F6000B2AB5 /* AppDelegate.swift */,
+				7FDF23E126D49A2B00549271 /* ViewController.swift */,
+				7FDF23DC26D499DD00549271 /* CustomView.swift */,
 				7FECA17426D0054A000E7276 /* Fuzzy.swift */,
 				7F2468D326CD50F8000B2AB5 /* Assets.xcassets */,
 				7F2468D826CD50F8000B2AB5 /* Main.storyboard */,
@@ -247,7 +253,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FDF23E226D49A2B00549271 /* ViewController.swift in Sources */,
 				7FE12E6126CD83C9001D1B24 /* Emojis.swift in Sources */,
+				7FDF23DD26D499DE00549271 /* CustomView.swift in Sources */,
 				7FECA17526D0054A000E7276 /* Fuzzy.swift in Sources */,
 				7F2468D026CD50F6000B2AB5 /* AppDelegate.swift in Sources */,
 			);
