@@ -196,16 +196,19 @@ class MyVC: NSViewController, NSTextFieldDelegate {
         self.customView.sendKey()
     }
 
-    func updateDescription(emoji: Emoji) {
-        self.descriptionField.stringValue = emoji.id + "\n" + emoji.keywords.joined(separator: ", ")
-        let newSize = self.descriptionField.sizeThatFits(NSSize(width: width - margin * 2, height: 400))
-        self.descriptionField.setFrameSize(newSize)
-        self.scroll.setFrameOrigin(NSPoint(x: 0, y: Int(newSize.height) + margin))
-        self.scroll.setFrameSize(NSSize(width: width, height: height - h - margin * 2 - Int(newSize.height) - margin))
+    func updateDescription(emoji: Emoji?) {
+        if let emoji = emoji {
+            self.descriptionField.stringValue = emoji.id + "\n" + emoji.keywords.joined(separator: ", ")
+            let newSize = self.descriptionField.sizeThatFits(NSSize(width: width - margin * 2, height: 400))
+            self.descriptionField.setFrameSize(newSize)
+            self.scroll.setFrameOrigin(NSPoint(x: 0, y: Int(newSize.height) + margin))
+            self.scroll.setFrameSize(NSSize(width: width, height: height - h - margin * 2 - Int(newSize.height) - margin))
+        }
     }
 
     func controlTextDidChange(_ obj: Notification) {
         customView.searchTerm = textField.stringValue
+        self.updateDescription(emoji: customView.currentEmoji())
     }
     
     func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {

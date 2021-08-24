@@ -185,8 +185,12 @@ class CustomView: NSView {
         self.scrollToVisible(rect)
     }
     
-    func currentEmoji() -> Emoji {
-        return sortedEmoijs()[self.selected]
+    func currentEmoji() -> Emoji? {
+        let sorted = sortedEmoijs()
+        if self.selected < sorted.count {
+            return sortedEmoijs()[self.selected]
+        }
+        return nil
     }
     
     func sortedEmoijs() -> Array<Emoji> {
