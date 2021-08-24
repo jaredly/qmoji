@@ -126,18 +126,11 @@ class CustomView: NSView {
         set {
             _searchTerm = newValue
             selected = 0
-            /*let newCache =
-            if let oldCache = self.filterCakkche {
-                if oldCache.cached == newCache.cached {
-                    return
-                }
-            }*/
             self.filterCache = Cache(searchTerm: newValue, usages: usages)
             let newHeight = heightForCount(count: self.filterCache!.cached.count)
             self.scroll(NSPoint(x: 0, y: 0))
             self.setFrameSize(NSSize(width: width, height: newHeight))
             self.setNeedsDisplay(self.bounds)
-            // self.setNeedsDisplay(NSRect(x: 0, y: 0, width: self.bounds.width, height: 200))
         }
     }
     override var isFlipped: Bool {
@@ -238,10 +231,8 @@ class CustomView: NSView {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
             sendKeystrokesToFrontmostApp(emoji.char)
         })
-        if !_searchTerm.isEmpty {
-            onClear()
-            searchTerm = ""
-        }
+        onClear()
+        searchTerm = ""
     }
 
     override func mouseDown(with event: NSEvent) {
@@ -249,17 +240,18 @@ class CustomView: NSView {
     }
     
     override func draw(_ dirtyRect: NSRect) {
+        let highlightValue: CGFloat = AppDelegate.isDark ? 1.0 : 0.0
         for (index, emoji) in sortedEmoijs().enumerated() {
             let rect = pointRect(point: pointFromIndex(index: index))
             if rect.intersects(dirtyRect) {
                 if usages[emoji.id] != nil {
-                    NSColor(calibratedRed: 1.0, green: 1.0, blue: 1.0, alpha: 0.3).set()
+                    NSColor(calibratedRed: highlightValue, green: highlightValue, blue: highlightValue, alpha: 0.3).set()
                     rect.fill()
                 }
                 let font = NSFont.systemFont(ofSize: CGFloat(fontSize))
                 NSString(string: emoji.char).draw(at: NSPoint(x: rect.minX + im, y: rect.minY + im), withAttributes: [.font:font])
                 if index == self.selected {
-                    NSColor(calibratedRed: 1.0, green: 1.0, blue: 1.0, alpha: 1.0).set()
+                    NSColor(calibratedRed: highlightValue, green: highlightValue, blue: highlightValue, alpha: 1.0).set()
                     rect.frame()
                 }
             }
@@ -271,7 +263,6 @@ class CustomView: NSView {
     }
 }
 
-//
 let usageKey = "emoji_usages"
 
 struct Usage: Codable {
@@ -366,6 +357,8 @@ class MyVC: NSViewController, NSTextFieldDelegate {
         }
         if commandSelector == #selector(cancelOperation(_:)) {
             print("Escape")
+            NSApp.hide(nil)
+            return true
         }
         return false
     }
@@ -390,14 +383,21 @@ func fourCharCodeValue(string: String) -> Int {
     return result
 }
 
+let positionAtMouse = true
+
 @main
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
     static var shared: AppDelegate!
+    
+    static var isDark: Bool {
+        return UserDefaults.standard.string(forKey: "AppleInterfaceStyle") == "Dark"
+    }
     
     var popover: NSPopover!
     var window: NSWindow!
     var statusBarItem: NSStatusItem!
     var hotKeyRef: UnsafeMutablePointer<EventHotKeyRef?>!
+    var showAtMouse: Bool = true
     
     @objc func onClick() {
         print("Hello")
@@ -405,24 +405,29 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         AppDelegate.shared = self
-        let window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: width, height: height), styleMask: [.fullSizeContentView, .titled], backing: .buffered, defer: false)
-        window.title = "qmoji"
-        window.isOpaque = false
-        window.backgroundColor = NSColor.white
-        window.titlebarAppearsTransparent = true
-        window.titleVisibility = .hidden
-        window.standardWindowButton(.closeButton)?.isHidden = true
-        window.showsToolbarButton = false
-        window.level = .statusBar
+        if positionAtMouse {
+            let window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: width, height: height), styleMask: [.fullSizeContentView, .titled], backing: .buffered, defer: false)
+            window.title = "qmoji"
+            window.delegate = self
+            window.isOpaque = false
+            window.titlebarAppearsTransparent = true
+            window.titleVisibility = .hidden
+            window.standardWindowButton(.closeButton)?.isHidden = true
+            window.showsToolbarButton = true
+            window.level = .statusBar
+            let vc = MyVC()
+            window.contentView = vc.view
 
-        self.window = window
-        // Create the popover
-        let popover = NSPopover()
-        popover.contentSize = NSSize(width: width, height: height)
-        popover.behavior = .transient
-        popover.contentViewController = MyVC()
-        popover.animates = false
-        self.popover = popover
+            self.window = window
+        } else {
+            // Create the popover
+            let popover = NSPopover()
+            popover.contentSize = NSSize(width: width, height: height)
+            popover.behavior = .transient
+            popover.contentViewController = MyVC()
+            popover.animates = false
+            self.popover = popover
+        }
 
         self.statusBarItem = NSStatusBar.system.statusItem(withLength: CGFloat(NSStatusItem.variableLength))
         if let button = self.statusBarItem.button {
@@ -430,10 +435,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
              button.action = #selector(togglePopover(_:))
         }
 
-        NSApp.activate(ignoringOtherApps: true)
-        
         let keyCode = 0x1F // 0x31
-        
+        registerHotkey(keyCode: keyCode)
+    }
+    
+    func windowDidResignKey(_ notification: Notification) {
+        NSApp.hide(nil)
+    }
+
+    func registerHotkey(keyCode: Int) {
         var gMyHotKeyID = EventHotKeyID()
         gMyHotKeyID.signature = OSType(fourCharCodeValue(string: "hotk"))
         gMyHotKeyID.id = UInt32(keyCode)
@@ -464,25 +474,40 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Register hotkey.
         let status = RegisterEventHotKey(UInt32(keyCode), UInt32(cmdKey + optionKey), gMyHotKeyID, GetApplicationEventTarget(), 0, hotKeyRef)
         print("The status", status)
-        
     }
 
     @objc func togglePopover(_ sender: AnyObject?) {
         if let button = self.statusBarItem.button {
-            if self.popover.isShown {
-                self.popover.performClose(sender)
-                
+            if positionAtMouse {
+                if !self.window.isKeyWindow {
+                    let pos = self.window.mouseLocationOutsideOfEventStream
+                    var globalPos = NSPoint(x: pos.x + self.window.frame.origin.x, y: pos.y + self.window.frame.origin.y)
+                    // If we clicked the statusbar button, show it relative to the button, not the mouse
+                    if sender as? NSObject == button {
+                        globalPos = button.window!.frame.origin
+                    }
+                    print("Pos", globalPos)
+                    self.window.setFrameTopLeftPoint(globalPos)
+                    self.window.makeKeyAndOrderFront(nil)
+                    self.window.orderFrontRegardless()
+                    NSApp.unhide(nil)
+                    NSApp.activate(ignoringOtherApps: true)
+                } else {
+                    self.window.orderOut(nil)
+                    NSApp.hide(nil)
+                    NSApp.deactivate()
+                }
             } else {
-                self.popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
-//                self.window.setFrameTopLeftPoint(button.window!.frame.origin)
-//                self.window.makeKeyAndOrderFront(self.window)
-//                self.window.orderFrontRegardless()
-                NSApp.unhide(nil)
-                NSApp.activate(ignoringOtherApps: true)
-                
-//                self.popover.contentViewController?.view.window?.becomeKey()
-//                (self.popover.contentViewController as! MyVC).textField!.becomeFirstResponder()
+                if self.popover.isShown {
+                    self.popover.performClose(sender)
+                } else {
+                    self.popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+
+                    NSApp.unhide(nil)
+                    NSApp.activate(ignoringOtherApps: true)
+                }
             }
         }
     }
 }
+
