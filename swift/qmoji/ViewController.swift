@@ -42,7 +42,7 @@ class NewShortcutKey: NSViewController, NSTextFieldDelegate {
     }
     
     override func viewDidLoad() {
-        self.view.setFrameSize(NSSize(width: width, height: 80))
+        self.view.setFrameSize(NSSize(width: width, height: 180))
         
         NSEvent.addLocalMonitorForEvents(matching: .keyDown, handler: {event in
             print("Event", event.keyCode)
@@ -90,7 +90,6 @@ class NewShortcutKey: NSViewController, NSTextFieldDelegate {
 class MyVC: NSViewController, NSTextFieldDelegate {
     var textField: NSTextField!
     var customView: CustomView!
-    var usages: [String:Usage] = [:]
     var descriptionField: NSTextField!
     var scroll: NSScrollView!
     var optionsMenu: NSMenu!
@@ -161,12 +160,6 @@ class MyVC: NSViewController, NSTextFieldDelegate {
         }
         shortcutPopover.contentViewController = ksvc
         
-        let decoder = JSONDecoder()
-        if let data = UserDefaults.standard.data(forKey: usageKey),
-           let decoded = try? decoder.decode([String:Usage].self, from: data) {
-            usages = decoded
-        }
-        
         let description = NSTextField.init(wrappingLabelWithString: " ")
         let newSize = description.sizeThatFits(NSSize(width: width, height: 400))
         description.setFrameSize(newSize)
@@ -175,9 +168,9 @@ class MyVC: NSViewController, NSTextFieldDelegate {
         
         let scroll = NSScrollView(frame: NSRect(x: 0, y: Int(newSize.height), width: width, height: height - h - margin * 2 - Int(newSize.height)))
         
-        let height = heightForCount(count: emojis.count)
+        let height = heightForCount(count: supported.count)
         let custom = CustomView(frame: NSRect(x: 0, y: 0, width: width, height: height ))
-        custom.usages = usages
+        custom.usages = loadUsages()
         self.customView = custom
         scroll.documentView = custom
         self.view.addSubview(scroll)
@@ -196,16 +189,19 @@ class MyVC: NSViewController, NSTextFieldDelegate {
         self.customView.sendKey()
     }
 
-    func updateDescription(emoji: Emoji) {
-        self.descriptionField.stringValue = emoji.id + "\n" + emoji.keywords.joined(separator: ", ")
-        let newSize = self.descriptionField.sizeThatFits(NSSize(width: width - margin * 2, height: 400))
-        self.descriptionField.setFrameSize(newSize)
-        self.scroll.setFrameOrigin(NSPoint(x: 0, y: Int(newSize.height) + margin))
-        self.scroll.setFrameSize(NSSize(width: width, height: height - h - margin * 2 - Int(newSize.height) - margin))
+    func updateDescription(emoji: Emoji?) {
+        if let emoji = emoji {
+            self.descriptionField.stringValue = emoji.id + "\n" + emoji.keywords.joined(separator: ", ")
+            let newSize = self.descriptionField.sizeThatFits(NSSize(width: width - margin * 2, height: 400))
+            self.descriptionField.setFrameSize(newSize)
+            self.scroll.setFrameOrigin(NSPoint(x: 0, y: Int(newSize.height) + margin))
+            self.scroll.setFrameSize(NSSize(width: width, height: height - h - margin * 2 - Int(newSize.height) - margin))
+        }
     }
 
     func controlTextDidChange(_ obj: Notification) {
         customView.searchTerm = textField.stringValue
+        self.updateDescription(emoji: customView.currentEmoji())
     }
     
     func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {

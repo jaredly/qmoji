@@ -39,9 +39,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
     }
     
     // Unused for now
-    var popover: NSPopover!
+//    var popover: NSPopover!
     var window: NSWindow!
     var statusBarItem: NSStatusItem!
+    var vc: MyVC!
 //    var hotKeyRef: UnsafeMutablePointer<EventHotKeyRef?>?
     var showAtMouse: Bool = UserDefaults.standard.bool(forKey: showAtMouseKey)
     var shortcutKey: Int = {
@@ -67,15 +68,15 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
     }
     
     // Unused at the moment
-    func setupPopover() {
-        // Create the popover
-        let popover = NSPopover()
-        popover.contentSize = NSSize(width: width, height: height)
-        popover.behavior = .transient
-        popover.contentViewController = MyVC()
-        popover.animates = false
-        self.popover = popover
-    }
+//    func setupPopover() {
+//        // Create the popover
+//        let popover = NSPopover()
+//        popover.contentSize = NSSize(width: width, height: height)
+//        popover.behavior = .transient
+//        popover.contentViewController = MyVC()
+//        popover.animates = false
+//        self.popover = popover
+//    }
     
     func setupWindow() {
         let window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: width, height: height), styleMask: [.fullSizeContentView, .titled], backing: .buffered, defer: false)
@@ -88,6 +89,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
         window.showsToolbarButton = true
         window.level = .statusBar
         let vc = MyVC()
+        self.vc = vc
         window.contentView = vc.view
 
         self.window = window
@@ -106,6 +108,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
 
 //        let keyCode = 0x1F // 0x31
         registerHotkey(keyCode: shortcutKey)
+        
+//        DispatchQueue.main.asu
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//            self.vc.resetSupported()
+//        }
     }
     
     func windowDidResignKey(_ notification: Notification) {
@@ -152,18 +159,18 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
         self.hotKeyRef = hotKeyRef.pointee
     }
     
-    func togglePopover(_ sender: AnyObject?) {
-        if let button = self.statusBarItem.button {
-            if self.popover.isShown {
-                self.popover.performClose(sender)
-            } else {
-                self.popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
-
-                NSApp.unhide(nil)
-                NSApp.activate(ignoringOtherApps: true)
-            }
-        }
-    }
+//    func togglePopover(_ sender: AnyObject?) {
+//        if let button = self.statusBarItem.button {
+//            if self.popover.isShown {
+//                self.popover.performClose(sender)
+//            } else {
+//                self.popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+//
+//                NSApp.unhide(nil)
+//                NSApp.activate(ignoringOtherApps: true)
+//            }
+//        }
+//    }
 
     @objc func toggle(_ sender: AnyObject?) {
         if let button = self.statusBarItem.button {
