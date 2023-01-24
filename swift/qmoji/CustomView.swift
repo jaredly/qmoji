@@ -226,7 +226,7 @@ class CustomView: NSView {
     override func mouseMoved(with event: NSEvent) {
         let local = self.convert(event.locationInWindow, from: nil)
         let index = indexFromPoint(point: local)
-        if index > 0 && index < sortedEmoijs().count {
+        if index >= 0 && index < sortedEmoijs().count {
             self.setSelected(proposed: index)
         }
     }
