@@ -42,7 +42,7 @@ class NewShortcutKey: NSViewController, NSTextFieldDelegate {
     }
     
     override func viewDidLoad() {
-        self.view.setFrameSize(NSSize(width: width, height: 80))
+        self.view.setFrameSize(NSSize(width: width, height: 180))
         
         NSEvent.addLocalMonitorForEvents(matching: .keyDown, handler: {event in
             print("Event", event.keyCode)
@@ -168,7 +168,7 @@ class MyVC: NSViewController, NSTextFieldDelegate {
         
         let scroll = NSScrollView(frame: NSRect(x: 0, y: Int(newSize.height), width: width, height: height - h - margin * 2 - Int(newSize.height)))
         
-        let height = heightForCount(count: emojis.count)
+        let height = heightForCount(count: supported.count)
         let custom = CustomView(frame: NSRect(x: 0, y: 0, width: width, height: height ))
         custom.usages = loadUsages()
         self.customView = custom

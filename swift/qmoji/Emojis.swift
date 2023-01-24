@@ -10,11 +10,11 @@ import Foundation
 
 struct Emoji: Codable, Equatable {
     var id: String
+    var oldId: String?
     var keywords: Array<String>
     var char: String
     var skinTones: Dictionary<String, String>
     var category: String
-	var oldId: String?
 }
 
 var emojis: Array<Emoji> = [

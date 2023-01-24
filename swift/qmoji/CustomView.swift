@@ -10,7 +10,7 @@ import Cocoa
 import AppKit
 
 //let width = 300
-let height = 200
+let height = 400
 let margin = 5
 let numAcross = 10
 
@@ -20,7 +20,6 @@ let fontSize = size - 4
 
 let h = 20
 
-//let lineWidth = (width - margin * 2) / size
 let lineWidth = 10
 let width = numAcross * size + margin * 2
 
@@ -28,9 +27,9 @@ func loadUsages() -> [String:Usage] {
     if let data = UserDefaults.standard.data(forKey: usageKey) {
         let decoder = JSONDecoder()
         if let usages = try? decoder.decode([String:Usage].self, from: data) {
-            let migrated = [:]
-            let oldMap = [:]
-            let newMap = [:]
+            var migrated: [String:Usage] = [:]
+            var oldMap: [String:String] = [:]
+            var newMap: [String:Bool] = [:]
             for emoji in emojis {
                 if let old = emoji.oldId {
                     oldMap[old] = emoji.id
@@ -108,15 +107,59 @@ func sortUsages(one: Usage, two: Usage) -> Bool {
     }
 }
 
+func emojiImage(emoji: String) -> Data? {
+    let font = NSFont.systemFont(ofSize: CGFloat(fontSize))
+    let string = NSString(string: emoji)
+    let size = string.size(withAttributes: [.font:font])
+    if size.width / size.height > 1.5 {
+        return nil
+    }
+    let image = NSImage(size: size)
+    image.lockFocus()
+    string.draw(at: NSPoint(x: 0, y: 0), withAttributes: [.font:font])
+    image.unlockFocus()
+    return image.tiffRepresentation
+}
+
+func supportedEmojis() -> [Emoji] {
+    let reference = emojiImage(emoji: "")
+    
+    var supported: [Emoji] = []
+    for emoji in emojis {
+        if let data = emojiImage(emoji: emoji.char) {
+            if data != reference {
+                supported.append(emoji)
+            }
+        }
+    }
+    return supported
+}
+
+let supported = supportedEmojis()
+
+//func supportedEmojis_() -> [Emoji] {
+//    let font = CTFontCreateWithName("AppleColorEmoji" as CFString, 0.0, nil)
+//    var glyphs: [CGGlyph] = [0, 0]
+//    var supported: [Emoji] = []
+//    for emoji in emojis {
+//        let uniChars = Array(emoji.char.utf16)
+//        let result = CTFontGetGlyphsForCharacters(font, uniChars, &glyphs, uniChars.count)
+//        if result {
+//            supported.append(emoji)
+//        }
+//    }
+//    return supported
+//}
+
 struct Cache {
     var cached: [Emoji]
     var searchTerm: String
-    init(searchTerm: String, usages: [String:Usage]) {
+    init(searchTerm: String, usages: [String:Usage], supported: [Emoji]) {
         self.searchTerm = searchTerm
         
         if searchTerm.isEmpty {
-            var used = emojis.filter({emoji in usages[emoji.id] != nil})
-            let unused = emojis.filter({emoji in usages[emoji.id] == nil})
+            var used = supported.filter({emoji in usages[emoji.id] != nil})
+            let unused = supported.filter({emoji in usages[emoji.id] == nil})
             used.sort(by: { one, two in
                 return sortUsages(one: usages[one.id]!, two: usages[two.id]!)
             })
@@ -124,7 +167,7 @@ struct Cache {
             cached = used
         } else {
             let needle = searchTerm.lowercased()
-            var scores = emojis.map({emoji in (emoji, bestMatch(emoji: emoji, needle: needle))}).filter({s in s.1.full})
+            var scores = supported.map({emoji in (emoji, bestMatch(emoji: emoji, needle: needle))}).filter({s in s.1.full})
             scores.sort(by: {one, two in compareScores(one.1, two.1)})
             var used = scores.filter({score in usages[score.0.id] != nil})
             let unused = scores.filter({score in usages[score.0.id] == nil})
@@ -154,7 +197,7 @@ class CustomView: NSView {
         set {
             _searchTerm = newValue
             selected = 0
-            self.filterCache = Cache(searchTerm: newValue, usages: usages)
+            self.filterCache = Cache(searchTerm: newValue, usages: usages, supported: supported)
             let newHeight = heightForCount(count: self.filterCache!.cached.count)
             self.scroll(NSPoint(x: 0, y: 0))
             self.setFrameSize(NSSize(width: width, height: newHeight))
@@ -182,7 +225,10 @@ class CustomView: NSView {
     
     override func mouseMoved(with event: NSEvent) {
         let local = self.convert(event.locationInWindow, from: nil)
-        self.setSelected(proposed: indexFromPoint(point: local))
+        let index = indexFromPoint(point: local)
+        if index > 0 && index < sortedEmoijs().count {
+            self.setSelected(proposed: index)
+        }
     }
     
     func setSelected(proposed: Int) {
@@ -221,17 +267,17 @@ class CustomView: NSView {
         }
         return nil
     }
-    
+
     func sortedEmoijs() -> Array<Emoji> {
         if let cache = filterCache,
             cache.searchTerm == _searchTerm {
             return cache.cached
         }
-        let cache = Cache(searchTerm: _searchTerm, usages: usages)
+        let cache = Cache(searchTerm: _searchTerm, usages: usages, supported: supported)
         filterCache = cache
         return cache.cached
     }
-    
+
     func updateUsage(id: String) {
         if var usage = self.usages[id] {
             usage.count += 1
@@ -251,7 +297,7 @@ class CustomView: NSView {
     }
     
     func saveUsages() {
-        self.filterCache = Cache(searchTerm: _searchTerm, usages: usages)
+        self.filterCache = Cache(searchTerm: _searchTerm, usages: usages, supported: supported)
         self.setNeedsDisplay(self.bounds)
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(self.usages) {
@@ -306,7 +352,12 @@ class CustomView: NSView {
                     rect.fill()
                 }
                 let font = NSFont.systemFont(ofSize: CGFloat(fontSize))
-                NSString(string: emoji.char).draw(at: NSPoint(x: rect.minX + im, y: rect.minY + im), withAttributes: [.font:font])
+                let string = NSString(string: emoji.char)
+//                let size = string.size(withAttributes: [.font:font])
+//                if size.width / size.height > 1.5 {
+//                    continue
+//                }
+                string.draw(at: NSPoint(x: rect.minX + im, y: rect.minY + im), withAttributes: [.font:font])
                 if index == self.selected {
                     NSColor(calibratedRed: highlightValue, green: highlightValue, blue: highlightValue, alpha: 1.0).set()
                     rect.frame()
